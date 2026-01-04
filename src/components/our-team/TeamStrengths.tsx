@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Zap, TrendingUp, Award, Clock, BarChart2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Code } from "lucide-react";
-import Layout from "@/components/layout/Layout";
 
 const benefits = [
   {
@@ -15,7 +14,7 @@ const benefits = [
   {
     title: "Design First Approach",
     description: "We combine clean UI UX design with usability principles to ensure every product looks professional and converts users effectively.",
-    icon: <Layout />
+    icon: <Code />
   },
   {
     title: "Automation & Integrations",
