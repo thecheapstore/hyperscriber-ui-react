@@ -27,24 +27,6 @@ const queryClient = new QueryClient({
       retry: 1,
       staleTime: 60000,
       gcTime: 300000,
-      queryFn: async ({ queryKey, signal }) => {
-        const response = await fetch(
-          Array.isArray(queryKey) ? queryKey[0] : queryKey.toString(),
-          {
-            signal,
-            credentials: "same-origin",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`Network error: ${response.status}`);
-        }
-
-        return response.json();
-      },
     },
     mutations: {
       retry: 0,
@@ -59,29 +41,19 @@ const App = () => {
         <Toaster />
         <Sonner position="top-center" />
         <BrowserRouter>
-          <SecurityHeaders />
           <div className="flex flex-col min-h-screen">
             <TopBanner />
 
             <main className="flex-1">
               <Routes>
-                {/* ✅ Home */}
                 <Route path="/" element={<Index />} />
-
-                {/* ✅ Core pages */}
                 <Route path="/services" element={<Services />} />
                 <Route path="/our-team" element={<OurTeam />} />
                 <Route path="/why-us" element={<WhyUs />} />
                 <Route path="/contact" element={<Contact />} />
-
-                {/* ✅ Legal */}
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
-                {/* 🔁 Backward compatibility */}
                 <Route path="/pricing" element={<Navigate to="/our-team" replace />} />
-
-                {/* ❌ 404 */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
