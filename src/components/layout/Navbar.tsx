@@ -45,7 +45,7 @@ const Navbar = () => {
         >
           <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
           <span className="text-xl md:text-2xl font-bold text-black">
-            HyperScriber
+            Clibre Associates
           </span>
         </Link>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
           ))}
           <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer">
             <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-3 rounded-full hover:opacity-90 transition-opacity duration-200 text-md hover:scale-110 transition-transform duration-200 id-calendly-booking">
-              Book a Call
+              Book a Free Consultation
             </button>
           </a>
         </div>
