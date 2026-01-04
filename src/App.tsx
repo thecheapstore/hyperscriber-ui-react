@@ -15,7 +15,6 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import CookieConsent from "./components/layout/CookieConsent";
 import ChatBot from "./components/layout/ChatBot";
-import SecurityHeaders from "./components/security/SecurityHeaders";
 
 const queryClient = new QueryClient({
   defaultOptions: {
