@@ -21,19 +21,18 @@ const ContactForm = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="bg-white shadow-lg border border-gray-100 h-full flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-xl"
+      className="bg-white shadow-lg border border-gray-100 flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-xl"
     >
       <h2 className="text-2xl font-semibold mb-6 tracking-tight">
         Contact Us
       </h2>
 
-      <div className="w-full flex-grow">
+      <div className="w-full">
         <iframe
           src="https://api.leadconnectorhq.com/widget/form/Czb3FWDhPiNoTx1naNbW"
           style={{
             width: "100%",
-            height: "100%",
-            minHeight: "735px",
+            minHeight: "800px",
             border: "none",
             borderRadius: "12px",
           }}

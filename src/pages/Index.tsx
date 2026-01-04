@@ -8,7 +8,7 @@ import ServicesSection from '@/components/services/ServicesSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet';
-import PricingBenefits from '@/components/pricing/PricingBenefits';
+import PricingBenefits from '@/components/our-team/TeamStrengths';
 
 const Index = () => {
   return (

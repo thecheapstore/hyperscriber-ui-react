@@ -13,13 +13,13 @@ const PricingHero = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-            PRICING
+            OUR TEAM
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Simple, <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Transparent</span> Pricing
+            Meet <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">the</span> People Behind Calibre Associates
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
-            Choose the package that fits your business needs and scale as you grow. All packages include our AI-powered content creation process.
+            A team of developers, designers, automation experts, and strategists dedicated to building high performance websites, scalable web applications, and growth driven digital systems.
           </p>
           
           <motion.div
@@ -30,15 +30,15 @@ const PricingHero = () => {
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <CheckCircle size={18} className="text-blue-500" />
-              <span className="text-sm font-medium">No hidden fees</span>
+              <span className="text-sm font-medium">Web Development Experts</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <CheckCircle size={18} className="text-blue-500" />
-              <span className="text-sm font-medium">Cancel anytime</span>
+              <span className="text-sm font-medium">UI UX Focused</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
               <CheckCircle size={18} className="text-blue-500" />
-              <span className="text-sm font-medium">Free consultation</span>
+              <span className="text-sm font-medium">Automation Driven & Growth Oriented</span>
             </div>
           </motion.div>
         </motion.div>

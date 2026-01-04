@@ -41,10 +41,10 @@ const PricingGuarantee = () => {
             <ShieldCheck size={24} className="text-blue-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Risk-Free Guarantee
+            Our Values and Work Culture
           </h2>
           <p className="text-lg text-muted-foreground">
-            We're so confident in our service that we back it with ironclad guarantees to ensure your complete satisfaction
+            The principles that guide how our team works, collaborates, and delivers consistent results for our clients.
           </p>
         </motion.div>
         
@@ -59,7 +59,7 @@ const PricingGuarantee = () => {
             <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
               <Award className="h-7 w-7 text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">30-Day Money Back Guarantee</h3>
+            <h3 className="text-xl font-bold mb-3">Quality Driven Execution</h3>
             <p className="text-muted-foreground">
               If you're not completely satisfied with our service in the first 30 days, we'll refund your investment in full — no questions asked.
             </p>
@@ -69,7 +69,7 @@ const PricingGuarantee = () => {
             <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
               <Zap className="h-7 w-7 text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Quality Assurance Promise</h3>
+            <h3 className="text-xl font-bold mb-3">Accountability and Ownership</h3>
             <p className="text-muted-foreground">
               Not happy with a deliverable? We'll revise it until you're 100% satisfied or you don't pay for that piece of content.
             </p>
@@ -102,7 +102,7 @@ const PricingGuarantee = () => {
             <div className="md:w-2/3 text-center md:text-left">
               <h3 className="text-2xl font-bold mb-2">Cancel Anytime</h3>
               <p className="text-muted-foreground mb-4">
-                You can pause or cancel your service at any time with just 14 days notice.
+                We take ownership of every project and ensure each deliverable meets our internal quality standards before reaching the client.
               </p>
             </div>
           </div>

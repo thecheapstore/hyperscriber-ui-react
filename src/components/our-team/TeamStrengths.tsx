@@ -6,34 +6,34 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const benefits = [
   {
-    title: "AI-Powered Efficiency",
-    description: "Create content 3x faster with our AI-powered creation process while maintaining high quality and originality.",
-    icon: <Zap className="h-10 w-10 text-blue-500" />
+    title: "Experienced Development Team",
+    description: "Our team consists of skilled web and app developers with real world experience building fast, secure, and scalable digital products.",
+    icon: <Code />
   },
   {
-    title: "Human Creative Expertise",
-    description: "Our content specialists ensure your brand voice remains consistent and your content connects with your audience.",
-    icon: <Award className="h-10 w-10 text-blue-500" />
+    title: "Design First Approach",
+    description: "We combine clean UI UX design with usability principles to ensure every product looks professional and converts users effectively.",
+    icon: <Layout />
   },
   {
-    title: "SEO-Optimized Content",
-    description: "Every piece of content is strategically optimized to rank higher in search results and drive organic traffic.",
-    icon: <TrendingUp className="h-10 w-10 text-blue-500" />
+    title: "Automation & Integrations",
+    description: "From CRM automation to API integrations, our team builds systems that eliminate manual work and improve operational efficiency.",
+    icon: <Zap />
   },
   {
-    title: "Faster Time-to-Market",
-    description: "Reduce content production timelines by weeks, allowing you to maintain a consistent publishing schedule.",
-    icon: <Clock className="h-10 w-10 text-blue-500" />
+    title: "Performance Focused Builds",
+    description: "Every website and web application is optimized for speed, SEO readiness, and long term scalability.",
+    icon: <TrendingUp />
   },
   {
-    title: "Performance Analytics",
-    description: "Get detailed insights on how your content is performing with regular reports and actionable recommendations.",
-    icon: <BarChart2 className="h-10 w-10 text-blue-500" />
+    title: "Clear Communication",
+    description: "We believe in transparency, regular updates, and collaborative execution throughout the project lifecycle.",
+    icon: <MessageSquare />
   },
   {
-    title: "Strategic Growth Partnership",
-    description: "We don't just create content - we become your strategic partner focused on driving business growth.",
-    icon: <CheckCircle className="h-10 w-10 text-blue-500" />
+    title: "Long Term Partnership",
+    description: "We work as an extension of your business, not just a vendor delivering one off projects.",
+    icon: <Handshake />
   }
 ];
 

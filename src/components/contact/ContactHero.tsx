@@ -21,7 +21,7 @@ const ContactHero = () => {
               Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Conversation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
-              Have questions about our services or ready to transform your content strategy?
+              Have questions about our services or ready to transform your marketing strategy?
               We're here to help.
             </p>
             <motion.div

@@ -3,11 +3,11 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import PricingHero from '@/components/pricing/PricingHero';
-import PricingPlans from '@/components/pricing/PricingPlans';
-import PricingComparison from '@/components/pricing/PricingComparison';
-import PricingGuarantee from '@/components/pricing/PricingGuarantee';
-import PricingFAQ from '@/components/pricing/PricingFAQ';
+import PricingHero from '@/components/our-team/TeamHero';
+import PricingPlans from '@/components/our-team/PricingPlans';
+import PricingComparison from '@/components/our-team/PricingComparison';
+import PricingGuarantee from '@/components/our-team/TeamValues';
+import PricingFAQ from '@/components/our-team/PricingFAQ';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
 
