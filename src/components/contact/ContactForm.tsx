@@ -24,7 +24,7 @@ const ContactForm = () => {
       className="bg-white shadow-lg border border-gray-100 h-full flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-xl"
     >
       <h2 className="text-2xl font-semibold mb-6 tracking-tight">
-        Book a Consultation
+        Contact Us
       </h2>
 
       <div className="w-full flex-grow">
