@@ -7,7 +7,7 @@ import React from "react";
 import TopBanner from "./components/layout/TopBanner";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Pricing from "./pages/Pricing";
+import Pricing from "./pages/OurTeam";
 import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
 import TermsConditions from "./pages/TermsConditions";
