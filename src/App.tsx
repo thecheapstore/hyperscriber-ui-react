@@ -1,20 +1,24 @@
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react";
-import TopBanner from "./components/layout/TopBanner";
-import Index from "./pages/Index";
-import Services from "./pages/Services";
-import Pricing from "./pages/OurTeam";
-import WhyUs from "./pages/WhyUs";
-import Contact from "./pages/Contact";
-import TermsConditions from "./pages/TermsConditions";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import NotFound from "./pages/NotFound";
-import CookieConsent from "./components/layout/CookieConsent";
-import ChatBot from "./components/layout/ChatBot";
+
+import TopBanner from "@/components/layout/TopBanner";
+import CookieConsent from "@/components/layout/CookieConsent";
+import ChatBot from "@/components/layout/ChatBot";
+
+// Pages
+import Index from "@/pages/Index";
+import Services from "@/pages/Services";
+import OurTeam from "@/pages/OurTeam";
+import WhyUs from "@/pages/WhyUs";
+import Contact from "@/pages/Contact";
+import TermsConditions from "@/pages/TermsConditions";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,22 +28,25 @@ const queryClient = new QueryClient({
       staleTime: 60000,
       gcTime: 300000,
       queryFn: async ({ queryKey, signal }) => {
-        const response = await fetch(Array.isArray(queryKey) ? queryKey[0] : queryKey.toString(), { 
-          signal,
-          credentials: 'same-origin',
-          headers: {
-            'Content-Type': 'application/json'
+        const response = await fetch(
+          Array.isArray(queryKey) ? queryKey[0] : queryKey.toString(),
+          {
+            signal,
+            credentials: "same-origin",
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
-        });
+        );
+
         if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.status}`);
+          throw new Error(`Network error: ${response.status}`);
         }
+
         return response.json();
       },
     },
     mutations: {
-      onMutate: () => {
-      },
       retry: 0,
     },
   },
@@ -55,18 +62,30 @@ const App = () => {
           <SecurityHeaders />
           <div className="flex flex-col min-h-screen">
             <TopBanner />
-            <div className="flex-1">
+
+            <main className="flex-1">
               <Routes>
+                {/* ✅ Home */}
                 <Route path="/" element={<Index />} />
+
+                {/* ✅ Core pages */}
                 <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/our-team" element={<OurTeam />} />
                 <Route path="/why-us" element={<WhyUs />} />
                 <Route path="/contact" element={<Contact />} />
+
+                {/* ✅ Legal */}
                 <Route path="/terms-conditions" element={<TermsConditions />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+                {/* 🔁 Backward compatibility */}
+                <Route path="/pricing" element={<Navigate to="/our-team" replace />} />
+
+                {/* ❌ 404 */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
-            </div>
+            </main>
+
             <CookieConsent />
             <ChatBot />
           </div>
