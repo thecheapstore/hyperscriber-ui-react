@@ -9,32 +9,26 @@ const benefits = [
   {
     title: "Experienced Development Team",
     description: "Our team consists of skilled web and app developers with real world experience building fast, secure, and scalable digital products.",
-    icon: <Code />
   },
   {
     title: "Design First Approach",
     description: "We combine clean UI UX design with usability principles to ensure every product looks professional and converts users effectively.",
-    icon: <Code />
   },
   {
     title: "Automation & Integrations",
     description: "From CRM automation to API integrations, our team builds systems that eliminate manual work and improve operational efficiency.",
-    icon: <Zap />
   },
   {
     title: "Performance Focused Builds",
     description: "Every website and web application is optimized for speed, SEO readiness, and long term scalability.",
-    icon: <TrendingUp />
   },
   {
     title: "Clear Communication",
     description: "We believe in transparency, regular updates, and collaborative execution throughout the project lifecycle.",
-    icon: <MessageSquare />
   },
   {
     title: "Long Term Partnership",
     description: "We work as an extension of your business, not just a vendor delivering one off projects.",
-    icon: <Handshake />
   }
 ];
 
