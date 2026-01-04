@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { LineChart, Code, Rocket, Target } from 'lucide-react';
+import { Code } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0 },
