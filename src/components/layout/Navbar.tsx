@@ -25,7 +25,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Why Us', path: '/why-us' },
     { name: 'Services', path: '/services' },
-    { name: 'Pricing', path: '/pricing' },
+    { name: 'Our Team', path: '/pricing' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           className="flex items-center z-30 gap-2"
           onClick={() => window.scrollTo(0, 0)}
         >
-          <img src="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" alt="HyperScriber Logo" className="h-20 w-10 object-contain" />
+          <img src="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" alt="Calibre Associates Logo" className="h-20 w-10 object-contain" />
           <span className="text-xl md:text-2xl font-bold text-black">
             Clibre Associates
           </span>

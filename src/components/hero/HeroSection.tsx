@@ -27,7 +27,7 @@ const HeroSection = () => {
           className="flex justify-center mt-20"
         >
           <a 
-            href="#workflow" 
+            href="/why-us" 
             className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
           >
             <span className="mb-2">View more</span>

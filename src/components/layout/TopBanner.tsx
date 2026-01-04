@@ -82,12 +82,12 @@ if (!isVisible) return null;
             </span>
             {/* Ensure font sizes are responsive */}
             <p className="text-xs sm:text-sm md:text-base font-medium text-center">
-              Limited Time Offer: Get a free SEO-optimized Blog Post completely for free!
+              Limited Time Offer: Get a free one-one-one session with our marketing expert!
             </p>
           </div>
           {/* Ensure button padding and text size are suitable for mobile */}
           <a
-            href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04"
+            href="https://calendly.com/calibreassociates/meeting"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center flex-shrink-0 bg-white hover:bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap id-calendly-booking"
