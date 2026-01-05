@@ -1,78 +1,127 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Search, Target, PenTool, BarChart3 } from "lucide-react";
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 
 const steps = [
   {
-    title: "Discovery & Research",
-    description:
-      "We start by understanding your business goals, target audience, competitors, and growth opportunities to ensure every decision is data driven.",
-    icon: <Search className="h-7 w-7 text-blue-600" />,
+    number: '01',
+    title: 'Discovery & Strategy',
+    description: 'We begin with a deep dive into your business, audience, and goals to create a tailored content strategy that aligns with your objectives.',
+    details: [
+      'Comprehensive business analysis',
+      'Competitor content research',
+      'Target audience profiling',
+      'Content gap analysis',
+      'Strategic content planning'
+    ]
   },
   {
-    title: "Strategy & Planning",
-    description:
-      "Based on insights, we define the right content, channels, messaging, and timelines aligned with your marketing and revenue objectives.",
-    icon: <Target className="h-7 w-7 text-blue-600" />,
+    number: '02',
+    title: 'AI-Enhanced Creation',
+    description: 'Our team leverages advanced AI tools to produce first drafts, which are then refined by expert human writers to ensure quality and brand voice consistency.',
+    details: [
+      'AI-generated content foundation',
+      'Human expert refinement',
+      'Brand voice calibration',
+      'Industry-specific knowledge integration',
+      'Fact-checking and verification'
+    ]
   },
   {
-    title: "Execution & Delivery",
-    description:
-      "Our team executes with precision, delivering high quality content, campaigns, and systems while keeping communication clear and consistent.",
-    icon: <PenTool className="h-7 w-7 text-blue-600" />,
+    number: '03',
+    title: 'Review & Optimization',
+    description: 'We collaborate with you to review content, implement feedback, and optimize for performance across all intended distribution channels.',
+    details: [
+      'Collaborative review process',
+      'Feedback integration',
+      'SEO optimization',
+      'Channel-specific formatting',
+      'Conversion optimization'
+    ]
   },
   {
-    title: "Tracking & Optimization",
-    description:
-      "We monitor performance, analyze results, and continuously optimize to improve engagement, conversions, and long term growth.",
-    icon: <BarChart3 className="h-7 w-7 text-blue-600" />,
-  },
+    number: '04',
+    title: 'Publish & Measure',
+    description: 'After publishing, we track performance metrics and provide detailed analytics to continuously improve your content strategy and ROI.',
+    details: [
+      'Publishing support',
+      'Performance tracking',
+      'Engagement analytics',
+      'Conversion reporting',
+      'Continuous strategy refinement'
+    ]
+  }
 ];
 
 const ServiceProcess = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+  
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-            OUR PROCESS
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            How We Deliver Consistent Results
+            Our AI + Human Workflow
           </h2>
           <p className="text-lg text-muted-foreground">
-            A structured, transparent process designed to keep projects efficient,
-            predictable, and focused on measurable business outcomes.
+            Simple Process, Expert Minds
           </p>
-        </motion.div>
-
-        {/* Process Steps */}
-        <motion.div
+        </div>
+        
+        <motion.div 
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+            <motion.div 
+              key={index} 
+              variants={itemVariants}
+              className={`flex flex-col md:flex-row gap-8 mb-16 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
             >
-              <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-                {step.icon}
+              <div className="w-full md:w-1/3">
+                <div className="bg-white p-6 rounded-xl shadow-md h-full">
+                  <div className="text-5xl font-bold text-blue-600 mb-4">{step.number}</div>
+                  <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground mb-6">{step.description}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
+              <div className="w-full md:w-2/3">
+                <div className="bg-white p-6 rounded-xl shadow-md h-full">
+                  <h4 className="text-xl font-semibold mb-4">What's included:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {step.details.map((detail, i) => (
+                      <div key={i} className="flex items-center space-x-3">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                          <Check className="h-4 w-4 text-blue-600" />
+                        </div>
+                        <span>{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

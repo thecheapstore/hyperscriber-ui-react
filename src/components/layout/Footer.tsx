@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <div className="mb-6">
               <div className="flex items-center gap-3">
-                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="Calibre Associates Logo" className="w-44 h-auto object-contain" />
+                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
