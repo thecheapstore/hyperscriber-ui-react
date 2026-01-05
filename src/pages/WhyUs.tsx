@@ -7,6 +7,48 @@ import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
+const ProjectCard = ({
+  image,
+  title,
+  description,
+  link,
+  delay,
+}: {
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+  delay: number;
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay }}
+    viewport={{ once: true }}
+    className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+  >
+    <img
+      src={image}
+      alt={title}
+      className="h-48 w-full object-cover"
+    />
+    <div className="p-6 flex flex-col flex-grow">
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-muted-foreground mb-6 flex-grow">
+        {description}
+      </p>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700 transition"
+      >
+        View Project
+      </a>
+    </div>
+  </motion.div>
+);
+
 const WhyUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,13 +80,13 @@ const WhyUs = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-                OUR PROCESS
+                OUR APPROACH
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                How <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">HyperScriber</span> Works
+                How Calibre Associates Builds <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Scalable Growth</span> Systems
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10">
-                Our streamlined AI + human workflow delivers exceptional content that drives real business results.
+                Our proven process combines strategy, technology, marketing, and automation to help businesses generate leads, scale operations, and achieve measurable long-term growth.
               </p>
               
               <motion.div 
@@ -57,7 +99,7 @@ const WhyUs = () => {
                   href="#workflow" 
                   className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
                 >
-                  <span className="mb-2">See our workflow</span>
+                  <span className="mb-2">Explore our execution process</span>
                   <ArrowDown className="animate-bounce" />
                 </a>
               </motion.div>
@@ -70,63 +112,97 @@ const WhyUs = () => {
           <ServiceProcess />
         </div>
         
-        {/* Process Details Section - Using a modified version of ServiceProcess */}
-        <section className="py-20 bg-slate-50">
-          <div className="container mx-auto px-6 text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Makes Our Process Different
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We combine the efficiency of AI with human expertise to deliver content that stands out
-            </p>
-          </div>
-          
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-md"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-blue-600 font-bold">1</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">3x Faster Production</h3>
-                <p className="text-muted-foreground">Our AI-enhanced workflow allows us to produce high-quality content in one-third of the time compared to traditional agencies.</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-md"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-blue-600 font-bold">2</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Human Quality Assurance</h3>
-                <p className="text-muted-foreground">Every piece of content goes through our expert review process to ensure accuracy, brand voice consistency, and human touch.</p>
-              </motion.div>
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-md"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-blue-600 font-bold">3</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Data-Driven Strategy</h3>
-                <p className="text-muted-foreground">We analyze performance metrics to continuously refine your content strategy and maximize ROI.</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* Project Showcase Section */}
+<section className="py-20 bg-slate-50" id="projects">
+  <div className="container mx-auto px-6 text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      Featured Projects & Case Studies
+    </h2>
+    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+      Real-world projects where we helped businesses grow through
+      high-performance development, lead generation, marketing systems,
+      and automation.
+    </p>
+  </div>
+
+  <div className="container mx-auto px-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {/* PROJECT 1 */}
+      <ProjectCard
+        image="/projects/optipharm.jpg"
+        title="OptiPharm"
+        description="Healthcare-focused website built for speed, SEO readiness, and lead conversion to support long-term digital growth."
+        link="https://optipharm.com"
+        delay={0}
+      />
+
+      {/* PROJECT 2 */}
+      <ProjectCard
+        image="/projects/calibre.jpg"
+        title="Calibre Associates"
+        description="Complete digital ecosystem including website development, SEO, social media marketing, automation, and conversion-focused UX."
+        link="https://calibreassociates.com"
+        delay={0.05}
+      />
+
+      {/* PROJECT 3 */}
+      <ProjectCard
+        image="/projects/taggingmy.jpg"
+        title="TaggingMy"
+        description="Lead generation and marketing platform designed to attract, nurture, and convert inbound traffic at scale."
+        link="https://taggingmy.com"
+        delay={0.1}
+      />
+
+      {/* PROJECT 4 */}
+      <ProjectCard
+        image="/projects/automation.jpg"
+        title="AI & Automation Systems"
+        description="Custom automation and AI workflows built to eliminate manual work and streamline business operations."
+        link="https://calibreassociates.com"
+        delay={0.15}
+      />
+
+      {/* PROJECT 5 */}
+      <ProjectCard
+        image="/projects/saas-dashboard.jpg"
+        title="SaaS Dashboard Platform"
+        description="Scalable SaaS dashboard with performance optimization, clean UI UX, and secure backend architecture."
+        link="#"
+        delay={0.2}
+      />
+
+      {/* PROJECT 6 */}
+      <ProjectCard
+        image="/projects/marketing-funnel.jpg"
+        title="Lead Generation Funnel"
+        description="High-converting paid ads and landing page funnel designed for consistent inbound lead flow."
+        link="#"
+        delay={0.25}
+      />
+
+      {/* PROJECT 7 */}
+      <ProjectCard
+        image="/projects/gmb-seo.jpg"
+        title="Local SEO & GMB Growth"
+        description="Online reputation management and Google My Business optimization to drive organic local leads."
+        link="#"
+        delay={0.3}
+      />
+
+      {/* PROJECT 8 */}
+      <ProjectCard
+        image="/projects/uiux.jpg"
+        title="UI UX Product Design"
+        description="Modern UI UX design system created for web and mobile applications with conversion-focused layouts."
+        link="#"
+        delay={0.35}
+      />
+
+    </div>
+  </div>
+</section>
         
         <CTASection />
       </main>

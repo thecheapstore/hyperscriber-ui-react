@@ -21,9 +21,9 @@ const teamMembers = [
     link: "https://www.linkedin.com/in/sargam-rastogi15/",
   },
   {
-    name: "Pawan",
+    name: "Pawan Kumar",
     role: "Full Stack Web Developer & DevOps Engineer",
-    link: "#",
+    link: "https://www.linkedin.com/in/pawan-kumar-devops/",
   },
   {
     name: "Nirosh Hewabahithage",
