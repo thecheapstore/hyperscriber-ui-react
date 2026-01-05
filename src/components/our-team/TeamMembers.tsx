@@ -64,7 +64,7 @@ const itemVariants = {
   },
 };
 
-const OurTeam = () => {
+const TeamMembers = () => {
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
@@ -132,4 +132,4 @@ const OurTeam = () => {
   );
 };
 
-export default OurTeam;
+export default TeamMembers;
