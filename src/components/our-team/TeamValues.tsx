@@ -5,7 +5,7 @@ import { ShieldCheck, Award, Zap, Clock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-const PricingGuarantee = () => {
+const TeamValues = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -112,4 +112,4 @@ const PricingGuarantee = () => {
   );
 };
 
-export default PricingGuarantee;
+export default TeamValues;
