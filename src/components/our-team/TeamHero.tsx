@@ -12,7 +12,7 @@ const TeamHero = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100">
-            OUR TEAM
+            ABOUT THE PEOPLE
           </span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
@@ -30,10 +30,10 @@ const TeamHero = () => {
 
           <div className="flex flex-wrap gap-3 justify-center mb-10">
             {[
-              "Web & App Development",
-              "UI/UX & Product Design",
-              "Automation & CRM Systems",
-              "Growth-Focused Execution",
+              "Full Stack Developers and System Architects",
+              "UI and UX Specialists Focused on Usability",
+              "Automation and CRM Experts",
+              "Collaborative and Growth Oriented Team",
             ].map((item, i) => (
               <div
                 key={i}

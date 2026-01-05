@@ -5,32 +5,32 @@ const strengths = [
   {
     title: "Experienced Engineering Team",
     description:
-      "Our developers build fast, secure, and scalable web applications using modern frameworks and best practices.",
+      "Our engineering team brings hands-on experience across modern web technologies, building secure, scalable, and maintainable applications that support real business growth.",
   },
   {
     title: "Design-Led Thinking",
     description:
-      "Every project starts with UX clarity — clean interfaces, intuitive flows, and conversion-focused layouts.",
+      "We approach every project with design clarity first, focusing on intuitive user experiences, clean interfaces, and thoughtful flows that make products easy to use and hard to forget.",
   },
   {
     title: "Automation & Integrations",
     description:
-      "We design CRM workflows, API integrations, and automation systems that eliminate repetitive manual work.",
+      "Our team specializes in building smart automation and system integrations, helping businesses streamline operations, connect tools, and reduce manual effort through well-architected workflows.",
   },
   {
     title: "Performance & Scalability",
     description:
-      "From code structure to infrastructure, everything is optimized for speed, SEO readiness, and long-term growth.",
+      "From code structure to infrastructure decisions, our team builds with performance and scalability in mind, ensuring long-term stability, speed, and technical reliability.",
   },
   {
     title: "Clear Communication",
     description:
-      "You work directly with the execution team — transparent timelines, regular updates, and no guesswork.",
+      "We believe great results come from clear communication. Clients work directly with our execution team, with transparent timelines, regular updates, and collaborative decision-making.",
   },
   {
     title: "Long-Term Partnership",
     description:
-      "We act as a digital extension of your business, not a one-off service provider.",
+      "We view every engagement as a long-term partnership, acting as an extension of your internal team rather than a short-term service provider.",
   },
 ];
 
@@ -40,7 +40,7 @@ const TeamStrengths = () => {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold rounded-full bg-blue-50 text-blue-600">
-            WHY OUR TEAM
+            WHY OUR TEAM WORKS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             What Sets Calibre Associates Apart

@@ -77,15 +77,13 @@ const TeamMembers = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-            OUR TEAM
+            THE CALIBRE TEAM
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet the Team Behind Calibre Associates
+            Built by People Who Care About the Craft
           </h2>
           <p className="text-lg text-muted-foreground">
-            A cross functional team of developers, designers, automation
-            specialists, and strategists working together to build scalable
-            digital products and growth driven systems.
+            A collaborative team combining engineering discipline, design thinking, and automation expertise.
           </p>
         </motion.div>
 

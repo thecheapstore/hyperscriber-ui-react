@@ -61,7 +61,7 @@ const TeamValues = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">Quality Driven Execution</h3>
             <p className="text-muted-foreground">
-              If you're not completely satisfied with our service in the first 30 days, we'll refund your investment in full — no questions asked.
+              We believe quality is not optional. Every website and web application we build goes through internal reviews to ensure clean code, strong performance, and long term reliability before it reaches our clients.
             </p>
           </motion.div>
           
@@ -71,7 +71,7 @@ const TeamValues = () => {
             </div>
             <h3 className="text-xl font-bold mb-3">Accountability and Ownership</h3>
             <p className="text-muted-foreground">
-              Not happy with a deliverable? We'll revise it until you're 100% satisfied or you don't pay for that piece of content.
+              Our team takes full ownership of every project from start to finish. We communicate clearly, fix issues proactively, and stand behind our work to deliver results that meet real business goals.
             </p>
           </motion.div>
           
@@ -79,9 +79,9 @@ const TeamValues = () => {
             <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
               <Clock className="h-7 w-7 text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">On-Time Delivery Guarantee</h3>
+            <h3 className="text-xl font-bold mb-3">Reliable and On Time Delivery</h3>
             <p className="text-muted-foreground">
-              We guarantee on-time delivery for all content. If we miss a deadline, you'll receive that deliverable for free.
+              We respect timelines and plan projects carefully to avoid delays. Our structured workflow ensures consistent progress and dependable delivery without compromising on quality.
             </p>
           </motion.div>
         </motion.div>
@@ -100,9 +100,9 @@ const TeamValues = () => {
               </div>
             </div>
             <div className="md:w-2/3 text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-2">Cancel Anytime</h3>
+              <h3 className="text-2xl font-bold mb-2">Collaboration and Transparency</h3>
               <p className="text-muted-foreground mb-4">
-                We take ownership of every project and ensure each deliverable meets our internal quality standards before reaching the client.
+                Great results come from strong collaboration. We work closely as a team and keep clients informed at every stage so expectations stay aligned and outcomes remain predictable.
               </p>
             </div>
           </div>
