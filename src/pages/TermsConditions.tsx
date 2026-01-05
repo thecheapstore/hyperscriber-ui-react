@@ -27,7 +27,7 @@ const TermsConditions = () => {
           rel="canonical"
           href="https://calibreassociates.com/terms-conditions"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
       </Helmet>
 
       <Navbar />

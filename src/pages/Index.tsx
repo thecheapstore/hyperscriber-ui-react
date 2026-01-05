@@ -31,7 +31,7 @@ const Index = () => {
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
   />
   <link rel="canonical" href="https://calibreassociates.com/" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
 </Helmet>
       <Navbar />
       <main 

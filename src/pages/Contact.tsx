@@ -26,7 +26,7 @@ const Contact = () => {
     content="Contact Calibre Associates to discuss website development, web and app solutions, SEO, paid advertising, automation, and AI-powered growth systems. Let’s build scalable digital solutions for your business."
   />
   <link rel="canonical" href="https://www.calibreassociates.com/contact" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
 </Helmet>
       <Navbar />
       <main className="min-h-screen mt-16">
