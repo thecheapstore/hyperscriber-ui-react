@@ -1,21 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 const ContactForm = () => {
-  useEffect(() => {
-    // Load GoHighLevel embed script once
-    const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -23,27 +15,82 @@ const ContactForm = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="bg-white shadow-lg border border-gray-100 flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-xl"
     >
+      {/* Heading */}
       <h2 className="text-2xl font-semibold mb-6 tracking-tight">
-        Contact Us
+        Get in Touch
       </h2>
 
-      <div className="w-full">
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/Czb3FWDhPiNoTx1naNbW"
-          style={{
-            width: "100%",
-            minHeight: "800px",
-            border: "none",
-            borderRadius: "12px",
-          }}
-          id="inline-Czb3FWDhPiNoTx1naNbW"
-          data-layout='{"id":"INLINE"}'
-          data-trigger-type="alwaysShow"
-          data-activation-type="alwaysActivated"
-          data-deactivation-type="neverDeactivate"
-          data-form-id="Czb3FWDhPiNoTx1naNbW"
-          title="Calibre Associates Contact Form"
-        />
+      <p className="text-muted-foreground mb-8 leading-relaxed">
+        Have a project in mind or looking to streamline your marketing, development,
+        or automation systems? Reach out to us directly and our team will get back to you.
+      </p>
+
+      {/* Contact Details */}
+      <div className="space-y-6">
+        {/* Phone 1 */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <Phone className="h-5 w-5 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-medium">Phone</p>
+            <p className="text-muted-foreground">
+              +1 (716) 355-1231
+            </p>
+          </div>
+        </div>
+
+        {/* Phone 2 */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <Phone className="h-5 w-5 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-medium">Alternate Phone</p>
+            <p className="text-muted-foreground">
+              +91 9792848868
+            </p>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <Mail className="h-5 w-5 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-medium">Email</p>
+            <p className="text-muted-foreground">
+              info@calibreassociates.com
+            </p>
+          </div>
+        </div>
+
+        {/* Location 1 */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <MapPin className="h-5 w-5 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-medium">Location</p>
+            <p className="text-muted-foreground">
+              Buffalo, New York, USA
+            </p>
+          </div>
+        </div>
+
+        {/* Location 2 */}
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <MapPin className="h-5 w-5 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-medium">Global Operations</p>
+            <p className="text-muted-foreground">
+              India
+            </p>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
