@@ -3,7 +3,7 @@ import TeamStrengths from "@/components/our-team/TeamStrengths";
 import TeamMembers from "@/components/our-team/TeamMembers";
 import TeamValues from "@/components/our-team/TeamValues";
 
-const OurTeamPage = () => {
+const OurTeam = () => {
   return (
     <>
       <TeamHero />
@@ -14,4 +14,4 @@ const OurTeamPage = () => {
   );
 };
 
-export default OurTeamPage;
+export default OurTeam;
