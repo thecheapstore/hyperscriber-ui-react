@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/components/our-team/.gitiignore", "src/components/our-team/.pages.tsx"]
 }
