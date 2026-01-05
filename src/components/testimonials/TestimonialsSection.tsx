@@ -6,31 +6,35 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO at TechFlow',
+    name: 'Daniel Moore',
+    role: 'Founder & CEO, SaaS Startup',
     image: '/placeholder.svg',
-    content: 'ContentAI transformed our content strategy. Their blend of AI efficiency and human creativity has helped us consistently produce high-quality pieces that resonate with our audience.',
+    content:
+      'Calibre Associates rebuilt our website and application architecture with performance and scalability in mind. The result was a faster product, cleaner UX, and a system we can confidently scale without technical debt.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    role: 'Marketing Director at SaaSify',
+    name: 'Emily Carter',
+    role: 'Head of Growth, B2B SaaS',
     image: '/placeholder.svg',
-    content: 'Working with ContentAI has been a game-changer. We\'ve seen a 40% increase in organic traffic and our lead generation has never been stronger. Their team truly understands SaaS.',
+    content:
+      'Their lead generation and paid advertising strategy brought structure to our acquisition efforts. Campaigns were tightly aligned with our funnel, and the leads we received were far more qualified than before.',
     rating: 5,
   },
   {
-    name: 'Lisa Rodriguez',
-    role: 'Founder at DataSmart',
+    name: 'Rahul Verma',
+    role: 'Marketing Manager, Tech Company',
     image: '/placeholder.svg',
-    content: 'The LinkedIn ghostwriting service has positioned me as a thought leader in my industry. I\'m getting more connection requests and partnership opportunities than ever before.',
+    content:
+      'Calibre Associates helped us improve our SEO and social media presence with a clear organic strategy. Rankings improved steadily, engagement increased, and our brand visibility became far more consistent.',
     rating: 5,
   },
   {
-    name: 'David Wilson',
-    role: 'CTO at CloudScale',
+    name: 'Sophia Nguyen',
+    role: 'Product Owner',
     image: '/placeholder.svg',
-    content: 'Their content not only sounds great but actually drives results. Our blog posts are ranking on page one for several competitive keywords, bringing us qualified leads every day.',
+    content:
+      'From UI UX design to content and video assets, the team delivered work that actually supported the product experience. Everything felt intentional, user focused, and aligned with our business goals.',
     rating: 5,
   },
 ];

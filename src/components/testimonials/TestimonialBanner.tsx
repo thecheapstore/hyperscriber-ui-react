@@ -14,13 +14,13 @@ const TestimonialBanner = () => {
         >
           <Quote className="text-blue-600 h-10 w-10 flex-shrink-0 opacity-80" />
           <div>
-            <p className="text-xl md:text-2xl text-slate-700 font-medium mb-3 leading-relaxed">
-              "As a solo SaaS founder, things get chaotic—HyperScriber 10xed my productivity by taking content off my plate so I could focus on building my product and growing my business."
-            </p>
-            <p className="text-sm md:text-base text-slate-600">
-              <span className="font-semibold">David F.</span> • <span className="text-blue-600">CEO</span>
-            </p>
-          </div>
+  <p className="text-xl md:text-2xl text-slate-700 font-medium mb-3 leading-relaxed">
+    "As a solo SaaS founder, managing product development while handling marketing and operations was overwhelming. Calibre Associates stepped in with structured systems and execution support, allowing me to focus on building the product and growing the business."
+  </p>
+  <p className="text-sm md:text-base text-slate-600">
+    <span className="font-semibold">David F.</span> • <span className="text-blue-600">Founder & CEO</span>
+  </p>
+</div>
           <Quote className="text-blue-600 h-10 w-10 flex-shrink-0 rotate-180 opacity-80" />
         </motion.div>
       </div>
