@@ -38,16 +38,18 @@ const Navbar = () => {
       style={{ top: 'var(--banner-height, 0px)' }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link 
-          to="/" 
-          className="flex items-center z-30 gap-2"
-          onClick={() => window.scrollTo(0, 0)}
-        >
-          <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="Calibre Associates Logo" className="h-20 w-10 object-contain" />
-          <span className="text-xl md:text-2xl font-bold text-black">
-            Clibre Associates
-          </span>
-        </Link>
+  <Link 
+    to="/" 
+    className="flex items-center z-30"
+    onClick={() => window.scrollTo(0, 0)}
+  >
+    <img
+      src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png"
+      alt="Calibre Associates Logo"
+      className="w-28 h-auto object-contain"
+    />
+  </Link>
+</div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
