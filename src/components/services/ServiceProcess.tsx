@@ -81,14 +81,14 @@ const ServiceProcess = () => {
   };
   
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="process" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our AI + Human Workflow
+            How We Build, Optimize, and Scale Growth
           </h2>
           <p className="text-lg text-muted-foreground">
-            Simple Process, Expert Minds
+            Strategy First. Execution Always.
           </p>
         </div>
         

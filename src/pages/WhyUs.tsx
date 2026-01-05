@@ -66,12 +66,18 @@ const WhyUs = () => {
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-white">
           <Helmet>
-            <meta charSet="utf-8" />
-            <title>HyperScriber | Why Us</title>
-            <meta name="description" content="Our streamlined AI + human workflow delivers exceptional content that drives real business results." />
-            <link rel="canonical" href="https://hyperscriber.com/why-us" />
-            <link rel="icon" href="/favicon.ico" />
-          </Helmet>
+  <meta charSet="utf-8" />
+  <title>Why Choose Calibre Associates | Digital Growth & Automation Experts</title>
+  <meta
+    name="description"
+    content="Discover why businesses choose Calibre Associates for lead generation, SEO, development, automation, and AI-driven digital growth solutions built for scale."
+  />
+  <link
+    rel="canonical"
+    href="https://calibreassociates.com/why-us"
+  />
+  <link rel="icon" href="/favicon.ico" />
+</Helmet>
           <div className="container mx-auto px-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -96,7 +102,7 @@ const WhyUs = () => {
                 className="flex justify-center mt-12"
               >
                 <a 
-                  href="#workflow" 
+                  href="#process" 
                   className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
                 >
                   <span className="mb-2">Explore our execution process</span>
@@ -130,46 +136,46 @@ const WhyUs = () => {
 
       {/* PROJECT 1 */}
       <ProjectCard
-        image="/projects/optipharm.jpg"
-        title="OptiPharm"
-        description="Healthcare-focused website built for speed, SEO readiness, and lead conversion to support long-term digital growth."
-        link="https://optipharm.com"
+        image="https://i.ibb.co/B5RR4DC4/Screenshot-2026-01-05-145111.png"
+        title="716 Lawn Care"
+        description="Local service website focused on lead generation, mobile usability, and service clarity for a Buffalo-based lawn care company"
+        link="https://716lawncare.com/"
         delay={0}
       />
 
       {/* PROJECT 2 */}
       <ProjectCard
-        image="/projects/calibre.jpg"
-        title="Calibre Associates"
-        description="Complete digital ecosystem including website development, SEO, social media marketing, automation, and conversion-focused UX."
-        link="https://calibreassociates.com"
+        image="https://i.ibb.co/0jBhkCDd/Screenshot-2026-01-05-145333.png"
+        title="RR Landscaping & Tree Services"
+        description="A service-driven local business website tailored for full-spectrum property enhancement, combining professional landscaping, tree services, and outdoor maintenance with clear lead capture and user-centred navigation."
+        link="https://rrlandscapingandtreeservices.com/"
         delay={0.05}
       />
 
       {/* PROJECT 3 */}
       <ProjectCard
-        image="/projects/taggingmy.jpg"
-        title="TaggingMy"
-        description="Lead generation and marketing platform designed to attract, nurture, and convert inbound traffic at scale."
-        link="https://taggingmy.com"
+        image="https://i.ibb.co/1ffMH6h5/Screenshot-2026-01-05-145536.png"
+        title="Personal Brand Portfolio (Actor & Model)"
+        description="A showcase website built to present the professional identity, work, and online presence of actor/model Manasvi Pathak, featuring standout visuals, clear navigation, and contact pathways for booking and networking."
+        link="https://manasvipathak.netlify.app/"
         delay={0.1}
       />
 
       {/* PROJECT 4 */}
       <ProjectCard
-        image="/projects/automation.jpg"
-        title="AI & Automation Systems"
-        description="Custom automation and AI workflows built to eliminate manual work and streamline business operations."
-        link="https://calibreassociates.com"
+        image="https://i.ibb.co/fY0yP3Yy/Screenshot-2026-01-05-145747.png"
+        title="Flo Mattress - Ecommerce Website"
+        description="A direct-to-consumer ecommerce site for mattress and sleep essentials in India, designed to balance trust, choice, and accessibility. The interface emphasizes clear product categories, strong value propositions, and seamless purchase incentives that support decision-making for first-time online mattress buyers."
+        link="https://www.flomattress.com/"
         delay={0.15}
       />
 
       {/* PROJECT 5 */}
       <ProjectCard
-        image="/projects/saas-dashboard.jpg"
-        title="SaaS Dashboard Platform"
-        description="Scalable SaaS dashboard with performance optimization, clean UI UX, and secure backend architecture."
-        link="#"
+        image="https://i.ibb.co/rG814kr8/Screenshot-2026-01-05-145941.png"
+        title="Tulsionline - Premium Fashion Ecommerce Website"
+        description="Tulsionline is a curated Indian online boutique offering a blend of designer apparel, artisanal clothing, and elevated lifestyle products. The interface is designed to balance rich textile storytelling with a high-performance ecommerce experience."
+        link="https://www.tulsionline.in/"
         delay={0.2}
       />
 
