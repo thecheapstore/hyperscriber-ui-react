@@ -31,9 +31,9 @@ const teamMembers = [
     link: "https://www.linkedin.com/in/niro-randimal/",
   },
   {
-    name: "Jitpaul",
-    role: "UI/UX Designer & Video Editor",
-    link: "#",
+    name: "Jitpaul Baishya",
+    role: "UI/UX Designer & Graphic Designer",
+    link: "https://www.linkedin.com/in/jitpaul-baishya-a05241381/",
   },
   {
     name: "Abhishek",

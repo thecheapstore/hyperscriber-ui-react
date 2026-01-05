@@ -5,213 +5,215 @@ import React from 'react';
 
 export const services: Service[] = [
   {
-    id: "linkedin",
-    icon: React.createElement(MessageSquare, { className: "h-8 w-8" }),
-    title: 'LinkedIn Ghostwriting for Founders',
-    description: 'Position yourself as a thought leader and attract qualified leads.',
-    details: [
-      'Custom posts that match your tone and expertise',
-      'Strategic content calendar aligned with your goals',
-      'Audience engagement to grow your network',
-      'Performance analytics and optimization recommendations',
-    ],
-    benefits: [
-      'Increased audience engagement and network growth',
-      'Consistent brand voice that resonates with your target audience',
-      'Strategic content that addresses your audience\'s pain points',
-      'Thought leadership to position you as an industry expert'
-    ],
-    process: [
-      {
-        title: "AI Content Foundation",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-blue-500" }),
-        description: "We analyze trending topics and your audience's preferences to create initial content outlines."
-      },
-      {
-        title: "Expert Human Refinement",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-blue-500" }),
-        description: "Skilled content specialists refine the AI outputs, adding industry expertise and creative elements."
-      },
-      {
-        title: "Strategic Publishing",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-blue-500" }),
-        description: "Content is published at optimal times for maximum engagement based on analytics."
-      },
-      {
-        title: "Performance Analysis",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-blue-500" }),
-        description: "Comprehensive metrics tracking engagement, reach, and conversions to refine future content."
-      }
-    ],
-    caseStudy: {
-      client: "SaaS Analytics Platform",
-      results: [
-        "250% increase in LinkedIn engagement",
-        "35% growth in qualified leads from LinkedIn",
-        "15 new partnership opportunities"
-      ]
-    },
-    color: 'from-blue-500 to-indigo-600',
-    bgLight: 'bg-blue-50'
-  },
-  {
-    id: "blog",
-    icon: React.createElement(FileText, { className: "h-8 w-8" }),
-    title: 'SEO Blog Articles',
-    description: 'Boost rankings and turn traffic into customers with conversion-focused blog content.',
-    details: [
-      'In-depth keyword & competitor research',
-      '1,500+ word SEO-optimized articles',
-      'Smart internal linking & on-page SEO',
-      'Regular performance reporting'
-    ],
-    benefits: [
-      'Higher search engine rankings for targeted keywords',
-      'Increased organic traffic to your website',
-      'Established authority in your industry',
-      'Long-term content assets that continue to drive traffic'
-    ],
-    process: [
-      {
-        title: "Keyword Research",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-purple-500" }),
-        description: "Strategic identification of high-value keywords with reasonable competition levels."
-      },
-      {
-        title: "AI-Assisted Drafting",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-purple-500" }),
-        description: "Our AI creates comprehensive, SEO-friendly article drafts based on research and keywords."
-      },
-      {
-        title: "Expert Editing",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-purple-500" }),
-        description: "Content specialists refine and enhance the articles with industry expertise and engaging elements."
-      },
-      {
-        title: "Optimization & Analysis",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-purple-500" }),
-        description: "Continuous monitoring of article performance with data-driven improvements."
-      }
-    ],
-    caseStudy: {
-      client: "B2B SaaS Platform",
-      results: [
-        "First page rankings for 12 target keywords",
-        "127% increase in organic traffic",
-        "35% decrease in cost per lead"
-      ]
-    },
-    color: 'from-purple-500 to-indigo-600',
-    bgLight: 'bg-purple-50'
-  },
-  {
-    id: "website",
+    id: "development",
     icon: React.createElement(Laptop, { className: "h-8 w-8" }),
-    title: 'Website & Ad Copywriting',
-    description: 'Convert more with persuasive website and ad copy that communicates your value proposition.',
+    title: "Website, App & Software Development",
+    description: "Build fast, scalable, and conversion focused digital products designed for long term business growth.",
     details: [
-      'Strategic website content audit and strategy',
-      'Conversion-focused landing page copy',
-      'UX writing for improved user experience',
-      'SEO optimization for key pages',
-      'A/B testing recommendations for continuous improvement',
-      'Targeted ad copywriting for digital platforms', 
-      'Ad copy optimized for different platforms (Google, Meta, LinkedIn)' 
+      "Custom website design and development",
+      "Web application and SaaS platform development",
+      "Mobile application development",
+      "Custom software solutions for business workflows",
+      "UI UX focused architecture and performance optimization",
+      "SEO ready and scalable development practices"
     ],
     benefits: [
-      'Higher conversion rates on landing pages',
-      'Clearer communication of your unique value proposition',
-      'Improved user experience through strategic copywriting',
-      'Consistent brand voice across your digital presence',
-      'Increased ad engagement and click-through rates' 
+      "High performance websites and applications",
+      "Improved user experience and engagement",
+      "Scalable systems that grow with your business",
+      "Clean, maintainable, and future proof codebase",
+      "Stronger brand credibility through premium design"
     ],
     process: [
       {
-        title: "Website Analysis",
+        title: "Requirement & UX Planning",
         icon: React.createElement(Target, { className: "h-6 w-6 text-teal-500" }),
-        description: "Comprehensive audit of current website content and conversion performance."
+        description: "We understand your business goals and design a clear structure focused on usability and conversions."
       },
       {
-        title: "AI-Powered Drafting",
+        title: "Design & Architecture",
         icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-teal-500" }),
-        description: "AI creates conversion-focused copy drafts based on your value proposition and target audience."
+        description: "UI UX design and system architecture built for speed, scalability, and long term growth."
       },
       {
-        title: "Conversion Optimization",
+        title: "Development & Testing",
         icon: React.createElement(PenTool, { className: "h-6 w-6 text-teal-500" }),
-        description: "Expert copywriters refine messaging to maximize clarity and persuasiveness."
+        description: "Full stack development with thorough testing to ensure performance and reliability."
       },
       {
-        title: "A/B Testing & Refinement",
+        title: "Launch & Optimization",
         icon: React.createElement(BarChart, { className: "h-6 w-6 text-teal-500" }),
-        description: "Data-driven testing to continuously improve conversion rates and ad performance."
+        description: "Deployment, performance optimization, and ongoing improvements post launch."
       }
     ],
     caseStudy: {
-      client: "SaaS HR Platform",
+      client: "Growth Focused SaaS Company",
       results: [
-        "89% increase in demo requests",
-        "42% improvement in page conversion rate",
-        "25% reduction in bounce rate",
-        "35% increase in ad click-through rates" 
+        "65% improvement in website performance",
+        "48% increase in conversion rate",
+        "Scalable platform supporting rapid user growth"
       ]
     },
-    color: 'from-teal-500 to-blue-500',
-    bgLight: 'bg-teal-50'
+    color: "from-teal-500 to-blue-500",
+    bgLight: "bg-teal-50"
   },
+
   {
-    id: "email-marketing",
-    icon: React.createElement(Mail, { className: "h-8 w-8" }),
-    title: 'Email Marketing Solutions',
-    description: 'Drive engagement and conversions with comprehensive email marketing services.',
+    id: "lead-generation",
+    icon: React.createElement(MessageSquare, { className: "h-8 w-8" }),
+    title: "Lead Generation & Paid Advertising",
+    description: "Generate consistent, high quality leads through ROI focused paid advertising and funnel strategies.",
     details: [
-      'Strategic newsletter campaigns',
-      'Custom email template design',
-      'Automated workflow setup',
-      'A/B testing strategies',
-      'Email sequence creation',
-      'List segmentation & management',
-      'Performance analytics & optimization'
+      "Google Ads, Meta Ads, and LinkedIn Ads management",
+      "Audience research and targeting strategy",
+      "Ad creatives and landing page optimization",
+      "Lead capture and conversion tracking setup",
+      "A/B testing and performance optimization"
     ],
     benefits: [
-      'Higher customer engagement and retention',
-      'Improved lead nurturing and conversion rates',
-      'Consistent brand messaging across email campaigns',
-      'Data-driven optimization of email performance',
-      'Automated customer journey touchpoints'
+      "Consistent flow of qualified leads",
+      "Lower cost per lead and higher ROI",
+      "Clear visibility into campaign performance",
+      "Scalable advertising systems for growth",
+      "Improved conversion rates across funnels"
     ],
     process: [
       {
-        title: "Strategy Development",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-sky-500" }),
-        description: "Create comprehensive email marketing strategy aligned with business goals."
+        title: "Audience & Funnel Strategy",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-blue-500" }),
+        description: "We define target audiences, offers, and funnel structure to maximize conversions."
       },
       {
-        title: "Content Creation",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-sky-500" }),
-        description: "Design and write engaging email content and templates."
+        title: "Creative & Campaign Setup",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-blue-500" }),
+        description: "High converting ad creatives and landing pages built for performance."
       },
       {
-        title: "Automation Setup",
-        icon: React.createElement(Layers, { className: "h-6 w-6 text-sky-500" }),
-        description: "Implement automated workflows and triggered email sequences."
+        title: "Launch & Optimization",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-blue-500" }),
+        description: "Continuous optimization based on real time campaign data."
       },
       {
-        title: "Performance Optimization",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-sky-500" }),
-        description: "Continuous testing and refinement based on analytics data."
+        title: "Tracking & Scaling",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-blue-500" }),
+        description: "Advanced tracking and scaling strategies to grow profitable campaigns."
       }
     ],
     caseStudy: {
-      client: "B2B SaaS Platform",
+      client: "B2B Service Business",
       results: [
-        "45% average open rate (industry avg: 21%)",
-        "15% click-through rate (industry avg: 2.5%)",
-        "32% increase in customer retention",
-        "28% boost in recurring revenue from email campaigns"
+        "3.2x return on ad spend",
+        "52% reduction in cost per lead",
+        "Consistent inbound leads within 30 days"
       ]
     },
-    color: 'from-blue-500 to-sky-400',
-    bgLight: 'bg-sky-50'
+    color: "from-blue-500 to-indigo-600",
+    bgLight: "bg-blue-50"
+  },
+
+  {
+    id: "seo-social",
+    icon: React.createElement(FileText, { className: "h-8 w-8" }),
+    title: "SEO & Social Media Marketing",
+    description: "Grow organic traffic, brand authority, and inbound leads through SEO and social media management.",
+    details: [
+      "On page and off page SEO optimization",
+      "Technical SEO and content optimization",
+      "Social media content planning and posting",
+      "Google My Business and online reputation management",
+      "Content distribution across social platforms"
+    ],
+    benefits: [
+      "Higher search engine rankings",
+      "Consistent organic traffic growth",
+      "Improved brand visibility and trust",
+      "Inbound leads from search and social",
+      "Long term digital asset creation"
+    ],
+    process: [
+      {
+        title: "SEO & Content Strategy",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-purple-500" }),
+        description: "Keyword research, competitor analysis, and content planning."
+      },
+      {
+        title: "Optimization & Publishing",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-purple-500" }),
+        description: "SEO optimized content and consistent social media publishing."
+      },
+      {
+        title: "Authority Building",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-purple-500" }),
+        description: "Backlinks, engagement strategies, and reputation management."
+      },
+      {
+        title: "Performance Tracking",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-purple-500" }),
+        description: "Continuous monitoring and optimization for sustained growth."
+      }
+    ],
+    caseStudy: {
+      client: "Local & SaaS Brand",
+      results: [
+        "Top 3 rankings for high intent keywords",
+        "140% increase in organic traffic",
+        "Consistent inbound leads month over month"
+      ]
+    },
+    color: "from-purple-500 to-indigo-600",
+    bgLight: "bg-purple-50"
+  },
+
+  {
+    id: "automation-ai",
+    icon: React.createElement(Layers, { className: "h-8 w-8" }),
+    title: "Automation & AI Solutions",
+    description: "Streamline operations and scale faster with custom automation and AI powered business systems.",
+    details: [
+      "CRM workflow automation",
+      "AI powered lead qualification systems",
+      "Sales and marketing automation",
+      "Custom integrations between tools",
+      "Operational process automation"
+    ],
+    benefits: [
+      "Reduced manual work and errors",
+      "Faster response times and efficiency",
+      "Scalable business operations",
+      "Improved data accuracy and reporting",
+      "More focus on revenue generating activities"
+    ],
+    process: [
+      {
+        title: "Process Mapping",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-sky-500" }),
+        description: "Identify bottlenecks and opportunities for automation."
+      },
+      {
+        title: "System Design",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-sky-500" }),
+        description: "Design automation workflows and AI logic tailored to your business."
+      },
+      {
+        title: "Implementation",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-sky-500" }),
+        description: "Build and deploy automation systems across your tools."
+      },
+      {
+        title: "Optimization & Scaling",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-sky-500" }),
+        description: "Continuous improvements to maximize efficiency and ROI."
+      }
+    ],
+    caseStudy: {
+      client: "Service Based Business",
+      results: [
+        "60% reduction in manual tasks",
+        "2x faster lead response time",
+        "Improved operational efficiency across teams"
+      ]
+    },
+    color: "from-blue-500 to-sky-400",
+    bgLight: "bg-sky-50"
   }
 ];

@@ -7,43 +7,58 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'LinkedIn Ghostwriting For Founders',
-    description: 'Build thought leadership and generate leads with professionally crafted LinkedIn content.',
-    icon: <MessageSquare className="h-8 w-8" />,
-    period: '/month',
-    features: ['Daily posts', 'Audience growth', 'Performance metrics', 'Strategic planning'],
-    color: 'from-blue-500 to-indigo-600',
-    bgLight: 'bg-blue-50'
-  },
-  {
-    title: 'SEO Blog Articles',
-    description: 'Rank higher and drive more organic traffic with SEO-optimized blog content.',
-    icon: <FileText className="h-8 w-8" />,
-    period: '/month',
-    features: ['Monthly articles', 'Keyword research', 'Competitive analysis', 'Internal linking'],
-    color: 'from-purple-500 to-indigo-600',
-    bgLight: 'bg-purple-50'
-  },
-  {
-    title: 'Website & Ad Copywriting', 
-    description: 'Convert more with persuasive website and ad copy that clearly communicates your value.',
+    title: 'Website, App & Software Development',
+    description: 'Design and develop scalable websites, applications, and software built for performance and long-term growth.',
     icon: <Laptop className="h-8 w-8" />,
     period: '/project',
     features: [
-      'Conversion-Focused Copy', 
-      'Landing Page Copy', 
-      'SEO Optimized Pages', 
-      'Brand Voice Consistency',
+      'Website & web app development',
+      'UI UX focused design',
+      'Custom software solutions',
+      'Performance & SEO optimized builds'
     ],
     color: 'from-teal-500 to-blue-500',
     bgLight: 'bg-teal-50'
   },
   {
-    title: 'Email Marketing Solutions',
-    description: 'Comprehensive email marketing services to nurture leads, drive conversions, and boost customer retention.',
+    title: 'Lead Generation & Paid Advertising',
+    description: 'Drive consistent, high-intent leads through data-driven paid advertising across Google, Meta, and LinkedIn.',
+    icon: <MessageSquare className="h-8 w-8" />,
+    period: '/month',
+    features: [
+      'Google, Meta & LinkedIn Ads',
+      'Audience targeting & retargeting',
+      'Ad creatives & funnel strategy',
+      'Conversion tracking & reporting'
+    ],
+    color: 'from-blue-500 to-indigo-600',
+    bgLight: 'bg-blue-50'
+  },
+  {
+    title: 'SEO & Social Media Marketing',
+    description: 'Improve visibility, rankings, and brand authority with organic SEO and consistent social media growth.',
+    icon: <FileText className="h-8 w-8" />,
+    period: '/month',
+    features: [
+      'On-page & off-page SEO',
+      'Content & keyword strategy',
+      'Social media management',
+      'Online reputation management'
+    ],
+    color: 'from-purple-500 to-indigo-600',
+    bgLight: 'bg-purple-50'
+  },
+  {
+    title: 'Automation & AI Solutions',
+    description: 'Streamline operations and eliminate manual work with custom automation and AI-powered workflows.',
     icon: <Mail className="h-8 w-8" />,
     period: '/month',
-    features: ['Strategic newsletters', 'Email templates', 'Automation setup', 'Performance analytics'],
+    features: [
+      'CRM & workflow automation',
+      'Lead capture & nurturing systems',
+      'AI integrations & process optimization',
+      'Scalable business systems'
+    ],
     color: 'from-blue-500 to-sky-400',
     bgLight: 'bg-sky-50'
   }
@@ -76,13 +91,13 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600">
-            OUR SERVICES
+            OUR CORE SERVICES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Content Solutions for Every SaaS Need
+            Growth Driven Digital Services Built to Scale Your Business
           </h2>
           <p className="text-muted-foreground text-lg">
-            We blend AI efficiency with human creativity to deliver content that connects with your audience and drives business results.
+            We help businesses grow through lead generation, paid advertising, SEO, social media marketing, website and application development, content creation, UI UX design, and AI powered automation systems that improve conversions and streamline operations.
           </p>
         </div>
         

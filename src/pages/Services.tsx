@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
@@ -23,18 +22,27 @@ const Services = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>HyperScriber | Services</title>
-        <meta name="description" content="We combine AI efficiency with human creativity to deliver high-converting content that drives growth, engages audiences, and establishes thought leadership." />
-        <link rel="canonical" href="https://hyperscriber.com/services" />
+        <title>Digital Marketing, Development & Automation Services | Calibre Associates</title>
+        <meta
+          name="description"
+          content="Calibre Associates provides lead generation, paid advertising, SEO, social media marketing, website and application development, content creation, UI UX design, and AI powered automation solutions to help businesses grow sustainably."
+        />
+        <link
+          rel="canonical"
+          href="https://www.calibreassociates.com/services"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
+
       <Navbar />
+
       <main className="mt-16">
         <ServiceHero />
         <ServicesList />
         <ServiceFAQ />
         <CTASection />
       </main>
+
       <Footer />
     </motion.div>
   );
