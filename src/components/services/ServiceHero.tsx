@@ -61,10 +61,10 @@ const ServiceHero = () => {
           className="flex justify-center mt-12"
         >
           <a 
-            href="#development" 
+            href="#FAQ" 
             className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
           >
-            <span className="mb-2">See all services</span>
+            <span className="mb-2">Have Questions?</span>
             <ArrowDown className="animate-bounce" />
           </a>
         </motion.div>
