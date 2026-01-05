@@ -1,96 +1,73 @@
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Zap, TrendingUp, Award, Clock, BarChart2 } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Code } from "lucide-react";
-
-const benefits = [
+const strengths = [
   {
-    title: "Experienced Development Team",
-    description: "Our team consists of skilled web and app developers with real world experience building fast, secure, and scalable digital products.",
+    title: "Experienced Engineering Team",
+    description:
+      "Our developers build fast, secure, and scalable web applications using modern frameworks and best practices.",
   },
   {
-    title: "Design First Approach",
-    description: "We combine clean UI UX design with usability principles to ensure every product looks professional and converts users effectively.",
+    title: "Design-Led Thinking",
+    description:
+      "Every project starts with UX clarity — clean interfaces, intuitive flows, and conversion-focused layouts.",
   },
   {
     title: "Automation & Integrations",
-    description: "From CRM automation to API integrations, our team builds systems that eliminate manual work and improve operational efficiency.",
+    description:
+      "We design CRM workflows, API integrations, and automation systems that eliminate repetitive manual work.",
   },
   {
-    title: "Performance Focused Builds",
-    description: "Every website and web application is optimized for speed, SEO readiness, and long term scalability.",
+    title: "Performance & Scalability",
+    description:
+      "From code structure to infrastructure, everything is optimized for speed, SEO readiness, and long-term growth.",
   },
   {
     title: "Clear Communication",
-    description: "We believe in transparency, regular updates, and collaborative execution throughout the project lifecycle.",
+    description:
+      "You work directly with the execution team — transparent timelines, regular updates, and no guesswork.",
   },
   {
-    title: "Long Term Partnership",
-    description: "We work as an extension of your business, not just a vendor delivering one off projects.",
-  }
+    title: "Long-Term Partnership",
+    description:
+      "We act as a digital extension of your business, not a one-off service provider.",
+  },
 ];
 
-const PricingBenefits = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-  
+const TeamStrengths = () => {
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-            WHY CHOOSE US
+          <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold rounded-full bg-blue-50 text-blue-600">
+            WHY OUR TEAM
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Benefits of HyperScriber
+            What Sets Calibre Associates Apart
           </h2>
           <p className="text-lg text-muted-foreground">
-            We combine cutting-edge AI technology with human creativity to deliver exceptional content that drives real business results.
+            A combination of technical depth, design precision, and execution
+            discipline.
           </p>
         </div>
-        
-        <motion.div 
-          variants={containerVariants}
+
+        <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {benefits.map((benefit, index) => (
-            <motion.div 
-              key={index} 
-              variants={itemVariants}
-              className="hover-scale"
+          {strengths.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
             >
-              <Card className="h-full border-0 shadow-md rounded-xl overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="mb-4 p-3 rounded-full bg-blue-50">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </div>
+              <Card className="h-full border-0 shadow-md rounded-xl">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -101,4 +78,4 @@ const PricingBenefits = () => {
   );
 };
 
-export default PricingBenefits;
+export default TeamStrengths;
