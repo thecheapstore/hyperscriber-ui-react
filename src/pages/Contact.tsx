@@ -19,12 +19,15 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>HyperScriber | Contact Us</title>
-        <meta name="description" content="Have questions about our services or ready to transform your content strategy? We're here to help." />
-        <link rel="canonical" href="https://hyperscriber.com/contact" />
-        <link rel="icon" href="/favicon.ico" />
-      </Helmet>
+  <meta charSet="utf-8" />
+  <title>Contact Calibre Associates | Digital Marketing, Development & AI Solutions</title>
+  <meta
+    name="description"
+    content="Contact Calibre Associates to discuss website development, web and app solutions, SEO, paid advertising, automation, and AI-powered growth systems. Let’s build scalable digital solutions for your business."
+  />
+  <link rel="canonical" href="https://www.calibreassociates.com/contact" />
+  <link rel="icon" href="/favicon.ico" />
+</Helmet>
       <Navbar />
       <main className="min-h-screen mt-16">
         <ContactHero />

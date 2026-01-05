@@ -33,7 +33,7 @@ const ContactForm = () => {
             <Phone className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <p className="font-medium">Phone</p>
+            <p className="font-medium">North America Office</p>
             <p className="text-muted-foreground">
               +1 (716) 355-1231
             </p>
@@ -46,7 +46,7 @@ const ContactForm = () => {
             <Phone className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <p className="font-medium">Alternate Phone</p>
+            <p className="font-medium">India Office</p>
             <p className="text-muted-foreground">
               +91 9792848868
             </p>
@@ -72,7 +72,7 @@ const ContactForm = () => {
             <MapPin className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <p className="font-medium">Location</p>
+            <p className="font-medium">North America Operations</p>
             <p className="text-muted-foreground">
               Buffalo, New York, USA
             </p>
@@ -85,9 +85,9 @@ const ContactForm = () => {
             <MapPin className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <p className="font-medium">Global Operations</p>
+            <p className="font-medium">Head Office</p>
             <p className="text-muted-foreground">
-              India
+              Uttar Pradesh, India
             </p>
           </div>
         </div>
