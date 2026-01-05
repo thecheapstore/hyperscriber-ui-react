@@ -7,37 +7,37 @@ import { Button } from "@/components/ui/button";
 const teamMembers = [
   {
     name: "Abhijeet",
-    role: "Founder and Full Stack Web Developer",
+    role: "Full Stack Web Developer & Workflow Specialists",
     link: "#",
   },
   {
-    name: "Pawan",
-    role: "Frontend Developer and UI Engineer",
+    name: "Pawan Sharma",
+    role: "Marketing & Automation Specialists",
     link: "#",
   },
   {
     name: "Sargam",
-    role: "UI UX Designer",
+    role: "Software Developer & CRM Specialists",
     link: "#",
   },
   {
     name: "Pawan",
-    role: "Backend Developer and API Specialist",
+    role: "Full Stack Web Developer & DevOps Engineer",
     link: "#",
   },
   {
     name: "Nirosh",
-    role: "Automation and CRM Specialist",
+    role: "Software Engineer & UI/UX Designer",
     link: "#",
   },
   {
     name: "Jitpaul",
-    role: "QA Engineer and Performance Analyst",
+    role: "UI/UX Designer & Video Editor",
     link: "#",
   },
   {
     name: "Abhishek",
-    role: "Digital Strategy and Growth Consultant",
+    role: "Wordpress & Shopify Developer",
     link: "#",
   },
 ];

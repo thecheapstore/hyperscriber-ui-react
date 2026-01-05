@@ -53,7 +53,7 @@ const TeamHero = () => {
           className="flex justify-center"
         >
           <a
-            href="#team-members"
+            href="#TeamMembers"
             className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition"
           >
             <span className="mb-2">Meet our team</span>
