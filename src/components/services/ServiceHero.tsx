@@ -61,7 +61,7 @@ const ServiceHero = () => {
           className="flex justify-center mt-12"
         >
           <a 
-            href="#services" 
+            href="#development" 
             className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
           >
             <span className="mb-2">See all services</span>
