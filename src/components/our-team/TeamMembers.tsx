@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 
 const teamMembers = [
   {
-    name: "Abhijeet",
+    name: "Abhijeet Jain",
     role: "Full Stack Web Developer & Workflow Specialists",
-    link: "#",
+    link: "https://www.linkedin.com/in/abhijeetjain231/",
   },
   {
     name: "Pawan Sharma",
@@ -16,9 +16,9 @@ const teamMembers = [
     link: "#",
   },
   {
-    name: "Sargam",
+    name: "Sargam Rastogi",
     role: "Software Developer & CRM Specialists",
-    link: "#",
+    link: "https://www.linkedin.com/in/sargam-rastogi15/",
   },
   {
     name: "Pawan",
@@ -26,9 +26,9 @@ const teamMembers = [
     link: "#",
   },
   {
-    name: "Nirosh",
+    name: "Nirosh Hewabahithage",
     role: "Software Engineer & UI/UX Designer",
-    link: "#",
+    link: "https://www.linkedin.com/in/niro-randimal/",
   },
   {
     name: "Jitpaul",
@@ -66,7 +66,7 @@ const itemVariants = {
 
 const TeamMembers = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="team-members" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
