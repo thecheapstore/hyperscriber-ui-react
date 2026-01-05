@@ -6,50 +6,54 @@ import { Check } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
-    description: 'We begin with a deep dive into your business, audience, and goals to create a tailored content strategy that aligns with your objectives.',
+    title: 'Discovery & Business Alignment',
+    description:
+      'We start by understanding your business model, growth goals, target audience, and current digital presence to define a clear execution roadmap.',
     details: [
-      'Comprehensive business analysis',
-      'Competitor content research',
-      'Target audience profiling',
-      'Content gap analysis',
-      'Strategic content planning'
+      'Business goals and revenue model analysis',
+      'Ideal customer and buyer journey mapping',
+      'Competitor and market research',
+      'Audit of existing marketing, content, and systems',
+      'Clear service and growth alignment strategy'
     ]
   },
   {
     number: '02',
-    title: 'AI-Enhanced Creation',
-    description: 'Our team leverages advanced AI tools to produce first drafts, which are then refined by expert human writers to ensure quality and brand voice consistency.',
+    title: 'Strategy, Systems & Architecture',
+    description:
+      'Based on insights, we design a scalable strategy that combines marketing, content, development, and automation to support long-term growth.',
     details: [
-      'AI-generated content foundation',
-      'Human expert refinement',
-      'Brand voice calibration',
-      'Industry-specific knowledge integration',
-      'Fact-checking and verification'
+      'Lead generation and paid advertising strategy',
+      'SEO and social media growth planning',
+      'Website, app, or software architecture planning',
+      'Automation and AI workflow mapping',
+      'Content and UX strategy definition'
     ]
   },
   {
     number: '03',
-    title: 'Review & Optimization',
-    description: 'We collaborate with you to review content, implement feedback, and optimize for performance across all intended distribution channels.',
+    title: 'Execution & Implementation',
+    description:
+      'Our team executes across development, marketing, content, and automation with a focus on performance, conversions, and scalability.',
     details: [
-      'Collaborative review process',
-      'Feedback integration',
-      'SEO optimization',
-      'Channel-specific formatting',
-      'Conversion optimization'
+      'Website, app, or software development',
+      'SEO, paid ads, and social media execution',
+      'Content creation including video-first marketing',
+      'UI UX design and optimization',
+      'Automation and AI system implementation'
     ]
   },
   {
     number: '04',
-    title: 'Publish & Measure',
-    description: 'After publishing, we track performance metrics and provide detailed analytics to continuously improve your content strategy and ROI.',
+    title: 'Optimization, Reporting & Scale',
+    description:
+      'We track performance, refine strategies, and continuously optimize systems to improve ROI, efficiency, and business growth.',
     details: [
-      'Publishing support',
-      'Performance tracking',
-      'Engagement analytics',
-      'Conversion reporting',
-      'Continuous strategy refinement'
+      'Performance tracking and analytics',
+      'Conversion rate and funnel optimization',
+      'SEO, ads, and content performance reporting',
+      'Automation efficiency improvements',
+      'Ongoing optimization and scaling support'
     ]
   }
 ];
