@@ -10,10 +10,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto pt-20 pb-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Company Info with improved typography and spacing */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-1">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="mb-6">
+               <div className="w-24 h-24">
               <div className="flex items-center gap-3">
-                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
+                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="Logo" className="h-10 w-10 object-contain" />
+              </div>
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
