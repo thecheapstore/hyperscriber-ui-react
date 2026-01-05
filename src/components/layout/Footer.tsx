@@ -10,38 +10,45 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto pt-20 pb-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Company Info with improved typography and spacing */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <div className="mb-6">
-               <div className="w-24 h-24">
-              <div className="flex items-center gap-3">
-                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="Logo" className="h-10 w-10 object-contain" />
-              </div>
-              </div>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-              We design and build scalable digital systems including high performance websites, automation workflows, and CRM integrations that help businesses operate efficiently and grow sustainably.
-            </p>
-            <div className="flex items-center space-x-4 mb-6">
-              <a 
-                href="https://www.linkedin.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a 
-                href="https://x.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-            </div>
-          </div>
+<div className="col-span-1 md:col-span-2 lg:col-span-1">
+  
+  {/* Logo */}
+  <div className="mb-4 flex items-start">
+    <img
+      src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png"
+      alt="Calibre Associates Logo"
+      className="w-24 h-auto object-contain"
+    />
+  </div>
+
+  {/* Description */}
+  <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
+    We design and build scalable digital systems including high performance websites, automation workflows, and CRM integrations that help businesses operate efficiently and grow sustainably.
+  </p>
+
+  {/* Social Icons */}
+  <div className="flex items-center space-x-4">
+    <a
+      href="https://www.linkedin.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-all duration-200 hover:scale-110"
+      aria-label="LinkedIn"
+    >
+      <Linkedin size={20} />
+    </a>
+
+    <a
+      href="https://x.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-all duration-200 hover:scale-110"
+      aria-label="Twitter"
+    >
+      <Twitter size={20} />
+    </a>
+  </div>
+</div>
 
           {/* Quick Links with improved hover states */}
           <div>
@@ -93,21 +100,89 @@ const Footer = () => {
           </div>
 
           {/* Contact with improved visual hierarchy and colors */}
-          <div>
-            <h3 className="text-sm font-medium uppercase tracking-wider mb-6 text-blue-700">Contact</h3>
-            <ul className="space-y-5">
-              <li className="flex items-start group">
-                <Mail className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
-                <a 
-                  href="mailto:info@hyperscriber.com" 
-                  className="text-muted-foreground hover:text-blue-600 transition-colors"
-                >
-                info@calibreassociates.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+<div>
+  <h3 className="text-sm font-medium uppercase tracking-wider mb-6 text-blue-700">
+    Contact
+  </h3>
+
+  <ul className="space-y-5">
+    
+    {/* North America Phone */}
+    <li className="flex items-start group">
+      <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+      <div>
+        <p className="text-sm font-medium text-slate-900">
+          North America Office
+        </p>
+        <a
+          href="tel:+17163551231"
+          className="text-muted-foreground hover:text-blue-600 transition-colors"
+        >
+          +1 (716) 355-1231
+        </a>
+      </div>
+    </li>
+
+    {/* India Phone */}
+    <li className="flex items-start group">
+      <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+      <div>
+        <p className="text-sm font-medium text-slate-900">
+          India Office
+        </p>
+        <a
+          href="tel:+919792848868"
+          className="text-muted-foreground hover:text-blue-600 transition-colors"
+        >
+          +91 97928 48868
+        </a>
+      </div>
+    </li>
+
+    {/* Email */}
+    <li className="flex items-start group">
+      <Mail className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+      <div>
+        <p className="text-sm font-medium text-slate-900">
+          Email
+        </p>
+        <a
+          href="mailto:info@calibreassociates.com"
+          className="text-muted-foreground hover:text-blue-600 transition-colors"
+        >
+          info@calibreassociates.com
+        </a>
+      </div>
+    </li>
+
+    {/* North America Operations */}
+    <li className="flex items-start group">
+      <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+      <div>
+        <p className="text-sm font-medium text-slate-900">
+          North America Operations
+        </p>
+        <p className="text-muted-foreground">
+          Buffalo, New York, USA
+        </p>
+      </div>
+    </li>
+
+    {/* Head Office */}
+    <li className="flex items-start group">
+      <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5 group-hover:scale-110 transition-transform" />
+      <div>
+        <p className="text-sm font-medium text-slate-900">
+          Head Office
+        </p>
+        <p className="text-muted-foreground">
+          Uttar Pradesh, India
+        </p>
+      </div>
+    </li>
+
+  </ul>
+</div>
 
         {/* Separator with gradient */}
         <div className="mt-14 mb-8">
