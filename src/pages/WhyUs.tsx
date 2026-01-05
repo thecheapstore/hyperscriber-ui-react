@@ -112,6 +112,11 @@ const WhyUs = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Workflow Section - Using our existing component */}
+        <div id="workflow">
+          <ServiceProcess />
+        </div>
         
         {/* Project Showcase Section */}
 <section className="py-20 bg-slate-50" id="projects">
