@@ -13,18 +13,15 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <div className="mb-6">
               <div className="flex items-center gap-3">
-                <img src="https://hyperscriber-assets-cdn.s3.eu-west-2.amazonaws.com/logo.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
-                <span className="text-xl md:text-2xl font-bold bg-clip-text">
-                  HyperScriber
-                </span>
+                <img src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png" alt="HyperScriber Logo" className="h-10 w-10 object-contain" />
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-              Email marketing solutions that drive engagement, nurture leads, and boost conversions for SaaS startups.
+              We design and build scalable digital systems including high performance websites, automation workflows, and CRM integrations that help businesses operate efficiently and grow sustainably.
             </p>
             <div className="flex items-center space-x-4 mb-6">
               <a 
-                href="https://www.linkedin.com/company/hyperscriber" 
+                href="https://www.linkedin.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
@@ -33,7 +30,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://x.com/hyperscriber" 
+                href="https://x.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 bg-blue-50 rounded-full text-blue-600 hover:bg-blue-100 transition-colors duration-200 hover:scale-110 transform"
@@ -52,7 +49,7 @@ const Footer = () => {
                 { name: 'Home', path: '/' },
                 { name: 'Services', path: '/services' },
                 { name: 'Why Us', path: '/why-us' },
-                { name: 'Pricing', path: '/pricing' },
+                { name: 'Our Team', path: '/our-team' },
                 { name: 'Contact', path: '/contact' },
                 { name: 'Terms & Conditions', path: '/terms-conditions' },
                 { name: 'Privacy Policy', path: '/privacy-policy' },
@@ -72,13 +69,13 @@ const Footer = () => {
 
           {/* All Services with improved visual style */}
           <div>
-            <h3 className="text-sm font-medium uppercase tracking-wider mb-6 text-blue-700">All Services</h3>
+            <h3 className="text-sm font-medium uppercase tracking-wider mb-6 text-blue-700">Our Services</h3>
             <ul className="space-y-4">
               {[
-                'LinkedIn Ghostwriting',
-                'SEO Blog Articles',
-                'Copywriting',
-                'Email Marketing'
+                'Website Design & Development',
+                'UI UX & Product Design',
+                'Performance & SEO Optimization',
+                'Social Media Marketing'
               ].map((service) => (
                 <li key={service}>
                   <Link 
@@ -103,7 +100,7 @@ const Footer = () => {
                   href="mailto:info@hyperscriber.com" 
                   className="text-muted-foreground hover:text-blue-600 transition-colors"
                 >
-                info@hyperscriber.com
+                info@calibreassociates.com
                 </a>
               </li>
             </ul>
@@ -117,10 +114,10 @@ const Footer = () => {
 
         {/* Copyright with improved styling */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} HyperScriber AI. All rights reserved.</p> 
+          <p>© {new Date().getFullYear()} Calibre Associates. All rights reserved.</p> 
           <p className="mt-2 md:mt-0">
-            Website by Lorenzo Filips <a href="https://github.com/Desk888" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-              (Desk888) <ExternalLink className="h-3 w-3" />
+            Website by Abhijeet Jain <a href="https://abhijeetjain.netlify.app/" className="hover:text-blue-600 transition-colors inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+              (AJ) <ExternalLink className="h-3 w-3" />
             </a>
           </p>
         </div>

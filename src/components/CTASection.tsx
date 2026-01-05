@@ -27,31 +27,31 @@ const CTASection = () => {
               GET IN TOUCH
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white max-w-3xl mx-auto leading-tight tracking-tight">
-              Ready to Transform Your SaaS Content Strategy?
+              Ready to Build Smarter Digital Systems for Growth?
             </h2>
             <p className="text-white/90 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
-              Book a free consultation today to discuss your business needs.
+              Book a free consultation to discuss your website, automation, or CRM needs and see how we can streamline your operations and improve conversions.
             </p>
             
             {/* Social proof elements - made responsive */}
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-10">
               <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                <span className="text-white text-sm sm:text-base font-medium">No commitment required</span>
+                <span className="text-white text-sm sm:text-base font-medium">No obligation or sales pressure</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                <span className="text-white text-sm sm:text-base font-medium">15-minute strategy session</span>
+                <span className="text-white text-sm sm:text-base font-medium">20 minute clarity call with our team</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 px-3 sm:px-4 py-2 rounded-full">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                <span className="text-white text-sm sm:text-base font-medium">Custom growth plan</span>
+                <span className="text-white text-sm sm:text-base font-medium">Actionable recommendations tailored to your business</span>
               </div>
             </div>
             
             {/* Made button responsive */}
             <div className="flex justify-center">
-              <a href="https://calendly.com/hyperscriber-info/free-introductory-call?preview_source=et_card&month=2025-04" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://calendly.com/calibreassociates/meeting" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto bg-white text-blue-700 hover:bg-blue-50 rounded-full px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base shadow-lg group transition-all duration-300 id-calendly-booking">
                   Book Your Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
