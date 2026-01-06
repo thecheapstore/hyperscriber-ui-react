@@ -36,9 +36,9 @@ const teamMembers = [
     link: "https://www.linkedin.com/in/jitpaul-baishya-a05241381/",
   },
   {
-    name: "Abhishek",
+    name: "Abhishek Patel",
     role: "Wordpress & Shopify Developer",
-    link: "#",
+    link: "https://www.linkedin.com/in/abhishek-patel-a01424212/",
   },
 ];
 
