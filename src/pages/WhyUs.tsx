@@ -7,6 +7,14 @@ import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import gemmenialImg from "../assets/images/projects/gemmenial.png";
+import hattiKappiImg from "../assets/images/projects/hatti-kappi.png";
+import kishoramImg from "../assets/images/projects/kishoram.png";
+import scentiraImg from "../assets/images/projects/scentita.png";
+import LawncareImg from "../assets/images/projects/716lawncare.png";
+import ManasviImg from "../assets/images/projects/manasvi.png";
+import rrlandscapingImg from "../assets/images/projects/rrlandscaping.png";
+import flowImg from "../assets/images/projects/flow.png";
+import tulsiImg from "../assets/images/projects/tulsi.png";
 
 const ProjectCard = ({
   image,
@@ -137,7 +145,7 @@ const WhyUs = () => {
 
       {/* PROJECT 1 */}
       <ProjectCard
-        image="https://i.ibb.co/B5RR4DC4/Screenshot-2026-01-05-145111.png"
+        image={LawncareImgImg}
         title="716 Lawn Care"
         description="Local service website designed to drive leads, improve mobile usability, and clearly present lawn care services for a Buffalo based residential business."
         link="https://716lawncare.com/"
@@ -146,7 +154,7 @@ const WhyUs = () => {
 
       {/* PROJECT 2 */}
       <ProjectCard
-        image="https://i.ibb.co/0jBhkCDd/Screenshot-2026-01-05-145333.png"
+        image={rrlandscapingImg}
         title="RR Landscaping & Tree Services"
         description="Service focused business website built to showcase landscaping and tree services, streamline navigation, and support consistent lead capture for local property clients."
         link="https://rrlandscapingandtreeservices.com/"
@@ -155,7 +163,7 @@ const WhyUs = () => {
 
       {/* PROJECT 3 */}
       <ProjectCard
-        image="https://i.ibb.co/1ffMH6h5/Screenshot-2026-01-05-145536.png"
+        image={ManasviImg}
         title="Personal Brand Portfolio (Actor & Model)"
         description="Personal brand portfolio website created to highlight professional identity, visual work, and contact pathways, supporting discovery, credibility, and direct booking opportunities online."
         link="https://manasvipathak.netlify.app/"
@@ -164,7 +172,7 @@ const WhyUs = () => {
 
       {/* PROJECT 4 */}
       <ProjectCard
-        image="https://i.ibb.co/fY0yP3Yy/Screenshot-2026-01-05-145747.png"
+        image={flowImg}
         title="Flo Mattress - Ecommerce Website"
         description="Direct to consumer ecommerce website structured to present sleep products clearly, build trust through value propositions, and enable purchasing for online shoppers."
         link="https://www.flomattress.com/"
@@ -173,7 +181,7 @@ const WhyUs = () => {
 
       {/* PROJECT 5 */}
       <ProjectCard
-        image="https://i.ibb.co/rG814kr8/Screenshot-2026-01-05-145941.png"
+        image={tulsiImg}
         title="Tulsionline - Premium Fashion Ecommerce Website"
         description="Premium ecommerce website built to showcase curated fashion collections, emphasize craftsmanship and brand identity, and provide a seamless shopping experience for customers."
         link="https://www.tulsionline.in/"
@@ -182,7 +190,7 @@ const WhyUs = () => {
 
       {/* PROJECT 6 */}
       <ProjectCard
-        image="https://i.ibb.co/tPKHgcvT/kishoram.png"
+        image={kishoramImg}
         title="Kirosham – Contemporary Women’s Fashion Ecommerce"
         description="Ecommerce website created to showcase a curated collection of stylish ready-to-wear clothing, highlight brand identity, and offer a seamless shopping experience for fashion conscious customers."
         link="https://kirosham.com/"
@@ -191,7 +199,7 @@ const WhyUs = () => {
 
       {/* PROJECT 7 */}
       <ProjectCard
-        image="https://i.ibb.co/r27nZ2Pm/scentita.png"
+        image={scentiraImg}
         title="Scentira – Luxury Fragrance Ecommerce Experience"
         description="Ecommerce website crafted to present a curated collection of premium perfumes and niche fragrances, emphasize authentic scent discovery, and offer a seamless shopping and sampling experience for fragrance lovers online."
         link="https://scentira.in/"
@@ -200,7 +208,7 @@ const WhyUs = () => {
 
       {/* PROJECT 8 */}
       <ProjectCard
-        image="https://i.ibb.co/67RXRRvq/hatti-kappi.png"
+        image={hattiKappiImg}
         title="Hatti Kaapi – Premium Coffee and Cafe Ecommerce"
         description="Ecommerce website developed to showcase artisanal coffee products, highlight brand heritage and cafe culture, and provide a streamlined online ordering experience for coffee enthusiasts."
         link="https://www.hattikaapi.com/"
