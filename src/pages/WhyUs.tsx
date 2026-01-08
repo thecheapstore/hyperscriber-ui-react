@@ -181,28 +181,37 @@ const WhyUs = () => {
 
       {/* PROJECT 6 */}
       <ProjectCard
-        image="/projects/marketing-funnel.jpg"
-        title="Lead Generation Funnel"
-        description="High-converting paid ads and landing page funnel designed for consistent inbound lead flow."
-        link="#"
+        image="https://i.ibb.co/tPKHgcvT/kishoram.png"
+        title="Kirosham – Contemporary Women’s Fashion Ecommerce"
+        description="Ecommerce website created to showcase a curated collection of stylish ready-to-wear clothing, highlight brand identity, and offer a seamless shopping experience for fashion conscious customers."
+        link="https://kirosham.com/"
         delay={0.25}
       />
 
       {/* PROJECT 7 */}
       <ProjectCard
-        image="/projects/gmb-seo.jpg"
-        title="Local SEO & GMB Growth"
-        description="Online reputation management and Google My Business optimization to drive organic local leads."
-        link="#"
+        image="https://i.ibb.co/r27nZ2Pm/scentita.png"
+        title="Scentira – Luxury Fragrance Ecommerce Experience"
+        description="Ecommerce website crafted to present a curated collection of premium perfumes and niche fragrances, emphasize authentic scent discovery, and offer a seamless shopping and sampling experience for fragrance lovers online."
+        link="https://scentira.in/"
         delay={0.3}
       />
 
       {/* PROJECT 8 */}
       <ProjectCard
-        image="/projects/uiux.jpg"
-        title="UI UX Product Design"
-        description="Modern UI UX design system created for web and mobile applications with conversion-focused layouts."
-        link="#"
+        image="https://i.ibb.co/67RXRRvq/hatti-kappi.png"
+        title="Hatti Kaapi – Premium Coffee and Cafe Ecommerce"
+        description="Ecommerce website developed to showcase artisanal coffee products, highlight brand heritage and cafe culture, and provide a streamlined online ordering experience for coffee enthusiasts."
+        link="https://www.hattikaapi.com/"
+        delay={0.35}
+      />
+
+      {/* PROJECT 9 */}
+      <ProjectCard
+        image="src/assets/images/projects/gemmenial.png"
+        title="Gemennial – Contemporary Jewellery Ecommerce Platform"
+        description="Ecommerce website built to showcase modern gold plated and anti-tarnish jewellery collections, highlight refined design details, and provide a seamless shopping experience for style conscious customers."
+        link="https://gemennial.com/"
         delay={0.35}
       />
 
