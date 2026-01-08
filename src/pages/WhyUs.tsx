@@ -6,6 +6,7 @@ import ServiceProcess from '@/components/services/ServiceProcess';
 import CTASection from '@/components/CTASection';
 import { ArrowDown } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import gemmenialImg from "../assets/images/projects/gemmenial.png";
 
 const ProjectCard = ({
   image,
@@ -208,7 +209,7 @@ const WhyUs = () => {
 
       {/* PROJECT 9 */}
       <ProjectCard
-        image="/src/assets/images/projects/gemmenial.png"
+        image={gemmenialImg}
         title="Gemennial – Contemporary Jewellery Ecommerce Platform"
         description="Ecommerce website built to showcase modern gold plated and anti-tarnish jewellery collections, highlight refined design details, and provide a seamless shopping experience for style conscious customers."
         link="https://gemennial.com/"
