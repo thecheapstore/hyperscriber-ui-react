@@ -145,7 +145,7 @@ const WhyUs = () => {
 
       {/* PROJECT 1 */}
       <ProjectCard
-        image={LawncareImgImg}
+        image={LawncareImg}
         title="716 Lawn Care"
         description="Local service website designed to drive leads, improve mobile usability, and clearly present lawn care services for a Buffalo based residential business."
         link="https://716lawncare.com/"
