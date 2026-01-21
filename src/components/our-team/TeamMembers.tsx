@@ -16,16 +16,6 @@ const teamMembers = [
     link: "#",
   },
   {
-    name: "Sargam Rastogi",
-    role: "Software Developer & CRM Specialists",
-    link: "https://www.linkedin.com/in/sargam-rastogi15/",
-  },
-  {
-    name: "Pawan Kumar",
-    role: "Full Stack Web Developer & DevOps Engineer",
-    link: "https://www.linkedin.com/in/pawan-kumar-devops/",
-  },
-  {
     name: "Nirosh Hewabahithage",
     role: "Software Engineer & UI/UX Designer",
     link: "https://www.linkedin.com/in/niro-randimal/",
