@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo(0, 0)}
         >
           <img
-            src="https://i.ibb.co/4ZVn3yZs/a8cb39ee-8dbf-47b5-b9fa-010b3a870e14-removebg-preview.png"
+            src={logo}
             alt="Calibre Associates Logo"
             className="w-28 h-auto object-contain"
           />
