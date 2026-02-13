@@ -21,6 +21,11 @@ const teamMembers = [
     link: "https://www.linkedin.com/in/niro-randimal/",
   },
   {
+    name: "Manasvi Pathak",
+    role: "Actor, Model & Content Creator",
+    link: "https://manasvipathak.netlify.app/",
+  },
+  {
     name: "Jitpaul Baishya",
     role: "UI/UX Designer & Graphic Designer",
     link: "https://www.linkedin.com/in/jitpaul-baishya-a05241381/",
