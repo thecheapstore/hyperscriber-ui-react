@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Abhijeet Jain",
     role: "Full Stack Web Developer & Workflow Specialists",
-    link: "https://www.linkedin.com/in/abhijeetjain231/",
+    link: "https://abhijeet.calibreassociates.com/",
   },
   {
     name: "Pawan Sharma",
