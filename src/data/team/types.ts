@@ -28,6 +28,9 @@ export interface FoundingTeamMember {
   title: string;
   image: string;
   imagePosition?: string;
+  /** Optional override for the Founding Team grid card only — falls back to `image` when omitted. */
+  listingImage?: string;
+  listingImagePosition?: string;
   cardIntro: string;
   cardBadges: string[];
   heroBadges: string[];

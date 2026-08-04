@@ -41,11 +41,11 @@ const TeamMembers = () => {
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img
-                    src={member.image}
+                    src={member.listingImage ?? member.image}
                     alt={member.name}
                     loading="lazy"
                     decoding="async"
-                    className={`w-full h-full object-cover ${member.imagePosition ?? "object-top"} transition-transform duration-700 ease-out group-hover:scale-110`}
+                    className={`w-full h-full object-cover ${member.listingImagePosition ?? member.imagePosition ?? "object-top"} transition-transform duration-700 ease-out group-hover:scale-110`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>

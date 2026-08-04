@@ -1,6 +1,11 @@
 import abhijeetImg from '@/assets/team/abhijeet.jpeg';
 import pawanImg from '@/assets/team/pawan.jpeg';
-import manasviImg from '@/assets/team/manasvi-pathak.jpeg';
+// manasvi-logo.webp (1080x1165, portrait, HD) is used for her profile hero — the display
+// frame there is large enough that a lower-res source visibly softens/pixelates.
+import manasviImg from '@/assets/portfolio/manasvi-logo.webp';
+// manasvi-pathak.jpeg is used for the Founding Team grid card instead — its landscape
+// aspect fits the card's 4:3 frame with much less cropping, and the card renders smaller.
+import manasviListingImg from '@/assets/team/manasvi-pathak.jpeg';
 import manasviPortfolioImg from '@/assets/portfolio/manasvi-thumbnail.png';
 import tejImg from '@/assets/team/tejpratap.jpg';
 import niroshImg from '@/assets/team/nirosh.jpg';
@@ -162,6 +167,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     title: 'Actor • Model • Content Creator',
     heroTagline: 'Actor, Model & Content Creator',
     image: manasviImg,
+    listingImage: manasviListingImg,
     cardIntro:
       'Co-Founder and on-camera talent crafting cinematic, authentic brand stories across fashion, beauty and lifestyle.',
     cardBadges: ['Actor', 'Fashion Model', 'UGC Creator'],
