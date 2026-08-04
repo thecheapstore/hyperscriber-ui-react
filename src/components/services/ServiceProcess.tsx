@@ -81,13 +81,13 @@ const ServiceProcess = () => {
   };
   
   return (
-    <section id="process" className="py-20 bg-slate-50">
+    <section id="process" className="py-20 bg-canvas">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="mb-4">
             How We Build, Optimize, and Scale Growth
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-ink/70">
             Strategy First. Execution Always.
           </p>
         </div>
@@ -105,20 +105,20 @@ const ServiceProcess = () => {
               className={`flex flex-col md:flex-row gap-8 mb-16 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
             >
               <div className="w-full md:w-1/3">
-                <div className="bg-white p-6 rounded-xl shadow-md h-full">
-                  <div className="text-5xl font-bold text-blue-600 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground mb-6">{step.description}</p>
+                <div className="bg-surface-soft p-6 rounded-lg h-full">
+                  <div className="text-5xl font-bold text-ink mb-4">{step.number}</div>
+                  <h3 className="mb-3">{step.title}</h3>
+                  <p className="text-ink/70 mb-6">{step.description}</p>
                 </div>
               </div>
               <div className="w-full md:w-2/3">
-                <div className="bg-white p-6 rounded-xl shadow-md h-full">
+                <div className="bg-canvas border border-hairline p-6 rounded-lg h-full">
                   <h4 className="text-xl font-semibold mb-4">What's included:</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {step.details.map((detail, i) => (
                       <div key={i} className="flex items-center space-x-3">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                          <Check className="h-4 w-4 text-blue-600" />
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-surface-soft flex items-center justify-center">
+                          <Check className="h-4 w-4 text-ink" />
                         </div>
                         <span>{detail}</span>
                       </div>

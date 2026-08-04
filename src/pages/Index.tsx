@@ -10,13 +10,12 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet';
 import PricingBenefits from '@/components/our-team/TeamStrengths';
+import { pageTransition } from '@/lib/motion';
 
 const Index = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      {...pageTransition}
       className="min-h-screen flex flex-col"
     >
       <Helmet>

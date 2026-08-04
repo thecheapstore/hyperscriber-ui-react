@@ -13,12 +13,12 @@ const ContactHero = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center justify-center mb-6">
-              <span className="inline-block py-1.5 px-4 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
+              <span className="inline-block py-1.5 px-4 text-xs font-semibold tracking-wider rounded-full bg-surface-soft text-ink border border-hairline">
                 GET IN TOUCH
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
-              Let's Start a <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Conversation</span>
+            <h1 className="mb-6">
+              Let's Start a <span className="text-ink font-bold">Conversation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
               Have questions about our services or ready to transform your marketing strategy?
@@ -31,15 +31,15 @@ const ContactHero = () => {
               className="flex flex-wrap justify-center gap-4 mb-12"
             >
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <CheckCircle size={18} className="text-blue-500" />
+                <CheckCircle size={18} className="text-ink" />
                 <span className="text-sm font-medium">Fast Response</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <CheckCircle size={18} className="text-blue-500" />
+                <CheckCircle size={18} className="text-ink" />
                 <span className="text-sm font-medium">Expert Team</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-                <CheckCircle size={18} className="text-blue-500" />
+                <CheckCircle size={18} className="text-ink" />
                 <span className="text-sm font-medium">Customized Solutions</span>
               </div>
             </motion.div>
@@ -52,7 +52,7 @@ const ContactHero = () => {
           >
             <a 
               href="#contact-form" 
-              className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+              className="flex flex-col items-center text-ink/70 hover:text-ink transition-colors"
             >
               <span className="mb-2 font-medium">Contact Us</span>
               <ArrowDown className="animate-bounce" />

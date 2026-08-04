@@ -14,7 +14,7 @@ export const ServiceProcess = ({ process }: ServiceProcessProps) => {
         {process.map((step, i) => (
           <div key={i} className="flex gap-4">
             <div className="shrink-0 mt-1">
-              <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
                 {step.icon}
               </div>
             </div>

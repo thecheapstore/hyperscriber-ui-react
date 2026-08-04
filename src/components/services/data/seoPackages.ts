@@ -1,0 +1,62 @@
+import type { PricingPackage } from './pricing';
+
+export const seoPackages: PricingPackage[] = [
+  {
+    id: 'basic',
+    name: 'Basic',
+    price: { INR: 15000, USD: 149 },
+    billingPeriod: '/month',
+    includes: [
+      'Website On Page SEO',
+      'Website Technical Optimization',
+      'Content Optimization',
+      '5–8 Target Keywords (Short Tail + Long Tail)',
+      'Meta Tags',
+      'Image Optimization',
+      'Internal Linking',
+      'Basic Schema Implementation',
+      'Performance Optimization',
+      'Reporting Once Every Three Months',
+    ],
+    ctaLabel: 'Book Free Consultation',
+    ctaHref: '/contact',
+  },
+  {
+    id: 'advanced',
+    name: 'Advanced',
+    price: { INR: 30000, USD: 300 },
+    billingPeriod: '/month',
+    highlight: true,
+    includes: [
+      'Everything in Basic',
+      'On Page SEO',
+      'Off Page SEO',
+      'Google Business Profile Optimization',
+      'Local SEO',
+      'Authority Building',
+      'High Quality Backlinks',
+      'Citation Management',
+      '10–15 Target Keywords (Short Tail + Long Tail)',
+      'Monthly Reporting',
+    ],
+    ctaLabel: 'Book Free Consultation',
+    ctaHref: '/contact',
+  },
+  {
+    id: 'premium',
+    name: 'Premium',
+    isCustom: true,
+    customHeadline: 'Custom Pricing',
+    customDescription:
+      'Tailored SEO strategy built specifically around your business goals, market competition, number of service areas, website size and long-term growth objectives.',
+    includes: [
+      'Multi-location businesses',
+      'Enterprise SEO',
+      'National campaigns',
+      'Competitive local markets',
+      'Businesses requiring advanced authority building',
+    ],
+    ctaLabel: 'Request Custom Proposal',
+    ctaHref: '/contact',
+  },
+];

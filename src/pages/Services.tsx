@@ -7,6 +7,7 @@ import ServicesList from '@/components/services/ServicesList';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet';
+import { pageTransition } from '@/lib/motion';
 
 const Services = () => {
   useEffect(() => {
@@ -15,9 +16,7 @@ const Services = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      {...pageTransition}
       className="min-h-screen"
     >
       <Helmet>

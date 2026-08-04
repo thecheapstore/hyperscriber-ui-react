@@ -13,11 +13,11 @@ const ServiceHero = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
+          <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-surface-soft text-ink border border-hairline">
             OUR SERVICES
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Growth-Driven Digital Services Built for Modern Businesses <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600">Marketing, Development, Automation & AI</span>
+          <h1 className="mb-4">
+            Growth-Driven Digital Services Built for Modern Businesses <span className="text-ink font-bold">Marketing, Development, Automation & AI</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
             We help businesses generate qualified leads, build scalable digital systems, and streamline operations through paid advertising, SEO, content creation, development, and AI-powered automation.
@@ -31,23 +31,22 @@ const ServiceHero = () => {
             className="mb-8 flex flex-wrap gap-3 justify-center"
           >
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle size={18} className="text-blue-500" />
+              <CheckCircle size={18} className="text-ink" />
               <span className="text-sm font-medium">Web, App, Software & Automation Solutions</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle size={18} className="text-blue-500" />
+              <CheckCircle size={18} className="text-ink" />
               <span className="text-sm font-medium">Lead Generation & Performance Marketing</span>
             </div>
             <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
-              <CheckCircle size={18} className="text-blue-500" />
+              <CheckCircle size={18} className="text-ink" />
               <span className="text-sm font-medium">SEO, Social Media & Online Reputation Growth</span>
             </div>
           </motion.div>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
             <a href="https://calendly.com/calibreassociates/meeting" target="_blank" rel="noopener noreferrer">
-              <Button className="w-full sm:w-auto rounded-full px-7 sm:px-9 py-6 sm:py-7 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 relative overflow-hidden group id-calendly-booking">
-                <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+              <Button className="w-full sm:w-auto rounded-pill px-7 sm:px-9 py-6 sm:py-7 text-base sm:text-lg id-calendly-booking">
                 Book a Free Strategy Consultation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -62,7 +61,7 @@ const ServiceHero = () => {
         >
           <a 
             href="#FAQ" 
-            className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+            className="flex flex-col items-center text-ink/70 hover:text-ink transition-colors"
           >
             <span className="mb-2">Have Questions?</span>
             <ArrowDown className="animate-bounce" />

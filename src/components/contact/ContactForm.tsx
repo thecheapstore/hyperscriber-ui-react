@@ -13,7 +13,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="bg-white shadow-lg border border-gray-100 flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-xl"
+      className="bg-canvas border border-hairline flex flex-col px-8 py-8 sm:p-8 md:p-10 rounded-block"
     >
       {/* Heading */}
       <h2 className="text-2xl font-semibold mb-6 tracking-tight">
@@ -29,8 +29,8 @@ const ContactForm = () => {
       <div className="space-y-6">
         {/* Phone 1 */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-            <Phone className="h-5 w-5 text-blue-600" />
+          <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+            <Phone className="h-5 w-5 text-ink" />
           </div>
           <div>
             <p className="font-medium">North America Office</p>
@@ -42,8 +42,8 @@ const ContactForm = () => {
 
         {/* Phone 2 */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-            <Phone className="h-5 w-5 text-blue-600" />
+          <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+            <Phone className="h-5 w-5 text-ink" />
           </div>
           <div>
             <p className="font-medium">India Office</p>
@@ -55,8 +55,8 @@ const ContactForm = () => {
 
         {/* Email */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-            <Mail className="h-5 w-5 text-blue-600" />
+          <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+            <Mail className="h-5 w-5 text-ink" />
           </div>
           <div>
             <p className="font-medium">Email</p>
@@ -68,8 +68,8 @@ const ContactForm = () => {
 
         {/* Location 1 */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-            <MapPin className="h-5 w-5 text-blue-600" />
+          <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+            <MapPin className="h-5 w-5 text-ink" />
           </div>
           <div>
             <p className="font-medium">North America Operations</p>
@@ -81,8 +81,8 @@ const ContactForm = () => {
 
         {/* Location 2 */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-            <MapPin className="h-5 w-5 text-blue-600" />
+          <div className="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center">
+            <MapPin className="h-5 w-5 text-ink" />
           </div>
           <div>
             <p className="font-medium">Head Office</p>

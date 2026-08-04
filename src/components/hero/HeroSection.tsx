@@ -26,9 +26,9 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="flex justify-center mt-20"
         >
-          <a 
-            href="/why-us" 
-            className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition-colors"
+          <a
+            href="/why-us"
+            className="flex flex-col items-center text-ink/70 hover:text-ink transition-colors"
           >
             <span className="mb-2">View more</span>
             <ArrowDown className="animate-bounce" />

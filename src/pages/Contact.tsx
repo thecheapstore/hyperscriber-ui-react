@@ -9,15 +9,17 @@ import ContactHero from '@/components/contact/ContactHero';
 import CTASection from '@/components/CTASection';
 import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
+import { pageTransition } from '@/lib/motion';
 
 const Contact = () => {
-  
+
   React.useEffect(() => {
     emailjs.init('4COZc8xvshn3d5SLB');
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
+    <motion.div {...pageTransition} className="min-h-screen">
       <Helmet>
   <meta charSet="utf-8" />
   <title>Contact Calibre Associates | Digital Marketing, Development & AI Solutions</title>
@@ -33,7 +35,7 @@ const Contact = () => {
         <ContactHero />
         
         
-        <section id="contact-form" className="py-24 bg-slate-50">
+        <section id="contact-form" className="py-24 bg-block-lime">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -48,7 +50,7 @@ const Contact = () => {
         <CTASection />
       </main>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 

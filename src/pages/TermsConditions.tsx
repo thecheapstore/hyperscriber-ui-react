@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet';
+import { pageTransition } from '@/lib/motion';
 
 const TermsConditions = () => {
   useEffect(() => {
@@ -11,9 +12,7 @@ const TermsConditions = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      {...pageTransition}
       className="min-h-screen"
     >
       <Helmet>

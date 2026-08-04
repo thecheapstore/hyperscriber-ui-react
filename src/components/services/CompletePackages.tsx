@@ -66,7 +66,7 @@ const CompletePackages = () => {
   };
   
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-canvas">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -90,10 +90,10 @@ const CompletePackages = () => {
               variants={itemVariants}
               className="hover-scale"
             >
-              <Card className={`h-full flex flex-col border-0 shadow-md rounded-xl overflow-hidden ${pkg.highlighted ? 'border-2 border-blue-500 relative' : ''}`}>
+              <Card className={`h-full flex flex-col border border-hairline shadow-none rounded-lg overflow-hidden ${pkg.highlighted ? 'border-2 border-ink relative' : ''}`}>
                 {pkg.highlighted && (
                   <div className="absolute top-0 inset-x-0 transform translate-y-0">
-                    <div className="bg-blue-500 text-white text-xs font-semibold py-1 text-center">
+                    <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 text-center">
                       RECOMMENDED
                     </div>
                   </div>
@@ -120,7 +120,7 @@ const CompletePackages = () => {
                   >
                     <Button 
                       variant="default"
-                      className="w-full bg-blue-600 hover:bg-blue-700 rounded-lg group id-get-in-touch"
+                      className="w-full rounded-pill group id-get-in-touch"
                       size="lg"
                     >
                       <span>Get In Touch</span>

@@ -109,118 +109,118 @@ const CookieConsent = () => {
 
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-[2px]">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-[92vw] md:w-full px-8 py-8 flex flex-col items-center gap-6 animate-fade-in border border-purple-200">
-        <div className="bg-blue-100 p-3 rounded-full">
-          <Shield className="h-7 w-7 text-blue-600" />
+      <div className="bg-canvas rounded-block shadow-modal max-w-md w-[92vw] md:w-full px-8 py-8 flex flex-col items-center gap-6 animate-fade-in border border-hairline">
+        <div className="bg-surface-soft p-3 rounded-full">
+          <Shield className="h-7 w-7 text-ink" />
         </div>
-        
-        <h3 className="text-2xl md:text-3xl font-extrabold leading-tight tracking-tight text-gray-900 mb-2 text-center">
+
+        <h3 className="text-ink mb-2 text-center">
           {showPreferences ? 'Cookie Preferences' : 'Privacy & Cookies'}
         </h3>
-        
+
         {!showPreferences ? (
           <>
-            <p className="text-base md:text-lg text-center text-muted-foreground">
-              We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
+            <p className="text-base md:text-lg text-center text-ink/70">
+              We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
               You can choose which cookies you want to allow.
             </p>
-            
-            <div className="border-t border-gray-200 w-full my-2"></div>
-            
+
+            <div className="border-t border-hairline w-full my-2"></div>
+
             <div className="flex gap-4 w-full mt-2 justify-center flex-col sm:flex-row space-y-2 sm:space-y-0">
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full sm:w-auto font-medium py-2 px-4 rounded-lg text-base border-gray-300"
+                className="w-full sm:w-auto font-medium py-2 px-4 rounded-pill text-base"
                 onClick={() => setShowPreferences(true)}
               >
                 Preferences
               </Button>
-              
+
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full sm:w-auto font-medium py-2 px-4 rounded-lg text-base border-gray-300"
+                className="w-full sm:w-auto font-medium py-2 px-4 rounded-pill text-base"
                 onClick={acceptEssential}
               >
                 Essential Only
               </Button>
-              
+
               <Button
                 size="sm"
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-3 rounded-full hover:opacity-90 transition-opacity duration-200 text-md hover:scale-110 transition-transform duration-200"
+                className="w-full sm:w-auto font-semibold px-4 py-3 rounded-pill text-md"
                 onClick={acceptAll}
               >
                 Accept All
               </Button>
             </div>
-            
-            <p className="text-xs text-center text-gray-500 mt-2">
-              By clicking "Accept All", you agree to the storing of cookies on your device to enhance 
+
+            <p className="text-xs text-center text-ink/60 mt-2">
+              By clicking "Accept All", you agree to the storing of cookies on your device to enhance
               site navigation, analyze site usage, and assist in our marketing efforts.
             </p>
           </>
         ) : (
           <>
             <div className="w-full space-y-4">
-              <div className="flex items-center justify-between border p-4 rounded-lg bg-gray-50">
+              <div className="flex items-center justify-between border border-hairline p-4 rounded-md bg-surface-soft">
                 <div>
                   <h4 className="font-semibold">Essential Cookies</h4>
-                  <p className="text-sm text-gray-500">Required for the website to function properly.</p>
+                  <p className="text-sm text-ink/60">Required for the website to function properly.</p>
                 </div>
-                <div className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                <div className="bg-canvas border border-hairline text-ink text-xs font-semibold px-2.5 py-0.5 rounded">
                   Required
                 </div>
               </div>
-              
-              <div className="flex items-center justify-between border p-4 rounded-lg">
+
+              <div className="flex items-center justify-between border border-hairline p-4 rounded-md">
                 <div>
                   <h4 className="font-semibold">Analytics Cookies</h4>
-                  <p className="text-sm text-gray-500">Help us improve our website by collecting anonymous information.</p>
+                  <p className="text-sm text-ink/60">Help us improve our website by collecting anonymous information.</p>
                 </div>
-                <input 
-                  type="checkbox" 
-                  checked={preferences.analytics} 
+                <input
+                  type="checkbox"
+                  checked={preferences.analytics}
                   onChange={e => setPreferences({...preferences, analytics: e.target.checked})}
-                  className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring"
                 />
               </div>
-              
-              <div className="flex items-center justify-between border p-4 rounded-lg">
+
+              <div className="flex items-center justify-between border border-hairline p-4 rounded-md">
                 <div>
                   <h4 className="font-semibold">Marketing Cookies</h4>
-                  <p className="text-sm text-gray-500">Used to track visitors across websites to display relevant advertisements.</p>
+                  <p className="text-sm text-ink/60">Used to track visitors across websites to display relevant advertisements.</p>
                 </div>
-                <input 
-                  type="checkbox" 
-                  checked={preferences.marketing} 
+                <input
+                  type="checkbox"
+                  checked={preferences.marketing}
                   onChange={e => setPreferences({...preferences, marketing: e.target.checked})}
-                  className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring"
                 />
               </div>
             </div>
-            
-            <div className="border-t border-gray-200 w-full my-2"></div>
-            
+
+            <div className="border-t border-hairline w-full my-2"></div>
+
             <div className="flex gap-4 w-full justify-end">
               <Button
                 variant="outline"
                 onClick={() => setShowPreferences(false)}
-                className="text-gray-700"
+                className="rounded-pill"
               >
                 Back
               </Button>
               <Button
                 onClick={() => savePreferences(preferences)}
-                className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800"
+                className="rounded-pill"
               >
                 Save Preferences
               </Button>
             </div>
           </>
         )}
-        
-        <div className="flex items-center text-amber-600 text-xs gap-1 mt-1">
+
+        <div className="flex items-center text-ink/60 text-xs gap-1 mt-1">
           <AlertTriangle className="h-3 w-3" />
           <span>You must accept or decline before continuing.</span>
         </div>

@@ -1,63 +1,73 @@
 import { motion } from "framer-motion";
-import { CheckCircle, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import { fadeUp, fadeIn, staggerContainer, easeOut } from "@/lib/motion";
 
 const TeamHero = () => {
   return (
-    <section className="pt-32 pb-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="relative pt-32 pb-24 bg-white overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 0.5, scale: 1 }}
+        transition={{ duration: 2, ease: easeOut }}
+        className="absolute -top-24 -left-24 w-[480px] h-[480px] bg-block-lilac rounded-full mix-blend-multiply filter blur-[90px]"
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 2, delay: 0.4, ease: easeOut }}
+        className="absolute -bottom-32 -right-16 w-[560px] h-[560px] bg-block-mint rounded-full mix-blend-multiply filter blur-[100px]"
+      />
+      <motion.div
+        animate={{ y: [0, -18, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/3 right-[15%] w-24 h-24 bg-block-coral/40 rounded-full blur-[40px]"
+      />
+
+      <div className="container mx-auto px-6 relative">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
           className="text-center max-w-4xl mx-auto"
         >
-          <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100">
-            ABOUT THE PEOPLE
-          </span>
+          <motion.span
+            variants={fadeUp}
+            className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-surface-soft text-ink border border-hairline"
+          >
+            FOUNDING TEAM
+          </motion.span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
-            Meet the People Behind{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Calibre Associates
-            </span>
-          </h1>
+          <motion.h1 variants={fadeUp} className="mb-6">
+            Built by Specialists.
+            <br />
+            <span className="text-ink font-bold">Driven by Results.</span>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            We are a multidisciplinary team of developers, designers, automation
-            experts, and strategists building scalable digital systems that
-            drive real business growth.
-          </p>
+          <motion.p variants={fadeUp} className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto">
+            Meet the specialists behind Calibre Associates. A multidisciplinary founding team
+            combining software engineering, marketing, automation, design and content to help
+            businesses grow through modern digital solutions.
+          </motion.p>
 
-          <div className="flex flex-wrap gap-3 justify-center mb-10">
-            {[
-              "Full Stack Developers and System Architects",
-              "UI and UX Specialists Focused on Usability",
-              "Automation and CRM Experts",
-              "Collaborative and Growth Oriented Team",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm"
-              >
-                <CheckCircle size={18} className="text-blue-500" />
-                <span className="text-sm font-medium">{item}</span>
-              </div>
-            ))}
-          </div>
+          <motion.p variants={fadeUp} className="text-base text-ink/60 max-w-2xl mx-auto">
+            When you work with us, you work directly with the people building your project —
+            not layers of account managers.
+          </motion.p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="flex justify-center"
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.8 }}
+          className="flex justify-center mt-12"
         >
           <a
             href="#team-members"
-            className="flex flex-col items-center text-blue-600 hover:text-blue-700 transition"
+            className="flex flex-col items-center text-ink/70 hover:text-ink transition"
           >
-            <span className="mb-2">Meet our team</span>
-            <ArrowDown className="animate-bounce" />
+            <span className="mb-2 text-sm">Meet the founding team</span>
+            <ArrowDown className="animate-bounce" size={18} />
           </a>
         </motion.div>
       </div>

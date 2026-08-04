@@ -80,7 +80,7 @@ const ServicePricing = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600">
+          <span className="inline-block py-1 px-3 mb-5 text-xs font-semibold tracking-wider rounded-full bg-surface-soft text-ink">
             PRICING
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -117,10 +117,10 @@ const ServicePricing = () => {
               variants={itemVariants}
               className="hover-scale"
             >
-              <Card className={`h-full flex flex-col border-0 shadow-md rounded-xl overflow-hidden ${plan.highlighted ? 'border-2 border-blue-500 relative' : ''}`}>
+              <Card className={`h-full flex flex-col border border-hairline shadow-none rounded-lg overflow-hidden ${plan.highlighted ? 'border-2 border-ink relative' : ''}`}>
                 {plan.highlighted && (
                   <div className="absolute top-0 inset-x-0 transform translate-y-0">
-                    <div className="bg-blue-500 text-white text-xs font-semibold py-1 text-center">
+                    <div className="bg-primary text-primary-foreground text-xs font-semibold py-1 text-center">
                       MOST POPULAR
                     </div>
                   </div>
@@ -148,7 +148,7 @@ const ServicePricing = () => {
                 <CardFooter className="pt-8">
                   <Button 
                     variant={plan.highlighted ? "default" : "outline"} 
-                    className={`w-full ${plan.highlighted ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'border-2'} rounded-lg group`} 
+                    className={`w-full rounded-pill group`}
                     size="lg"
                   >
                     <span>Get Started</span>
@@ -164,7 +164,7 @@ const ServicePricing = () => {
           <p className="text-muted-foreground mb-8">
             Need a custom solution? Contact us for a personalized quote tailored to your specific business requirements.
           </p>
-          <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-blue-50/50">
+          <Button variant="outline" className="rounded-full px-8 py-6 border-2 text-base hover:bg-surface-soft/50">
             Contact for Custom Pricing
           </Button>
         </div>

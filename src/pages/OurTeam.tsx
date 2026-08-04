@@ -6,10 +6,11 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 import TeamHero from "@/components/our-team/TeamHero";
-import TeamStrengths from "@/components/our-team/TeamStrengths";
 import TeamMembers from "@/components/our-team/TeamMembers";
-import TeamValues from "@/components/our-team/TeamValues";
-import CTASection from "@/components/CTASection";
+import TeamPhilosophy from "@/components/our-team/TeamPhilosophy";
+import WhyChooseUs from "@/components/our-team/WhyChooseUs";
+import TeamFinalCTA from "@/components/our-team/TeamFinalCTA";
+import { pageTransition } from "@/lib/motion";
 
 const OurTeamPage = () => {
   useEffect(() => {
@@ -18,16 +19,14 @@ const OurTeamPage = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      {...pageTransition}
       className="min-h-screen"
     >
       <Helmet>
-        <title>Our Team | Calibre Associates</title>
+        <title>Founding Team | Calibre Associates</title>
         <meta
           name="description"
-          content="Meet the people behind Calibre Associates — a team of developers, designers, automation experts, and strategists building high-performance digital products."
+          content="Meet the Founding Team behind Calibre Associates — specialists in software engineering, marketing, automation, design and content, working directly with clients to help businesses grow."
         />
         <link
           rel="canonical"
@@ -39,10 +38,10 @@ const OurTeamPage = () => {
 
       <main className="mt-16">
         <TeamHero />
-        <TeamStrengths />
         <TeamMembers />
-        <TeamValues />
-        <CTASection />
+        <TeamPhilosophy />
+        <WhyChooseUs />
+        <TeamFinalCTA />
       </main>
 
       <Footer />

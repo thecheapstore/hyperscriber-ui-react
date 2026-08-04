@@ -1,122 +1,77 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-const teamMembers = [
-  {
-    name: "Abhijeet Jain",
-    role: "Full Stack Web Developer & Workflow Specialists",
-    link: "https://abhijeet.calibreassociates.com/",
-  },
-  {
-    name: "Pawan Sharma",
-    role: "Marketing & Automation Specialists",
-    link: "#",
-  },
-  {
-    name: "Nirosh Hewabahithage",
-    role: "Software Engineer & UI/UX Designer",
-    link: "https://www.linkedin.com/in/niro-randimal/",
-  },
-  {
-    name: "Manasvi Pathak",
-    role: "Actor, Model & Content Creator",
-    link: "https://manasvipathak.netlify.app/",
-  },
-  {
-    name: "Jitpaul Baishya",
-    role: "UI/UX Designer & Graphic Designer",
-    link: "https://www.linkedin.com/in/jitpaul-baishya-a05241381/",
-  },
-  {
-    name: "Abhishek Patel",
-    role: "Wordpress & Shopify Developer",
-    link: "https://www.linkedin.com/in/abhishek-patel-a01424212/",
-  },
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
+import { foundingTeam } from "@/data/team/foundingTeam";
+import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
 
 const TeamMembers = () => {
   return (
-    <section id="team-members" className="py-20 bg-slate-50">
+    <section id="team-members" className="py-20 md:py-24 bg-canvas">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          variants={fadeUp}
+          className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold tracking-wider rounded-full bg-blue-50 text-blue-600 border border-blue-100 shadow-sm">
-            THE CALIBRE TEAM
+          <span className="eyebrow inline-block py-1.5 px-4 mb-5 rounded-pill bg-surface-soft">
+            THE FOUNDING TEAM
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Built by People Who Care About the Craft
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            A collaborative team combining engineering discipline, design thinking, and automation expertise.
+          <h2 className="mb-4">Six Specialists. One Mission.</h2>
+          <p className="text-lg text-ink/70">
+            Every founding member brings a distinct craft to the table — together they cover
+            everything a modern business needs to grow online.
           </p>
         </motion.div>
 
-        {/* Team Grid */}
         <motion.div
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={viewportOnce}
+          variants={staggerContainer}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {teamMembers.map((member, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full border-0 shadow-md rounded-xl flex flex-col justify-between hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                  <p className="text-muted-foreground mb-6">
-                    {member.role}
-                  </p>
-                </CardContent>
+          {foundingTeam.map((member) => (
+            <motion.div key={member.slug} variants={fadeUp} className="group h-full">
+              <Link
+                to={`/our-team/${member.slug}`}
+                onClick={() => window.scrollTo(0, 0)}
+                className="flex flex-col h-full bg-white/70 backdrop-blur-sm border border-hairline rounded-block overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-1.5 hover:border-ink/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                    className={`w-full h-full object-cover ${member.imagePosition ?? "object-top"} transition-transform duration-700 ease-out group-hover:scale-110`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
 
-                <CardFooter className="px-8 pb-8">
-                  <a
-                    href={member.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    <Button
-                      variant="outline"
-                      className="w-full rounded-lg group border-2"
-                    >
-                      <span>View Profile</span>
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
+                <div className="flex flex-col flex-grow p-6">
+                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-sm font-medium text-ink/60 mb-3">{member.title}</p>
+                  <p className="text-sm text-ink/70 mb-5 flex-grow">{member.cardIntro}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {member.cardBadges.map((badge) => (
+                      <span
+                        key={badge}
+                        className="font-mono text-[10px] uppercase tracking-[0.5px] px-2.5 py-1 rounded-pill bg-surface-soft text-ink/70 border border-hairline"
+                      >
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+
+                  <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
+                    View Profile
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

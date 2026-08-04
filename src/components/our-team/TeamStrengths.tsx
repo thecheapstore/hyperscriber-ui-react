@@ -36,16 +36,16 @@ const strengths = [
 
 const TeamStrengths = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-canvas">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block py-1.5 px-4 mb-5 text-xs font-semibold rounded-full bg-blue-50 text-blue-600">
+          <span className="eyebrow inline-block py-1.5 px-4 mb-5 rounded-pill bg-surface-soft">
             WHY OUR TEAM WORKS
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="mb-4">
             What Sets Calibre Associates Apart
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-ink/70">
             A combination of technical depth, design precision, and execution
             discipline.
           </p>
@@ -63,11 +63,12 @@ const TeamStrengths = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
+              whileHover={{ y: -6 }}
             >
-              <Card className="h-full border-0 shadow-md rounded-xl">
+              <Card className="h-full border border-hairline shadow-none rounded-lg transition-shadow duration-300 hover:shadow-card">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <p className="text-ink/70">{item.description}</p>
                 </CardContent>
               </Card>
             </motion.div>

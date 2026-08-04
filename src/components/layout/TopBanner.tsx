@@ -61,7 +61,7 @@ if (!isVisible) return null;
 
   return (
     
-    <div className={`fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white ${bannerHeight === '48px' ? 'h-12' : 'md:h-14'} z-40 transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
+    <div className={`fixed top-0 left-0 w-full bg-block-lilac text-ink ${bannerHeight === '48px' ? 'h-12' : 'md:h-14'} z-40 transition-transform duration-300 ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
       {/* Adjust padding for mobile (px-2) and larger screens (sm:px-4) */}
       <div className="max-w-[1440px] mx-auto px-2 sm:px-4 h-full flex items-center justify-center">
         {/* Centered Text Content - Adjust gap for mobile (gap-x-2) and larger (sm:gap-x-4) */}
@@ -90,7 +90,7 @@ if (!isVisible) return null;
             href="https://calendly.com/calibreassociates/meeting"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center flex-shrink-0 bg-white hover:bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-medium transition-colors duration-200 whitespace-nowrap id-calendly-booking"
+            className="inline-flex items-center justify-center flex-shrink-0 bg-accent-magenta hover:opacity-90 hover:scale-[1.03] active:scale-[0.97] text-white px-3 py-1 rounded-pill text-xs sm:text-sm font-medium transition-all duration-200 whitespace-nowrap id-calendly-booking"
           >
             Get Started
           </a>

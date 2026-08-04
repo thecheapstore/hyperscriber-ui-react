@@ -13,35 +13,35 @@ const ContactInfo = () => {
       transition={{ duration: 0.7, delay: 0.2 }}
       className="space-y-6 h-full flex flex-col"
     >
-      <Card className="bg-gradient-to-r from-blue-600 to-blue-700 border-0 shadow-lg overflow-hidden rounded-xl">
-        <CardContent className="p-8 text-white">
+      <Card className="bg-block-navy border-0 rounded-block overflow-hidden">
+        <CardContent className="p-8 text-inverse-ink">
           <h3 className="text-xl font-semibold mb-4 tracking-tight">Book a Consultation</h3>
-          <p className="text-blue-50 mb-6">
+          <p className="text-inverse-ink/80 mb-6">
             Ready to discuss your business needs? Schedule a free 30-minute consultation with our team.
           </p>
           <a href="https://calendly.com/calibreassociates/meeting" target="_blank" rel="noopener noreferrer">
-            <Button 
+            <Button
               variant="default"
-              className="w-full rounded-full py-6 bg-white hover:bg-blue-50 text-blue-700 transition-colors shadow-md hover:shadow-lg id-calendly-booking"
+              className="w-full rounded-pill py-6 bg-canvas hover:bg-surface-soft text-ink transition-colors id-calendly-booking"
             >
               Book a Call <Calendar className="ml-2 h-4 w-4" />
             </Button>
           </a>
         </CardContent>
       </Card>
-      
-      <Card className="bg-gradient-to-r from-blue-600 to-blue-700 border-0 rounded-xl mt-auto">
-        <CardContent className="p-6 text-white">
+
+      <Card className="bg-surface-soft border border-hairline rounded-block mt-auto">
+        <CardContent className="p-6 text-ink">
           <div className="flex items-center gap-3 mb-4">
-            <CheckCircle className="h-5 w-5 text-white flex-shrink-0" />
+            <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
             <h4 className="font-medium">Fast Turnaround Times</h4>
           </div>
           <div className="flex items-center gap-3 mb-4">
-            <CheckCircle className="h-5 w-5 text-white flex-shrink-0" />
+            <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
             <h4 className="font-medium">Dedicated Account Manager</h4>
           </div>
           <div className="flex items-center gap-3">
-            <CheckCircle className="h-5 w-5 text-white flex-shrink-0" />
+            <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
             <h4 className="font-medium">Results-Driven Approach</h4>
           </div>
         </CardContent>

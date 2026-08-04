@@ -1,14 +1,23 @@
 
-import { MessageSquare, FileText, Laptop, Mail, Users, Target, Lightbulb, PenTool, BarChart, Layers } from 'lucide-react';
+import {
+  Laptop, Code2, Share2, Search, Video, MessageSquare, Layers, Target, Lightbulb, PenTool, BarChart,
+  TrendingUp, ShieldCheck, Smartphone, Clock, LifeBuoy,
+  DollarSign, Filter, ClipboardCheck, FlaskConical, MousePointerClick, Rocket,
+  Blocks, Plug, Timer, Gauge, Activity,
+} from 'lucide-react';
 import { Service } from '../types/service';
 import React from 'react';
+import websiteDevPreview from '@/assets/images/mockup-website.jpg';
 
 export const services: Service[] = [
   {
-    id: "development",
+    id: "website-development",
+    slug: "website-development",
     icon: React.createElement(Laptop, { className: "h-8 w-8" }),
-    title: "Website, App & Software Development",
-    description: "Build fast, scalable, and conversion focused digital products designed for long term business growth.",
+    title: "Website Development",
+    shortDescription: "Fast, conversion focused websites built to represent your brand and turn visitors into customers.",
+    description: "Build fast, scalable, and conversion focused websites designed for long term business growth.",
+    previewImage: websiteDevPreview,
     details: [
       "Custom website design and development",
       "Web application and SaaS platform development",
@@ -27,22 +36,22 @@ export const services: Service[] = [
     process: [
       {
         title: "Requirement & UX Planning",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-teal-500" }),
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
         description: "We understand your business goals and design a clear structure focused on usability and conversions."
       },
       {
         title: "Design & Architecture",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-teal-500" }),
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
         description: "UI UX design and system architecture built for speed, scalability, and long term growth."
       },
       {
         title: "Development & Testing",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-teal-500" }),
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
         description: "Full stack development with thorough testing to ensure performance and reliability."
       },
       {
         title: "Launch & Optimization",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-teal-500" }),
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
         description: "Deployment, performance optimization, and ongoing improvements post launch."
       }
     ],
@@ -54,14 +63,311 @@ export const services: Service[] = [
         "Scalable platform supporting rapid user growth"
       ]
     },
-    color: "from-teal-500 to-blue-500",
-    bgLight: "bg-teal-50"
+    color: "bg-block-mint",
+    bgLight: "bg-block-mint",
+    stats: [
+      { label: "Websites Built", value: 120, suffix: "+" },
+      { label: "Projects Delivered", value: 150, suffix: "+" },
+      { label: "Avg. Load Time Improvement", value: 65, suffix: "%" },
+      { label: "Client Satisfaction", value: 98, suffix: "%" }
+    ],
+    portfolioCategories: [
+      { label: "Website Screenshots", description: "Full page captures of recent website builds." },
+      { label: "Desktop Mockup", description: "High fidelity desktop presentation of the finished build." },
+      { label: "Mobile Mockup", description: "Responsive mobile view of the same project." },
+      { label: "Before / After", description: "Visual comparison against the previous website." },
+      { label: "Live Preview", description: "Direct link to view the finished website live." },
+      { label: "Technology Used", description: "Stack and tools used to build the project." }
+    ]
   },
 
   {
-    id: "lead-generation",
+    id: "application-software-development",
+    slug: "application-software-development",
+    icon: React.createElement(Code2, { className: "h-8 w-8" }),
+    title: "Application & Software Development",
+    shortDescription: "Custom web apps, SaaS platforms, and business software engineered for performance and scale.",
+    description: "Design and build scalable applications and custom software solutions built for performance and long term business growth.",
+    details: [
+      "Custom website design and development",
+      "Web application and SaaS platform development",
+      "Mobile application development",
+      "Custom software solutions for business workflows",
+      "UI UX focused architecture and performance optimization",
+      "SEO ready and scalable development practices"
+    ],
+    benefits: [
+      "High performance websites and applications",
+      "Improved user experience and engagement",
+      "Scalable systems that grow with your business",
+      "Clean, maintainable, and future proof codebase",
+      "Stronger brand credibility through premium design"
+    ],
+    process: [
+      {
+        title: "Requirement & UX Planning",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
+        description: "We understand your business goals and design a clear structure focused on usability and conversions."
+      },
+      {
+        title: "Design & Architecture",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
+        description: "UI UX design and system architecture built for speed, scalability, and long term growth."
+      },
+      {
+        title: "Development & Testing",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
+        description: "Full stack development with thorough testing to ensure performance and reliability."
+      },
+      {
+        title: "Launch & Optimization",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
+        description: "Deployment, performance optimization, and ongoing improvements post launch."
+      }
+    ],
+    caseStudy: {
+      client: "Growth Focused SaaS Company",
+      results: [
+        "65% improvement in website performance",
+        "48% increase in conversion rate",
+        "Scalable platform supporting rapid user growth"
+      ]
+    },
+    color: "bg-block-cream",
+    bgLight: "bg-block-cream",
+    stats: [
+      { label: "Applications Delivered", value: 60, suffix: "+" },
+      { label: "Projects Delivered", value: 150, suffix: "+" },
+      { label: "System Uptime", value: 99, suffix: "%" },
+      { label: "Client Satisfaction", value: 98, suffix: "%" }
+    ],
+    portfolioCategories: [],
+    whyChooseReasons: [
+      { icon: React.createElement(TrendingUp, { className: "h-6 w-6" }), title: "Built to Scale", description: "Architecture designed for growth from day one, not a rebuild waiting to happen." },
+      { icon: React.createElement(Code2, { className: "h-6 w-6" }), title: "Clean, Maintainable Code", description: "Well-documented, testable code your team (or ours) can extend without fighting it later." },
+      { icon: React.createElement(Gauge, { className: "h-6 w-6" }), title: "Performance-First Engineering", description: "Every build is measured against real speed and reliability benchmarks, not just feature checklists." },
+      { icon: React.createElement(Smartphone, { className: "h-6 w-6" }), title: "Cross-Platform Expertise", description: "Web, mobile, and internal tools built with a consistent, unified architecture." },
+      { icon: React.createElement(ShieldCheck, { className: "h-6 w-6" }), title: "Security Best Practices", description: "Modern security standards baked into every layer, not bolted on after launch." },
+      { icon: React.createElement(LifeBuoy, { className: "h-6 w-6" }), title: "Real Post-Launch Support", description: "We stay involved after go-live — monitoring, fixes, and iteration, not a handoff and goodbye." },
+    ],
+    finalCtaHeadline: "Ready to Build Software That Scales With You?",
+    finalCtaDescription: "Book a free consultation and we'll map out the architecture, timeline, and cost for your project.",
+  },
+
+  {
+    id: "social-media-marketing",
+    slug: "social-media-marketing",
+    icon: React.createElement(Share2, { className: "h-8 w-8" }),
+    title: "Social Media Marketing",
+    shortDescription: "Consistent, on-brand social content and community growth that builds authority and trust.",
+    description: "Grow brand authority and inbound engagement through consistent, strategy driven social media management.",
+    details: [
+      "On page and off page SEO optimization",
+      "Technical SEO and content optimization",
+      "Social media content planning and posting",
+      "Google My Business and online reputation management",
+      "Content distribution across social platforms"
+    ],
+    benefits: [
+      "Higher search engine rankings",
+      "Consistent organic traffic growth",
+      "Improved brand visibility and trust",
+      "Inbound leads from search and social",
+      "Long term digital asset creation"
+    ],
+    process: [
+      {
+        title: "SEO & Content Strategy",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
+        description: "Keyword research, competitor analysis, and content planning."
+      },
+      {
+        title: "Optimization & Publishing",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
+        description: "SEO optimized content and consistent social media publishing."
+      },
+      {
+        title: "Authority Building",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
+        description: "Backlinks, engagement strategies, and reputation management."
+      },
+      {
+        title: "Performance Tracking",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
+        description: "Continuous monitoring and optimization for sustained growth."
+      }
+    ],
+    caseStudy: {
+      client: "Local & SaaS Brand",
+      results: [
+        "Top 3 rankings for high intent keywords",
+        "140% increase in organic traffic",
+        "Consistent inbound leads month over month"
+      ]
+    },
+    color: "bg-block-pink",
+    bgLight: "bg-block-pink",
+    stats: [
+      { label: "Posts Published", value: 2400, suffix: "+" },
+      { label: "Avg. Engagement Growth", value: 85, suffix: "%" },
+      { label: "Followers Gained", value: 40, suffix: "K+" },
+      { label: "Brands Managed", value: 35, suffix: "+" }
+    ],
+    portfolioCategories: [
+      { label: "Reels", description: "Short-form video content built for reach and engagement." },
+      { label: "Carousels", description: "Multi-slide posts designed for saves and shares." },
+      { label: "Feed Preview", description: "Cohesive grid and brand aesthetic preview." },
+      { label: "Engagement Metrics", description: "Reach, engagement, and growth performance snapshots." },
+      { label: "Content Calendar", description: "Sample of a planned monthly content calendar." },
+      { label: "Brand Style Guide", description: "Visual identity guidelines applied across content." }
+    ]
+  },
+
+  {
+    id: "seo",
+    slug: "seo",
+    icon: React.createElement(Search, { className: "h-8 w-8" }),
+    title: "Search Engine Optimization",
+    shortDescription: "Dominate Google Search, Google Maps, and AI-Powered Search Results.",
+    description: "Local SEO, technical SEO, and AI search optimization built to make your business impossible to miss — on Google and beyond.",
+    details: [
+      "On page and off page SEO optimization",
+      "Technical SEO and content optimization",
+      "Social media content planning and posting",
+      "Google My Business and online reputation management",
+      "Content distribution across social platforms"
+    ],
+    benefits: [
+      "Higher search engine rankings",
+      "Consistent organic traffic growth",
+      "Improved brand visibility and trust",
+      "Inbound leads from search and social",
+      "Long term digital asset creation"
+    ],
+    process: [
+      {
+        title: "SEO & Content Strategy",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
+        description: "Keyword research, competitor analysis, and content planning."
+      },
+      {
+        title: "Optimization & Publishing",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
+        description: "SEO optimized content and consistent social media publishing."
+      },
+      {
+        title: "Authority Building",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
+        description: "Backlinks, engagement strategies, and reputation management."
+      },
+      {
+        title: "Performance Tracking",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
+        description: "Continuous monitoring and optimization for sustained growth."
+      }
+    ],
+    caseStudy: {
+      client: "Local & SaaS Brand",
+      results: [
+        "Top 3 rankings for high intent keywords",
+        "140% increase in organic traffic",
+        "Consistent inbound leads month over month"
+      ]
+    },
+    color: "bg-block-lilac",
+    bgLight: "bg-block-lilac",
+    stats: [
+      { label: "Organic Traffic Growth", value: 140, suffix: "%" },
+      { label: "Keywords Ranked", value: 3200, suffix: "+" },
+      { label: "Avg. Ranking Improvement", value: 22, suffix: " positions" },
+      { label: "Projects Delivered", value: 90, suffix: "+" }
+    ],
+    portfolioCategories: [
+      { label: "Ranking Improvements", description: "Keyword position gains tracked over time." },
+      { label: "Search Console Data", description: "Impressions, clicks, and CTR performance snapshots." },
+      { label: "Analytics Growth", description: "Organic traffic growth visualized month over month." },
+      { label: "Keyword Growth", description: "Expansion of ranking keyword footprint." },
+      { label: "Local SEO", description: "Map pack and local search visibility examples." },
+      { label: "Backlink Profile", description: "Authority and backlink growth overview." }
+    ]
+  },
+
+  {
+    id: "video-editing",
+    slug: "video-editing",
+    icon: React.createElement(Video, { className: "h-8 w-8" }),
+    title: "Video Editing",
+    shortDescription: "Polished, scroll-stopping video content edited for social, ads, and brand storytelling.",
+    description: "Professional video editing that turns raw footage into polished, on-brand content built to engage audiences across social, web, and paid channels.",
+    details: [
+      "Short form video editing for social and ads",
+      "Long form video editing for YouTube and web",
+      "Motion graphics and on-brand titling",
+      "Color correction and audio cleanup",
+      "Platform specific formatting and captions",
+      "Fast turnaround for high volume content needs"
+    ],
+    benefits: [
+      "Consistent, professional brand presentation",
+      "Higher engagement across social platforms",
+      "Faster content turnaround for campaigns",
+      "Video content optimized per platform",
+      "More value extracted from existing footage"
+    ],
+    process: [
+      {
+        title: "Footage Review & Story Direction",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
+        description: "We review raw footage and define the story, pacing, and platform requirements."
+      },
+      {
+        title: "Editing & Motion Graphics",
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
+        description: "Editing, color correction, sound design, and on-brand motion graphics."
+      },
+      {
+        title: "Revisions & Refinement",
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
+        description: "Feedback rounds to refine pacing, messaging, and visual polish."
+      },
+      {
+        title: "Delivery & Platform Formatting",
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
+        description: "Final delivery formatted and captioned for every target platform."
+      }
+    ],
+    caseStudy: {
+      client: "Content Driven Brand",
+      results: [
+        "3x increase in average watch time",
+        "Consistent weekly content output",
+        "Higher engagement across social channels"
+      ]
+    },
+    color: "bg-block-coral",
+    bgLight: "bg-block-coral",
+    stats: [
+      { label: "Videos Edited", value: 800, suffix: "+" },
+      { label: "Avg. Watch Time Increase", value: 3, suffix: "x" },
+      { label: "Content Delivered Weekly", value: 15, suffix: "+" },
+      { label: "Client Satisfaction", value: 97, suffix: "%" }
+    ],
+    portfolioCategories: [
+      { label: "Before / After", description: "Raw footage compared against the final edit." },
+      { label: "Embedded Video", description: "Full video sample embedded directly on page." },
+      { label: "Short-Form Reel", description: "Vertical, platform-native short-form edits." },
+      { label: "Motion Graphics", description: "Titling, transitions, and animated brand elements." },
+      { label: "Color Grading", description: "Before and after color correction examples." },
+      { label: "Sound Design", description: "Audio mixing and sound design samples." }
+    ]
+  },
+
+  {
+    id: "lead-generation-paid-advertising",
+    slug: "lead-generation-paid-advertising",
     icon: React.createElement(MessageSquare, { className: "h-8 w-8" }),
     title: "Lead Generation & Paid Advertising",
+    shortDescription: "ROI focused paid campaigns that generate consistent, high quality leads.",
     description: "Generate consistent, high quality leads through ROI focused paid advertising and funnel strategies.",
     details: [
       "Google Ads, Meta Ads, and LinkedIn Ads management",
@@ -80,22 +386,22 @@ export const services: Service[] = [
     process: [
       {
         title: "Audience & Funnel Strategy",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-blue-500" }),
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
         description: "We define target audiences, offers, and funnel structure to maximize conversions."
       },
       {
         title: "Creative & Campaign Setup",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-blue-500" }),
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
         description: "High converting ad creatives and landing pages built for performance."
       },
       {
         title: "Launch & Optimization",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-blue-500" }),
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
         description: "Continuous optimization based on real time campaign data."
       },
       {
         title: "Tracking & Scaling",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-blue-500" }),
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
         description: "Advanced tracking and scaling strategies to grow profitable campaigns."
       }
     ],
@@ -107,67 +413,33 @@ export const services: Service[] = [
         "Consistent inbound leads within 30 days"
       ]
     },
-    color: "from-blue-500 to-indigo-600",
-    bgLight: "bg-blue-50"
+    color: "bg-block-lime",
+    bgLight: "bg-block-lime",
+    stats: [
+      { label: "Leads Generated", value: 25000, suffix: "+" },
+      { label: "Campaign ROAS", value: 3.2, suffix: "x" },
+      { label: "Cost Per Lead Reduction", value: 52, suffix: "%" },
+      { label: "Projects Delivered", value: 110, suffix: "+" }
+    ],
+    portfolioCategories: [],
+    whyChooseReasons: [
+      { icon: React.createElement(DollarSign, { className: "h-6 w-6" }), title: "ROI-Obsessed Management", description: "Every dollar of spend is tied back to a measurable outcome, not just impressions." },
+      { icon: React.createElement(Filter, { className: "h-6 w-6" }), title: "Full-Funnel Strategy", description: "From first click to closed lead — we build and optimize the whole journey, not just the ad." },
+      { icon: React.createElement(ClipboardCheck, { className: "h-6 w-6" }), title: "Transparent Reporting", description: "Clear, honest reporting on what's working and what's not — no vanity metrics." },
+      { icon: React.createElement(FlaskConical, { className: "h-6 w-6" }), title: "Continuous A/B Testing", description: "Creative, copy, and targeting are constantly tested to keep cost per lead trending down." },
+      { icon: React.createElement(MousePointerClick, { className: "h-6 w-6" }), title: "Landing Pages Built to Convert", description: "Purpose-built landing pages, not a generic homepage redirect." },
+      { icon: React.createElement(Rocket, { className: "h-6 w-6" }), title: "Fast Campaign Launch", description: "Structured onboarding gets qualified traffic flowing quickly, without cutting corners." },
+    ],
+    finalCtaHeadline: "Ready for a Predictable Pipeline of Leads?",
+    finalCtaDescription: "Book a free consultation and we'll show you exactly how we'd structure your campaigns for ROI.",
   },
 
   {
-    id: "seo-social",
-    icon: React.createElement(FileText, { className: "h-8 w-8" }),
-    title: "SEO & Social Media Marketing",
-    description: "Grow organic traffic, brand authority, and inbound leads through SEO and social media management.",
-    details: [
-      "On page and off page SEO optimization",
-      "Technical SEO and content optimization",
-      "Social media content planning and posting",
-      "Google My Business and online reputation management",
-      "Content distribution across social platforms"
-    ],
-    benefits: [
-      "Higher search engine rankings",
-      "Consistent organic traffic growth",
-      "Improved brand visibility and trust",
-      "Inbound leads from search and social",
-      "Long term digital asset creation"
-    ],
-    process: [
-      {
-        title: "SEO & Content Strategy",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-purple-500" }),
-        description: "Keyword research, competitor analysis, and content planning."
-      },
-      {
-        title: "Optimization & Publishing",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-purple-500" }),
-        description: "SEO optimized content and consistent social media publishing."
-      },
-      {
-        title: "Authority Building",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-purple-500" }),
-        description: "Backlinks, engagement strategies, and reputation management."
-      },
-      {
-        title: "Performance Tracking",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-purple-500" }),
-        description: "Continuous monitoring and optimization for sustained growth."
-      }
-    ],
-    caseStudy: {
-      client: "Local & SaaS Brand",
-      results: [
-        "Top 3 rankings for high intent keywords",
-        "140% increase in organic traffic",
-        "Consistent inbound leads month over month"
-      ]
-    },
-    color: "from-purple-500 to-indigo-600",
-    bgLight: "bg-purple-50"
-  },
-
-  {
-    id: "automation-ai",
+    id: "ai-automation-solutions",
+    slug: "ai-automation-solutions",
     icon: React.createElement(Layers, { className: "h-8 w-8" }),
-    title: "Automation & AI Solutions",
+    title: "AI Automation & Solutions",
+    shortDescription: "Custom automation and AI systems that streamline operations and scale your team's output.",
     description: "Streamline operations and scale faster with custom automation and AI powered business systems.",
     details: [
       "CRM workflow automation",
@@ -186,22 +458,22 @@ export const services: Service[] = [
     process: [
       {
         title: "Process Mapping",
-        icon: React.createElement(Target, { className: "h-6 w-6 text-sky-500" }),
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
         description: "Identify bottlenecks and opportunities for automation."
       },
       {
         title: "System Design",
-        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-sky-500" }),
+        icon: React.createElement(Lightbulb, { className: "h-6 w-6 text-ink" }),
         description: "Design automation workflows and AI logic tailored to your business."
       },
       {
         title: "Implementation",
-        icon: React.createElement(PenTool, { className: "h-6 w-6 text-sky-500" }),
+        icon: React.createElement(PenTool, { className: "h-6 w-6 text-ink" }),
         description: "Build and deploy automation systems across your tools."
       },
       {
         title: "Optimization & Scaling",
-        icon: React.createElement(BarChart, { className: "h-6 w-6 text-sky-500" }),
+        icon: React.createElement(BarChart, { className: "h-6 w-6 text-ink" }),
         description: "Continuous improvements to maximize efficiency and ROI."
       }
     ],
@@ -213,7 +485,24 @@ export const services: Service[] = [
         "Improved operational efficiency across teams"
       ]
     },
-    color: "from-blue-500 to-sky-400",
-    bgLight: "bg-sky-50"
+    color: "bg-block-mint",
+    bgLight: "bg-block-mint",
+    stats: [
+      { label: "Hours Automated Monthly", value: 4500, suffix: "+" },
+      { label: "Workflows Built", value: 200, suffix: "+" },
+      { label: "Avg. Efficiency Improvement", value: 60, suffix: "%" },
+      { label: "Projects Delivered", value: 80, suffix: "+" }
+    ],
+    portfolioCategories: [],
+    whyChooseReasons: [
+      { icon: React.createElement(Blocks, { className: "h-6 w-6" }), title: "Custom-Built, Not Templated", description: "Automations designed around how your business actually operates, not a generic recipe." },
+      { icon: React.createElement(Plug, { className: "h-6 w-6" }), title: "Seamless Tool Integration", description: "Connects the tools you already use — CRM, forms, email, calendars — into one workflow." },
+      { icon: React.createElement(Timer, { className: "h-6 w-6" }), title: "Real Time & Cost Savings", description: "Automation is scoped around hours actually saved, not novelty for its own sake." },
+      { icon: React.createElement(TrendingUp, { className: "h-6 w-6" }), title: "Scales With Your Team", description: "Systems built to keep working as your volume grows, without constant rebuilding." },
+      { icon: React.createElement(Activity, { className: "h-6 w-6" }), title: "Reliable, Monitored Systems", description: "We monitor what we build so failures get caught early, not discovered by your team." },
+      { icon: React.createElement(Rocket, { className: "h-6 w-6" }), title: "Fast Implementation", description: "Structured scoping and build process gets automations live in weeks, not quarters." },
+    ],
+    finalCtaHeadline: "Ready to Automate the Busywork?",
+    finalCtaDescription: "Book a free consultation and we'll identify exactly where automation saves you the most time.",
   }
 ];

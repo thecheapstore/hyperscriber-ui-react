@@ -5,10 +5,11 @@ import ServiceCard from './components/ServiceCard';
 import ServicesHeader from './components/ServicesHeader';
 import { services } from './data/services';
 import { useLocation } from 'react-router-dom';
+import { staggerContainer, fadeUp } from '@/lib/motion';
 
 const ServicesList = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
     // If there's a hash in the URL, scroll to the corresponding service
     if (location.hash) {
@@ -23,47 +24,26 @@ const ServicesList = () => {
     }
   }, [location]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-  
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-canvas">
       <div className="container mx-auto px-6">
         <ServicesHeader />
-        
-        <motion.div 
-          variants={containerVariants}
+
+        <motion.div
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="space-y-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service) => (
-            <div 
-              key={service.id} 
-              id={service.title.toLowerCase().replace(/\s+/g, '-')}
+            <div
+              key={service.id}
+              id={service.slug}
             >
-              <ServiceCard 
+              <ServiceCard
                 service={service}
-                variants={itemVariants}
+                variants={fadeUp}
               />
             </div>
           ))}
