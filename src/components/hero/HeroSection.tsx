@@ -10,7 +10,7 @@ const HeroSection = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center"
+      className="relative min-h-[calc(100vh-60px)] md:min-h-screen flex items-center overflow-hidden"
     >
       {/* Add the animated background */}
       <HeroBackground />

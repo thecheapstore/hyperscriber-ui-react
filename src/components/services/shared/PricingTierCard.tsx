@@ -2,13 +2,23 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import type { VideoEditingTier } from './data/videoEditingPricing';
 
-interface VideoEditingPricingCardProps {
-  tier: VideoEditingTier;
+export interface PricingTier {
+  id: string;
+  name: string;
+  /** Shown prominently in place of a price, e.g. "Contact for Pricing" */
+  priceLabel?: string;
+  description: string;
+  features: string[];
+  ctaLabel: string;
+  featured?: boolean;
 }
 
-const VideoEditingPricingCard = ({ tier }: VideoEditingPricingCardProps) => {
+interface PricingTierCardProps {
+  tier: PricingTier;
+}
+
+const PricingTierCard = ({ tier }: PricingTierCardProps) => {
   return (
     <motion.div
       whileHover={{ y: -6 }}
@@ -24,7 +34,10 @@ const VideoEditingPricingCard = ({ tier }: VideoEditingPricingCardProps) => {
         </span>
       )}
 
-      <h3 className="text-xl font-bold mb-3">{tier.name}</h3>
+      <h3 className="text-xl font-bold mb-1">{tier.name}</h3>
+      {tier.priceLabel && (
+        <p className={`text-lg font-semibold mb-3 ${tier.featured ? 'text-inverse-ink' : 'text-ink'}`}>{tier.priceLabel}</p>
+      )}
       <p className={`text-sm leading-relaxed mb-6 ${tier.featured ? 'text-inverse-ink/70' : 'text-ink/70'}`}>
         {tier.description}
       </p>
@@ -52,4 +65,4 @@ const VideoEditingPricingCard = ({ tier }: VideoEditingPricingCardProps) => {
   );
 };
 
-export default VideoEditingPricingCard;
+export default PricingTierCard;

@@ -19,6 +19,8 @@ import WebsiteDevelopment from "@/pages/WebsiteDevelopment";
 import SocialMediaMarketing from "@/pages/SocialMediaMarketing";
 import Seo from "@/pages/Seo";
 import VideoEditing from "@/pages/VideoEditing";
+import LeadGeneration from "@/pages/LeadGeneration";
+import AIAutomation from "@/pages/AIAutomation";
 import CaseStudy from "@/pages/CaseStudy";
 import OurTeam from "@/pages/OurTeam";
 import TeamProfile from "@/pages/TeamProfile";
@@ -54,6 +56,8 @@ const AnimatedRoutes = () => {
         <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
         <Route path="/services/seo" element={<Seo />} />
         <Route path="/services/video-editing" element={<VideoEditing />} />
+        <Route path="/services/lead-generation-paid-advertising" element={<LeadGeneration />} />
+        <Route path="/services/ai-automation-solutions" element={<AIAutomation />} />
         <Route path="/services/:serviceSlug/projects/:projectSlug" element={<CaseStudy />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-team" element={<OurTeam />} />

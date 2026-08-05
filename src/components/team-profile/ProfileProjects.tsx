@@ -30,10 +30,10 @@ const ProfileProjects = ({ member }: ProfileProjectsProps) => {
               Explore the full journey on LinkedIn.
             </p>
             <CtaButton cta={member.primaryCta}>
-              <Button className="rounded-pill px-7 py-6 group">
-                <Linkedin className="mr-2 h-4 w-4" />
+              <Button className="rounded-pill px-6 sm:px-7 py-5 sm:py-6 h-auto text-sm sm:text-base whitespace-normal max-w-full group">
+                <Linkedin className="mr-2 h-4 w-4 flex-shrink-0" />
                 Explore My Journey on LinkedIn
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
               </Button>
             </CtaButton>
           </motion.div>
