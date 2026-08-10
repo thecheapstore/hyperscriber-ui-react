@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -23,10 +23,10 @@ const OurTeamPage = () => {
       className="min-h-screen"
     >
       <Helmet>
-        <title>Founding Team | Calibre Associates</title>
+        <title>Founding Team | Abhijeet Jain, Manasvi Pathak and Calibre Associates</title>
         <meta
           name="description"
-          content="Meet the Founding Team behind Calibre Associates — specialists in software engineering, marketing, automation, design and content, working directly with clients to help businesses grow."
+          content="Meet the founding team behind Calibre Associates, including Abhijeet Jain and Manasvi Pathak, specialists in software engineering, digital marketing, AI automation, design and content, working directly with clients in India and the United States to help businesses grow."
         />
         <link
           rel="canonical"

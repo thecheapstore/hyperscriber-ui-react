@@ -28,7 +28,7 @@ const VideoEditingPricing = () => {
           </motion.span>
           <motion.h2 variants={fadeUp} className="mb-4">Plans Built Around Your Content</motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-            Every project is scoped around your footage, platforms and turnaround needs — reach out and we'll put
+            Every project is scoped around your footage, platforms and turnaround needs, reach out and we'll put
             together a plan that fits.
           </motion.p>
         </motion.div>
@@ -48,7 +48,7 @@ const VideoEditingPricing = () => {
         </motion.div>
 
         <TrustBadges badges={PRICING_TRUST_BADGES} />
-        <p className="text-center text-xs text-ink/40 mt-4">*Revision policy varies by package — confirmed during your consultation.</p>
+        <p className="text-center text-xs text-ink/40 mt-4">*Revision policy varies by package, confirmed during your consultation.</p>
       </div>
     </section>
   );

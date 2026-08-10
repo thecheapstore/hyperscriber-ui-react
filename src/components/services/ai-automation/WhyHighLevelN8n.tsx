@@ -48,8 +48,8 @@ const WhyHighLevelN8n = () => {
             <motion.h2 variants={fadeUp} className="mb-4">Why HighLevel + n8n?</motion.h2>
             <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
               HighLevel is already a powerful CRM and marketing platform on its own. We extend it
-              dramatically with custom n8n workflows — connecting it to AI, your tools and your data
-              in ways the platform alone can't do.
+              into full CRM workflow automation with custom n8n workflows, connecting it to AI,
+              your tools and your data in ways the platform alone can't do.
             </motion.p>
           </motion.div>
 
@@ -115,7 +115,7 @@ const WhyHighLevelN8n = () => {
             <h3 className="text-inverse-ink text-2xl md:text-3xl font-bold mb-3">
               One Lead. Eleven Automated Steps. Zero Manual Work.
             </h3>
-            <p className="text-inverse-ink/60">All automated — from first click to closed review.</p>
+            <p className="text-inverse-ink/60">All automated, from first click to closed review.</p>
           </motion.div>
 
           <WorkflowChain steps={WORKFLOW_STEPS} tone="dark" compact />

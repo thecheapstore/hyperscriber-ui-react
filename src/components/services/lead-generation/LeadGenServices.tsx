@@ -49,7 +49,7 @@ const LeadGenServices = () => {
           </motion.span>
           <motion.h2 variants={fadeUp} className="mb-4">Our Lead Generation Services</motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-            A complete, connected system — not a single channel.
+            A complete lead generation and paid advertising system, not a single channel.
           </motion.p>
         </motion.div>
 

@@ -1,15 +1,16 @@
 import abhijeetImg from '@/assets/team/abhijeet.jpeg';
 import pawanImg from '@/assets/team/pawan.jpeg';
-// manasvi-logo.webp (1080x1165, portrait, HD) is used for her profile hero — the display
+// manasvi-logo.webp (1080x1165, portrait, HD) is used for her profile hero, the display
 // frame there is large enough that a lower-res source visibly softens/pixelates.
 import manasviImg from '@/assets/portfolio/manasvi-logo.webp';
-// manasvi-pathak.jpeg is used for the Founding Team grid card instead — its landscape
+// manasvi-pathak.jpeg is used for the Founding Team grid card instead, its landscape
 // aspect fits the card's 4:3 frame with much less cropping, and the card renders smaller.
 import manasviListingImg from '@/assets/team/manasvi-pathak.jpeg';
-import manasviPortfolioImg from '@/assets/portfolio/manasvi-thumbnail.png';
-import tejImg from '@/assets/team/tejpratap.jpg';
+import manasviPortfolioImg from '@/assets/portfolio/manasvi-thumbnail.webp';
+import tejImg from '@/assets/team/tejpratap.jpeg';
 import niroshImg from '@/assets/team/nirosh.jpg';
 import jitpaulImg from '@/assets/team/jitpaul.jpg';
+import { Briefcase, FileText, Search, ListChecks, Handshake, CalendarCheck, Rocket } from 'lucide-react';
 import type { FoundingTeamMember } from './types';
 
 const ABHIJEET_LINKEDIN = 'https://www.linkedin.com/in/abhijeetjain231/';
@@ -20,6 +21,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     name: 'Abhijeet Jain',
     roleLine: 'Founder & CEO, Calibre Associates',
     title: 'Full Stack Web Developer & Workflow Specialist',
+    heroImageAlt: 'Abhijeet Jain, Founder and CEO of Calibre Associates, full stack web developer and AI automation specialist',
     image: abhijeetImg,
     cardIntro:
       'Founder of Calibre Associates, building full stack products, automation and AI-driven workflows that turn websites into growth systems.',
@@ -41,7 +43,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     aboutHeading: 'Building Businesses, Not Just Websites.',
     aboutParagraphs: [
       "I started Calibre Associates around a simple idea: businesses don't need another vendor selling isolated services, they need a partner who can combine software engineering, automation, marketing and AI into one growth-focused system.",
-      "My work sits at the intersection of code and strategy. I build the scalable systems — websites, CRMs, automations — that produce measurable results, and I stay close to clients from strategy through execution instead of handing work off and disappearing.",
+      "My work sits at the intersection of code and strategy. I build the scalable systems, websites, CRMs, automations, that produce measurable results, and I stay close to clients from strategy through execution instead of handing work off and disappearing.",
       "Every project I take on is judged the same way: does it move the business forward, not just does it look good.",
     ],
     journey: [
@@ -95,6 +97,50 @@ export const foundingTeam: FoundingTeamMember[] = [
       { label: 'Connect on LinkedIn', href: ABHIJEET_LINKEDIN, external: true },
       { label: 'Book Free Consultation', href: '/contact' },
     ],
+    knowsAbout: [
+      'Full Stack Development', 'AI Automation', 'Workflow Automation', 'SEO',
+      'CRM Systems', 'WordPress Development', 'React and Next.js',
+    ],
+    metaTitle: 'Abhijeet Jain | Founder & CEO, Full Stack Developer | Calibre Associates',
+    metaDescription:
+      'Abhijeet Jain is Founder and CEO of Calibre Associates, a full stack developer building websites, CRM systems and AI automation for businesses in India and the United States.',
+    faqs: [
+      {
+        question: 'Who is Abhijeet Jain and what industries is he associated with?',
+        answer:
+          'Abhijeet Jain is the Founder and CEO of Calibre Associates, a full stack web developer and workflow specialist who builds websites, web applications, CRM systems, and AI automation for businesses. He works across industries including local services, e-commerce, professional services, and small business growth, combining software engineering with SEO and marketing strategy.',
+      },
+      {
+        question: 'What companies has Abhijeet Jain founded?',
+        answer:
+          'Abhijeet Jain founded Calibre Associates, a digital marketing agency that combines full stack development, SEO, automation, and AI into growth systems for businesses in India and the United States.',
+      },
+      {
+        question: "Where can I find Abhijeet Jain's professional profile online?",
+        answer:
+          "You can find Abhijeet Jain's professional profile on LinkedIn, where he shares his work in full stack development, automation, and digital growth strategy, or on his Calibre Associates founding team profile.",
+      },
+      {
+        question: 'What services does Abhijeet Jain offer through Calibre Associates?',
+        answer:
+          'Through Calibre Associates, Abhijeet Jain offers full stack website and web application development, SEO and organic growth strategy, CRM and workflow automation, and AI powered business systems, working directly with clients from strategy through execution.',
+      },
+      {
+        question: 'How can I contact Abhijeet Jain for business inquiries?',
+        answer:
+          'You can reach Abhijeet Jain through his LinkedIn profile or by emailing info@calibreassociates.com, or by booking a free consultation through the Calibre Associates contact page.',
+      },
+      {
+        question: 'What are some notable projects Abhijeet Jain has developed?',
+        answer:
+          "Abhijeet Jain has built full stack websites and web applications for businesses including 716 Lawn Care, RR Landscaping, and KP Landscaping, along with Manasvi Pathak's personal brand portfolio. His project work spans custom WordPress development, React and Next.js applications, and CRM integrated business systems.",
+      },
+      {
+        question: 'What technology platforms does Abhijeet Jain specialize in?',
+        answer:
+          'Abhijeet Jain works primarily with React, Next.js, TypeScript, and WordPress for development, GoHighLevel and n8n for automation and CRM systems, and OpenAI and Claude for AI powered workflows. He also works across Google Workspace, Stripe, Cloudflare, and standard SEO and analytics tooling like Google Search Console and Ahrefs.',
+      },
+    ],
   },
   {
     slug: 'pawan-sharma',
@@ -113,7 +159,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     secondaryCta: { label: 'Explore Our Work', href: '/services' },
     aboutHeading: 'Building Smarter Growth Systems.',
     aboutParagraphs: [
-      "As Co-Founder of Calibre Associates, I focus on combining digital marketing, automation and AI into systems that scale — not one-off campaigns that stop producing the moment attention moves elsewhere.",
+      "As Co-Founder of Calibre Associates, I focus on combining digital marketing, automation and AI into systems that scale, not one-off campaigns that stop producing the moment attention moves elsewhere.",
       "I care about practical strategy: the kind that turns leads into predictable growth using tools that keep working long after the initial setup, so clients get efficiency and sustainable growth instead of just more noise.",
     ],
     journey: [
@@ -166,42 +212,54 @@ export const foundingTeam: FoundingTeamMember[] = [
     roleLine: 'Co-Founder, Calibre Associates',
     title: 'Actor • Model • Content Creator',
     heroTagline: 'Actor, Model & Content Creator',
+    heroSupportingLine: 'Talent Manager • Brand Representative • On Camera Talent',
+    heroImageAlt: 'Manasvi Pathak, actor, model, content creator and talent manager at Calibre Associates',
     image: manasviImg,
     listingImage: manasviListingImg,
     cardIntro:
-      'Co-Founder and on-camera talent crafting cinematic, authentic brand stories across fashion, beauty and lifestyle.',
-    cardBadges: ['Actor', 'Fashion Model', 'UGC Creator'],
+      'Co-Founder and on camera talent crafting cinematic, authentic brand stories, who now also helps brands find the right creators to tell theirs.',
+    cardBadges: ['Actor', 'Fashion Model', 'UGC Creator', 'Talent Manager'],
     heroBadges: [
       'Actor', 'Fashion Model', 'UGC Creator', 'Brand Representative', 'Beauty Creator',
       'Fashion Creator', 'Lifestyle Creator', 'Commercial Model', 'On Camera Talent', 'Creative Storytelling',
+      'Talent Manager', 'Creator Partnerships',
     ],
     primaryCta: { label: 'Connect on LinkedIn', href: 'https://www.linkedin.com/in/manasvipathakofficial/', external: true },
     secondaryCta: { label: 'Email Manasvi', href: 'mailto:manasvipathak002@gmail.com', external: true },
     aboutHeading: 'Crafting Authentic Stories Through a Cinematic Lens.',
     aboutParagraphs: [
-      "I've been in front of a camera since childhood — what started as a passion for performance evolved into a career built on storytelling. Acting and modelling taught me that every campaign should feel authentic, not promotional.",
+      "I've been in front of a camera since childhood, what started as a passion for performance evolved into a career built on storytelling. Acting and modelling taught me that every campaign should feel authentic, not promotional.",
       "My work spans fashion editorials, premium brand campaigns, commercial ads, digital content and creative collaborations across beauty, lifestyle and luxury brands.",
       'My vision is simple: to tell stories with honesty, creativity and lasting impact.',
+      "That experience now shapes a second part of my work. Through Calibre Associates, I help brands find and coordinate the right creators and on camera talent for their campaigns, models, actors, UGC creators or content creators, matched to what the brand actually needs. Having spent most of my career in front of the camera gives me a practical understanding of what makes a campaign feel authentic instead of staged, and that's what I now bring to talent management and brand representation.",
     ],
     journey: [
       'Early Passion for Performance', 'Junior Pageant Winner', 'Fashion Editorials', 'Commercial Campaigns',
       'Acting Projects', 'Brand Collaborations', 'Content Creation', 'Co-Founder, Calibre Associates',
+      'Talent Management & Brand Representation',
     ],
     whatIDo: [
       { title: 'Acting', description: 'Bringing characters and brand narratives to life on camera.' },
       { title: 'Fashion Modelling', description: 'Editorial and commercial modelling across fashion and beauty brands.' },
       { title: 'UGC Content Creation', description: 'Producing authentic, native-feeling content for digital campaigns.' },
-      { title: 'Brand Representation', description: 'Representing brands as the face of their campaigns and launches.' },
+      { title: 'Brand Representation', description: 'Representing brands as the face of their campaigns, and helping other brands find the right person to do the same.' },
       { title: 'Commercial Campaigns', description: 'Delivering polished, on-brief work for advertising and commercial clients.' },
+      { title: 'Creative Direction', description: 'Shaping the creative and on camera approach behind Calibre Associates campaigns.' },
+      { title: 'Talent Management', description: 'Identifying, coordinating and managing creators and on camera talent for brand campaigns.' },
+      { title: 'Creator Partnerships', description: 'Building relationships with creators across niches and connecting them with relevant brand opportunities.' },
+      { title: 'Content Strategy', description: 'Bringing an on camera and creator perspective into the campaigns built for Calibre Associates clients.' },
     ],
     techStack: [],
     projectsVariant: 'portfolio',
     portfolioUrl: 'https://manasvipathak.netlify.app/',
     portfolioImage: manasviPortfolioImg,
+    secondaryPortfolioCta: { label: 'Work With Manasvi', href: '/contact' },
     philosophyHeading: 'Every Brand Has a Story.',
     philosophyPoints: [
       'Audiences connect with authenticity, not ads',
       'Great content is creativity, professionalism and emotional storytelling combined',
+      'Representation means alignment, not just appearance',
+      'Professional delivery paired with natural, authentic storytelling',
     ],
     beyondHeading: 'Beyond the Camera',
     beyondItems: [
@@ -226,7 +284,7 @@ export const foundingTeam: FoundingTeamMember[] = [
       'Certificate of Excellence, World Designing Forum',
       'Featured Face, Eminent Icon Pageant Talent Hunt Reality Show',
       'Professional Brand Collaborations',
-      'Film Appearance — "Tu Meri Main Tera"',
+      'Film Appearance, "Tu Meri Main Tera"',
       'Member, Kaushambi Foundation NGO',
     ],
     achievementsHeading: 'Featured Achievements',
@@ -241,6 +299,87 @@ export const foundingTeam: FoundingTeamMember[] = [
     industries: [
       'Beauty', 'Fashion', 'Lifestyle', 'Jewellery', 'Hospitality', 'Real Estate',
       'Commercial Advertising', 'Luxury Brands', 'Personal Branding', 'Digital Campaigns', 'Social Media', 'UGC Campaigns',
+    ],
+    talentIntro: {
+      heading: 'The Right Talent For The Right Brand.',
+      description:
+        "I've spent my career as the talent. Now, through Calibre Associates, I also help brands find and work with the right creators and on camera talent for their campaigns. It's a growing, curated network rather than an open marketplace, every match is considered against the brand's niche, audience, content style and campaign goals.",
+    },
+    talentCategories: [
+      { title: 'UGC Creators', description: 'Authentic, product focused content built for social and paid campaigns.' },
+      { title: 'Models', description: 'Fashion, beauty, lifestyle and commercial campaign work.' },
+      { title: 'Actors', description: 'Commercials, advertisements and scripted brand content.' },
+      { title: 'Influencers', description: 'Campaigns built around genuine audience reach and community trust.' },
+      { title: 'Content Creators', description: 'Platform native content for Instagram, YouTube, TikTok and beyond.' },
+      { title: 'On Camera Talent', description: 'Talking head, educational, promotional and brand communication content.' },
+    ],
+    talentWorkflow: [
+      { label: 'Brand Requirement', icon: Briefcase },
+      { label: 'Campaign Brief', icon: FileText },
+      { label: 'Talent Discovery', icon: Search },
+      { label: 'Shortlisting', icon: ListChecks },
+      { label: 'Talent Matching', icon: Handshake },
+      { label: 'Campaign Coordination', icon: CalendarCheck },
+      { label: 'Campaign Delivery', icon: Rocket },
+    ],
+    knowsAbout: [
+      'Acting', 'Fashion Modelling', 'UGC Content Creation', 'Brand Representation',
+      'Talent Management', 'Creator Partnerships', 'Content Strategy',
+    ],
+    metaTitle: 'Manasvi Pathak | Actor, Model & Talent Manager | Calibre Associates',
+    metaDescription:
+      'Manasvi Pathak is Co-Founder of Calibre Associates, an actor, model and content creator who also leads talent management and brand representation for creator campaigns.',
+    faqs: [
+      {
+        question: 'What does Manasvi Pathak do at Calibre Associates?',
+        answer:
+          'Manasvi Pathak is a Co-Founder of Calibre Associates who contributes to the creative side of the agency. She works as an actor, model and content creator, and also leads talent management and brand representation, helping identify, coordinate and manage creators and on camera talent for client campaigns.',
+      },
+      {
+        question: 'Who is Manasvi Pathak and what is her professional background?',
+        answer:
+          'Manasvi Pathak is a Co-Founder of Calibre Associates, an actor, fashion model and content creator with a career built on storytelling since childhood. Her background spans fashion editorials, commercial campaigns, acting projects and brand collaborations across beauty, lifestyle and luxury brands, experience she now also brings to talent management and brand representation.',
+      },
+      {
+        question: 'Does Calibre Associates provide creators for brand campaigns?',
+        answer:
+          'Yes, through a growing, curated talent and creator management capability led by Manasvi Pathak. Calibre Associates can help brands identify and coordinate suitable creators and on camera talent for a campaign, rather than operating as an open talent marketplace.',
+      },
+      {
+        question: 'What type of talent can brands work with through Calibre Associates?',
+        answer:
+          'Brands can be matched with UGC creators, models, actors, influencers, content creators and on camera talent, depending on the campaign. The right fit depends on niche, audience, content style and what the brand is trying to communicate.',
+      },
+      {
+        question: 'Can brands request creators from a specific niche or platform?',
+        answer:
+          "Yes, talent is matched to a brand's specific requirements, including niche, audience, content style, location, platform and campaign objectives, rather than a generic one size fits all approach.",
+      },
+      {
+        question: 'Does Manasvi Pathak personally participate in brand campaigns?',
+        answer:
+          "Yes. In addition to her talent management and brand representation work, Manasvi continues to work as an actor, model and on camera talent herself where it's the right fit for the campaign.",
+      },
+      {
+        question: 'Can businesses hire Manasvi Pathak as a model or content creator?',
+        answer:
+          'Yes, brands and businesses can reach out to discuss modelling, acting or content creation collaborations directly, either by email or through Calibre Associates.',
+      },
+      {
+        question: 'Can Calibre Associates help with a complete creator campaign, not just talent?',
+        answer:
+          "Depending on the campaign, yes. Calibre Associates can support talent selection, coordination and creative direction alongside the agency's broader social media marketing and content services, so a campaign isn't limited to sourcing talent alone.",
+      },
+      {
+        question: 'What brands have Manasvi Pathak collaborated with for influencer marketing?',
+        answer:
+          'Manasvi Pathak has collaborated with fashion, beauty, and lifestyle brands as a brand representative and on camera talent, along with commercial advertising clients and organizations including Woman Central and the Kaushambi Foundation. Full details of her brand work and experience are on this profile.',
+      },
+      {
+        question: "Where can I find Manasvi Pathak's official social media and professional profiles?",
+        answer:
+          'You can find Manasvi Pathak on LinkedIn, where she shares her acting, modelling, and content creation work, and on her portfolio site, which showcases her fashion editorials, campaigns, and creative collaborations.',
+      },
     ],
   },
   {
@@ -324,7 +463,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     aboutHeading: 'Engineering Better Digital Experiences.',
     aboutParagraphs: [
       "I combine software engineering with UX design, because the best products come from understanding users before writing a single line of code.",
-      "My experience spans Software Engineering, WordPress Development, UI/UX Design, CRM Systems, Business Applications and Responsive Websites — always with the same starting point: what does the user actually need?",
+      "My experience spans Software Engineering, WordPress Development, UI/UX Design, CRM Systems, Business Applications and Responsive Websites, always with the same starting point: what does the user actually need?",
     ],
     journey: [
       'Software Engineering', 'Frontend Development', 'UI/UX Design', 'WordPress Solutions',
@@ -387,7 +526,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     aboutHeading: 'Designing With Curiosity, Growing With Every Project.',
     aboutParagraphs: [
       "I began with graphic design and evolved into UI/UX through continuous, hands-on learning. Along the way I've worked across Branding, Graphic Design, Menu Design, UI Concepts, UX Research, Design Systems, UX Case Studies and Digital Interfaces.",
-      "I'm still learning — and I say that openly. Working on real client projects at Calibre Associates has accelerated my growth faster than anything else, and every project teaches me something I didn't know before.",
+      "I'm still learning, and I say that openly. Working on real client projects at Calibre Associates has accelerated my growth faster than anything else, and every project teaches me something I didn't know before.",
     ],
     journey: [
       'Graphic Design', 'Brand Identity', 'Visual Communication', 'UI Design', 'UX Research',

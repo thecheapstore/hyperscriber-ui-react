@@ -46,7 +46,7 @@ const VARIANT_DESCRIPTION: Record<BulletListCardVariant, string> = {
   accent: 'text-ink/70',
 };
 
-/** Reusable bullet-list card — powers Client Goals, SEO Foundation, Performance Optimization, and Business Impact. */
+/** Reusable bullet-list card, powers Client Goals, SEO Foundation, Performance Optimization, and Business Impact. */
 const BulletListCard = ({ icon, eyebrow, title, description, items, variant = 'light', className = '' }: BulletListCardProps) => (
   <motion.div variants={fadeUp} className={`rounded-lg p-8 ${VARIANT_STYLES[variant]} ${className}`}>
     <div className={`w-11 h-11 rounded-lg flex items-center justify-center mb-5 ${VARIANT_ICON_WRAP[variant]}`}>

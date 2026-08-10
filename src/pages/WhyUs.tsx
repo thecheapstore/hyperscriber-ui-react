@@ -7,8 +7,10 @@ import WhyChooseUs from '@/components/services/sections/WhyChooseUs';
 import StatsSection from '@/components/services/sections/StatsSection';
 import TestimonialSlider from '@/components/services/sections/TestimonialSlider';
 import FinalCTA from '@/components/services/sections/FinalCTA';
+import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 import { ArrowDown } from 'lucide-react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
 const companyStats = [
@@ -18,10 +20,40 @@ const companyStats = [
   { label: 'Industries Served', value: 12, suffix: '+' },
 ];
 
+const BRAND_FAQS: FAQItem[] = [
+  {
+    question: 'What services does Calibre Associates offer in India and the United States?',
+    answer:
+      'We offer website and application development, SEO, social media marketing, video editing, lead generation, paid advertising, and AI automation, delivered as one connected system rather than isolated services. We work with businesses across India and the United States, combining engineering, marketing, and automation under one team instead of requiring you to coordinate multiple vendors.',
+  },
+  {
+    question: 'How do I choose a marketing agency for digital campaigns?',
+    answer:
+      'Look past the pitch and ask to see actual results from past clients, rankings, ad performance, or lead volume, not just polished case study language. Ask how they report progress and how often, a good agency should make it easy to see exactly what your budget is producing. And make sure their team actually covers what you need, an agency that is strong in social media but weak in paid ads will show gaps once your campaign is live.',
+  },
+  {
+    question: 'What should I expect when working with a marketing agency?',
+    answer:
+      'Expect a discovery phase first, understanding your business, goals, and audience before any strategy work starts. From there, a good agency sets clear timelines, explains what results are realistic and when, and provides regular, honest reporting, including when something is not working as well as hoped. What you should not expect is instant results or guarantees that sound too good to be true, sustainable growth takes structured, ongoing work.',
+  },
+  {
+    question: 'What are the benefits of hiring a full service marketing agency instead of a freelancer?',
+    answer:
+      'A full service agency brings a team covering strategy, design, development, and marketing together, so your website, SEO, and advertising all work from the same plan instead of being handled by disconnected freelancers. It also means continuity, if one person is unavailable, the work keeps moving, and you get a broader range of expertise than any single freelancer typically offers.',
+  },
+  {
+    question: 'How can I book a consultation with Calibre Associates?',
+    answer:
+      'You can book a free consultation directly through our contact page or Calendly link, no upfront commitment required. We use that first call to understand your business and goals, then map out exactly what we would recommend and why, so you have a clear picture before deciding to move forward.',
+  },
+];
+
 const WhyUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const faqSchema = buildFaqSchema(BRAND_FAQS);
 
   return (
     <motion.div
@@ -41,9 +73,10 @@ const WhyUs = () => {
   />
   <link
     rel="canonical"
-    href="https://calibreassociates.com/why-us"
+    href="https://www.calibreassociates.com/why-us"
   />
   <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
+  <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 </Helmet>
           <div className="container mx-auto px-6">
             <motion.div
@@ -90,6 +123,13 @@ const WhyUs = () => {
         <StatsSection stats={companyStats} />
 
         <TestimonialSlider />
+
+        <FAQSection
+          faqs={BRAND_FAQS}
+          eyebrow="FAQS"
+          title="Questions About Working With Calibre Associates"
+          description="Common questions business owners ask before choosing a digital marketing agency."
+        />
 
         <FinalCTA
           headline="Ready to Work With a Team That Delivers?"

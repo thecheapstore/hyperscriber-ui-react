@@ -6,7 +6,7 @@ import AutomationHeroDiagram from './AutomationHeroDiagram';
 
 const AIAutomationHero = () => {
   return (
-    <section className="relative pt-32 pb-24 md:pb-32 bg-ink overflow-hidden">
+    <section className="relative pt-28 pb-16 md:pt-32 md:pb-32 bg-ink overflow-hidden">
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ const AIAutomationHero = () => {
       />
 
       <div className="container relative mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-center lg:text-left">
             <motion.span
               variants={fadeUp}
@@ -40,8 +40,9 @@ const AIAutomationHero = () => {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Custom AI and automation systems that connect your CRM, phones, calendars and tools
-              into one workflow — so your business runs itself in the background.
+              Custom AI automation for small businesses that connects your CRM, phones, calendars
+              and tools into one workflow, so your business runs itself in the background while
+              you focus on growth.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

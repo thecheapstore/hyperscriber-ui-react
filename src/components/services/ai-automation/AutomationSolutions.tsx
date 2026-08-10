@@ -49,7 +49,7 @@ const AutomationSolutions = () => {
           </motion.span>
           <motion.h2 variants={fadeUp} className="mb-4">Our Automation Solutions</motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-            End-to-end systems covering every part of how your business runs.
+            End to end CRM workflow automation and AI systems covering every part of how your business runs.
           </motion.p>
         </motion.div>
 

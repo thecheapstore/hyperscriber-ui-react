@@ -21,8 +21,8 @@ const ContactHero = () => {
               Let's Start a <span className="text-ink font-bold">Conversation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
-              Have questions about our services or ready to transform your marketing strategy?
-              We're here to help.
+              Have questions about website development, SEO, paid advertising, or AI automation,
+              or ready to transform your digital marketing strategy? We're here to help.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -20,7 +20,7 @@ const TeamMembers = () => {
           </span>
           <h2 className="mb-4">Six Specialists. One Mission.</h2>
           <p className="text-lg text-ink/70">
-            Every founding member brings a distinct craft to the table — together they cover
+            Every founding member brings a distinct craft to the table, together they cover
             everything a modern business needs to grow online.
           </p>
         </motion.div>

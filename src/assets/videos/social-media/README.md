@@ -1,6 +1,6 @@
 # Social Media Portfolio Videos
 
-Drop video files directly in this folder — the portfolio section on the Social Media
+Drop video files directly in this folder, the portfolio section on the Social Media
 Marketing page picks them up automatically, no code changes required.
 
 ## Supported formats
@@ -12,7 +12,7 @@ Marketing page picks them up automatically, no code changes required.
 - Everything before `__` becomes the category badge (e.g. `Ecommerce`, `Restaurant`, `Fitness`).
 - Everything after `__` becomes the video title, humanized from kebab-case
   (`product-launch-reel` → "Product Launch Reel").
-- No `__` in the filename? It still works — category defaults to "Social Media"
+- No `__` in the filename? It still works, category defaults to "Social Media"
   and the whole filename becomes the title.
 
 Examples:

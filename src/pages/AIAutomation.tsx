@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   TreePine, HardHat, Home, HeartPulse, Scale, Megaphone, UtensilsCrossed,
@@ -22,6 +22,8 @@ import CorePhilosophy from '@/components/services/ai-automation/CorePhilosophy';
 import AutomationSolutions from '@/components/services/ai-automation/AutomationSolutions';
 import WhyHighLevelN8n from '@/components/services/ai-automation/WhyHighLevelN8n';
 import { aiAutomationTiers } from '@/components/services/ai-automation/data/aiAutomationPricing';
+import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SITE_URL = 'https://www.calibreassociates.com';
 const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
@@ -30,6 +32,29 @@ const PLATFORMS = [
   'HighLevel (GoHighLevel)', 'n8n', 'Make', 'Zapier', 'OpenAI', 'Claude', 'Gemini',
   'Google Workspace', 'Stripe', 'Twilio', 'Mailgun', 'WhatsApp', 'Calendly',
   'Google Calendar', 'Google Sheets', 'Slack', 'Webhooks', 'APIs', 'WordPress',
+];
+
+const AI_AUTOMATION_FAQS: FAQItem[] = [
+  {
+    question: 'How can small businesses in India use AI automation to reduce operational costs?',
+    answer:
+      "Small businesses cut costs fastest by automating the repetitive tasks that eat up staff time, lead follow up, appointment booking, invoicing, and customer support. We connect your CRM, phones, calendars, and messaging into one automated workflow built on HighLevel and n8n, so tasks that used to require a dedicated team member happen instantly and consistently, without adding headcount.",
+  },
+  {
+    question: 'How can CRM workflow automation help Indian businesses improve their sales process?',
+    answer:
+      'CRM workflow automation removes the manual work between a lead coming in and a sale closing. Instead of a team member manually routing leads, sending follow ups, and updating pipeline stages by hand, an automated workflow qualifies leads with AI, assigns them instantly, sends timely follow up messages, and keeps your pipeline updated in real time, so no lead is missed and your team spends its time closing deals instead of managing spreadsheets.',
+  },
+  {
+    question: 'What is the difference between HighLevel alone and a custom automation workflow?',
+    answer:
+      'HighLevel on its own is a strong CRM and marketing platform, it handles pipelines, calendars, forms, and basic automations. We extend it with custom n8n workflows that connect it to AI models, your existing tools, and your specific business logic, turning a general CRM into a fully automated system built around exactly how your business operates.',
+  },
+  {
+    question: 'Can AI automation replace my customer service or sales team?',
+    answer:
+      'No, and that is not the goal. Our automation handles the repetitive parts of the process, answering common questions, qualifying leads, booking appointments, and sending reminders, so your team can focus on the conversations and decisions that actually need a person. Automation removes the busywork, it does not replace the people who build relationships with your customers.',
+  },
 ];
 
 const INDUSTRIES: IndustryItem[] = [
@@ -75,8 +100,10 @@ const AIAutomation = () => {
     serviceType: service.title,
     url: pageUrl,
     provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: 'US',
+    areaServed: ['US', 'IN'],
   };
+
+  const faqSchema = buildFaqSchema(AI_AUTOMATION_FAQS);
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
@@ -101,6 +128,7 @@ const AIAutomation = () => {
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -126,6 +154,13 @@ const AIAutomation = () => {
         <StatsSection stats={service.stats} />
 
         <PricingTiers tiers={aiAutomationTiers} eyebrow="PRICING" title="Plans Built Around Your Operations" />
+
+        <FAQSection
+          faqs={AI_AUTOMATION_FAQS}
+          eyebrow="AI AUTOMATION FAQS"
+          title="Your AI Automation Questions, Answered"
+          description="Common questions business owners ask about automating operations with AI."
+        />
 
         <FinalCTA
           headline="Ready to Automate Your Business?"

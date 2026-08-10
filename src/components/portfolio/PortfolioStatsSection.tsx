@@ -8,7 +8,7 @@ interface PortfolioStatsSectionProps {
   projects: Project[];
 }
 
-/** Every figure here is computed directly from the portfolio data array — nothing is hardcoded or fabricated. */
+/** Every figure here is computed directly from the portfolio data array, nothing is hardcoded or fabricated. */
 const PortfolioStatsSection = ({ projects }: PortfolioStatsSectionProps) => {
   const stats = useMemo(() => {
     const websitesDelivered = projects.filter((p) => p.portfolioCategory === 'Website Development').length;

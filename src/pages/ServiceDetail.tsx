@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 import Navbar from '@/components/layout/Navbar';
@@ -59,7 +59,7 @@ const ServiceDetail = () => {
       name: 'Calibre Associates',
       url: SITE_URL,
     },
-    areaServed: 'US',
+    areaServed: ['US', 'IN'],
   };
 
   return (

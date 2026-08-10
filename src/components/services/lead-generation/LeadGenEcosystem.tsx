@@ -28,7 +28,8 @@ const LeadGenEcosystem = () => {
           <span className="eyebrow inline-block py-1 px-3 mb-5 rounded-pill bg-surface-soft">HOW IT WORKS</span>
           <h2 className="mb-4">The Lead Generation Ecosystem</h2>
           <p className="text-ink/70 text-body-lg">
-            Every lead moves through one connected system — not a set of disconnected tactics.
+            Every lead generation strategy we build moves through one connected system, not a set
+            of disconnected tactics.
           </p>
         </motion.div>
 

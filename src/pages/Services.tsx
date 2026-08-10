@@ -6,7 +6,7 @@ import ServiceHero from '@/components/services/ServiceHero';
 import ServicesList from '@/components/services/ServicesList';
 import ServiceFAQ from '@/components/services/ServiceFAQ';
 import CTASection from '@/components/CTASection';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
 const Services = () => {
@@ -21,10 +21,10 @@ const Services = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Digital Marketing, Development & Automation Services | Calibre Associates</title>
+        <title>Digital Marketing, Web Development and AI Automation Services | Calibre Associates</title>
         <meta
           name="description"
-          content="Calibre Associates provides lead generation, paid advertising, SEO, social media marketing, website and application development, content creation, UI UX design, and AI powered automation solutions to help businesses grow sustainably."
+          content="Explore Calibre Associates' full range of digital marketing agency services: lead generation, paid advertising, SEO, social media marketing, video editing, website and application development, and AI automation for small businesses in India and the United States."
         />
         <link
           rel="canonical"

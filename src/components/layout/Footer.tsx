@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
 
             <p className="text-ink/70 font-light mb-6 max-w-sm">
-              We design and build scalable digital systems including high performance websites, automation workflows, and CRM integrations that help businesses operate efficiently and grow sustainably.
+              Calibre Associates is a digital marketing agency that designs and builds scalable digital systems, including high performance websites, AI automation workflows, and CRM integrations, that help businesses in India and the United States operate efficiently and grow sustainably.
             </p>
 
             <div className="flex items-center space-x-4">
@@ -59,6 +59,7 @@ const Footer = () => {
                 { name: 'Services', path: '/services' },
                 { name: 'Why Us', path: '/why-us' },
                 { name: 'Our Team', path: '/our-team' },
+                { name: 'FAQ', path: '/faq' },
                 { name: 'Contact', path: '/contact' },
                 { name: 'Terms & Conditions', path: '/terms-conditions' },
                 { name: 'Privacy Policy', path: '/privacy-policy' },
@@ -85,19 +86,22 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                'Website Design & Development',
-                'UI UX & Product Design',
-                'Performance & SEO Optimization',
-                'Social Media Marketing',
+                { name: 'Website Development', path: '/services/website-development' },
+                { name: 'SEO', path: '/services/seo' },
+                { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
+                { name: 'Video Editing', path: '/services/video-editing' },
+                { name: 'Lead Generation & Paid Advertising', path: '/services/lead-generation-paid-advertising' },
+                { name: 'AI Automation & Solutions', path: '/services/ai-automation-solutions' },
+                { name: 'Application & Software Development', path: '/services/application-software-development' },
               ].map((service) => (
-                <li key={service}>
+                <li key={service.name}>
                   <Link
-                    to="/services"
+                    to={service.path}
                     className="text-ink/70 hover:text-ink transition-colors flex items-center group"
                   >
                     <span className="inline-block w-1.5 h-1.5 bg-ink rounded-full mr-3 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-200"></span>
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
-                      {service}
+                      {service.name}
                     </span>
                   </Link>
                 </li>
@@ -176,7 +180,7 @@ const Footer = () => {
           <p className="mt-2 md:mt-0">
             Designed with ❤️ by{' '}
             <a
-              href="https://abhijeetjain.netlify.app/"
+              href="https://calibreassociates.com/our-team/abhijeet-jain"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-ink inline-flex items-center gap-1"

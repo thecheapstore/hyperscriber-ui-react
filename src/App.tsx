@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -10,6 +11,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import TopBanner from "@/components/layout/TopBanner";
 import CookieConsent from "@/components/layout/CookieConsent";
 import DisableInspect from "@/components/layout/DisableInspect";
+import OrganizationSchema from "@/components/layout/OrganizationSchema";
 
 // Pages
 import Index from "@/pages/Index";
@@ -24,6 +26,7 @@ import AIAutomation from "@/pages/AIAutomation";
 import CaseStudy from "@/pages/CaseStudy";
 import OurTeam from "@/pages/OurTeam";
 import TeamProfile from "@/pages/TeamProfile";
+import Faq from "@/pages/Faq";
 import WhyUs from "@/pages/WhyUs";
 import Contact from "@/pages/Contact";
 import TermsConditions from "@/pages/TermsConditions";
@@ -62,6 +65,7 @@ const AnimatedRoutes = () => {
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/our-team/:slug" element={<TeamProfile />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="/why-us" element={<WhyUs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
@@ -75,24 +79,27 @@ const AnimatedRoutes = () => {
 
 const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner position="top-center" />
-        <BrowserRouter>
-          <div className="flex flex-col min-h-screen">
-            <DisableInspect />
-            <TopBanner />
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner position="top-center" />
+          <BrowserRouter>
+            <div className="flex flex-col min-h-screen">
+              <DisableInspect />
+              <OrganizationSchema />
+              <TopBanner />
 
-            <main className="flex-1">
-              <AnimatedRoutes />
-            </main>
+              <main className="flex-1">
+                <AnimatedRoutes />
+              </main>
 
-            <CookieConsent />
-          </div>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+              <CookieConsent />
+            </div>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 };
 

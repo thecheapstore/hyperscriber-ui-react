@@ -44,9 +44,15 @@ const ProfileHero = ({ member }: ProfileHeroProps) => {
             <motion.h1 variants={fadeUp} className="mb-3">
               {member.name}
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-ink/60 mb-8">
+            <motion.p variants={fadeUp} className={`text-xl text-ink/60 ${member.heroSupportingLine ? "mb-3" : "mb-8"}`}>
               {member.heroTagline ?? member.title}
             </motion.p>
+
+            {member.heroSupportingLine && (
+              <motion.p variants={fadeUp} className="text-sm font-medium text-ink/50 mb-8">
+                {member.heroSupportingLine}
+              </motion.p>
+            )}
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-10">
               {member.heroBadges.map((badge) => (
@@ -83,7 +89,7 @@ const ProfileHero = ({ member }: ProfileHeroProps) => {
             <div className="relative aspect-[4/5] rounded-block overflow-hidden border border-hairline shadow-card">
               <img
                 src={member.image}
-                alt={member.name}
+                alt={member.heroImageAlt ?? member.name}
                 loading="eager"
                 // @ts-expect-error -- fetchpriority isn't in this React version's JSX types yet, but is a valid HTML attribute
                 fetchpriority="high"

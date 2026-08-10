@@ -38,7 +38,7 @@ const InstagramPostCard = ({ post, index }: InstagramPostCardProps) => {
         if (cancelled || !containerRef.current) return;
         window.instgrm?.Embeds.process();
 
-        // Poll for a genuinely rendered embed rather than relying solely on a MutationObserver —
+        // Poll for a genuinely rendered embed rather than relying solely on a MutationObserver,
         // Instagram's script can batch-insert iframes for every card on the page in one pass, and
         // observers set up a tick apart can miss each other's insertion. Polling always checks
         // live DOM state directly, so it can't miss it.
@@ -46,7 +46,7 @@ const InstagramPostCard = ({ post, index }: InstagramPostCardProps) => {
         // An <iframe> existing isn't enough on its own: Instagram sizes it via its own postMessage
         // handshake, and that handshake can silently fail for a post while the iframe tag stays in
         // the DOM at ~0 height. Only trust the embed once Instagram has marked it rendered AND it
-        // actually has real height — otherwise treat it the same as never having loaded.
+        // actually has real height, otherwise treat it the same as never having loaded.
         pollId = window.setInterval(() => {
           const iframe = containerRef.current?.querySelector('iframe');
           if (iframe?.classList.contains('instagram-media-rendered') && iframe.getBoundingClientRect().height > 10) {
@@ -119,7 +119,7 @@ const InstagramPostCard = ({ post, index }: InstagramPostCardProps) => {
       )}
 
       <div ref={containerRef}>
-        {/* Official Instagram embed widget — instagram.com/embed.js replaces this with the post's real iframe. Left unconstrained so the full post (caption, likes, comments) shows, not just a cropped top slice. */}
+        {/* Official Instagram embed widget, instagram.com/embed.js replaces this with the post's real iframe. Left unconstrained so the full post (caption, likes, comments) shows, not just a cropped top slice. */}
         <blockquote
           className="instagram-media"
           data-instgrm-permalink={post.url}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   BarChart3, Workflow, TrendingUp, ClipboardCheck, Users, Layers, RefreshCw,
@@ -25,6 +25,8 @@ import LeadGenHero from '@/components/services/lead-generation/LeadGenHero';
 import LeadGenEcosystem from '@/components/services/lead-generation/LeadGenEcosystem';
 import LeadGenServices from '@/components/services/lead-generation/LeadGenServices';
 import { leadGenTiers } from '@/components/services/lead-generation/data/leadGenPricing';
+import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SITE_URL = 'https://www.calibreassociates.com';
 const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
@@ -33,6 +35,29 @@ const PLATFORMS = [
   'Google Ads', 'Meta Ads', 'Google Analytics', 'Google Tag Manager', 'Google Search Console',
   'HighLevel', 'n8n', 'Make', 'Zapier', 'Stripe', 'Nextdoor', 'Yelp', 'Google Business Profile',
   'Looker Studio', 'Calendly', 'Mailgun', 'Twilio', 'OpenAI', 'Claude', 'Gemini', 'Perplexity', 'Microsoft Clarity',
+];
+
+const LEAD_GEN_FAQS: FAQItem[] = [
+  {
+    question: 'What are the most effective SaaS lead generation strategies for the Indian market?',
+    answer:
+      'The strategies that convert best combine paid search and social advertising with a fast, automated follow up system, Google Ads and Meta Ads bring in demand, landing pages and forms capture it, and CRM automation makes sure every lead gets a response within minutes instead of hours. For the Indian market specifically, adding WhatsApp follow up and local service ads alongside traditional channels significantly increases response rates, since WhatsApp is where most Indian leads actually reply.',
+  },
+  {
+    question: 'What is the difference between Google Ads and Meta Ads for lead generation?',
+    answer:
+      'Google Ads captures people who are already searching for a solution, which tends to produce higher intent leads at a higher cost per click. Meta Ads reaches people based on interests and behavior before they start searching, which is better for building awareness and filling the top of your funnel at a lower cost. Most businesses get the best results running both together, Google to capture demand and Meta to create it.',
+  },
+  {
+    question: 'How do marketing agencies measure return on investment for lead generation campaigns?',
+    answer:
+      'We track cost per lead, cost per booked appointment, and cost per closed customer, not just clicks or impressions. Every campaign is connected to your CRM, so we can see exactly which channels and ads are producing leads that actually turn into paying customers, and shift budget toward what is working.',
+  },
+  {
+    question: 'How long does it take to see results from paid advertising and lead generation campaigns?',
+    answer:
+      'Paid campaigns typically start generating leads within the first one to two weeks of launch, though the first month is mainly about gathering data, testing audiences, and identifying what converts. Meaningful optimization and a lower, more stable cost per lead usually show up by month two or three, once we have enough data to refine targeting and creative.',
+  },
 ];
 
 const INDUSTRIES: IndustryItem[] = [
@@ -56,10 +81,10 @@ const whyChooseReasons: Reason[] = [
   { icon: <BarChart3 className="h-6 w-6" />, title: 'Data Driven', description: 'Every campaign decision is backed by real performance data, not guesswork.' },
   { icon: <Workflow className="h-6 w-6" />, title: 'Automation First', description: 'Lead routing, follow-ups and nurturing run automatically from the moment a lead comes in.' },
   { icon: <TrendingUp className="h-6 w-6" />, title: 'ROI Focused', description: 'Every dollar of spend is tied back to a measurable outcome, not just impressions.' },
-  { icon: <ClipboardCheck className="h-6 w-6" />, title: 'Transparent Reporting', description: 'Clear, honest reporting on what’s working and what’s not — no vanity metrics.' },
-  { icon: <Users className="h-6 w-6" />, title: 'Real Human Support', description: 'A real strategist you can reach — not a ticket queue or an automated chatbot.' },
+  { icon: <ClipboardCheck className="h-6 w-6" />, title: 'Transparent Reporting', description: 'Clear, honest reporting on what’s working and what’s not, no vanity metrics.' },
+  { icon: <Users className="h-6 w-6" />, title: 'Real Human Support', description: 'A real strategist you can reach, not a ticket queue or an automated chatbot.' },
   { icon: <Layers className="h-6 w-6" />, title: 'Scalable Campaigns', description: 'Systems built to grow with you, from a single channel to a full-funnel operation.' },
-  { icon: <RefreshCw className="h-6 w-6" />, title: 'Continuous Optimization', description: 'Campaigns are never "set and forget" — we’re constantly testing and improving.' },
+  { icon: <RefreshCw className="h-6 w-6" />, title: 'Continuous Optimization', description: 'Campaigns are never "set and forget", we’re constantly testing and improving.' },
 ];
 
 const processSteps: TimelineStep[] = [
@@ -102,8 +127,10 @@ const LeadGeneration = () => {
     serviceType: service.title,
     url: pageUrl,
     provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: 'US',
+    areaServed: ['US', 'IN'],
   };
+
+  const faqSchema = buildFaqSchema(LEAD_GEN_FAQS);
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
@@ -128,6 +155,7 @@ const LeadGeneration = () => {
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -143,7 +171,7 @@ const LeadGeneration = () => {
           platforms={PLATFORMS}
           eyebrow="TECH STACK"
           title="Platforms We Use"
-          description="A connected stack of advertising, automation and reporting tools — chosen for what they deliver, not what's trendy."
+          description="A connected stack of advertising, automation and reporting tools, chosen for what they deliver, not what's trendy."
         />
 
         <IndustryIconGrid items={INDUSTRIES} eyebrow="INDUSTRIES WE HELP" title="Built for Businesses Like Yours" />
@@ -158,6 +186,13 @@ const LeadGeneration = () => {
         />
 
         <PricingTiers tiers={leadGenTiers} eyebrow="PRICING" title="Plans Built Around Your Growth" />
+
+        <FAQSection
+          faqs={LEAD_GEN_FAQS}
+          eyebrow="LEAD GENERATION FAQS"
+          title="Your Lead Generation Questions, Answered"
+          description="Common questions business owners ask about paid advertising and lead generation."
+        />
 
         <WhyChooseUs
           reasons={whyChooseReasons}

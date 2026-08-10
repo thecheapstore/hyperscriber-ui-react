@@ -18,7 +18,7 @@ interface TestimonialSliderProps {
 }
 
 const TestimonialSlider = ({
-  description = 'Placeholder testimonials — real client quotes will replace these as case studies are added.',
+  description = 'Placeholder testimonials, real client quotes will replace these as case studies are added.',
 }: TestimonialSliderProps) => {
   return (
     <section className="py-20 md:py-24 bg-canvas overflow-hidden">

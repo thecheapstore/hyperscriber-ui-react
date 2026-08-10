@@ -16,7 +16,7 @@ const PricingTiers = ({
   tiers,
   eyebrow = 'PRICING',
   title = 'Plans Built Around Your Goals',
-  description = "Every engagement is scoped around your business — reach out and we'll put together a plan that fits.",
+  description = "Every engagement is scoped around your business, reach out and we'll put together a plan that fits.",
   trustBadges,
   footnote,
 }: PricingTiersProps) => {

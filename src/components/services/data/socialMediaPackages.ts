@@ -18,7 +18,7 @@ export const socialMediaPackages: PricingPackage[] = [
       '4–6 Stories (T&Cs apply on story count)',
     ],
     notes: [
-      'Reels use AI-generated video or client-supplied raw footage, edited with captions, background music, and basic trimming — no advanced motion graphics.',
+      'Reels use AI-generated video or client-supplied raw footage, edited with captions, background music, and basic trimming, no advanced motion graphics.',
       'Advanced editing, talking-head videos, premium AI videos, and cinematic editing are quoted separately based on project requirements.',
     ],
     reporting: 'Performance report once every two months',

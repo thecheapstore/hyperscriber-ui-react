@@ -20,7 +20,7 @@ const PlaceholderContent = () => (
 /** Reusable browser / tablet / phone frame used for portfolio thumbnails and case study screenshots. */
 const WebsiteMockup = ({ imageUrl, alt = 'Website preview', className = '', device = 'desktop' }: WebsiteMockupProps) => {
   const content = imageUrl ? (
-    <img src={imageUrl} alt={alt} className="w-full h-full object-cover object-top" />
+    <img src={imageUrl} alt={alt} loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
   ) : (
     <PlaceholderContent />
   );

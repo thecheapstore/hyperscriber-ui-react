@@ -8,7 +8,7 @@ import metaServicesLogo from '@/assets/portfolio/meta-services-logo.webp';
 import ashtonServicesLogo from '@/assets/portfolio/ashton-services-logo.webp';
 import aOneTreeLogo from '@/assets/portfolio/aone-tree-logo.webp';
 
-// Shared methodology applied consistently across every SEO engagement — the same
+// Shared methodology applied consistently across every SEO engagement, the same
 // process, described once, rather than reworded per project.
 const seoProcess: ProjectProcessStep[] = [
   { title: 'Website Audit', description: 'A full technical and content audit to identify what\'s holding organic visibility back.' },
@@ -39,9 +39,9 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: '716 Lawn Care',
     companyLogo: lawnCareLogo,
-    projectName: '716 Lawn Care — SEO & Local Search Growth',
+    projectName: '716 Lawn Care, SEO & Local Search Growth',
     shortDescription:
-      "716 Lawn Care needed to turn its already-strong reputation in Buffalo into consistent organic visibility — showing up in local search and Google Maps results whenever nearby homeowners searched for lawn care.",
+      "716 Lawn Care needed to turn its already-strong reputation in Buffalo into consistent organic visibility, showing up in local search and Google Maps results whenever nearby homeowners searched for lawn care.",
     category: 'Local SEO & Google Business Profile Growth',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
@@ -63,9 +63,9 @@ export const seoProjects: Project[] = [
       'Establish long-term organic search authority in Western New York',
     ],
     challenge:
-      "Despite delivering excellent work, 716 Lawn Care's website wasn't structured to compete for the local searches that matter most — \"lawn care near me,\" \"landscaping Buffalo NY,\" and similar high-intent terms. The Google Business Profile was underutilized, service pages weren't targeting the right local keywords, and there was no consistent content strategy to build long-term authority.",
+      "Despite delivering excellent work, 716 Lawn Care's website wasn't structured to compete for the local searches that matter most, \"lawn care near me,\" \"landscaping Buffalo NY,\" and similar high-intent terms. The Google Business Profile was underutilized, service pages weren't targeting the right local keywords, and there was no consistent content strategy to build long-term authority.",
     strategy:
-      'We approached this as a local-search-first engagement — auditing the technical foundation, rebuilding on-page structure around real search intent, and treating the Google Business Profile as a primary growth channel rather than an afterthought.',
+      'We approached this as a local-search-first engagement, auditing the technical foundation, rebuilding on-page structure around real search intent, and treating the Google Business Profile as a primary growth channel rather than an afterthought.',
     solution:
       'Calibre Associates delivered a full local SEO program: technical audit and fixes, on-page optimization across every service page, structured local landing pages for each service area, Google Business Profile optimization and ongoing management, and a content strategy built to establish 716 Lawn Care as the authority for lawn care and landscaping across Western New York.',
     process: seoProcess,
@@ -75,7 +75,7 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      "The SEO program gives 716 Lawn Care a durable, compounding source of organic visibility across Buffalo and Western New York — reducing reliance on paid ads while building long-term local authority.",
+      "The SEO program gives 716 Lawn Care a durable, compounding source of organic visibility across Buffalo and Western New York, reducing reliance on paid ads while building long-term local authority.",
     businessImpact: [
       'Established as a leading local search presence for lawn care in Buffalo',
       'Improved visibility across Google Search and Google Maps',
@@ -97,9 +97,9 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'RR Landscaping & Tree Services',
     companyLogo: rrLandscapingLogo,
-    projectName: 'RR Landscaping & Tree Services — SEO & Local Search Growth',
+    projectName: 'RR Landscaping & Tree Services, SEO & Local Search Growth',
     shortDescription:
-      'RR Landscaping & Tree Services had strong word-of-mouth in Syracuse but almost no organic search presence — Calibre Associates built the local SEO foundation to change that.',
+      'RR Landscaping & Tree Services had strong word-of-mouth in Syracuse but almost no organic search presence, Calibre Associates built the local SEO foundation to change that.',
     category: 'Local SEO & Local Search Optimization',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
@@ -119,7 +119,7 @@ export const seoProjects: Project[] = [
       'Establish long-term organic authority in Syracuse',
     ],
     challenge:
-      "RR Landscaping & Tree Services had strong word-of-mouth in Syracuse but almost no organic search presence — the site wasn't ranking for core landscaping and tree service terms, and there was no local SEO structure to support multiple service areas.",
+      "RR Landscaping & Tree Services had strong word-of-mouth in Syracuse but almost no organic search presence, the site wasn't ranking for core landscaping and tree service terms, and there was no local SEO structure to support multiple service areas.",
     strategy:
       'We prioritized a technical-SEO-first approach paired with local service-area targeting, so the site could compete for both landscaping and tree service searches across Syracuse and surrounding communities.',
     solution:
@@ -152,9 +152,9 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'WNY Tree Specialists',
     companyLogo: wnyTreeLogo,
-    projectName: 'WNY Tree Specialists — SEO & Local Search Growth',
+    projectName: 'WNY Tree Specialists, SEO & Local Search Growth',
     shortDescription:
-      'Tree service searches spike during emergencies — Calibre Associates built an SEO strategy to make sure WNY Tree Specialists is visible at exactly those moments.',
+      'Tree service searches spike during emergencies, Calibre Associates built an SEO strategy to make sure WNY Tree Specialists is visible at exactly those moments.',
     category: 'Local SEO & Emergency Search Visibility',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
@@ -174,7 +174,7 @@ export const seoProjects: Project[] = [
       'Establish long-term authority in Western New York tree care',
     ],
     challenge:
-      "Tree service searches spike during emergencies — storm damage, hazardous trees — and WNY Tree Specialists needed to be visible at exactly those moments. The site wasn't structured to capture urgent, high-intent local searches or to build the trust signals homeowners look for before calling a tree company.",
+      "Tree service searches spike during emergencies, storm damage, hazardous trees, and WNY Tree Specialists needed to be visible at exactly those moments. The site wasn't structured to capture urgent, high-intent local searches or to build the trust signals homeowners look for before calling a tree company.",
     strategy:
       'We built the SEO strategy around intent: making sure WNY Tree Specialists ranks for both routine tree care searches and urgent, storm-driven emergency searches across Western New York.',
     solution:
@@ -207,9 +207,9 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'Buffalo Tree Specialists',
     companyLogo: buffaloTreeLogo,
-    projectName: 'Buffalo Tree Specialists — SEO & Local Search Growth',
+    projectName: 'Buffalo Tree Specialists, SEO & Local Search Growth',
     shortDescription:
-      'Buffalo Tree Specialists competes in a crowded local market where customers often search while already in a stressful situation — the SEO strategy was built around speed-to-trust.',
+      'Buffalo Tree Specialists competes in a crowded local market where customers often search while already in a stressful situation, the SEO strategy was built around speed-to-trust.',
     category: 'Local SEO & Emergency Search Visibility',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
@@ -231,7 +231,7 @@ export const seoProjects: Project[] = [
     challenge:
       'Buffalo Tree Specialists competes in a crowded local market where customers often search while already in a stressful situation. The website needed to build trust and rank quickly for emergency and same-day service searches, not just general tree service terms.',
     strategy:
-      'We focused the SEO approach on speed-to-trust — technical performance, clear local signals, and content built around the urgent searches that convert fastest.',
+      'We focused the SEO approach on speed-to-trust, technical performance, clear local signals, and content built around the urgent searches that convert fastest.',
     solution:
       'Technical SEO, Google Business Profile optimization, local citation building, and service-area SEO structured around emergency and same-day tree service searches across Buffalo.',
     process: seoProcess,
@@ -241,7 +241,7 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      'The SEO program helps Buffalo Tree Specialists show up — and be trusted — in the moments that matter most: urgent, high-intent local searches.',
+      'The SEO program helps Buffalo Tree Specialists show up, and be trusted, in the moments that matter most: urgent, high-intent local searches.',
     businessImpact: [
       'Improved visibility for emergency and same-day search terms',
       'Stronger local citation and map presence',
@@ -262,7 +262,7 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'Meta Tree Services NY',
     companyLogo: metaTreeLogo,
-    projectName: 'Meta Tree Services NY — SEO & Local Search Growth',
+    projectName: 'Meta Tree Services NY, SEO & Local Search Growth',
     shortDescription:
       'Meta Tree Services NY needed a scalable SEO foundation capable of supporting a broader New York service footprint without diluting local relevance in any one market.',
     category: 'Scalable Local SEO Architecture',
@@ -286,7 +286,7 @@ export const seoProjects: Project[] = [
     challenge:
       'Meta Tree Services NY needed a scalable SEO foundation capable of supporting a broader New York service footprint, not just a single metro area, without diluting local relevance in any one market.',
     strategy:
-      "We structured the SEO program to scale — a repeatable local SEO framework that could extend to new service areas as the business grows, while keeping each location's content genuinely locally relevant.",
+      "We structured the SEO program to scale, a repeatable local SEO framework that could extend to new service areas as the business grows, while keeping each location's content genuinely locally relevant.",
     solution:
       'Technical SEO, scalable local landing page architecture, Google Business Profile optimization, and a content strategy designed to expand cleanly into new New York markets over time.',
     process: seoProcess,
@@ -317,7 +317,7 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'Meta Services NY',
     companyLogo: metaServicesLogo,
-    projectName: 'Meta Services NY — SEO & Local Search Growth',
+    projectName: 'Meta Services NY, SEO & Local Search Growth',
     shortDescription:
       "As a multi-service property improvement company, Meta Services NY needed its SEO strategy to cover many distinct services without any one service page cannibalizing another.",
     category: 'Multi-Service Local SEO Architecture',
@@ -339,7 +339,7 @@ export const seoProjects: Project[] = [
       'Improve Google Business Profile visibility',
     ],
     challenge:
-      'As a multi-service property improvement company, Meta Services NY needed its SEO strategy to cover many distinct services without any one service page cannibalizing another — a common challenge for businesses with a broad service catalog.',
+      'As a multi-service property improvement company, Meta Services NY needed its SEO strategy to cover many distinct services without any one service page cannibalizing another, a common challenge for businesses with a broad service catalog.',
     strategy:
       "We approached this with a hub-and-spoke content architecture, giving each service its own optimized page while reinforcing overall domain authority.",
     solution:
@@ -372,7 +372,7 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'Ashton Services NY',
     companyLogo: ashtonServicesLogo,
-    projectName: 'Ashton Services NY — SEO & Local Search Growth',
+    projectName: 'Ashton Services NY, SEO & Local Search Growth',
     shortDescription:
       'A family-owned landscaping and property services company founded in 2019, Ashton Services NY needed to build organic visibility from the ground up in a competitive Buffalo-area market.',
     category: 'Local SEO Foundation Building',
@@ -396,7 +396,7 @@ export const seoProjects: Project[] = [
     challenge:
       'As a newer, family-owned business founded in 2019, Ashton Services NY needed to build organic visibility from the ground up in a competitive Buffalo-area market dominated by more established landscaping companies.',
     strategy:
-      'We focused on building a strong technical and local SEO foundation quickly — establishing trust signals and local relevance to help a younger business compete against longer-established competitors in organic search.',
+      'We focused on building a strong technical and local SEO foundation quickly, establishing trust signals and local relevance to help a younger business compete against longer-established competitors in organic search.',
     solution:
       'Technical SEO, on-page optimization across their landscaping, lawn care, tree service, and snow removal offerings, Google Business Profile setup and optimization, and local citation building across the Buffalo and North Tonawanda area.',
     process: seoProcess,
@@ -427,9 +427,9 @@ export const seoProjects: Project[] = [
     serviceSlug: 'seo',
     companyName: 'A-One Tree Services',
     companyLogo: aOneTreeLogo,
-    projectName: 'A-One Tree Services Rochester NY — SEO & Local Search Growth',
+    projectName: 'A-One Tree Services Rochester NY, SEO & Local Search Growth',
     shortDescription:
-      "With 15+ years of hands-on experience and a strong local reputation, A-One Tree Services had the credibility to dominate local search in Rochester — their organic visibility just didn't reflect it yet.",
+      "With 15+ years of hands-on experience and a strong local reputation, A-One Tree Services had the credibility to dominate local search in Rochester, their organic visibility just didn't reflect it yet.",
     category: 'Local SEO Across a Multi-Community Service Area',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
@@ -449,7 +449,7 @@ export const seoProjects: Project[] = [
       'Capture both routine and emergency tree service searches',
     ],
     challenge:
-      "With 15+ years of hands-on experience and a 4.8-star reputation, A-One Tree Services had the credibility to dominate local search in Rochester — but their organic visibility didn't yet reflect that reputation across the many Monroe County communities they serve.",
+      "With 15+ years of hands-on experience and a 4.8-star reputation, A-One Tree Services had the credibility to dominate local search in Rochester, but their organic visibility didn't yet reflect that reputation across the many Monroe County communities they serve.",
     strategy:
       'We built a local SEO strategy structured around Rochester and each of the surrounding Monroe County communities A-One serves, translating their real-world reputation and certifications into stronger search visibility.',
     solution:

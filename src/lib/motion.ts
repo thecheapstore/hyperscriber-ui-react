@@ -1,6 +1,6 @@
 import type { Transition, Variants } from 'framer-motion';
 
-// Shared easing curve — a quick, confident deceleration used across the site
+// Shared easing curve, a quick, confident deceleration used across the site
 // so every reveal / hover / transition reads as one consistent motion language.
 export const easeOut: Transition['ease'] = [0.22, 1, 0.36, 1];
 
@@ -48,7 +48,7 @@ export const staggerContainerFast: Variants = {
   },
 };
 
-// Card hover lift — used across service/testimonial/pricing/team cards for a
+// Card hover lift, used across service/testimonial/pricing/team cards for a
 // single, restrained hover language (small lift + shadow, no rotation/scale).
 export const cardHover = {
   whileHover: { y: -6, transition: { duration: 0.25, ease: easeOut } },

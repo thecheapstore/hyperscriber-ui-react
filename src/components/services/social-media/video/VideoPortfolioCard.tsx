@@ -95,7 +95,7 @@ const VideoPortfolioCard = ({ video }: VideoPortfolioCardProps) => {
         video.thumbnailUrl && <img src={video.thumbnailUrl} alt={video.title} className="w-full h-full object-cover" loading="lazy" />
       )}
 
-      {/* Loading state — shown once the card mounts a real <video> until its first frame is ready */}
+      {/* Loading state, shown once the card mounts a real <video> until its first frame is ready */}
       {hasEnteredOnce && !isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-ink/40">
           <Loader2 className="h-6 w-6 text-white animate-spin" />

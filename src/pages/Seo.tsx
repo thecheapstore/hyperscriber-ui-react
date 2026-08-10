@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   ClipboardCheck, MapPin, ShieldCheck, Target, Sparkles, TrendingUp,
@@ -22,6 +22,8 @@ import SeoResultsSection from '@/components/services/seo/SeoResultsSection';
 import SeoProcessTimeline from '@/components/services/seo/SeoProcessTimeline';
 import AiSearchSection from '@/components/services/seo/AiSearchSection';
 import SeoPortfolioGrid from '@/components/services/seo/SeoPortfolioGrid';
+import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SITE_URL = 'https://www.calibreassociates.com';
 const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
@@ -38,12 +40,40 @@ const heroBadges = [
 ];
 
 const whyChooseReasons: Reason[] = [
-  { icon: <ClipboardCheck className="h-6 w-6" />, title: 'Transparent Reporting', description: 'Clear, honest reporting on what\'s working — no vanity metrics, no confusing jargon.' },
+  { icon: <ClipboardCheck className="h-6 w-6" />, title: 'Transparent Reporting', description: 'Clear, honest reporting on what\'s working, no vanity metrics, no confusing jargon.' },
   { icon: <MapPin className="h-6 w-6" />, title: 'Local SEO Specialists', description: 'Deep, hands-on experience winning local map pack and local search visibility.' },
-  { icon: <ShieldCheck className="h-6 w-6" />, title: 'White Hat Practices', description: 'Sustainable, guideline-compliant SEO built to last — not shortcuts that put your site at risk.' },
-  { icon: <Target className="h-6 w-6" />, title: 'Conversion Focused Strategy', description: 'Rankings are a means to an end — every recommendation ties back to real business outcomes.' },
+  { icon: <ShieldCheck className="h-6 w-6" />, title: 'White Hat Practices', description: 'Sustainable, guideline-compliant SEO built to last, not shortcuts that put your site at risk.' },
+  { icon: <Target className="h-6 w-6" />, title: 'Conversion Focused Strategy', description: 'Rankings are a means to an end, every recommendation ties back to real business outcomes.' },
   { icon: <Sparkles className="h-6 w-6" />, title: 'AI Search Ready', description: 'Content structured for traditional search and the AI-powered search experiences customers use today.' },
-  { icon: <TrendingUp className="h-6 w-6" />, title: 'Long-Term Growth', description: 'SEO is a compounding asset — we build for durable growth, not a short-lived spike.' },
+  { icon: <TrendingUp className="h-6 w-6" />, title: 'Long-Term Growth', description: 'SEO is a compounding asset, we build for durable growth, not a short-lived spike.' },
+];
+
+const SEO_FAQS: FAQItem[] = [
+  {
+    question: 'Should an Indian small business invest in SEO or paid ads to grow online faster?',
+    answer:
+      'Paid ads bring faster visibility, you show up the day you launch a campaign, but that visibility disappears the moment you stop paying. SEO takes longer to build, usually three to six months before you see meaningful movement, but the rankings and traffic it earns keep working without ongoing ad spend. The businesses that grow fastest and most sustainably usually run both together, paid ads for immediate leads while SEO compounds in the background and gradually lowers cost per lead over time.',
+  },
+  {
+    question: 'What are the key differences between an SEO expert and an SEO agency?',
+    answer:
+      "An individual SEO expert typically handles one part of the process well, often technical audits or content, but has limited bandwidth and no backup if priorities shift. An SEO agency brings a full team covering technical SEO, content, local SEO, and reporting, so your strategy does not depend on one person's availability or skill set. For most growing businesses, an agency delivers more consistent, well rounded results.",
+  },
+  {
+    question: 'What is the difference between white hat and black hat SEO?',
+    answer:
+      'White hat SEO follows search engine guidelines, earning rankings through quality content, legitimate backlinks, and genuine technical improvements. Black hat SEO uses shortcuts like keyword stuffing, hidden text, or purchased links to manipulate rankings quickly, which usually leads to a penalty once search engines catch up. We only use white hat practices, because rankings built on shortcuts tend to disappear just as fast as they arrived.',
+  },
+  {
+    question: "Can an SEO expert help improve my website's Google ranking quickly?",
+    answer:
+      'SEO can produce early wins within the first month, mainly from fixing technical issues and optimizing existing pages, but meaningful ranking improvements typically take three to six months. Anyone promising guaranteed rankings within days or weeks is usually relying on tactics that put your site at risk. We focus on durable, compounding growth instead of shortcuts that create bigger problems later.',
+  },
+  {
+    question: 'What questions should I ask before hiring an SEO firm?',
+    answer:
+      'Ask what specific work they will do each month, how they report results, and whether their practices follow search engine guidelines. Ask for examples of past results and how long those results took to appear, since anyone promising fast guaranteed rankings should raise a flag. Finally, ask how they measure success, real SEO should be judged on leads and revenue, not just keyword rankings.',
+  },
 ];
 
 const trustBadges: TrustBadge[] = [
@@ -83,8 +113,10 @@ const Seo = () => {
     serviceType: service.title,
     url: pageUrl,
     provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: 'US',
+    areaServed: ['US', 'IN'],
   };
+
+  const faqSchema = buildFaqSchema(SEO_FAQS);
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
@@ -109,6 +141,7 @@ const Seo = () => {
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -132,7 +165,7 @@ const Seo = () => {
               </motion.span>
               <motion.h2 variants={fadeUp} className="mb-4">SEO Packages</motion.h2>
               <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-                Monthly SEO retainers built around your growth stage — swipe through to compare.
+                Monthly SEO retainers built around your growth stage, swipe through to compare.
               </motion.p>
             </motion.div>
 
@@ -168,11 +201,18 @@ const Seo = () => {
 
         <AiSearchSection />
 
+        <FAQSection
+          faqs={SEO_FAQS}
+          eyebrow="SEO FAQS"
+          title="Your SEO Questions, Answered"
+          description="Common questions business owners ask about search engine optimization."
+        />
+
         <WhyChooseUs
           reasons={whyChooseReasons}
           eyebrow="WHY CALIBRE ASSOCIATES"
           title="Why Choose Calibre Associates"
-          description="An SEO partner focused on durable, compounding growth — not short-term ranking tricks."
+          description="An SEO partner focused on durable, compounding organic growth, the kind of long term value paid ads alone can't deliver."
         />
 
         <FinalCTA

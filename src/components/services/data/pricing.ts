@@ -8,7 +8,7 @@ export const CURRENCY_SYMBOLS: Record<Currency, string> = {
 export interface PricingPackage {
   id: string;
   name: string;
-  /** Monthly price per currency — omitted entirely for the custom, quote-based tier */
+  /** Monthly price per currency, omitted entirely for the custom, quote-based tier */
   price?: Record<Currency, number>;
   billingPeriod?: string;
   isCustom?: boolean;

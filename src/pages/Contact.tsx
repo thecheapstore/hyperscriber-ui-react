@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -25,7 +25,7 @@ const Contact = () => {
   <title>Contact Calibre Associates | Digital Marketing, Development & AI Solutions</title>
   <meta
     name="description"
-    content="Contact Calibre Associates to discuss website development, web and app solutions, SEO, paid advertising, automation, and AI-powered growth systems. Let’s build scalable digital solutions for your business."
+    content="Contact Calibre Associates, a digital marketing agency serving businesses in India and the United States, to discuss website development, SEO, paid advertising, social media marketing, video editing, and AI automation for small businesses. Let’s build a scalable growth system for your business."
   />
   <link rel="canonical" href="https://www.calibreassociates.com/contact" />
   <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />

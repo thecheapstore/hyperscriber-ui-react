@@ -3,7 +3,7 @@ import { Users, Repeat, TrendingUp } from 'lucide-react';
 import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 
 const POINTS = [
-  { icon: Users, title: 'People Stay in Charge', description: 'Automation handles the workflow — your team still makes the decisions that matter.' },
+  { icon: Users, title: 'People Stay in Charge', description: 'Automation handles the workflow, your team still makes the decisions that matter.' },
   { icon: Repeat, title: 'Repetitive Work Disappears', description: 'Data entry, follow-ups and status updates happen automatically, every time.' },
   { icon: TrendingUp, title: 'Time Goes Back to Growth', description: 'Hours saved get reinvested into sales, service and the work that actually grows the business.' },
 ];
@@ -26,8 +26,9 @@ const CorePhilosophy = () => {
             Automation Doesn't Replace People. It Removes the Work They Shouldn't Be Doing.
           </motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-            Every workflow we build is designed to take repetitive, manual tasks off your team's plate —
-            so the people you've hired can spend their time on the work that actually grows the business.
+            Every AI automation workflow we build for small businesses is designed to take repetitive,
+            manual tasks off your team's plate, so the people you've hired can spend their time on the
+            work that actually grows the business.
           </motion.p>
         </motion.div>
 

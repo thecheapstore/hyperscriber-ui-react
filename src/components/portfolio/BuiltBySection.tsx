@@ -17,7 +17,7 @@ import {
 import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 
 interface BuiltBySectionProps {
-  /** Services delivered on this specific project — only relevant items are ever shown. */
+  /** Services delivered on this specific project, only relevant items are ever shown. */
   services: string[];
 }
 

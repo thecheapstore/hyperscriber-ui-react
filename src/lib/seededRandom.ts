@@ -7,7 +7,7 @@ const hashString = (str: string): number => {
   return hash >>> 0;
 };
 
-/** Mulberry32 — small, fast, deterministic PRNG. Same seed always produces the same sequence. */
+/** Mulberry32, small, fast, deterministic PRNG. Same seed always produces the same sequence. */
 export const createSeededRandom = (seed: string) => {
   let state = hashString(seed) || 1;
   return () => {

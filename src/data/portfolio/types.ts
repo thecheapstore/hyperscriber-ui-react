@@ -26,11 +26,11 @@ export interface ProjectTestimonial {
 /** Top-level grouping used for portfolio browsing/category filters */
 export type PortfolioCategoryType = 'Website Development' | 'Ecommerce' | 'Personal Branding';
 
-/** Filter-chip values — subset of tags a project can be tagged with for the portfolio filter bar */
+/** Filter-chip values, subset of tags a project can be tagged with for the portfolio filter bar */
 export type PlatformTag = 'WordPress' | 'React.js' | 'Shopify' | 'Ecommerce' | 'Local Business' | 'Personal Brand';
 
 export interface Project {
-  /** URL-safe identifier, unique within its service — used in the route */
+  /** URL-safe identifier, unique within its service, used in the route */
   slug: string;
   /** Which service portfolio this project belongs to, e.g. "website-development" */
   serviceSlug: string;
@@ -45,10 +45,10 @@ export interface Project {
   platformTags: PlatformTag[];
   /** Shown with larger emphasis in the Featured Projects section */
   featured?: boolean;
-  /** Outcome-focused scope tags shown as badges — e.g. "Local SEO Structure", not raw tech stack names */
+  /** Outcome-focused scope tags shown as badges, e.g. "Local SEO Structure", not raw tech stack names */
   highlights: string[];
   liveUrl?: string;
-  /** Card thumbnail — falls back to an abstract mockup when omitted */
+  /** Card thumbnail, falls back to an abstract mockup when omitted */
   thumbnail?: string;
   /** Longer lead-in paragraph shown near the top of the case study */
   overview?: string;
@@ -62,23 +62,23 @@ export interface Project {
   process: ProjectProcessStep[];
   screenshots: ProjectScreenshots;
   features: string[];
-  /** Craft/aesthetic callouts — better tonal fit than Technical Foundation for design- and brand-led projects */
+  /** Craft/aesthetic callouts, better tonal fit than Technical Foundation for design- and brand-led projects */
   designHighlights?: string[];
   seoFoundation?: string[];
   performanceOptimizations?: string[];
   /** Optional lead-in paragraph shown above the businessImpact bullets */
   businessImpactSummary?: string;
-  /** Qualitative outcomes — pair with `results` for any quantified metrics */
+  /** Qualitative outcomes, pair with `results` for any quantified metrics */
   businessImpact?: string[];
   results: Stat[];
-  /** Override the default final-CTA copy — useful for non-business (e.g. personal brand) projects */
+  /** Override the default final-CTA copy, useful for non-business (e.g. personal brand) projects */
   finalCtaHeadline?: string;
   finalCtaDescription?: string;
-  /** Override the default "Website Features" / "WHAT SHIPPED" heading on the features section — e.g. "Services Delivered" for SEO case studies */
+  /** Override the default "Website Features" / "WHAT SHIPPED" heading on the features section, e.g. "Services Delivered" for SEO case studies */
   featuresSectionTitle?: string;
   featuresSectionEyebrow?: string;
-  /** Shows the Search Performance + Google Business Profile sample-dashboard sections — clearly labeled illustrative data, never real client metrics */
+  /** Shows the Search Performance + Google Business Profile sample-dashboard sections, clearly labeled illustrative data, never real client metrics */
   showSeoReporting?: boolean;
-  /** Placeholder client quote, clearly marked as such — shown when present */
+  /** Placeholder client quote, clearly marked as such, shown when present */
   testimonial?: ProjectTestimonial;
 }

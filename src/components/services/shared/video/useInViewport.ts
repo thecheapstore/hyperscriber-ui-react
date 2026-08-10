@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-/** Tracks whether an element is near/within the viewport — used for lazy-mounting and auto-pause. */
-// A smaller default than the auto-pause margin would want on its own — a large margin means
+/** Tracks whether an element is near/within the viewport, used for lazy-mounting and auto-pause. */
+// A smaller default than the auto-pause margin would want on its own, a large margin means
 // many grid cards start requesting video metadata at once as soon as the section scrolls
 // near, which is what was making the whole section feel slow to populate. Loading only once a
 // card is genuinely close spreads those requests out as the user actually scrolls.
@@ -23,7 +23,7 @@ export const useInViewport = (rootMargin = '60px') => {
         setIsInView(entry.isIntersecting);
         if (entry.isIntersecting) setHasEnteredOnce(true);
       },
-      // threshold: 0 — "in view" as soon as any pixel is within the expanded root;
+      // threshold: 0, "in view" as soon as any pixel is within the expanded root;
       // only a genuine scroll well past the card counts as "left the viewport".
       { rootMargin, threshold: 0 }
     );

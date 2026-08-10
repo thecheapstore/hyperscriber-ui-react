@@ -1,6 +1,6 @@
 # Video Editing Portfolio Videos
 
-Drop video files directly in this folder — the portfolio section on the Video Editing
+Drop video files directly in this folder, the portfolio section on the Video Editing
 page picks them up automatically, no code changes required.
 
 ## Supported formats
@@ -12,7 +12,7 @@ page picks them up automatically, no code changes required.
 - Everything before `__` becomes the category badge and drives the filter tabs.
 - Everything after `__` becomes the video title, humanized from kebab-case
   (`product-launch-reel` → "Product Launch Reel").
-- No `__` in the filename? It still works — category defaults to "YouTube" and the
+- No `__` in the filename? It still works, category defaults to "YouTube" and the
   whole filename becomes the title.
 
 ## Category tokens (use exactly these, case-insensitive)
@@ -24,7 +24,7 @@ page picks them up automatically, no code changes required.
 - `YouTube`
 
 Anything else is still accepted and shown as its own filter tab (humanized), so new
-categories work without a code change — but the six above are the ones the page's
+categories work without a code change, but the six above are the ones the page's
 "All" filter bar is designed around.
 
 Examples:

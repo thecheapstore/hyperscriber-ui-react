@@ -46,7 +46,7 @@ export interface Service {
   stats: Stat[];
   /** Empty array hides the Featured Work / portfolio section entirely for this service */
   portfolioCategories: PortfolioCategory[];
-  /** Real project screenshot shown inside the hero browser mockup — falls back to an abstract skeleton when omitted */
+  /** Real project screenshot shown inside the hero browser mockup, falls back to an abstract skeleton when omitted */
   previewImage?: string;
   /** Overrides the default generic reasons in WhyChooseUs when provided */
   whyChooseReasons?: WhyChooseReason[];

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 import CountUp from '@/components/services/sections/CountUp';
 
-// Believable, modest placeholder figures — clearly not exaggerated, easy to replace with real reporting later.
+// Believable, modest placeholder figures, clearly not exaggerated, easy to replace with real reporting later.
 const RESULTS = [
   { label: 'Businesses Optimized', value: 25, suffix: '+' },
   { label: 'Organic Clicks Generated', value: 45, suffix: 'K+' },

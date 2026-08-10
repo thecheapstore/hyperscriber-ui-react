@@ -4,7 +4,7 @@ import lawnCareThumbnail from '@/assets/portfolio/716lawncare.png';
 import rrLandscapingLogo from '@/assets/portfolio/rr-landscaping-logo.png';
 import rrLandscapingThumbnail from '@/assets/portfolio/rrlandscaping.png';
 import manasviLogo from '@/assets/portfolio/manasvi-logo.webp';
-import manasviThumbnail from '@/assets/portfolio/manasvi-thumbnail.png';
+import manasviThumbnail from '@/assets/portfolio/manasvi-thumbnail.webp';
 import floLogo from '@/assets/portfolio/flo-logo.svg';
 import floThumbnail from '@/assets/portfolio/flo.png';
 import tulsiLogo from '@/assets/portfolio/tulsi-logo.jpg';
@@ -27,7 +27,7 @@ import metaTreeLogo from '@/assets/portfolio/meta-tree-service-logo.webp';
 import metaTreeThumbnail from '@/assets/portfolio/meta-tree-services.png';
 
 // Website Development case studies.
-// Add one object per project here — the portfolio card, case study page,
+// Add one object per project here, the portfolio card, case study page,
 // and routing are generated automatically from this array.
 export const websiteDevelopmentProjects: Project[] = [
   {
@@ -71,11 +71,11 @@ export const websiteDevelopmentProjects: Project[] = [
       'Simplify the quote request process',
     ],
     challenge:
-      "716 Lawn Care wanted to establish itself as a premium landscaping brand in Buffalo while creating a website capable of generating consistent local leads. The goal wasn't just to build another landscaping website — it was to create a platform capable of supporting long-term organic growth and future expansion across Western New York.",
+      "716 Lawn Care wanted to establish itself as a premium landscaping brand in Buffalo while creating a website capable of generating consistent local leads. The goal wasn't just to build another landscaping website, it was to create a platform capable of supporting long-term organic growth and future expansion across Western New York.",
     strategy:
-      'Calibre Associates approached this as a custom WordPress build focused on performance, usability, and search engine visibility — designed from the outset to support future SEO expansion, so new services, locations, and content can be added without a redesign.',
+      'Calibre Associates approached this as a custom WordPress build focused on performance, usability, and search engine visibility, designed from the outset to support future SEO expansion, so new services, locations, and content can be added without a redesign.',
     solution:
-      'We designed and developed a custom WordPress website built around modern responsive design, dedicated service pages, and local service area targeting. The site uses an SEO-friendly URL structure, conversion-focused CTAs, and a trust-building layout, paired with a blog system for topical authority and a strong internal linking structure — all optimized mobile-first.',
+      'We designed and developed a custom WordPress website built around modern responsive design, dedicated service pages, and local service area targeting. The site uses an SEO-friendly URL structure, conversion-focused CTAs, and a trust-building layout, paired with a blog system for topical authority and a strong internal linking structure, all optimized mobile-first.',
     process: [],
     screenshots: {},
     features: [
@@ -158,11 +158,11 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a website that grows with the business',
     ],
     challenge:
-      'RR Landscaping & Tree Services wanted a premium digital presence that reflected the quality of their workmanship while helping generate qualified local leads across Syracuse and nearby service areas. The site needed to present the company as a trustworthy local contractor, clearly organize multiple landscaping and tree care services, and improve the experience on both desktop and mobile — all while laying the groundwork for long-term SEO growth and clearly encouraging visitors to request estimates.',
+      'RR Landscaping & Tree Services wanted a premium digital presence that reflected the quality of their workmanship while helping generate qualified local leads across Syracuse and nearby service areas. The site needed to present the company as a trustworthy local contractor, clearly organize multiple landscaping and tree care services, and improve the experience on both desktop and mobile, all while laying the groundwork for long-term SEO growth and clearly encouraging visitors to request estimates.',
     strategy:
-      'We approached this as a local-SEO-first WordPress build, prioritizing conversion-focused user journeys and a scalable information architecture from the start — so service pages, locations, and content could expand over time without a rebuild.',
+      'We approached this as a local-SEO-first WordPress build, prioritizing conversion-focused user journeys and a scalable information architecture from the start, so service pages, locations, and content could expand over time without a rebuild.',
     solution:
-      'Calibre Associates designed and developed a custom WordPress website focused on local lead generation, user experience, and future SEO scalability. Rather than a simple brochure website, we built a conversion-focused platform with dedicated service pages, intuitive navigation, trust-building sections, and strategically positioned contact opportunities throughout the user journey — structured to support future content expansion, local SEO campaigns, and additional service area pages while maintaining fast performance and a clean, premium interface.',
+      'Calibre Associates designed and developed a custom WordPress website focused on local lead generation, user experience, and future SEO scalability. Rather than a simple brochure website, we built a conversion-focused platform with dedicated service pages, intuitive navigation, trust-building sections, and strategically positioned contact opportunities throughout the user journey, structured to support future content expansion, local SEO campaigns, and additional service area pages while maintaining fast performance and a clean, premium interface.',
     process: [],
     screenshots: {},
     features: [
@@ -213,9 +213,9 @@ export const websiteDevelopmentProjects: Project[] = [
     serviceSlug: 'website-development',
     companyName: 'Manasvi Pathak',
     companyLogo: manasviLogo,
-    projectName: 'Manasvi Pathak — Personal Brand Portfolio',
+    projectName: 'Manasvi Pathak, Personal Brand Portfolio',
     shortDescription:
-      'A premium personal brand portfolio for actor, model, and content creator Manasvi Pathak — a cinematic digital identity built for brands, casting agencies, photographers, and collaborators.',
+      'A premium personal brand portfolio for actor, model, and content creator Manasvi Pathak, a cinematic digital identity built for brands, casting agencies, photographers, and collaborators.',
     category: 'Personal Brand Portfolio',
     portfolioCategory: 'Personal Branding',
     platformTags: ['React.js', 'Personal Brand'],
@@ -236,7 +236,7 @@ export const websiteDevelopmentProjects: Project[] = [
     overview:
       "Manasvi Pathak required a premium personal portfolio that could serve as a digital identity for brands, casting agencies, photographers, production houses, and potential collaborators. Unlike a traditional portfolio, the objective was to create a visually immersive experience that reflects her personality while showcasing her work through cinematic visuals, motion design, and modern web interactions. The website was designed not only as a portfolio but also as a personal brand asset capable of increasing credibility and improving discoverability online.",
     about: {
-      business: 'Personal Brand Portfolio — Actor, Model & Content Creator',
+      business: 'Personal Brand Portfolio, Actor, Model & Content Creator',
       industry: 'Personal Branding, Entertainment & Content Creation',
       location: 'Agra, Uttar Pradesh, India',
     },
@@ -249,11 +249,11 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a memorable first impression',
     ],
     challenge:
-      'The project required balancing aesthetics with performance — presenting Manasvi as a premium personal brand while maintaining fast page speeds despite extensive visual media. The site needed smooth, premium animations without sacrificing performance, a fully responsive experience across desktop, tablet, Android, and iOS, consistent playback for embedded video, and a structure built to rank for personal branding keywords — all while designing a layout that naturally encourages brands and agencies to reach out.',
+      'The project required balancing aesthetics with performance, presenting Manasvi as a premium personal brand while maintaining fast page speeds despite extensive visual media. The site needed smooth, premium animations without sacrificing performance, a fully responsive experience across desktop, tablet, Android, and iOS, consistent playback for embedded video, and a structure built to rank for personal branding keywords, all while designing a layout that naturally encourages brands and agencies to reach out.',
     strategy:
-      "We approached this as a storytelling-first build — leading with cinematic visuals and motion rather than a conventional grid portfolio, so every section reinforces Manasvi's personal brand before asking anything of the visitor.",
+      "We approached this as a storytelling-first build, leading with cinematic visuals and motion rather than a conventional grid portfolio, so every section reinforces Manasvi's personal brand before asking anything of the visitor.",
     solution:
-      "Calibre Associates designed and developed a fully custom React-based portfolio focused on storytelling, premium visuals, and user engagement. The experience combines elegant typography, cinematic transitions, immersive galleries, and interactive sections to guide visitors naturally through Manasvi's work — every section built to reinforce trust, highlight professionalism, and encourage collaboration inquiries. The site incorporates technical SEO best practices, responsive layouts, performance optimization, and a scalable architecture for future additions such as campaigns, collaborations, media features, and portfolio updates.",
+      "Calibre Associates designed and developed a fully custom React-based portfolio focused on storytelling, premium visuals, and user engagement. The experience combines elegant typography, cinematic transitions, immersive galleries, and interactive sections to guide visitors naturally through Manasvi's work, every section built to reinforce trust, highlight professionalism, and encourage collaboration inquiries. The site incorporates technical SEO best practices, responsive layouts, performance optimization, and a scalable architecture for future additions such as campaigns, collaborations, media features, and portfolio updates.",
     process: [],
     screenshots: {},
     designHighlights: [
@@ -339,9 +339,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable ecommerce platform',
     ],
     challenge:
-      "Designing an ecommerce experience for premium mattresses is significantly different from selling traditional retail products. Customers require extensive information before purchasing — comfort level, firmness, support, warranty, and delivery timelines — so the website needed to simplify the buying journey, clearly differentiate multiple mattress collections, and build customer confidence through trust-focused content, without overwhelming visitors or slowing down the experience on desktop or mobile.",
+      "Designing an ecommerce experience for premium mattresses is significantly different from selling traditional retail products. Customers require extensive information before purchasing, comfort level, firmness, support, warranty, and delivery timelines, so the website needed to simplify the buying journey, clearly differentiate multiple mattress collections, and build customer confidence through trust-focused content, without overwhelming visitors or slowing down the experience on desktop or mobile.",
     strategy:
-      'We approached this as a trust-first ecommerce build — leading with product education and confidence-building content ahead of aggressive selling, so every visitor understands exactly what they\'re buying before checkout.',
+      'We approached this as a trust-first ecommerce build, leading with product education and confidence-building content ahead of aggressive selling, so every visitor understands exactly what they\'re buying before checkout.',
     solution:
       'Calibre Associates designed a premium ecommerce experience focused on usability, trust, and conversion. The website architecture prioritizes product discovery, intuitive navigation, responsive layouts, and a seamless shopping experience. Clear product categorization, persuasive calls-to-action, customer-first messaging, and premium visual presentation help guide visitors from product discovery to purchase, with the platform structured to support future marketing campaigns, SEO growth, and product expansion while maintaining excellent performance and usability.',
     process: [],
@@ -439,9 +439,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable ecommerce platform for future collections',
     ],
     challenge:
-      'Luxury fashion ecommerce requires more than simply displaying products. The website needed to reflect the sophistication of the Tulsi brand, communicate the heritage behind every collection, and showcase handcrafted textiles through premium product presentation — all while organizing hundreds of products into intuitive collections, building customer confidence for high-value purchases, and balancing storytelling, craftsmanship, and ecommerce functionality across desktop and mobile.',
+      'Luxury fashion ecommerce requires more than simply displaying products. The website needed to reflect the sophistication of the Tulsi brand, communicate the heritage behind every collection, and showcase handcrafted textiles through premium product presentation, all while organizing hundreds of products into intuitive collections, building customer confidence for high-value purchases, and balancing storytelling, craftsmanship, and ecommerce functionality across desktop and mobile.',
     strategy:
-      "We approached this as an editorial-first ecommerce build — treating each collection as a story worth telling before it's a product worth buying, so the shopping experience carries the same heritage and craft the brand is known for.",
+      "We approached this as an editorial-first ecommerce build, treating each collection as a story worth telling before it's a product worth buying, so the shopping experience carries the same heritage and craft the brand is known for.",
     solution:
       'Calibre Associates designed and developed a refined ecommerce experience that emphasizes visual storytelling, premium product presentation, and effortless navigation. The platform was structured to showcase designer collections while providing customers with a seamless browsing and purchasing experience. Elegant layouts, intuitive navigation, detailed product pages, collection-based organization, and conversion-focused ecommerce flows were combined to create a shopping journey that reflects the exclusivity of the Tulsi brand, with scalability built in so new seasonal collections and campaigns can be introduced without disrupting the overall experience.',
     process: [],
@@ -537,9 +537,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable ecommerce platform',
     ],
     challenge:
-      'Luxury fragrance ecommerce relies heavily on branding and storytelling because customers cannot experience the scent digitally. The website needed to build trust with first-time buyers, present fragrances with a premium visual identity, and communicate fragrance notes and personality effectively — while simplifying product discovery, encouraging gifting and repeat purchases, and delivering a seamless shopping experience on mobile.',
+      'Luxury fragrance ecommerce relies heavily on branding and storytelling because customers cannot experience the scent digitally. The website needed to build trust with first-time buyers, present fragrances with a premium visual identity, and communicate fragrance notes and personality effectively, while simplifying product discovery, encouraging gifting and repeat purchases, and delivering a seamless shopping experience on mobile.',
     strategy:
-      "We approached this as a sensory-storytelling ecommerce build — since scent can't be shown on screen, every layout, typographic choice, and product page was designed to do the communicating instead.",
+      "We approached this as a sensory-storytelling ecommerce build, since scent can't be shown on screen, every layout, typographic choice, and product page was designed to do the communicating instead.",
     solution:
       'Calibre Associates designed and developed a premium ecommerce platform focused on luxury presentation, intuitive navigation, and conversion optimization. Every aspect of the website was designed to evoke sophistication through elegant layouts, premium typography, carefully balanced whitespace, and immersive product presentation. The shopping journey guides customers naturally from fragrance discovery to purchase while reinforcing trust through detailed product information, refined branding, and conversion-focused ecommerce flows, with the platform designed to scale effortlessly as new fragrance collections and limited-edition launches are introduced.',
     process: [],
@@ -602,7 +602,7 @@ export const websiteDevelopmentProjects: Project[] = [
     companyLogo: hattiKaapiLogo,
     projectName: 'Hatti Kaapi',
     shortDescription:
-      "Hatti Kaapi is one of India's well-recognized specialty coffee brands, bringing freshly roasted South Indian coffee to customers through its cafés and ecommerce platform — coffee beans, ground coffee, instant coffee, brewing equipment, gift boxes, and café-inspired merchandise.",
+      "Hatti Kaapi is one of India's well-recognized specialty coffee brands, bringing freshly roasted South Indian coffee to customers through its cafés and ecommerce platform, coffee beans, ground coffee, instant coffee, brewing equipment, gift boxes, and café-inspired merchandise.",
     category: 'Premium Coffee & Café Ecommerce Platform',
     portfolioCategory: 'Ecommerce',
     platformTags: ['Shopify', 'Ecommerce'],
@@ -636,9 +636,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Build a scalable ecommerce platform',
     ],
     challenge:
-      'Coffee is more than just a product — it is an experience. The ecommerce platform needed to reflect the premium café experience digitally, showcase coffee products through engaging storytelling, and educate customers about brewing methods and coffee varieties, while organizing multiple product categories intuitively, building trust with first-time buyers, and encouraging repeat purchases across desktop and mobile.',
+      'Coffee is more than just a product, it is an experience. The ecommerce platform needed to reflect the premium café experience digitally, showcase coffee products through engaging storytelling, and educate customers about brewing methods and coffee varieties, while organizing multiple product categories intuitively, building trust with first-time buyers, and encouraging repeat purchases across desktop and mobile.',
     strategy:
-      'We approached this as a lifestyle-first ecommerce build — extending the warmth and ritual of the physical café experience into every page, so the site feels less like a store and more like a visit to Hatti Kaapi itself.',
+      'We approached this as a lifestyle-first ecommerce build, extending the warmth and ritual of the physical café experience into every page, so the site feels less like a store and more like a visit to Hatti Kaapi itself.',
     solution:
       'Calibre Associates designed and developed a premium ecommerce experience centered around storytelling, product discovery, and conversion optimization. The website combines clean navigation, elegant product presentation, rich brand storytelling, and an intuitive shopping journey that reflects the atmosphere and quality associated with the Hatti Kaapi cafés, structured to support seasonal launches, gift collections, and future product expansion while maintaining excellent usability and performance.',
     process: [],
@@ -701,7 +701,7 @@ export const websiteDevelopmentProjects: Project[] = [
     companyLogo: gemennialLogo,
     projectName: 'Gemennial',
     shortDescription:
-      'Gemennial is a contemporary jewellery brand blending timeless craftsmanship with modern design — elegant collections for everyday wear and special occasions, built around minimalist luxury and premium-quality pieces for the modern consumer.',
+      'Gemennial is a contemporary jewellery brand blending timeless craftsmanship with modern design, elegant collections for everyday wear and special occasions, built around minimalist luxury and premium-quality pieces for the modern consumer.',
     category: 'Premium Contemporary Jewellery Ecommerce Platform',
     portfolioCategory: 'Ecommerce',
     platformTags: ['Shopify', 'Ecommerce'],
@@ -735,9 +735,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable ecommerce platform',
     ],
     challenge:
-      'Luxury jewellery purchases are driven by trust, presentation, and emotional connection. The ecommerce platform needed to establish a premium and trustworthy online presence, showcase jewellery with exceptional visual presentation, and organize collections in a clean, intuitive way — while building confidence for high-value purchases and delivering a frictionless shopping experience across all devices.',
+      'Luxury jewellery purchases are driven by trust, presentation, and emotional connection. The ecommerce platform needed to establish a premium and trustworthy online presence, showcase jewellery with exceptional visual presentation, and organize collections in a clean, intuitive way, while building confidence for high-value purchases and delivering a frictionless shopping experience across all devices.',
     strategy:
-      'We approached this as an emotion-first ecommerce build — designing every collection page to build desire and confidence before asking for a purchase decision, since jewellery is bought with the heart as much as the eye.',
+      'We approached this as an emotion-first ecommerce build, designing every collection page to build desire and confidence before asking for a purchase decision, since jewellery is bought with the heart as much as the eye.',
     solution:
       'Calibre Associates designed and developed a refined ecommerce platform focused on premium branding, visual storytelling, and conversion-focused user experience. The website combines elegant layouts, sophisticated typography, curated product collections, and intuitive navigation to create a luxury shopping environment. Every interaction was carefully designed to reinforce trust, simplify product discovery, and create an enjoyable browsing experience while maintaining excellent performance across desktop and mobile, with a scalable foundation for future launches, campaigns, and collection expansions.',
     process: [],
@@ -802,7 +802,7 @@ export const websiteDevelopmentProjects: Project[] = [
     companyLogo: kpLandscapingLogo,
     projectName: 'KP Landscaping',
     shortDescription:
-      'KP Landscaping is a professional landscaping and outdoor property improvement company offering landscaping, hardscaping, lawn maintenance, outdoor construction, and complete landscape transformations — built on a fully custom React.js website rather than a template or WordPress platform.',
+      'KP Landscaping is a professional landscaping and outdoor property improvement company offering landscaping, hardscaping, lawn maintenance, outdoor construction, and complete landscape transformations, built on a fully custom React.js website rather than a template or WordPress platform.',
     category: 'Custom React.js Landscaping Website',
     portfolioCategory: 'Website Development',
     platformTags: ['React.js', 'Local Business'],
@@ -837,9 +837,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Strengthen local market positioning',
     ],
     challenge:
-      'The client required a modern website capable of standing out in a competitive local services market. The platform needed to present the business as a premium landscaping company, clearly organize multiple services, and deliver exceptional performance across desktop and mobile — while improving user trust through professional branding, guiding visitors toward requesting estimates, and providing a scalable architecture for future SEO growth and expansion.',
+      'The client required a modern website capable of standing out in a competitive local services market. The platform needed to present the business as a premium landscaping company, clearly organize multiple services, and deliver exceptional performance across desktop and mobile, while improving user trust through professional branding, guiding visitors toward requesting estimates, and providing a scalable architecture for future SEO growth and expansion.',
     strategy:
-      'Unlike our WordPress-built landscaping sites, we approached this as a fully custom React.js engineering project — trading a CMS for hand-built components, so every interaction, transition, and load time could be tuned specifically for speed and conversion.',
+      'Unlike our WordPress-built landscaping sites, we approached this as a fully custom React.js engineering project, trading a CMS for hand-built components, so every interaction, transition, and load time could be tuned specifically for speed and conversion.',
     solution:
       "Calibre Associates designed and developed a fully custom React.js website focused on speed, user experience, and lead generation. The project combines modern UI/UX principles, responsive layouts, intuitive navigation, premium animations, and conversion-focused content placement to create a seamless browsing experience. Every section was designed to educate visitors, showcase the company's expertise, and encourage users to request a consultation or estimate, with an architecture that supports future SEO campaigns, additional service pages, and ongoing content expansion without compromising performance.",
     process: [],
@@ -939,9 +939,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable website for future expansion',
     ],
     challenge:
-      'Unlike single-service businesses, Meta Services NY required a website capable of presenting multiple service categories without overwhelming visitors. The platform needed to organize numerous services into a simple navigation structure, build trust across residential and commercial audiences, and clearly communicate the company\'s capabilities — while delivering an intuitive browsing experience, encouraging visitors to request estimates, and maintaining fast performance across all devices.',
+      'Unlike single-service businesses, Meta Services NY required a website capable of presenting multiple service categories without overwhelming visitors. The platform needed to organize numerous services into a simple navigation structure, build trust across residential and commercial audiences, and clearly communicate the company\'s capabilities, while delivering an intuitive browsing experience, encouraging visitors to request estimates, and maintaining fast performance across all devices.',
     strategy:
-      "We approached this as a clarity-first WordPress build — since Meta Services NY covers far more ground than a single-trade competitor, the priority was making that breadth feel organized and approachable rather than overwhelming.",
+      "We approached this as a clarity-first WordPress build, since Meta Services NY covers far more ground than a single-trade competitor, the priority was making that breadth feel organized and approachable rather than overwhelming.",
     solution:
       'Calibre Associates designed and developed a custom WordPress website focused on clarity, usability, and conversion. The website features a structured service architecture, intuitive navigation, responsive layouts, trust-building content sections, and strategically placed calls-to-action that guide visitors toward requesting estimates or contacting the business. The scalable website architecture allows new services, service locations, and marketing content to be added efficiently as the business continues to expand.',
     process: [],
@@ -1042,9 +1042,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Support long-term digital growth',
     ],
     challenge:
-      'Tree service is a highly competitive local industry where trust, professionalism, and emergency availability directly influence customer decisions. The website needed to position the company as a trusted local tree care expert, clearly organize multiple tree services, and encourage visitors to request estimates quickly — while building confidence through premium branding and delivering exceptional performance across desktop and mobile.',
+      'Tree service is a highly competitive local industry where trust, professionalism, and emergency availability directly influence customer decisions. The website needed to position the company as a trusted local tree care expert, clearly organize multiple tree services, and encourage visitors to request estimates quickly, while building confidence through premium branding and delivering exceptional performance across desktop and mobile.',
     strategy:
-      'We led with authority and expertise — positioning WNY Tree Specialists as the established, trusted name in Western New York tree care, with the site built to reassure homeowners and win their confidence before a single call is made.',
+      'We led with authority and expertise, positioning WNY Tree Specialists as the established, trusted name in Western New York tree care, with the site built to reassure homeowners and win their confidence before a single call is made.',
     solution:
       'Calibre Associates designed and developed a fully custom WordPress website focused on lead generation, local SEO readiness, and user experience. The platform combines premium branding, intuitive navigation, dedicated service pages, strategically positioned calls-to-action, and a clean information architecture that guides visitors naturally toward requesting a free estimate, built with future scalability in mind so additional service pages, location pages, and marketing campaigns can be introduced without disrupting the user experience.',
     process: [],
@@ -1144,9 +1144,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Support future business expansion',
     ],
     challenge:
-      'Tree service customers are often searching during urgent situations, especially after storms or when hazardous trees require immediate attention. The website needed to build trust within seconds, present multiple tree services in a clear and organized manner, and highlight emergency response capabilities — while encouraging visitors to request a free estimate and delivering a seamless browsing experience across all devices.',
+      'Tree service customers are often searching during urgent situations, especially after storms or when hazardous trees require immediate attention. The website needed to build trust within seconds, present multiple tree services in a clear and organized manner, and highlight emergency response capabilities, while encouraging visitors to request a free estimate and delivering a seamless browsing experience across all devices.',
     strategy:
-      "Because Buffalo Tree Specialists customers are frequently searching mid-emergency, we designed around urgency — fast-loading pages, immediately visible contact options, and a homepage built to earn trust in seconds rather than minutes.",
+      "Because Buffalo Tree Specialists customers are frequently searching mid-emergency, we designed around urgency, fast-loading pages, immediately visible contact options, and a homepage built to earn trust in seconds rather than minutes.",
     solution:
       'Calibre Associates designed and developed a premium WordPress website focused on conversion, usability, and local search visibility. The website combines modern branding, dedicated service pages, intuitive navigation, trust-building content, and strategically positioned calls-to-action to guide users naturally toward requesting estimates. Every page was structured with future SEO growth in mind, allowing additional location pages, service pages, and marketing campaigns to be integrated without compromising the user experience or website performance.',
     process: [],
@@ -1245,9 +1245,9 @@ export const websiteDevelopmentProjects: Project[] = [
       'Create a scalable digital platform for business growth',
     ],
     challenge:
-      'Tree care is a trust-driven industry where customers often require immediate assistance while expecting professionalism and safety. The website needed to build credibility from the first interaction, clearly present multiple tree care services, and communicate emergency availability — while delivering a seamless experience across desktop, tablet, and mobile, and differentiating the business from generic contractor websites.',
+      'Tree care is a trust-driven industry where customers often require immediate assistance while expecting professionalism and safety. The website needed to build credibility from the first interaction, clearly present multiple tree care services, and communicate emergency availability, while delivering a seamless experience across desktop, tablet, and mobile, and differentiating the business from generic contractor websites.',
     strategy:
-      "With two tree-service brands already in the portfolio, we deliberately pushed this build toward a more modern, digitally polished identity — positioning Meta Tree Services NY as the tech-forward, growth-ready option built for a broader New York footprint.",
+      "With two tree-service brands already in the portfolio, we deliberately pushed this build toward a more modern, digitally polished identity, positioning Meta Tree Services NY as the tech-forward, growth-ready option built for a broader New York footprint.",
     solution:
       'Calibre Associates designed and developed a premium WordPress website focused on conversion, usability, and long-term scalability. The website combines a modern visual identity, intuitive navigation, dedicated service pages, trust-building content, and strategically placed enquiry opportunities to create a frictionless customer journey. Every page was structured with local SEO best practices in mind, allowing future service pages, location pages, and digital marketing campaigns to be added efficiently while maintaining excellent website performance.',
     process: [],

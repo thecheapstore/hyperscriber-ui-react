@@ -29,7 +29,7 @@ const TeamPhilosophy = () => {
           <h2 className="mb-4">Different Specialists. One Mission.</h2>
           <p className="text-lg text-ink/70">
             Every project we take on combines expertise across Development, Marketing,
-            Automation, Design, Branding, AI and Performance — one team, working toward the
+            Automation, Design, Branding, AI and Performance, one team, working toward the
             same outcome for your business.
           </p>
         </motion.div>

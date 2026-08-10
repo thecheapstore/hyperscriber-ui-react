@@ -1,6 +1,6 @@
 import { services } from '@/components/services/data/services';
 
-// Explicit order for the nav dropdown / mobile accordion — all 7 services.
+// Explicit order for the nav dropdown / mobile accordion, all 7 services.
 const DROPDOWN_SLUGS = [
   'website-development',
   'social-media-marketing',

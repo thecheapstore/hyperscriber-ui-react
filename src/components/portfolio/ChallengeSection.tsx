@@ -7,7 +7,7 @@ interface ChallengeSectionProps {
   challenge: string;
 }
 
-/** Column content — pair with SolutionSection inside a shared two-column section. */
+/** Column content, pair with SolutionSection inside a shared two-column section. */
 const ChallengeSection = ({ challenge }: ChallengeSectionProps) => (
   <motion.div variants={fadeUp} className="bg-canvas border border-hairline rounded-lg p-8">
     <div className="w-11 h-11 rounded-lg bg-surface-soft flex items-center justify-center mb-5">

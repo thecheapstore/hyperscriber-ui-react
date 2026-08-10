@@ -1,0 +1,26 @@
+# Calibre Associates
+
+> Calibre Associates is a digital marketing agency that designs and builds scalable digital systems for businesses in India and the United States, including high performance websites, SEO, social media marketing, video editing, lead generation and paid advertising, and AI automation.
+
+## Services
+
+- [Website Development](https://www.calibreassociates.com/services/website-development): Custom WordPress development, React and Next.js applications, and e-commerce websites built for performance and conversion.
+- [SEO](https://www.calibreassociates.com/services/seo): Local SEO, technical SEO, and AI search optimization to improve organic rankings and visibility.
+- [Social Media Marketing](https://www.calibreassociates.com/services/social-media-marketing): Content creation, UGC production, and social media management built around consistent growth.
+- [Video Editing](https://www.calibreassociates.com/services/video-editing): Professional video editing for social media, YouTube, and paid advertising campaigns.
+- [Lead Generation & Paid Advertising](https://www.calibreassociates.com/services/lead-generation-paid-advertising): Google Ads, Meta Ads, and CRM automation built to generate qualified leads.
+- [AI Automation & Solutions](https://www.calibreassociates.com/services/ai-automation-solutions): Custom AI automation and CRM workflow automation for small businesses, built on HighLevel and n8n.
+- [Application & Software Development](https://www.calibreassociates.com/services/application-software-development): Custom web applications and business software engineered for scale.
+- [All Services](https://www.calibreassociates.com/services): Full overview of every service Calibre Associates offers.
+
+## Company
+
+- [Why Us](https://www.calibreassociates.com/why-us): Why businesses choose Calibre Associates, our process, and results.
+- [Founding Team](https://www.calibreassociates.com/our-team): Meet the founding team, including Abhijeet Jain, Founder and CEO, and Manasvi Pathak, Co-Founder.
+- [FAQ](https://www.calibreassociates.com/faq): Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, and AI automation.
+- [Contact](https://www.calibreassociates.com/contact): Book a free consultation.
+
+## Optional
+
+- [Terms & Conditions](https://www.calibreassociates.com/terms-conditions)
+- [Privacy Policy](https://www.calibreassociates.com/privacy-policy)

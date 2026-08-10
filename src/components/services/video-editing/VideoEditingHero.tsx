@@ -55,8 +55,9 @@ const VideoEditingHero = () => {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Cinematic, conversion-focused editing that turns raw footage into content built to hold attention —
-              across social, YouTube, ads and everything in between.
+              Professional video editing services that turn raw footage into cinematic, conversion
+              focused content built to hold attention, across social media, YouTube, ads and
+              everything in between.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -75,7 +76,7 @@ const VideoEditingHero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Editing-interface-inspired visual — inspired by, not a recreation of, any specific NLE */}
+          {/* Editing-interface-inspired visual, inspired by, not a recreation of, any specific NLE */}
           <motion.div
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
 const TermsConditions = () => {
@@ -24,7 +24,7 @@ const TermsConditions = () => {
         />
         <link
           rel="canonical"
-          href="https://calibreassociates.com/terms-conditions"
+          href="https://www.calibreassociates.com/terms-conditions"
         />
         <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
       </Helmet>

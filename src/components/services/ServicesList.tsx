@@ -1,11 +1,22 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ServiceCard from './components/ServiceCard';
+import ServiceBentoTile from './components/ServiceBentoTile';
 import ServicesHeader from './components/ServicesHeader';
 import { services } from './data/services';
 import { useLocation } from 'react-router-dom';
 import { staggerContainer, fadeUp } from '@/lib/motion';
+
+/** Column-span classes per index so the 7-service grid fills every row with no empty cells. */
+const TILE_LAYOUT = [
+  { variant: 'featured' as const, colSpanClass: 'sm:col-span-2 lg:col-span-3' },
+  { variant: 'featured' as const, colSpanClass: 'sm:col-span-2 lg:col-span-3' },
+  { variant: 'standard' as const, colSpanClass: 'sm:col-span-1 lg:col-span-2' },
+  { variant: 'standard' as const, colSpanClass: 'sm:col-span-1 lg:col-span-2' },
+  { variant: 'standard' as const, colSpanClass: 'sm:col-span-2 lg:col-span-2' },
+  { variant: 'standard' as const, colSpanClass: 'sm:col-span-1 lg:col-span-3' },
+  { variant: 'standard' as const, colSpanClass: 'sm:col-span-1 lg:col-span-3' },
+];
 
 const ServicesList = () => {
   const location = useLocation();
@@ -25,7 +36,7 @@ const ServicesList = () => {
   }, [location]);
 
   return (
-    <section className="py-20 bg-canvas">
+    <section className="py-20 md:py-24 bg-canvas">
       <div className="container mx-auto px-6">
         <ServicesHeader />
 
@@ -34,19 +45,20 @@ const ServicesList = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5 md:gap-6"
         >
-          {services.map((service) => (
-            <div
-              key={service.id}
-              id={service.slug}
-            >
-              <ServiceCard
-                service={service}
-                variants={fadeUp}
-              />
-            </div>
-          ))}
+          {services.map((service, index) => {
+            const layout = TILE_LAYOUT[index] ?? { variant: 'standard' as const, colSpanClass: 'lg:col-span-2' };
+            return (
+              <div key={service.id} id={service.slug} className={layout.colSpanClass}>
+                <ServiceBentoTile
+                  service={service}
+                  variant={layout.variant}
+                  variants={fadeUp}
+                />
+              </div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

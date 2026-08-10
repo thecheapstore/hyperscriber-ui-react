@@ -6,11 +6,11 @@ import { createSeededRandom, seededInt, seededFloat } from '@/lib/seededRandom';
 import CountUp from '@/components/services/sections/CountUp';
 
 interface SearchPerformanceDashboardProps {
-  /** Any stable per-project string (e.g. project slug) — same seed always renders the same numbers. */
+  /** Any stable per-project string (e.g. project slug), same seed always renders the same numbers. */
   seed: string;
 }
 
-/** A believable sample dashboard — unique per project, generated rather than sourced from a real client account. */
+/** A believable sample dashboard, unique per project, generated rather than sourced from a real client account. */
 const SearchPerformanceDashboard = ({ seed }: SearchPerformanceDashboardProps) => {
   const { stats, clicksTrend } = useMemo(() => {
     const rand = createSeededRandom(`${seed}-search`);
@@ -20,7 +20,7 @@ const SearchPerformanceDashboard = ({ seed }: SearchPerformanceDashboardProps) =
     const avgCtr = seededFloat(rand, 2.8, 8.6, 1);
     const avgPosition = seededInt(rand, 3, 14);
 
-    // A generally upward-trending 12-month curve with realistic month-to-month noise —
+    // A generally upward-trending 12-month curve with realistic month-to-month noise,
     // not a perfectly smooth ramp, but not random either.
     const months = 12;
     const startFraction = seededFloat(rand, 0.28, 0.45, 2);
@@ -72,7 +72,7 @@ const SearchPerformanceDashboard = ({ seed }: SearchPerformanceDashboardProps) =
       </motion.div>
 
       <div>
-        <p className="font-mono text-[11px] uppercase tracking-[0.5px] text-ink/40 mb-3">Clicks — Last 12 Months</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.5px] text-ink/40 mb-3">Clicks, Last 12 Months</p>
         <div className="flex items-end gap-1.5 h-24">
           {clicksTrend.map((v, i) => (
             <motion.div

@@ -50,7 +50,7 @@ const TeamHero = () => {
           </motion.p>
 
           <motion.p variants={fadeUp} className="text-base text-ink/60 max-w-2xl mx-auto">
-            When you work with us, you work directly with the people building your project —
+            When you work with us, you work directly with the people building your project,
             not layers of account managers.
           </motion.p>
         </motion.div>

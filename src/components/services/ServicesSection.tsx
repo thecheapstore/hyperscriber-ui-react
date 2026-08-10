@@ -1,22 +1,21 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { services } from './data/services';
 import { staggerContainer, fadeUp } from '@/lib/motion';
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-canvas">
+    <section id="services" className="py-24 md:py-32 bg-canvas">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="max-w-3xl mb-16 md:mb-20"
         >
           <motion.span variants={fadeUp} className="eyebrow inline-block py-1 px-3 mb-5 rounded-pill bg-surface-soft">
             OUR CORE SERVICES
@@ -24,8 +23,10 @@ const ServicesSection = () => {
           <motion.h2 variants={fadeUp} className="mb-4">
             Growth Driven Digital Services Built to Scale Your Business
           </motion.h2>
-          <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-            We help businesses grow through lead generation, paid advertising, SEO, social media marketing, video content, website and application development, and AI powered automation systems that improve conversions and streamline operations.
+          <motion.p variants={fadeUp} className="text-ink/70 text-body-lg max-w-2xl">
+            Lead generation, paid advertising, SEO, social media marketing, video editing, website
+            development, and AI automation, delivered as one connected system by a digital marketing
+            agency that treats your growth as our own.
           </motion.p>
         </motion.div>
 
@@ -34,46 +35,29 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="border-t border-hairline"
         >
-          {services.map((service) => (
-            <motion.div key={service.id} variants={fadeUp} whileHover={{ y: -6 }} className="group h-full">
-              <Card className="h-full flex flex-col border border-hairline shadow-none rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-card">
-                <CardHeader className="pb-4">
-                  <div className={`mb-3 w-14 h-14 flex items-center justify-center rounded-lg ${service.bgLight} text-ink transition-transform duration-300 group-hover:scale-110`}>
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-base text-ink/70">
-                    {service.shortDescription}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-0 grow">
-                  <ul className="space-y-2 mb-6">
-                    {service.details.slice(0, 3).map((feature, i) => (
-                      <li key={i} className="flex items-center">
-                        <div className="mr-2 p-0.5 rounded-full bg-surface-soft">
-                          <CheckCircle size={12} className="text-ink" />
-                        </div>
-                        <span className="text-sm text-ink/70">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button
-                    variant="outline"
-                    className="w-full rounded-pill group/btn"
-                    size="sm"
-                    asChild
-                  >
-                    <Link to={`/services/${service.slug}`}>
-                      <span>Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+          {services.map((service, index) => (
+            <motion.div key={service.id} variants={fadeUp} className="border-b border-hairline">
+              <Link
+                to={`/services/${service.slug}`}
+                className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[64px_auto_1fr_auto] items-center gap-5 md:gap-8 py-7 md:py-9 px-2 -mx-2 rounded-lg transition-colors duration-300 hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                <span className="hidden md:block font-mono text-sm text-ink/30 tabular-nums">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-lg ${service.bgLight} text-ink shrink-0 transition-transform duration-300 group-hover:scale-110 [&_svg]:h-6 [&_svg]:w-6`}>
+                  {service.icon}
+                </div>
+
+                <div className="min-w-0">
+                  <h3 className="text-xl md:text-2xl font-bold mb-1.5 truncate">{service.title}</h3>
+                  <p className="text-sm md:text-base text-ink/60 line-clamp-1">{service.shortDescription}</p>
+                </div>
+
+                <ArrowRight className="h-5 w-5 text-ink/40 shrink-0 transition-all duration-300 group-hover:text-ink group-hover:translate-x-1" />
+              </Link>
             </motion.div>
           ))}
         </motion.div>
@@ -83,12 +67,9 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-center mt-16"
+          className="flex justify-center mt-14 md:mt-16"
         >
-          <Button
-            className="rounded-pill px-8 py-6 group"
-            asChild
-          >
+          <Button className="rounded-pill px-8 py-6 group" asChild>
             <Link to="/services">
               View All Services
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

@@ -234,7 +234,7 @@ const MOCKUP_COMPONENTS: Record<MockupVariant, React.FC<{ previewImage?: string 
 
 interface ServiceMockupProps {
   variant: MockupVariant;
-  /** Real project screenshot — only rendered by the `browser` variant, ignored by the rest */
+  /** Real project screenshot, only rendered by the `browser` variant, ignored by the rest */
   previewImage?: string;
 }
 

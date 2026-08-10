@@ -8,7 +8,7 @@ interface FeaturedProjectsProps {
   projects: Project[];
 }
 
-/** Renders nothing if no projects are flagged as featured — keeps the section self-hiding like the rest of the portfolio components. */
+/** Renders nothing if no projects are flagged as featured, keeps the section self-hiding like the rest of the portfolio components. */
 const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   const featured = projects.filter((p) => p.featured);
 

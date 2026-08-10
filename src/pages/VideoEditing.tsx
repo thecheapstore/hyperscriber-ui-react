@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Eye, Sparkles, Users, BookOpen, Presentation, TrendingUp, Target, Lightbulb, Zap, Wand2, Layers, ShieldCheck, Bot, PlayCircle } from 'lucide-react';
 
@@ -18,6 +18,8 @@ import VideoEditingPricing from '@/components/services/video-editing/VideoEditin
 import PortfolioCategoryTabs from '@/components/services/video-editing/PortfolioCategoryTabs';
 import IndustriesWeEditFor from '@/components/services/video-editing/IndustriesWeEditFor';
 import EditingCapabilities from '@/components/services/video-editing/EditingCapabilities';
+import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SITE_URL = 'https://www.calibreassociates.com';
 const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
@@ -28,7 +30,7 @@ const whyEditingMattersReasons: Reason[] = [
   { icon: <Users className="h-6 w-6" />, title: 'Higher Engagement', description: 'Editing decisions driven by what actually keeps audiences watching, liking and sharing.' },
   { icon: <BookOpen className="h-6 w-6" />, title: 'Better Storytelling', description: 'Every edit is structured around a narrative arc, not just a sequence of clips.' },
   { icon: <Presentation className="h-6 w-6" />, title: 'Professional Presentation', description: 'Clean, polished delivery that reflects the quality of your brand or business.' },
-  { icon: <TrendingUp className="h-6 w-6" />, title: 'Improved Conversions', description: 'Content edited with the end action in mind — not just views, but results.' },
+  { icon: <TrendingUp className="h-6 w-6" />, title: 'Improved Conversions', description: 'Content edited with the end action in mind, not just views, but results.' },
 ];
 
 const whyChooseCalibreReasons: Reason[] = [
@@ -39,7 +41,7 @@ const whyChooseCalibreReasons: Reason[] = [
   { icon: <Wand2 className="h-6 w-6" />, title: 'Premium Motion Graphics', description: 'On-brand titling, transitions and animated elements built in-house.' },
   { icon: <Layers className="h-6 w-6" />, title: 'Scalable Production', description: 'From a single reel to a full content pipeline, our workflow scales with you.' },
   { icon: <ShieldCheck className="h-6 w-6" />, title: 'Built for Brands', description: 'Consistent visual identity carried across every piece of content we deliver.' },
-  { icon: <Bot className="h-6 w-6" />, title: 'Modern AI-assisted Workflow', description: 'AI tools used to speed up production — never as a replacement for craft.' },
+  { icon: <Bot className="h-6 w-6" />, title: 'Modern AI-assisted Workflow', description: 'AI tools used to speed up production, never as a replacement for craft.' },
 ];
 
 const creativeWorkflow: TimelineStep[] = [
@@ -49,6 +51,34 @@ const creativeWorkflow: TimelineStep[] = [
   { title: 'Motion Graphics', description: 'Adding titling, transitions and animated brand elements where they earn their place.' },
   { title: 'Review', description: 'Feedback rounds to refine pacing, messaging and visual polish before delivery.' },
   { title: 'Final Delivery', description: 'Formatted, captioned and exported for every platform it needs to live on.' },
+];
+
+const VIDEO_EDITING_FAQS: FAQItem[] = [
+  {
+    question: 'What should I look for when choosing a video editing service for my business?',
+    answer:
+      'Look at their portfolio across the specific platform you care about, an editor skilled at cinematic YouTube videos is not automatically good at fast paced Reels or TikTok content, since each platform rewards different pacing and structure. Ask about turnaround time, revision rounds, and whether they handle motion graphics and captions in house. And prioritize editors who ask about your business goals, not just your footage, since the best edits are built around what you actually want the video to achieve.',
+  },
+  {
+    question: 'How do I optimize video for social media platforms?',
+    answer:
+      'Edit for each platform rather than reusing one cut everywhere, vertical framing and fast pacing for Reels and TikTok, horizontal and slightly slower pacing for YouTube. Add captions by default, since most social video is watched with sound off, and hook viewers in the first two to three seconds or they will scroll past. Keep file formats and lengths matched to what each platform actually favors in its algorithm.',
+  },
+  {
+    question: 'Do you offer quick turnaround video editing services?',
+    answer:
+      'Yes, our workflow is built around structured, repeatable steps, concept, script, editing, motion graphics, and review, so projects move quickly without cutting corners on quality. Turnaround time depends on project complexity and revision rounds, but we scope timelines clearly upfront so you know exactly when to expect delivery.',
+  },
+  {
+    question: 'What is the difference between a freelance video editor and a video editing service?',
+    answer:
+      'A freelance editor is often a strong option for a single project, but availability, consistency, and range of skills can vary widely from one freelancer to the next. A video editing service brings a structured process, backup coverage if someone is out, and a team that covers editing, motion graphics, and platform strategy together, which matters more once you need a steady stream of content rather than a one off video.',
+  },
+  {
+    question: 'How much does professional video editing cost?',
+    answer:
+      'Cost depends on video length, complexity, and how much motion graphics or animation work is involved, a simple social clip costs far less than a fully animated brand video. Rather than a flat number that will not apply to most projects, we scope pricing based on your specific content needs and volume, monthly retainers make sense for brands publishing regularly, while project based pricing suits one off videos.',
+  },
 ];
 
 const VideoEditing = () => {
@@ -79,8 +109,10 @@ const VideoEditing = () => {
     serviceType: service.title,
     url: pageUrl,
     provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: 'US',
+    areaServed: ['US', 'IN'],
   };
+
+  const faqSchema = buildFaqSchema(VIDEO_EDITING_FAQS);
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
@@ -105,6 +137,7 @@ const VideoEditing = () => {
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -155,6 +188,13 @@ const VideoEditing = () => {
         <IndustriesWeEditFor />
 
         <EditingCapabilities />
+
+        <FAQSection
+          faqs={VIDEO_EDITING_FAQS}
+          eyebrow="VIDEO EDITING FAQS"
+          title="Your Video Editing Questions, Answered"
+          description="Common questions brands ask about hiring a video editing service."
+        />
 
         <WhyChooseUs
           reasons={whyChooseCalibreReasons}

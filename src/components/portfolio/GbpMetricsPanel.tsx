@@ -6,11 +6,11 @@ import { createSeededRandom, seededInt } from '@/lib/seededRandom';
 import CountUp from '@/components/services/sections/CountUp';
 
 interface GbpMetricsPanelProps {
-  /** Any stable per-project string (e.g. project slug) — same seed always renders the same numbers. */
+  /** Any stable per-project string (e.g. project slug), same seed always renders the same numbers. */
   seed: string;
 }
 
-/** A believable sample Google Business Profile insights panel — unique per project, generated rather than sourced from a real client account. */
+/** A believable sample Google Business Profile insights panel, unique per project, generated rather than sourced from a real client account. */
 const GbpMetricsPanel = ({ seed }: GbpMetricsPanelProps) => {
   const metrics = useMemo(() => {
     const rand = createSeededRandom(`${seed}-gbp`);

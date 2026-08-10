@@ -31,7 +31,7 @@ const humanize = (slug: string) =>
     .map((word) => (word.length > 0 ? word[0].toUpperCase() + word.slice(1) : word))
     .join(' ');
 
-/** Canonical display label for the page's known category tokens — keeps acronym casing (UGC, AI) correct. */
+/** Canonical display label for the page's known category tokens, keeps acronym casing (UGC, AI) correct. */
 const CANONICAL_CATEGORIES: Record<string, string> = {
   ugc: 'UGC',
   realestate: 'Real Estate',
@@ -46,7 +46,7 @@ const normalizeCategory = (raw: string) => {
   return CANONICAL_CATEGORIES[key] ?? humanize(raw);
 };
 
-/** Default one-line description per category — used unless a per-video override is provided below. */
+/** Default one-line description per category, used unless a per-video override is provided below. */
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   UGC: 'Authentic, native-feeling content built to convert.',
   'Real Estate': 'Cinematic property walkthroughs that sell the space.',
@@ -56,7 +56,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   YouTube: 'Long-form storytelling paced to hold watch time.',
 };
 
-/** Per-video description overrides, keyed by base filename — optional, falls back to the category default. */
+/** Per-video description overrides, keyed by base filename, optional, falls back to the category default. */
 const DESCRIPTION_OVERRIDES: Record<string, string> = {};
 
 const parseFilename = (baseName: string): { title: string; category: string } => {

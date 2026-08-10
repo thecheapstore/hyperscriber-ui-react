@@ -20,7 +20,7 @@ const SeoProcessTimeline = () => (
         </motion.span>
         <motion.h2 variants={fadeUp} className="mb-4">How We Approach SEO</motion.h2>
         <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-          A structured, repeatable process behind every engagement — from first audit to ongoing growth.
+          A structured, repeatable process behind every engagement, from first audit to ongoing growth.
         </motion.p>
       </motion.div>
 

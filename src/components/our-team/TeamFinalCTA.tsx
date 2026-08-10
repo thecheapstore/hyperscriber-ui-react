@@ -35,7 +35,7 @@ const TeamFinalCTA = () => {
             </h2>
             <p className="text-inverse-ink/80 text-body-lg mb-10 max-w-2xl mx-auto">
               Whether you're launching something new, scaling what already works, or modernizing
-              an outdated system — our founding team is ready to help you build it right.
+              an outdated system, our founding team is ready to help you build it right.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center">

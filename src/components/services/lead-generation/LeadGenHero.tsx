@@ -46,8 +46,8 @@ const LeadGenHero = () => {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Full-funnel paid advertising and automation systems that turn ad spend into booked
-              appointments — tracked, optimized and reported on every step of the way.
+              Full funnel lead generation and paid advertising systems that turn ad spend into
+              booked appointments, tracked, optimized and reported on every step of the way.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -17,10 +17,10 @@ const ServiceHero = () => {
             OUR SERVICES
           </span>
           <h1 className="mb-4">
-            Growth-Driven Digital Services Built for Modern Businesses <span className="text-ink font-bold">Marketing, Development, Automation & AI</span>
+            Growth Driven Digital Services Built for Modern Businesses <span className="text-ink font-bold">Marketing, Development, Automation and AI</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6">
-            We help businesses generate qualified leads, build scalable digital systems, and streamline operations through paid advertising, SEO, content creation, development, and AI-powered automation.
+            We help businesses in India and the United States generate qualified leads, build scalable digital systems, and streamline operations through paid advertising, SEO, website development, video editing, and AI powered automation.
           </p>
           
           {/* Social proof element */}

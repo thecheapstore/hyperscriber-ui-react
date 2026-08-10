@@ -37,7 +37,7 @@ const HeroContent = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-body-lg text-ink/70 mb-8 max-w-xl mx-auto"
       >
-        We build high performance websites, SEO driven marketing systems, automation workflows, AI powered solutions, and content strategies designed to increase visibility, engagement, and revenue. <br/> Calibre Associates helps businesses scale through data driven digital strategy, conversion focused design, intelligent automation, and measurable marketing execution across web, search, and paid channels.
+        We build high performance websites, SEO driven marketing systems, social media marketing, video editing, and AI automation for small businesses, all designed to increase visibility, engagement, and revenue. <br/> Calibre Associates helps businesses in India and the United States scale through data driven digital strategy, conversion focused design, and measurable marketing execution across web, search, and paid channels.
       </motion.p>
 
       {/* Social proof element with improved spacing */}
@@ -53,11 +53,11 @@ const HeroContent = () => {
         </div>
         <div className="flex items-center gap-2 bg-canvas px-4 py-2 rounded-pill border border-hairline">
           <CheckCircle size={18} className="text-ink" />
-          <span className="text-sm font-medium">High performance websites and web applications</span>
+          <span className="text-sm font-medium">Website development and web applications</span>
         </div>
         <div className="flex items-center gap-2 bg-canvas px-4 py-2 rounded-pill border border-hairline">
           <CheckCircle size={18} className="text-ink" />
-          <span className="text-sm font-medium">Automation and AI driven efficiency</span>
+          <span className="text-sm font-medium">AI automation and workflow efficiency</span>
         </div>
       </motion.div>
 

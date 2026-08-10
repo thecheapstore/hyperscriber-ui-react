@@ -11,7 +11,7 @@ const STORY_RINGS = [
   { accent: 'from-accent-magenta to-block-lilac' },
 ];
 
-/** Premium, abstract social-feed mockup — evokes a modern content app without copying any real platform's UI. */
+/** Premium, abstract social-feed mockup, evokes a modern content app without copying any real platform's UI. */
 const InstagramFeedMockup = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

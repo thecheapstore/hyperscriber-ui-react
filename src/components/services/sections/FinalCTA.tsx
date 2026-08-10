@@ -10,7 +10,7 @@ interface FinalCTAProps {
   description?: string;
   primaryLabel?: string;
   secondaryLabel?: string;
-  /** Internal route or same-page hash anchor (e.g. "#portfolio") for the secondary button — falls back to the /contact page */
+  /** Internal route or same-page hash anchor (e.g. "#portfolio") for the secondary button, falls back to the /contact page */
   secondaryHref?: string;
   secondaryIcon?: ReactNode;
 }

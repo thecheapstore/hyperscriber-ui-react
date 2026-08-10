@@ -36,7 +36,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center gap-3 mb-4">
             {project.companyLogo ? (
-              <img src={project.companyLogo} alt={project.companyName} className="w-9 h-9 rounded-full object-cover border border-hairline flex-shrink-0" />
+              <img src={project.companyLogo} alt={project.companyName} loading="lazy" decoding="async" className="w-9 h-9 rounded-full object-cover border border-hairline flex-shrink-0" />
             ) : (
               <div className="w-9 h-9 rounded-full bg-surface-soft border border-hairline flex items-center justify-center text-sm font-semibold text-ink/60 flex-shrink-0">
                 {initial}

@@ -75,13 +75,20 @@ const ProfileProjects = ({ member }: ProfileProjectsProps) => {
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 flex justify-center">
+            <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 flex flex-wrap gap-3 justify-center">
               <a href={member.portfolioUrl} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-canvas text-ink hover:bg-surface-soft rounded-pill px-7 py-6 group">
                   Explore Portfolio
                   <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </a>
+              {member.secondaryPortfolioCta && (
+                <CtaButton cta={member.secondaryPortfolioCta}>
+                  <Button variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 rounded-pill px-7 py-6">
+                    {member.secondaryPortfolioCta.label}
+                  </Button>
+                </CtaButton>
+              )}
             </div>
           </motion.div>
         </div>
