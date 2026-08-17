@@ -1,15 +1,41 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Linkedin } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/portfolio/ProjectCard";
 import { findProject } from "@/data/portfolio";
 import { staggerContainer, fadeUp, viewportOnce, easeOut } from "@/lib/motion";
-import type { FoundingTeamMember } from "@/data/team/types";
+import type { FoundingTeamMember, TeamProjectRef } from "@/data/team/types";
 import CtaButton from "./CtaButton";
 
 interface ProfileProjectsProps {
   member: FoundingTeamMember;
 }
+
+const resolveProjects = (refs: TeamProjectRef[]) =>
+  refs
+    .map((ref) => findProject(ref.serviceSlug, ref.slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+const ProjectCardGrid = ({ projects }: { projects: ReturnType<typeof resolveProjects> }) => (
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={viewportOnce}
+    variants={staggerContainer}
+    className="flex flex-wrap justify-center gap-8"
+  >
+    {projects.map((project) => (
+      <div
+        key={`${project.serviceSlug}-${project.slug}`}
+        className="flex-none w-full sm:basis-[calc(50%-1rem)] lg:basis-[calc(33.333%-1.334rem)]"
+      >
+        <ProjectCard project={project} />
+      </div>
+    ))}
+  </motion.div>
+);
 
 const ProfileProjects = ({ member }: ProfileProjectsProps) => {
   if (member.projectsVariant === "linkedin") {
@@ -96,14 +122,18 @@ const ProfileProjects = ({ member }: ProfileProjectsProps) => {
     );
   }
 
-  const projects = (member.projects ?? [])
-    .map((ref) => findProject(ref.serviceSlug, ref.slug))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const groups = member.projectGroups && member.projectGroups.length > 1 ? member.projectGroups : null;
+
+  if (groups) {
+    return <TabbedProjects groups={groups} />;
+  }
+
+  const projects = resolveProjects(member.projects ?? []);
 
   if (projects.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-24 bg-canvas">
+    <section id="recent-work" className="py-20 md:py-24 bg-canvas">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -116,17 +146,61 @@ const ProfileProjects = ({ member }: ProfileProjectsProps) => {
           <h2>Recent Work</h2>
         </motion.div>
 
+        <ProjectCardGrid projects={projects} />
+      </div>
+    </section>
+  );
+};
+
+interface TabbedProjectsProps {
+  groups: NonNullable<FoundingTeamMember["projectGroups"]>;
+}
+
+/** Tabbed project switcher used when a member has work across more than one category, e.g. web development and brand identity. */
+const TabbedProjects = ({ groups }: TabbedProjectsProps) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeGroup = groups[activeIndex];
+  const projects = resolveProjects(activeGroup.projects);
+
+  return (
+    <section id="recent-work" className="py-20 md:py-24 bg-canvas">
+      <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          variants={staggerContainer}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={fadeUp}
+          className="text-center max-w-2xl mx-auto mb-10"
         >
-          {projects.map((project) => (
-            <ProjectCard key={`${project.serviceSlug}-${project.slug}`} project={project} />
-          ))}
+          <span className="eyebrow inline-block py-1.5 px-4 mb-5 rounded-pill bg-surface-soft">SELECTED PROJECTS</span>
+          <h2>Recent Work</h2>
         </motion.div>
+
+        <div className="flex flex-wrap justify-center gap-2.5 mb-14">
+          {groups.map((group, index) => {
+            const isActive = index === activeIndex;
+            return (
+              <button
+                key={group.label}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                aria-pressed={isActive}
+                className={cn(
+                  "rounded-pill px-4 py-2 text-sm font-medium transition-colors duration-300",
+                  isActive ? "bg-ink text-inverse-ink" : "bg-surface-soft text-ink/70 hover:text-ink"
+                )}
+              >
+                {group.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {projects.length > 0 ? (
+          <ProjectCardGrid key={activeGroup.label} projects={projects} />
+        ) : (
+          <p className="text-center text-ink/60">Case studies for this category are on the way.</p>
+        )}
       </div>
     </section>
   );

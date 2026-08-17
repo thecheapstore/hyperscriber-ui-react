@@ -25,12 +25,26 @@ const Index = () => {
     name="description"
     content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
   />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-  />
   <link rel="canonical" href="https://www.calibreassociates.com/" />
-  <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
+  <link rel="icon" href="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calibre Associates | Digital Marketing Agency for Website Development, SEO and AI Automation" />
+  <meta
+    property="og:description"
+    content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
+  />
+  <meta property="og:url" content="https://www.calibreassociates.com/" />
+  <meta property="og:image" content="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
+  <meta property="og:site_name" content="Calibre Associates" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calibre Associates | Digital Marketing Agency for Website Development, SEO and AI Automation" />
+  <meta
+    name="twitter:description"
+    content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
+  />
+  <meta name="twitter:image" content="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
 </Helmet>
       <Navbar />
       <main 

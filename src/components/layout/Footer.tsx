@@ -18,6 +18,7 @@ const Footer = () => {
                 src={logo}
                 alt="Calibre Associates Logo"
                 className="w-24 h-auto object-contain"
+                loading="lazy"
               />
             </div>
 
@@ -92,6 +93,7 @@ const Footer = () => {
                 { name: 'Video Editing', path: '/services/video-editing' },
                 { name: 'Lead Generation & Paid Advertising', path: '/services/lead-generation-paid-advertising' },
                 { name: 'AI Automation & Solutions', path: '/services/ai-automation-solutions' },
+                { name: 'Brand Identity Development', path: '/services/brand-identity-development' },
                 { name: 'Application & Software Development', path: '/services/application-software-development' },
               ].map((service) => (
                 <li key={service.name}>

@@ -8,9 +8,24 @@ interface CtaButtonProps {
   className?: string;
 }
 
-/** Wraps a Button in the right link element based on the CTA's destination, external URL/mailto vs internal route. */
+/** Wraps a Button in the right link element based on the CTA's destination: in-page anchor, external URL/mailto, or internal route. */
 const CtaButton = ({ cta, children, className }: CtaButtonProps) => {
   const isExternal = cta.external || cta.href.startsWith("http") || cta.href.startsWith("mailto:");
+
+  if (cta.href.startsWith("#")) {
+    return (
+      <a
+        href={cta.href}
+        className={className}
+        onClick={(e) => {
+          e.preventDefault();
+          document.querySelector(cta.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      >
+        {children}
+      </a>
+    );
+  }
 
   if (isExternal) {
     return (

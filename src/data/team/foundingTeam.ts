@@ -74,6 +74,7 @@ export const foundingTeam: FoundingTeamMember[] = [
       { serviceSlug: 'website-development', slug: 'rr-landscaping' },
       { serviceSlug: 'website-development', slug: 'kp-landscaping' },
       { serviceSlug: 'website-development', slug: 'manasvi-pathak' },
+      { serviceSlug: 'website-development', slug: 'buffalo-deck-builders' },
     ],
     philosophyHeading: 'My Approach',
     philosophyPoints: [
@@ -155,8 +156,8 @@ export const foundingTeam: FoundingTeamMember[] = [
       'Digital Marketing', 'AI Automation', 'Lead Generation', 'CRM Automation',
       'Workflow Automation', 'Business Growth', 'Sales Funnels', 'AI Integrations', 'Process Optimization',
     ],
-    primaryCta: { label: 'Connect on Instagram', href: 'https://www.instagram.com/paw_wan.ai/', external: true },
-    secondaryCta: { label: 'Explore Our Work', href: '/services' },
+    primaryCta: { label: 'Connect on LinkedIn', href: 'https://www.linkedin.com/in/pawansharma-growth', external: true },
+    secondaryCta: { label: 'See Recent Work', href: '#recent-work' },
     aboutHeading: 'Building Smarter Growth Systems.',
     aboutParagraphs: [
       "As Co-Founder of Calibre Associates, I focus on combining digital marketing, automation and AI into systems that scale, not one-off campaigns that stop producing the moment attention moves elsewhere.",
@@ -179,9 +180,23 @@ export const foundingTeam: FoundingTeamMember[] = [
       'CRM Automation', 'Email Marketing', 'AI Assistants', 'Marketing Automation', 'Lead Generation Systems',
     ],
     projectsVariant: 'cards',
-    projects: [
-      { serviceSlug: 'website-development', slug: 'meta-services-ny' },
-      { serviceSlug: 'website-development', slug: 'meta-tree-services-ny' },
+    projectGroups: [
+      {
+        label: 'Web Development',
+        projects: [
+          { serviceSlug: 'website-development', slug: 'meta-services-ny' },
+          { serviceSlug: 'website-development', slug: 'meta-tree-services-ny' },
+        ],
+      },
+      {
+        label: 'Brand Identity',
+        projects: [
+          { serviceSlug: 'brand-identity-development', slug: 'plume' },
+          { serviceSlug: 'brand-identity-development', slug: 'slick' },
+          { serviceSlug: 'brand-identity-development', slug: 'volta' },
+          { serviceSlug: 'brand-identity-development', slug: 'denim' },
+        ],
+      },
     ],
     philosophyHeading: 'My Approach',
     philosophyPoints: [
@@ -202,7 +217,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     ],
     finalCtaHeading: 'Ready to Grow Smarter?',
     finalCtaButtons: [
-      { label: 'Connect on Instagram', href: 'https://www.instagram.com/paw_wan.ai/', external: true },
+      { label: 'Connect on LinkedIn', href: 'https://www.linkedin.com/in/pawansharma-growth', external: true },
       { label: 'Book Free Consultation', href: '/contact' },
     ],
   },

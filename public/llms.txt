@@ -10,6 +10,7 @@
 - [Video Editing](https://www.calibreassociates.com/services/video-editing): Professional video editing for social media, YouTube, and paid advertising campaigns.
 - [Lead Generation & Paid Advertising](https://www.calibreassociates.com/services/lead-generation-paid-advertising): Google Ads, Meta Ads, and CRM automation built to generate qualified leads.
 - [AI Automation & Solutions](https://www.calibreassociates.com/services/ai-automation-solutions): Custom AI automation and CRM workflow automation for small businesses, built on HighLevel and n8n.
+- [Brand Identity Development](https://www.calibreassociates.com/services/brand-identity-development): Complete brand identities, wordmark, color system, packaging, and campaign content, including full-funnel ad creative and video reels.
 - [Application & Software Development](https://www.calibreassociates.com/services/application-software-development): Custom web applications and business software engineered for scale.
 - [All Services](https://www.calibreassociates.com/services): Full overview of every service Calibre Associates offers.
 

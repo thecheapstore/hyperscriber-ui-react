@@ -17,6 +17,7 @@ import StrategySection from '@/components/portfolio/StrategySection';
 import SolutionSection from '@/components/portfolio/SolutionSection';
 import BulletListCard from '@/components/portfolio/BulletListCard';
 import FeatureGrid from '@/components/portfolio/FeatureGrid';
+import MediaGallery from '@/components/portfolio/MediaGallery';
 import BuiltBySection from '@/components/portfolio/BuiltBySection';
 import RelatedProjects from '@/components/portfolio/RelatedProjects';
 import SearchPerformanceDashboard from '@/components/portfolio/SearchPerformanceDashboard';
@@ -27,7 +28,7 @@ import StatsSection from '@/components/services/sections/StatsSection';
 import FinalCTA from '@/components/services/sections/FinalCTA';
 
 const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const CaseStudy = () => {
   const { serviceSlug, projectSlug } = useParams<{ serviceSlug: string; projectSlug: string }>();
@@ -44,9 +45,32 @@ const CaseStudy = () => {
 
   const pageUrl = `${SITE_URL}/services/${project.serviceSlug}/projects/${project.slug}`;
   const pageTitle = `${project.projectName} Case Study | Calibre Associates`;
+  const shareImage = project.socialImage || project.thumbnail || OG_IMAGE;
   const hasBrief = Boolean(project.goals?.length || project.challenge || project.strategy || project.solution);
   const hasTechnicalFoundation = Boolean(project.seoFoundation?.length || project.performanceOptimizations?.length);
   const hasImpact = Boolean(project.businessImpact?.length || project.results.length > 0);
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${service.slug}` },
+      { '@type': 'ListItem', position: 4, name: project.projectName, item: pageUrl },
+    ],
+  };
+
+  const caseStudySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: pageTitle,
+    description: project.shortDescription,
+    url: pageUrl,
+    image: shareImage,
+    about: service.title,
+    author: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
+  };
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
@@ -61,13 +85,16 @@ const CaseStudy = () => {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={project.shortDescription} />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={project.thumbnail || OG_IMAGE} />
+        <meta property="og:image" content={shareImage} />
         <meta property="og:site_name" content="Calibre Associates" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={project.shortDescription} />
-        <meta name="twitter:image" content={project.thumbnail || OG_IMAGE} />
+        <meta name="twitter:image" content={shareImage} />
+
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(caseStudySchema)}</script>
       </Helmet>
 
       <Navbar />
@@ -120,6 +147,14 @@ const CaseStudy = () => {
               </motion.div>
             </div>
           </section>
+        )}
+
+        {project.gallery && project.gallery.length > 0 && (
+          <MediaGallery
+            gallery={project.gallery}
+            video={project.video}
+            description={`A look at the campaign visuals and content produced for ${project.projectName}.`}
+          />
         )}
 
         {project.process.length > 0 && (

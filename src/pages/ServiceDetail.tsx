@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import { services } from '@/components/services/data/services';
 import { defaultFaqs } from '@/components/services/data/faqs';
 import { pageTransition } from '@/lib/motion';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 import ServiceHero from '@/components/services/sections/ServiceHero';
 import WhyChooseUs from '@/components/services/sections/WhyChooseUs';
@@ -20,7 +21,7 @@ import TestimonialSlider from '@/components/services/sections/TestimonialSlider'
 import FinalCTA from '@/components/services/sections/FinalCTA';
 
 const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -62,6 +63,8 @@ const ServiceDetail = () => {
     areaServed: ['US', 'IN'],
   };
 
+  const faqSchema = buildFaqSchema(defaultFaqs);
+
   return (
     <motion.div {...pageTransition} className="min-h-screen">
       <Helmet>
@@ -88,6 +91,7 @@ const ServiceDetail = () => {
         {/* Structured data */}
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />

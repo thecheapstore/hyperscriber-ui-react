@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnimatePresence } from "framer-motion";
@@ -23,6 +23,7 @@ import Seo from "@/pages/Seo";
 import VideoEditing from "@/pages/VideoEditing";
 import LeadGeneration from "@/pages/LeadGeneration";
 import AIAutomation from "@/pages/AIAutomation";
+import BrandIdentityDevelopment from "@/pages/BrandIdentityDevelopment";
 import CaseStudy from "@/pages/CaseStudy";
 import OurTeam from "@/pages/OurTeam";
 import TeamProfile from "@/pages/TeamProfile";
@@ -49,6 +50,16 @@ const queryClient = new QueryClient({
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
+    fbq?.("track", "PageView");
+  }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -61,6 +72,7 @@ const AnimatedRoutes = () => {
         <Route path="/services/video-editing" element={<VideoEditing />} />
         <Route path="/services/lead-generation-paid-advertising" element={<LeadGeneration />} />
         <Route path="/services/ai-automation-solutions" element={<AIAutomation />} />
+        <Route path="/services/brand-identity-development" element={<BrandIdentityDevelopment />} />
         <Route path="/services/:serviceSlug/projects/:projectSlug" element={<CaseStudy />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-team" element={<OurTeam />} />

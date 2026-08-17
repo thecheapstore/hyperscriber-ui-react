@@ -23,11 +23,22 @@ export interface ProjectTestimonial {
   role: string;
 }
 
+export interface ProjectGalleryItem {
+  src: string;
+  alt: string;
+}
+
+export interface ProjectVideo {
+  src: string;
+  poster?: string;
+  label?: string;
+}
+
 /** Top-level grouping used for portfolio browsing/category filters */
-export type PortfolioCategoryType = 'Website Development' | 'Ecommerce' | 'Personal Branding';
+export type PortfolioCategoryType = 'Website Development' | 'Ecommerce' | 'Personal Branding' | 'Brand Identity';
 
 /** Filter-chip values, subset of tags a project can be tagged with for the portfolio filter bar */
-export type PlatformTag = 'WordPress' | 'React.js' | 'Shopify' | 'Ecommerce' | 'Local Business' | 'Personal Brand';
+export type PlatformTag = 'WordPress' | 'React.js' | 'Shopify' | 'Ecommerce' | 'Local Business' | 'Personal Brand' | 'Brand Identity';
 
 export interface Project {
   /** URL-safe identifier, unique within its service, used in the route */
@@ -50,6 +61,8 @@ export interface Project {
   liveUrl?: string;
   /** Card thumbnail, falls back to an abstract mockup when omitted */
   thumbnail?: string;
+  /** Image used for Open Graph/Twitter/JSON-LD sharing, falls back to `thumbnail` then the site default. Use this when a project intentionally has no card thumbnail but still needs a real social preview image. */
+  socialImage?: string;
   /** Longer lead-in paragraph shown near the top of the case study */
   overview?: string;
   about: ProjectAbout;
@@ -81,4 +94,10 @@ export interface Project {
   showSeoReporting?: boolean;
   /** Placeholder client quote, clearly marked as such, shown when present */
   testimonial?: ProjectTestimonial;
+  /** Marks this as an in-house concept/demo project rather than a real client engagement. Shows a disclosure badge instead of a live-site link. */
+  isConcept?: boolean;
+  /** Full media set for content-led case studies (campaign photography, stills) */
+  gallery?: ProjectGalleryItem[];
+  /** Optional showcase video, e.g. a campaign reel */
+  video?: ProjectVideo;
 }

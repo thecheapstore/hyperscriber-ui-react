@@ -5,6 +5,12 @@ export interface TeamProjectRef {
   slug: string;
 }
 
+/** A labeled group of project refs, used to render a tabbed project switcher (e.g. "Web Development" / "Brand Identity"). */
+export interface TeamProjectGroup {
+  label: string;
+  projects: TeamProjectRef[];
+}
+
 export interface DoCard {
   title: string;
   description: string;
@@ -70,6 +76,8 @@ export interface FoundingTeamMember {
   techStackHeading?: string;
   projectsVariant: ProjectsVariant;
   projects?: TeamProjectRef[];
+  /** When set (2+ groups), the 'cards' variant renders a tabbed switcher instead of a single flat grid. */
+  projectGroups?: TeamProjectGroup[];
   portfolioUrl?: string;
   portfolioImage?: string;
   /** Optional second CTA shown alongside the portfolio link (e.g. "Work With Manasvi" -> /contact). */

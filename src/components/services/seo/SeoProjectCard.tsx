@@ -35,6 +35,7 @@ const SeoProjectCard = ({ project }: SeoProjectCardProps) => {
             <img
               src={project.companyLogo}
               alt={project.companyName}
+              loading="lazy"
               className={`w-14 h-14 rounded-full object-cover border flex-shrink-0 bg-white ${project.featured ? 'border-white/20' : 'border-hairline'}`}
             />
           ) : (

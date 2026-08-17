@@ -40,10 +40,12 @@ const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8"
+          className="flex flex-wrap justify-center gap-6 md:gap-8"
         >
           {featured.map((project) => (
-            <FeaturedProjectCard key={`${project.serviceSlug}-${project.slug}`} project={project} />
+            <div key={`${project.serviceSlug}-${project.slug}`} className="flex-none w-full lg:basis-[calc(50%-1rem)]">
+              <FeaturedProjectCard project={project} />
+            </div>
           ))}
         </motion.div>
       </div>

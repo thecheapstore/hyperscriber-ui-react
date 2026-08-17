@@ -23,7 +23,7 @@ import { buildFaqSchema } from '@/lib/faqSchema';
 import { Link } from 'react-router-dom';
 
 const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const whyChooseReasons: Reason[] = [
   { icon: <Target className="h-6 w-6" />, title: 'Strategy-Led Content', description: 'Every post ties back to a clear growth goal, not just a content calendar to fill.' },

@@ -10,7 +10,7 @@ import { buildFaqSchema } from '@/lib/faqSchema';
 import { pageTransition, fadeUp, staggerContainer, viewportOnce } from '@/lib/motion';
 
 const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
 
 interface FaqCategory {
   eyebrow: string;
@@ -231,6 +231,14 @@ const Faq = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:site_name" content="Calibre Associates" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Frequently Asked Questions | Calibre Associates" />
+        <meta
+          name="twitter:description"
+          content="Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, paid advertising, and AI automation."
+        />
+        <meta name="twitter:image" content={OG_IMAGE} />
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

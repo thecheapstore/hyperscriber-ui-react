@@ -17,7 +17,11 @@ const StatsSection = ({ stats }: StatsSectionProps) => {
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10"
+          className={
+            stats.length === 1
+              ? 'flex justify-center'
+              : 'grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10'
+          }
         >
           {stats.map((stat, index) => (
             <motion.div key={`${index}-${stat.label}`} variants={fadeUp} className="text-center">

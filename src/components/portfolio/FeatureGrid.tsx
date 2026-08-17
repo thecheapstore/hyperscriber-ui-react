@@ -48,7 +48,7 @@ const FeatureGrid = ({ features, title = 'Features Delivered', eyebrow = 'WHAT S
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+          className="flex flex-wrap justify-center gap-4"
         >
           {features.map((feature, index) => {
             const Icon = pickIcon(feature);
@@ -57,7 +57,7 @@ const FeatureGrid = ({ features, title = 'Features Delivered', eyebrow = 'WHAT S
                 key={`${index}-${feature}`}
                 variants={fadeUp}
                 whileHover={{ y: -4 }}
-                className="flex flex-col items-center text-center gap-3 bg-surface-soft rounded-lg p-6 transition-colors duration-300 hover:bg-hairline-soft"
+                className="flex flex-none basis-[calc(50%-0.5rem)] sm:basis-[calc(33.333%-0.667rem)] lg:basis-[calc(25%-0.75rem)] flex-col items-center text-center gap-3 bg-surface-soft rounded-lg p-6 transition-colors duration-300 hover:bg-hairline-soft"
               >
                 <div className="w-11 h-11 rounded-full bg-canvas text-ink flex items-center justify-center">
                   <Icon className="h-5 w-5" />

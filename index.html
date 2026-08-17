@@ -16,28 +16,49 @@
   gtag('config', 'G-J21E37W93P');
 </script>
     <!-- End Google Tag Manager -->
-    <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" type="image/x-icon" />
-    <meta name="description" content="Calibre Associates helps businesses scale through data driven digital strategy, conversion focused design, intelligent automation, and measurable marketing execution across web, search, and paid channels." />
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '38851287007803355');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <!--
+      Note: per-page <meta name="description">, og:*, and twitter:* tags are set by
+      react-helmet-async in each page component. They are intentionally NOT duplicated
+      here: Helmet only knows how to manage tags it renders itself, so a static default
+      here would never be removed and would sit alongside the page-specific one, and
+      most scrapers/crawlers take the first tag they find in the document, meaning it's
+      important there is exactly one instance of these tags in the rendered DOM.
+    -->
     <meta name="author" content="Calibre Associates" />
-    <meta property="og:image" content="/og-image.png" />
-    <meta property="og:title" content="Calibre Associates" />
-    <meta property="og:description" content="Calibre Associates helps businesses scale through data driven digital strategy, conversion focused design, intelligent automation, and measurable marketing execution across web, search, and paid channels." />
-    <meta property="og:url" content="https://www.calibreassociates.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Calibre Associates" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://assets.calendly.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;320;330;340;400;480;540;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    
+
     <!-- End Google Tag Manager (noscript) -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=38851287007803355&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

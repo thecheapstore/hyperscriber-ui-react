@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 import TechnologyBadge from './TechnologyBadge';
 import LiveWebsiteButton from './LiveWebsiteButton';
 import type { Project } from '@/data/portfolio/types';
@@ -56,6 +57,14 @@ const CaseStudyHero = ({ project, serviceTitle }: CaseStudyHeroProps) => {
           </div>
 
           <h1 className="mb-6">{project.projectName}</h1>
+
+          {project.isConcept && (
+            <span className="inline-flex items-center gap-1.5 rounded-pill bg-block-lilac/60 border border-hairline px-3 py-1.5 text-xs font-medium text-ink/80 mb-6">
+              <Sparkles className="h-3.5 w-3.5" />
+              Concept Campaign, In-House Demo Work
+            </span>
+          )}
+
           <p className="text-lg text-ink/70 mb-8 max-w-xl">{project.shortDescription}</p>
 
           <div className="mb-8">
@@ -67,7 +76,7 @@ const CaseStudyHero = ({ project, serviceTitle }: CaseStudyHeroProps) => {
             </div>
           </div>
 
-          <LiveWebsiteButton url={project.liveUrl} />
+          {!project.isConcept && <LiveWebsiteButton url={project.liveUrl} />}
         </motion.div>
       </div>
     </section>

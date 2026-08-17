@@ -21,18 +21,20 @@ const FeaturedProjectCard = ({ project }: FeaturedProjectCardProps) => {
       <Link
         to={href}
         onClick={() => window.scrollTo(0, 0)}
-        className="flex flex-col md:flex-row h-full bg-canvas border border-hairline rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className={`flex flex-col h-full bg-canvas border border-hairline rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${project.thumbnail ? 'md:flex-row' : ''}`}
       >
-        <div className="p-4 pb-0 md:pb-4 md:w-1/2 flex-shrink-0">
-          <WebsiteMockup
-            imageUrl={project.thumbnail}
-            alt={project.projectName}
-            device="desktop"
-            className="aspect-video w-full transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-          />
-        </div>
+        {project.thumbnail && (
+          <div className="p-4 pb-0 md:pb-4 md:w-1/2 flex-shrink-0">
+            <WebsiteMockup
+              imageUrl={project.thumbnail}
+              alt={project.projectName}
+              device="desktop"
+              className="aspect-video w-full transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+            />
+          </div>
+        )}
 
-        <div className="p-6 md:p-8 flex flex-col flex-grow md:w-1/2">
+        <div className={`p-6 md:p-8 flex flex-col flex-grow ${project.thumbnail ? 'md:w-1/2' : ''}`}>
           <span className="inline-flex items-center gap-1.5 self-start mb-4 rounded-pill bg-block-lilac px-3 py-1 text-[11px] font-mono uppercase tracking-[0.5px] text-ink/70">
             <Star className="h-3 w-3 fill-current" />
             Featured Work

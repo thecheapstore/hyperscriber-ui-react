@@ -1,6 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { pageTransition } from "@/lib/motion";
 
 const NotFound = () => {
@@ -15,6 +16,10 @@ const NotFound = () => {
 
   return (
     <motion.div {...pageTransition} className="min-h-screen flex items-center justify-center bg-canvas">
+      <Helmet>
+        <title>Page Not Found | Calibre Associates</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,9 +28,9 @@ const NotFound = () => {
       >
         <h1 className="text-4xl font-bold mb-4 text-ink">404</h1>
         <p className="text-xl text-ink/70 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-ink underline underline-offset-4 hover:opacity-70">
+        <Link to="/" className="text-ink underline underline-offset-4 hover:opacity-70">
           Return to Home
-        </a>
+        </Link>
       </motion.div>
     </motion.div>
   );

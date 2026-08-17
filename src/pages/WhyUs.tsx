@@ -48,6 +48,21 @@ const BRAND_FAQS: FAQItem[] = [
   },
 ];
 
+const SITE_URL = 'https://www.calibreassociates.com';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const PAGE_TITLE = 'Why Choose Calibre Associates | Digital Growth & Automation Experts';
+const PAGE_DESCRIPTION =
+  'Discover why businesses choose Calibre Associates for lead generation, SEO, development, automation, and AI-driven digital growth solutions built for scale.';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Why Us', item: `${SITE_URL}/why-us` },
+  ],
+};
+
 const WhyUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -66,16 +81,24 @@ const WhyUs = () => {
         <section className="pt-32 pb-16 bg-white">
           <Helmet>
   <meta charSet="utf-8" />
-  <title>Why Choose Calibre Associates | Digital Growth & Automation Experts</title>
-  <meta
-    name="description"
-    content="Discover why businesses choose Calibre Associates for lead generation, SEO, development, automation, and AI-driven digital growth solutions built for scale."
-  />
-  <link
-    rel="canonical"
-    href="https://www.calibreassociates.com/why-us"
-  />
-  <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESCRIPTION} />
+  <link rel="canonical" href={`${SITE_URL}/why-us`} />
+  <link rel="icon" href={OG_IMAGE} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESCRIPTION} />
+  <meta property="og:url" content={`${SITE_URL}/why-us`} />
+  <meta property="og:image" content={OG_IMAGE} />
+  <meta property="og:site_name" content="Calibre Associates" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={PAGE_TITLE} />
+  <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+  <meta name="twitter:image" content={OG_IMAGE} />
+
+  <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
   <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 </Helmet>
           <div className="container mx-auto px-6">

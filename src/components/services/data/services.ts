@@ -3,11 +3,12 @@ import {
   Laptop, Code2, Share2, Search, Video, MessageSquare, Layers, Target, Lightbulb, PenTool, BarChart,
   TrendingUp, ShieldCheck, Smartphone, Clock, LifeBuoy,
   DollarSign, Filter, ClipboardCheck, FlaskConical, MousePointerClick, Rocket,
-  Blocks, Plug, Timer, Gauge, Activity,
+  Blocks, Plug, Timer, Gauge, Activity, Palette, Sparkles, Wand2, Film,
 } from 'lucide-react';
 import { Service } from '../types/service';
 import React from 'react';
 import websiteDevPreview from '@/assets/images/mockup-website.jpg';
+import brandIdentityPreview from '@/assets/portfolio/brand-identity/plume/01_hero.jpg';
 
 export const services: Service[] = [
   {
@@ -504,5 +505,84 @@ export const services: Service[] = [
     ],
     finalCtaHeadline: "Ready to Automate the Busywork?",
     finalCtaDescription: "Book a free consultation and we'll identify exactly where automation saves you the most time.",
+  },
+
+  {
+    id: "brand-identity-development",
+    slug: "brand-identity-development",
+    icon: React.createElement(Palette, { className: "h-8 w-8" }),
+    title: "Brand Identity Development",
+    shortDescription: "Complete brand identities, wordmark, color system, packaging, and campaign content, built from scratch and ready to launch.",
+    description: "We design complete brand identities from the ground up, wordmark, color system, packaging, and a full content campaign to launch it with, so a brand looks and feels finished before it ever goes live.",
+    previewImage: brandIdentityPreview,
+    details: [
+      "Wordmark, logo, and packaging design",
+      "Color system and typography selection",
+      "Brand voice and messaging direction",
+      "Campaign photography and art direction",
+      "Full funnel ad creative across formats",
+      "Short form video reels and content"
+    ],
+    benefits: [
+      "A cohesive identity across every touchpoint",
+      "Launch ready campaign content, not just a logo file",
+      "Consistent visual language across photography and video",
+      "Full funnel creative planned alongside the identity, not after it",
+      "A brand that looks established from day one"
+    ],
+    process: [
+      {
+        title: "Discovery & Positioning",
+        icon: React.createElement(Target, { className: "h-6 w-6 text-ink" }),
+        description: "We define who the brand is for, what it stands for, and how it should feel before any design starts."
+      },
+      {
+        title: "Identity Design",
+        icon: React.createElement(Palette, { className: "h-6 w-6 text-ink" }),
+        description: "Wordmark, color system, typography, and packaging designed to work together as one identity."
+      },
+      {
+        title: "Campaign Production",
+        icon: React.createElement(Wand2, { className: "h-6 w-6 text-ink" }),
+        description: "Photography, art direction, and video content produced to launch the identity, not just present it."
+      },
+      {
+        title: "Delivery & Launch Kit",
+        icon: React.createElement(Film, { className: "h-6 w-6 text-ink" }),
+        description: "A complete, ready to use set of assets handed off across every format and platform you need."
+      }
+    ],
+    caseStudy: {
+      client: "In House Concept Brands",
+      results: [
+        "Four complete brand identities designed end to end",
+        "Full photography and video campaigns produced per brand",
+        "A full paid social funnel demonstrated across formats"
+      ]
+    },
+    color: "bg-block-pink",
+    bgLight: "bg-block-pink",
+    stats: [
+      { label: "Brand Identities Designed", value: 4, suffix: "+" },
+      { label: "Campaign Assets Produced", value: 45, suffix: "+" },
+      { label: "Funnel Stages Covered", value: 3 },
+      { label: "Content Formats Delivered", value: 5, suffix: "+" }
+    ],
+    portfolioCategories: [
+      { label: "Brand Identity", description: "Wordmark, color system, and packaging design for each concept brand." },
+      { label: "Campaign Photography", description: "Hero, lifestyle, macro, and flat lay shots built around the identity." },
+      { label: "Full Funnel Creative", description: "Awareness, consideration, and conversion ad creative in multiple formats." },
+      { label: "Video Reels", description: "Short form vertical video content cut for Stories and Reels placements." }
+    ],
+    whyChooseReasons: [
+      { icon: React.createElement(Palette, { className: "h-6 w-6" }), title: "Identity First, Not Logo Only", description: "We design the whole system, wordmark, color, type, and packaging, not a single logo file." },
+      { icon: React.createElement(Sparkles, { className: "h-6 w-6" }), title: "Launch Ready Campaign Content", description: "Every identity ships with the photography and video needed to actually launch it." },
+      { icon: React.createElement(Filter, { className: "h-6 w-6" }), title: "Full Funnel Thinking", description: "Awareness, consideration, and conversion creative planned together, not bolted on later." },
+      { icon: React.createElement(Film, { className: "h-6 w-6" }), title: "Photography and Video, One System", description: "Stills and short form video share the same identity, palette, and voice." },
+      { icon: React.createElement(Wand2, { className: "h-6 w-6" }), title: "Fast, AI Assisted Production", description: "Campaign content generated efficiently without sacrificing consistency or craft." },
+      { icon: React.createElement(ShieldCheck, { className: "h-6 w-6" }), title: "Transparent Process", description: "Every concept project in our portfolio is clearly labeled as demo or client work." },
+    ],
+    finalCtaHeadline: "Ready to Build a Brand From Scratch?",
+    finalCtaDescription: "Book a free consultation and we'll map out the identity and campaign content your brand needs to launch.",
   }
 ];

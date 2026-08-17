@@ -30,7 +30,7 @@ const ContactInfo = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-surface-soft border border-hairline rounded-block mt-auto">
+      <Card className="bg-surface-soft border border-hairline rounded-block">
         <CardContent className="p-6 text-ink">
           <div className="flex items-center gap-3 mb-4">
             <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
@@ -43,6 +43,56 @@ const ContactInfo = () => {
           <div className="flex items-center gap-3">
             <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
             <h4 className="font-medium">Results-Driven Approach</h4>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-surface-soft border border-hairline rounded-block mt-auto">
+        <CardContent className="p-6 text-ink space-y-5">
+          <div className="flex items-start gap-3">
+            <Phone className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-ink">North America Office</p>
+              <a href="tel:+17163551231" className="text-ink/70 hover:text-ink">
+                +1 (716) 355-1231
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <Phone className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-ink">India Office</p>
+              <a href="tel:+919792848868" className="text-ink/70 hover:text-ink">
+                +91 97928 48868
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <Mail className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-ink">Email</p>
+              <a href="mailto:info@calibreassociates.com" className="text-ink/70 hover:text-ink">
+                info@calibreassociates.com
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <MapPin className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-ink">North America Operations</p>
+              <p className="text-ink/70">Buffalo, New York, USA</p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3">
+            <MapPin className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-ink">Head Office</p>
+              <p className="text-ink/70">Uttar Pradesh, India</p>
+            </div>
           </div>
         </CardContent>
       </Card>

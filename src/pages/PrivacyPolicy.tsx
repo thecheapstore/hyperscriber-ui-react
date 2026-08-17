@@ -5,6 +5,21 @@ import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
+const SITE_URL = 'https://www.calibreassociates.com';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const PAGE_TITLE = 'Calibre Associates | Privacy Policy';
+const PAGE_DESCRIPTION =
+  'Privacy policy outlining how Calibre Associates collects, uses, and protects personal information across its digital marketing, development, and automation services.';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${SITE_URL}/privacy-policy` },
+  ],
+};
+
 const PrivacyPolicy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,16 +32,24 @@ const PrivacyPolicy = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Calibre Associates | Privacy Policy</title>
-        <meta
-          name="description"
-          content="Privacy policy outlining how Calibre Associates collects, uses, and protects personal information across its digital marketing, development, and automation services."
-        />
-        <link
-          rel="canonical"
-          href="https://www.calibreassociates.com/privacy-policy"
-        />
-        <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} />
+        <link rel="canonical" href={`${SITE_URL}/privacy-policy`} />
+        <link rel="icon" href={OG_IMAGE} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
+        <meta property="og:url" content={`${SITE_URL}/privacy-policy`} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:site_name" content="Calibre Associates" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Navbar />

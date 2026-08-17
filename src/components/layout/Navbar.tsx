@@ -36,7 +36,11 @@ const Navbar = () => {
   };
 
   const primaryLinks = [{ name: 'Home', path: '/' }, { name: 'Why Us', path: '/why-us' }];
-  const secondaryLinks = [{ name: 'Our Team', path: '/our-team' }, { name: 'Contact', path: '/contact' }];
+  const secondaryLinks = [
+    { name: 'Our Team', path: '/our-team' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
     <nav

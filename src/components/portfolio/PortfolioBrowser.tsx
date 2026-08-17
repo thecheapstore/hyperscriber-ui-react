@@ -16,9 +16,10 @@ const FILTERS: Array<{ label: string; tag: PlatformTag | 'All' }> = [
   { label: 'Ecommerce', tag: 'Ecommerce' },
   { label: 'Local Business', tag: 'Local Business' },
   { label: 'Personal Brand', tag: 'Personal Brand' },
+  { label: 'Brand Identity', tag: 'Brand Identity' },
 ];
 
-const CATEGORY_ORDER: PortfolioCategoryType[] = ['Website Development', 'Ecommerce', 'Personal Branding'];
+const CATEGORY_ORDER: PortfolioCategoryType[] = ['Website Development', 'Ecommerce', 'Personal Branding', 'Brand Identity'];
 
 /** Portfolio browsing surface: filter chips + either grouped-by-category (All) or a flat filtered grid. */
 const PortfolioBrowser = ({ projects }: PortfolioBrowserProps) => {

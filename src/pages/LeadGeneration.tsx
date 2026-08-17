@@ -29,7 +29,7 @@ import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSect
 import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const PLATFORMS = [
   'Google Ads', 'Meta Ads', 'Google Analytics', 'Google Tag Manager', 'Google Search Console',

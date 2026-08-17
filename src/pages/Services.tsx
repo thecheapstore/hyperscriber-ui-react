@@ -9,6 +9,21 @@ import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
+const SITE_URL = 'https://www.calibreassociates.com';
+const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const PAGE_TITLE = 'Digital Marketing, Web Development and AI Automation Services | Calibre Associates';
+const PAGE_DESCRIPTION =
+  "Explore Calibre Associates' full range of digital marketing agency services: lead generation, paid advertising, SEO, social media marketing, video editing, website and application development, and AI automation for small businesses in India and the United States.";
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+  ],
+};
+
 const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,16 +36,24 @@ const Services = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Digital Marketing, Web Development and AI Automation Services | Calibre Associates</title>
-        <meta
-          name="description"
-          content="Explore Calibre Associates' full range of digital marketing agency services: lead generation, paid advertising, SEO, social media marketing, video editing, website and application development, and AI automation for small businesses in India and the United States."
-        />
-        <link
-          rel="canonical"
-          href="https://www.calibreassociates.com/services"
-        />
-        <link rel="icon" href="https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png" />
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESCRIPTION} />
+        <link rel="canonical" href={`${SITE_URL}/services`} />
+        <link rel="icon" href={OG_IMAGE} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESCRIPTION} />
+        <meta property="og:url" content={`${SITE_URL}/services`} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:site_name" content="Calibre Associates" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <Navbar />

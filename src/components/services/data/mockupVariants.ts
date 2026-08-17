@@ -18,6 +18,7 @@ const SLUG_TO_VARIANT: Record<string, MockupVariant> = {
   'video-editing': 'video',
   'lead-generation-paid-advertising': 'funnel',
   'ai-automation-solutions': 'workflow',
+  'brand-identity-development': 'image',
 };
 
 export const getMockupVariant = (slug: string): MockupVariant => SLUG_TO_VARIANT[slug] ?? 'browser';
