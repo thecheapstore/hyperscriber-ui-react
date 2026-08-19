@@ -45,7 +45,10 @@ const CaseStudy = () => {
 
   const pageUrl = `${SITE_URL}/services/${project.serviceSlug}/projects/${project.slug}`;
   const pageTitle = `${project.projectName} Case Study | Calibre Associates`;
-  const shareImage = project.socialImage || project.thumbnail || OG_IMAGE;
+  const rawShareImage = project.socialImage || project.thumbnail || OG_IMAGE;
+  // Vite-resolved asset imports (thumbnail/socialImage) are root-relative paths, but
+  // OG/Twitter/JSON-LD image URLs must be absolute for external crawlers to resolve them.
+  const shareImage = rawShareImage.startsWith('/') ? `${SITE_URL}${rawShareImage}` : rawShareImage;
   const hasBrief = Boolean(project.goals?.length || project.challenge || project.strategy || project.solution);
   const hasTechnicalFoundation = Boolean(project.seoFoundation?.length || project.performanceOptimizations?.length);
   const hasImpact = Boolean(project.businessImpact?.length || project.results.length > 0);
@@ -72,6 +75,24 @@ const CaseStudy = () => {
     author: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
   };
 
+  const rawVideoThumb = project.video?.poster;
+  const videoThumb = rawVideoThumb
+    ? (rawVideoThumb.startsWith('/') ? `${SITE_URL}${rawVideoThumb}` : rawVideoThumb)
+    : shareImage;
+  const rawVideoSrc = project.video?.src ?? '';
+  const videoContentUrl = rawVideoSrc.startsWith('/') ? `${SITE_URL}${rawVideoSrc}` : rawVideoSrc;
+  const videoSchema = project.video
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: project.video.label || pageTitle,
+        description: project.shortDescription,
+        thumbnailUrl: videoThumb,
+        contentUrl: videoContentUrl,
+        embedUrl: pageUrl,
+      }
+    : null;
+
   return (
     <motion.div {...pageTransition} className="min-h-screen">
       <Helmet>
@@ -95,6 +116,7 @@ const CaseStudy = () => {
 
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(caseStudySchema)}</script>
+        {videoSchema && <script type="application/ld+json">{JSON.stringify(videoSchema)}</script>}
       </Helmet>
 
       <Navbar />

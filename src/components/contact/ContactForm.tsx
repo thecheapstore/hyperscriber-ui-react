@@ -34,9 +34,9 @@ const ContactForm = () => {
           </div>
           <div>
             <p className="font-medium">North America Office</p>
-            <p className="text-muted-foreground">
+            <a href="tel:+17163551231" className="text-muted-foreground hover:text-ink">
               +1 (716) 355-1231
-            </p>
+            </a>
           </div>
         </div>
 
@@ -47,9 +47,9 @@ const ContactForm = () => {
           </div>
           <div>
             <p className="font-medium">India Office</p>
-            <p className="text-muted-foreground">
-              +91 9792848868
-            </p>
+            <a href="tel:+919792848868" className="text-muted-foreground hover:text-ink">
+              +91 97928 48868
+            </a>
           </div>
         </div>
 

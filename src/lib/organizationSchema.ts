@@ -1,5 +1,5 @@
 const SITE_URL = 'https://calibreassociates.com';
-const LOGO_URL = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
+const LOGO_URL = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 export const buildOrganizationSchema = () => ({
   '@context': 'https://schema.org',
@@ -11,6 +11,10 @@ export const buildOrganizationSchema = () => ({
   description:
     'Calibre Associates is a digital marketing agency that designs and builds scalable digital systems, including high performance websites, AI automation workflows, and CRM integrations, that help businesses in India and the United States operate efficiently and grow sustainably.',
   email: 'info@calibreassociates.com',
+  founder: [
+    { '@type': 'Person', name: 'Abhijeet Jain', url: `${SITE_URL}/our-team/abhijeet-jain` },
+    { '@type': 'Person', name: 'Manasvi Pathak', url: `${SITE_URL}/our-team/manasvi-pathak` },
+  ],
   sameAs: [
     'https://www.linkedin.com/company/112087503/',
     'https://www.instagram.com/calibreassociates/',

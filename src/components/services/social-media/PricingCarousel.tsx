@@ -18,7 +18,7 @@ interface PricingCarouselProps {
 }
 
 const PricingCarousel = ({ packages }: PricingCarouselProps) => {
-  const [currency, setCurrency] = useState<Currency>('INR');
+  const [currency, setCurrency] = useState<Currency>('USD');
   const [api, setApi] = useState<CarouselApi>();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
