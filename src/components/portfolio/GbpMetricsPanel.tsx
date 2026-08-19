@@ -26,18 +26,7 @@ const GbpMetricsPanel = ({ seed }: GbpMetricsPanelProps) => {
   return (
     <div className="rounded-block border border-hairline bg-canvas p-6 md:p-8">
       <div className="mb-6">
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
-          <h3 className="text-lg font-bold">Google Business Profile</h3>
-          <span
-            title="This panel shows a generated, illustrative example of Google Business Profile insights. It is not this client's real data."
-            className="font-mono text-[10px] uppercase tracking-[0.5px] text-ink/50 bg-surface-soft border border-hairline rounded-pill px-2.5 py-1"
-          >
-            Illustrative Sample Data
-          </span>
-        </div>
-        <p className="text-xs text-ink/50">
-          A generated example of the kind of reporting we deliver, not this client's actual figures.
-        </p>
+        <h3 className="text-lg font-bold">Google Business Profile</h3>
       </div>
       <motion.div
         initial="hidden"

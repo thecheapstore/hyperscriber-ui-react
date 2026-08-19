@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Shield, AlertTriangle } from 'lucide-react';
+import { Shield, X } from 'lucide-react';
 
 interface CookiePreferences {
   essential: boolean;
@@ -108,30 +108,38 @@ const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 backdrop-blur-[2px]">
-      <div className="bg-canvas rounded-block shadow-modal max-w-md w-[92vw] md:w-full px-8 py-8 flex flex-col items-center gap-6 animate-fade-in border border-hairline">
-        <div className="bg-surface-soft p-3 rounded-full">
-          <Shield className="h-7 w-7 text-ink" />
-        </div>
+    <div className="fixed inset-x-4 bottom-4 z-[1000] sm:inset-x-auto sm:left-4 sm:max-w-sm">
+      <div className="bg-canvas rounded-block shadow-modal p-5 flex flex-col gap-4 animate-fade-in border border-hairline relative">
+        <button
+          type="button"
+          aria-label="Dismiss, essential cookies only"
+          onClick={acceptEssential}
+          className="absolute top-3 right-3 text-ink/40 hover:text-ink transition-colors"
+        >
+          <X className="h-4 w-4" />
+        </button>
 
-        <h3 className="text-ink mb-2 text-center">
-          {showPreferences ? 'Cookie Preferences' : 'Privacy & Cookies'}
-        </h3>
+        <div className="flex items-center gap-3 pr-6">
+          <div className="bg-surface-soft p-2 rounded-full flex-shrink-0">
+            <Shield className="h-4 w-4 text-ink" />
+          </div>
+          <h3 className="text-sm font-semibold text-ink">
+            {showPreferences ? 'Cookie Preferences' : 'Privacy & Cookies'}
+          </h3>
+        </div>
 
         {!showPreferences ? (
           <>
-            <p className="text-base md:text-lg text-center text-ink/70">
-              We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
-              You can choose which cookies you want to allow.
+            <p className="text-sm text-ink/70">
+              We use cookies to enhance your browsing experience and analyze site traffic.
+              You can choose which cookies to allow.
             </p>
 
-            <div className="border-t border-hairline w-full my-2"></div>
-
-            <div className="flex gap-4 w-full mt-2 justify-center flex-col sm:flex-row space-y-2 sm:space-y-0">
+            <div className="flex flex-wrap gap-2">
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full sm:w-auto font-medium py-2 px-4 rounded-pill text-base"
+                className="font-medium rounded-pill text-xs"
                 onClick={() => setShowPreferences(true)}
               >
                 Preferences
@@ -140,7 +148,7 @@ const CookieConsent = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full sm:w-auto font-medium py-2 px-4 rounded-pill text-base"
+                className="font-medium rounded-pill text-xs"
                 onClick={acceptEssential}
               >
                 Essential Only
@@ -148,82 +156,72 @@ const CookieConsent = () => {
 
               <Button
                 size="sm"
-                className="w-full sm:w-auto font-semibold px-4 py-3 rounded-pill text-md"
+                className="font-semibold rounded-pill text-xs"
                 onClick={acceptAll}
               >
                 Accept All
               </Button>
             </div>
-
-            <p className="text-xs text-center text-ink/60 mt-2">
-              By clicking "Accept All", you agree to the storing of cookies on your device to enhance
-              site navigation, analyze site usage, and assist in our marketing efforts.
-            </p>
           </>
         ) : (
           <>
-            <div className="w-full space-y-4">
-              <div className="flex items-center justify-between border border-hairline p-4 rounded-md bg-surface-soft">
+            <div className="w-full space-y-3">
+              <div className="flex items-center justify-between border border-hairline p-3 rounded-md bg-surface-soft">
                 <div>
-                  <h4 className="font-semibold">Essential Cookies</h4>
-                  <p className="text-sm text-ink/60">Required for the website to function properly.</p>
+                  <h4 className="text-sm font-semibold">Essential Cookies</h4>
+                  <p className="text-xs text-ink/60">Required for the website to function.</p>
                 </div>
-                <div className="bg-canvas border border-hairline text-ink text-xs font-semibold px-2.5 py-0.5 rounded">
+                <div className="bg-canvas border border-hairline text-ink text-[10px] font-semibold px-2 py-0.5 rounded flex-shrink-0">
                   Required
                 </div>
               </div>
 
-              <div className="flex items-center justify-between border border-hairline p-4 rounded-md">
+              <div className="flex items-center justify-between border border-hairline p-3 rounded-md">
                 <div>
-                  <h4 className="font-semibold">Analytics Cookies</h4>
-                  <p className="text-sm text-ink/60">Help us improve our website by collecting anonymous information.</p>
+                  <h4 className="text-sm font-semibold">Analytics Cookies</h4>
+                  <p className="text-xs text-ink/60">Helps us improve the site with anonymous data.</p>
                 </div>
                 <input
                   type="checkbox"
                   checked={preferences.analytics}
                   onChange={e => setPreferences({...preferences, analytics: e.target.checked})}
-                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring"
+                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring flex-shrink-0"
                 />
               </div>
 
-              <div className="flex items-center justify-between border border-hairline p-4 rounded-md">
+              <div className="flex items-center justify-between border border-hairline p-3 rounded-md">
                 <div>
-                  <h4 className="font-semibold">Marketing Cookies</h4>
-                  <p className="text-sm text-ink/60">Used to track visitors across websites to display relevant advertisements.</p>
+                  <h4 className="text-sm font-semibold">Marketing Cookies</h4>
+                  <p className="text-xs text-ink/60">Used to show relevant advertisements.</p>
                 </div>
                 <input
                   type="checkbox"
                   checked={preferences.marketing}
                   onChange={e => setPreferences({...preferences, marketing: e.target.checked})}
-                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring"
+                  className="h-5 w-5 rounded border-hairline text-ink focus:ring-ring flex-shrink-0"
                 />
               </div>
             </div>
 
-            <div className="border-t border-hairline w-full my-2"></div>
-
-            <div className="flex gap-4 w-full justify-end">
+            <div className="flex gap-2 w-full justify-end">
               <Button
                 variant="outline"
+                size="sm"
                 onClick={() => setShowPreferences(false)}
-                className="rounded-pill"
+                className="rounded-pill text-xs"
               >
                 Back
               </Button>
               <Button
+                size="sm"
                 onClick={() => savePreferences(preferences)}
-                className="rounded-pill"
+                className="rounded-pill text-xs"
               >
                 Save Preferences
               </Button>
             </div>
           </>
         )}
-
-        <div className="flex items-center text-ink/60 text-xs gap-1 mt-1">
-          <AlertTriangle className="h-3 w-3" />
-          <span>You must accept or decline before continuing.</span>
-        </div>
       </div>
     </div>
   );
