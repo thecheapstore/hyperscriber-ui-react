@@ -1,6 +1,6 @@
 import type { FoundingTeamMember, CtaLink } from '@/data/team/types';
 
-const SITE_URL = 'https://www.calibreassociates.com';
+const SITE_URL = 'https://calibreassociates.com';
 
 const collectSameAs = (member: FoundingTeamMember): string[] => {
   const links: CtaLink[] = [member.primaryCta, member.secondaryCta, ...(member.finalCtaButtons ?? [])];

@@ -11,8 +11,8 @@ import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 import { pageTransition } from '@/lib/motion';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 const PAGE_TITLE = 'Contact Calibre Associates | Digital Marketing, Development & AI Solutions';
 const PAGE_DESCRIPTION =
   'Contact Calibre Associates, a digital marketing agency serving businesses in India and the United States, to discuss website development, SEO, paid advertising, social media marketing, video editing, and AI automation for small businesses. Let’s build a scalable growth system for your business.';

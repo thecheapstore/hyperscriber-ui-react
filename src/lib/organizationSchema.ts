@@ -1,4 +1,4 @@
-const SITE_URL = 'https://www.calibreassociates.com';
+const SITE_URL = 'https://calibreassociates.com';
 const LOGO_URL = 'https://i.ibb.co/ksMhQrst/94e69e74-31c6-4907-b7da-719956c4355f.png';
 
 export const buildOrganizationSchema = () => ({

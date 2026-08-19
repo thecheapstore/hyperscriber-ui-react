@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.calibreassociates.com/sitemap.xml
+Sitemap: https://calibreassociates.com/sitemap.xml

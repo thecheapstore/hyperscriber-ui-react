@@ -27,8 +27,8 @@ import FAQSection from "@/components/services/sections/FAQSection";
 import { buildFaqSchema } from "@/lib/faqSchema";
 import { buildPersonSchema } from "@/lib/personSchema";
 
-const SITE_URL = "https://www.calibreassociates.com";
-const FAVICON = "https://www.calibreassociates.com/favicons/android-chrome-512x512.png";
+const SITE_URL = "https://calibreassociates.com";
+const FAVICON = "https://calibreassociates.com/favicons/android-chrome-512x512.png";
 
 const TeamProfilePage = () => {
   const { slug } = useParams<{ slug: string }>();

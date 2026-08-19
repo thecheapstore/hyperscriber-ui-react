@@ -20,8 +20,8 @@ import FAQAccordion from '@/components/services/sections/FAQAccordion';
 import TestimonialSlider from '@/components/services/sections/TestimonialSlider';
 import FinalCTA from '@/components/services/sections/FinalCTA';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();

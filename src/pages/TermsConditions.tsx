@@ -5,8 +5,8 @@ import Footer from '@/components/layout/Footer';
 import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 const PAGE_TITLE = 'Calibre Associates | Terms & Conditions';
 const PAGE_DESCRIPTION =
   'Terms and conditions governing the use of Calibre Associates’ website, services, and digital solutions.';

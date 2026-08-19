@@ -25,8 +25,8 @@ import { aiAutomationTiers } from '@/components/services/ai-automation/data/aiAu
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
 import { buildFaqSchema } from '@/lib/faqSchema';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const PLATFORMS = [
   'HighLevel (GoHighLevel)', 'n8n', 'Make', 'Zapier', 'OpenAI', 'Claude', 'Gemini',

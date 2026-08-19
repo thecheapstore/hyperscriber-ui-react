@@ -25,8 +25,8 @@ import SeoPortfolioGrid from '@/components/services/seo/SeoPortfolioGrid';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
 import { buildFaqSchema } from '@/lib/faqSchema';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const heroBadges = [
   'Local SEO',

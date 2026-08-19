@@ -25,8 +25,8 @@ const Index = () => {
     name="description"
     content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
   />
-  <link rel="canonical" href="https://www.calibreassociates.com/" />
-  <link rel="icon" href="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
+  <link rel="canonical" href="https://calibreassociates.com/" />
+  <link rel="icon" href="https://calibreassociates.com/favicons/android-chrome-512x512.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Calibre Associates | Digital Marketing Agency for Website Development, SEO and AI Automation" />
@@ -34,8 +34,8 @@ const Index = () => {
     property="og:description"
     content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
   />
-  <meta property="og:url" content="https://www.calibreassociates.com/" />
-  <meta property="og:image" content="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
+  <meta property="og:url" content="https://calibreassociates.com/" />
+  <meta property="og:image" content="https://calibreassociates.com/favicons/android-chrome-512x512.png" />
   <meta property="og:site_name" content="Calibre Associates" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@ const Index = () => {
     name="twitter:description"
     content="Calibre Associates is a digital marketing agency helping businesses in India and the United States grow with website development, SEO, social media marketing, paid advertising, video editing, and AI automation for small businesses."
   />
-  <meta name="twitter:image" content="https://www.calibreassociates.com/favicons/android-chrome-512x512.png" />
+  <meta name="twitter:image" content="https://calibreassociates.com/favicons/android-chrome-512x512.png" />
 </Helmet>
       <Navbar />
       <main 

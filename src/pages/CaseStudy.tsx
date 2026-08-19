@@ -27,8 +27,8 @@ import ProcessTimeline from '@/components/services/sections/ProcessTimeline';
 import StatsSection from '@/components/services/sections/StatsSection';
 import FinalCTA from '@/components/services/sections/FinalCTA';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const CaseStudy = () => {
   const { serviceSlug, projectSlug } = useParams<{ serviceSlug: string; projectSlug: string }>();

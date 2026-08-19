@@ -9,8 +9,8 @@ import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet-async';
 import { pageTransition } from '@/lib/motion';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 const PAGE_TITLE = 'Digital Marketing, Web Development and AI Automation Services | Calibre Associates';
 const PAGE_DESCRIPTION =
   "Explore Calibre Associates' full range of digital marketing agency services: lead generation, paid advertising, SEO, social media marketing, video editing, website and application development, and AI automation for small businesses in India and the United States.";

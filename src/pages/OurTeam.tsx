@@ -12,8 +12,8 @@ import WhyChooseUs from "@/components/our-team/WhyChooseUs";
 import TeamFinalCTA from "@/components/our-team/TeamFinalCTA";
 import { pageTransition } from "@/lib/motion";
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 const PAGE_TITLE = 'Founding Team | Abhijeet Jain, Manasvi Pathak and Calibre Associates';
 const PAGE_DESCRIPTION =
   'Meet the founding team behind Calibre Associates, including Abhijeet Jain and Manasvi Pathak, specialists in software engineering, digital marketing, AI automation, design and content, working directly with clients in India and the United States to help businesses grow.';

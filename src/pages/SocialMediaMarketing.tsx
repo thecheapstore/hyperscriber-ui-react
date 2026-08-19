@@ -22,8 +22,8 @@ import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSect
 import { buildFaqSchema } from '@/lib/faqSchema';
 import { Link } from 'react-router-dom';
 
-const SITE_URL = 'https://www.calibreassociates.com';
-const OG_IMAGE = 'https://www.calibreassociates.com/favicons/android-chrome-512x512.png';
+const SITE_URL = 'https://calibreassociates.com';
+const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
 
 const whyChooseReasons: Reason[] = [
   { icon: <Target className="h-6 w-6" />, title: 'Strategy-Led Content', description: 'Every post ties back to a clear growth goal, not just a content calendar to fill.' },
