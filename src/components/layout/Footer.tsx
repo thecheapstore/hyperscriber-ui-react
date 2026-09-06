@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import TrustBox from './TrustBox';
 
 const Footer = () => {
   return (
@@ -174,6 +175,10 @@ const Footer = () => {
         {/* Separator */}
         <div className="mt-14 mb-8">
           <div className="h-px w-full bg-hairline" />
+        </div>
+
+        <div className="mb-8">
+          <TrustBox />
         </div>
 
         {/* Copyright */}

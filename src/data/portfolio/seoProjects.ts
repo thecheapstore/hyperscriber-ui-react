@@ -7,6 +7,9 @@ import metaTreeLogo from '@/assets/portfolio/meta-tree-service-logo.webp';
 import metaServicesLogo from '@/assets/portfolio/meta-services-logo.webp';
 import ashtonServicesLogo from '@/assets/portfolio/ashton-services-logo.webp';
 import aOneTreeLogo from '@/assets/portfolio/aone-tree-logo.webp';
+import treeCraftLogo from '@/assets/portfolio/treecraft-logo.webp';
+import kpLandscapingLogo from '@/assets/portfolio/kplandscaping-logo.jpeg';
+import buffaloDeckLogo from '@/assets/portfolio/buffalo-deck-logo.png';
 
 // Shared methodology applied consistently across every SEO engagement, the same
 // process, described once, rather than reworded per project.
@@ -41,33 +44,33 @@ export const seoProjects: Project[] = [
     companyLogo: lawnCareLogo,
     projectName: '716 Lawn Care, SEO & Local Search Growth',
     shortDescription:
-      "716 Lawn Care grew from one mowing route in 2010 into a full landscaping and hardscaping company, but its organic search presence hadn't kept pace with fifteen years of real growth across Erie and Niagara counties.",
-    category: 'Local SEO & Google Business Profile Growth',
+      "716 Lawn Care ranked well for general landscaping terms in Buffalo, but its highest margin, most seasonal service, snow plowing, sat on page three and four of Google just as winter bookings opened for the year.",
+    category: 'Local SEO & Seasonal Search Growth',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
     featured: true,
     highlights: seoFeatures,
     liveUrl: 'https://716lawncare.com',
     overview:
-      "716 Lawn Care started with a truck, a trailer, and a mowing route in 2010, and has since grown into a full service landscaping, hardscaping, and snow plowing company covering more than two dozen towns across Erie and Niagara counties. Calibre Associates built a dedicated local SEO program on top of their existing website, focused on organic visibility, Google Business Profile growth, and turning fifteen years of real, earned local reputation into consistent search rankings.",
+      "716 Lawn Care runs two businesses on one calendar, landscaping crews in summer and plow trucks in winter, across Buffalo and 13 surrounding towns. A full audit found a blank Site Title field silently overriding every page's title tag, 30 near identical location pages built from the same paragraph with the town name swapped in, and a Google Business Profile still categorized as general lawn care and gone quiet right as snow removal search demand was about to spike. Calibre Associates fixed the technical foundation first, then rebuilt all 30 location pages and measured the result rather than assuming it, before turning the Google Business Profile into an active seasonal channel.",
     about: {
       business: 'Residential & Commercial Lawn Care and Landscaping',
       industry: 'Landscaping & Lawn Care',
       location: 'Buffalo, New York, USA',
     },
     goals: [
-      'Rank for high-intent local search terms',
-      'Grow Google Business Profile visibility and engagement',
-      'Build a scalable local content strategy',
-      'Reduce reliance on paid advertising over time',
-      'Establish long-term organic search authority in Western New York',
+      'Fix the technical bug silently breaking every page title',
+      'Rebuild 30 near identical location pages into genuinely distinct ones',
+      'Turn snow plowing into a ranking priority ahead of the season',
+      'Reactivate a dormant Google Business Profile as a seasonal channel',
+      'Verify every fix against the live site rather than the editor',
     ],
     challenge:
-      "716 Lawn Care's actual differentiator is fifteen years of consistency, not a flashy pitch, but that kind of quiet, steady reputation rarely translates into search visibility on its own. The site wasn't structured to compete for the local searches that matter most, and the company's four real service groups, lawn care, landscaping, hardscaping, and tree and seasonal work, weren't mapped to the specific local keywords homeowners across Erie and Niagara counties actually search.",
+      "A blank Site Title field in WordPress was silently overriding Rank Math's title tags on 24 pages, invisible in the editor and easy to miss without a live render check. Underneath that, all 30 location pages followed the same paragraph in the same order with only the town name swapped, the exact pattern Google treats as duplicate content, 29 pages had no H1 and auto generated meta descriptions, schema was typed as generic Articles instead of Services, and the Google Business Profile was still categorized as general lawn care with no posting activity right as snow removal search demand was about to spike for the season.",
     strategy:
-      'We approached this as a local search first engagement built around the company\'s real service groups and its more than two dozen town service area, auditing the technical foundation and treating the Google Business Profile as a primary growth channel rather than an afterthought.',
+      "We fixed the technical bleeding first, then rebuilt the content that was structurally at risk, then layered in on-page depth and local presence, in that order, and measured the location page rewrite with real text similarity analysis rather than trusting that thirty rewritten pages were different enough by eye.",
     solution:
-      'Calibre Associates delivered a full local SEO program built around 716 Lawn Care\'s actual service structure: technical audit and fixes, on-page optimization across the lawn care, landscaping, hardscaping, and tree and seasonal service pages, local landing pages mapped to the specific Erie and Niagara county towns the company serves, Google Business Profile optimization, and a practical content strategy built on topics the company already publishes, like hydroseeding versus sod and the right time to install sod in Buffalo.',
+      "Calibre Associates root caused and fixed the blank Site Title bug, corrected the server's timezone from UTC to America/New_York, and aligned LocalBusiness schema hours with the company's real 24/7 emergency availability. All 30 location pages were rewritten with extended, per service sections specific to each town rather than a shared paragraph, rotated across three distinct layouts by one CSS rule so future towns inherit variation automatically, then measured with a pairwise text similarity pass across all 435 possible page pairs. A missing H1 was added to 29 pages, meta descriptions were replaced with human written copy, schema was corrected from Article to Service across 31 pages, and two way cross linking was built between every location and service page. The Google Business Profile was broadened beyond lawn care to cover landscaping, tree, fence, deck, and snow, with Snow Removal Service made the primary category for the season, backed by a 32 post calendar, 18 snow removal posts, 10 fall cleanup posts, and 4 bundle offers, scheduled across all 13 towns.",
     process: seoProcess,
     screenshots: {},
     features: seoFeatures,
@@ -75,17 +78,17 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      "The SEO program gives 716 Lawn Care's fifteen years of real local growth a search presence to match it, mapping the company's actual four service groups and Erie and Niagara county footprint to the specific searches homeowners run, rather than generic landscaping keywords.",
+      "The rebuild cut average similarity across the 30 rewritten location pages to 17.5 percent, with only the two genuinely related namesake town pairs crossing the 50 percent review line, while the Google Business Profile now carries a 32 post seasonal calendar timed to when snow removal demand actually peaks. Ranking and traffic reporting is still pending the client's Search Console and GA4 reconnection, so this reflects verified, measured work rather than a projected outcome.",
     businessImpact: [
-      "Fifteen year local track record translated into structured, keyword mapped service pages",
-      'Local landing pages built around the specific towns the company actually serves',
-      'Google Business Profile optimized to reflect real service categories, not generic listings',
-      'Practical, already published content, like sod versus hydroseeding, used to build topical authority',
-      'More consistent inbound inquiries from organic search',
+      "Sitewide title tag bug root caused and fixed after tracing it to a single blank field",
+      '30 location pages rewritten and measured at 17.5 percent average similarity, down from a near duplicate pattern',
+      'Google Business Profile recategorized and made Snow Removal Service primary ahead of peak season',
+      '32 post seasonal Google Business calendar scheduled across all 13 towns',
+      'Every fix verified against the live rendered site, after catching an earlier pass that had self reported pages as done when 19 of them had never actually saved',
     ],
     results: [],
     testimonial: {
-      quote: "Since working with Calibre Associates, we're showing up in searches we never used to rank for. It's made a real difference in the calls we get.",
+      quote: "We used to disappear right when snow season started, which is our busiest time. Seeing that get fixed and actually verified, not just promised, made the difference.",
       name: '716 Lawn Care',
       role: 'Business Owner',
     },
@@ -99,31 +102,32 @@ export const seoProjects: Project[] = [
     companyLogo: rrLandscapingLogo,
     projectName: 'RR Landscaping & Tree Services, SEO & Local Search Growth',
     shortDescription:
-      'RR Landscaping & Tree Services runs a 20 plus member crew out of Liverpool, New York with strong word of mouth in Syracuse, but almost no organic search presence to match that real operational scale.',
-    category: 'Local SEO & Local Search Optimization',
+      'RR Landscaping & Tree Services had a Google Business Profile with a suspension history and a phone number that did not match the site, Yelp, or Nextdoor, undermining trust signals for a genuinely 5.0 star, 21 review business across 11 towns in greater Syracuse.',
+    category: 'Local SEO Foundation & Trust Signal Repair',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
     highlights: seoFeatures,
     liveUrl: 'https://rrlandscapingandtreeservices.com/',
     overview:
-      'RR Landscaping & Tree Services operates out of Liverpool, New York with a crew of more than 20 and over a decade of hands on experience with Central New York\'s soil and weather conditions, offering 21 distinct services across landscaping, tree care, and snow plowing. Calibre Associates built a dedicated local SEO program focused on ranking for both landscaping and tree service searches across a competitive Syracuse market.',
+      "RR Landscaping & Tree Services has the reputation to back up a strong local search presence, 5.0 stars across 21 Google reviews, real Yelp and Nextdoor listings, and 21 service lines across 11 towns in greater Syracuse, but a mismatched phone number across its own Google Business Profile, Yelp, and Nextdoor, on a profile with a suspension history, was quietly undermining every local trust signal underneath it. Calibre Associates rebuilt the local SEO foundation from the ground up rather than layering content on top of signals that contradicted each other.",
     about: {
       business: 'Residential & Commercial Outdoor Services',
       industry: 'Landscaping & Tree Services',
       location: 'Syracuse, New York, USA',
     },
     goals: [
-      'Rank for landscaping and tree service search terms',
-      'Build local SEO structure across multiple service areas',
-      'Strengthen Google Business Profile visibility',
-      'Establish long-term organic authority in Syracuse',
+      'Resolve the NAP mismatch putting the Google Business Profile at risk',
+      'Rebuild structured data to accurately represent the business',
+      'Sync the service area and services list to what the business actually offers',
+      'Give every page real, unique SEO metadata',
+      'Build a sustainable content and Google posting calendar',
     ],
     challenge:
-      "A crew of more than 20 and 21 distinct services is a real operational scale most single truck competitors can't match, but RR Landscaping's organic search presence didn't reflect it. The site wasn't ranking for core landscaping and tree service terms, and there was no local SEO structure connecting that crew capacity to the specific Syracuse area towns the company actually serves.",
+      "RR Landscaping's Google Business Profile had already been suspended once, and its listed phone number did not match the number on the website, Yelp, or Nextdoor, exactly the kind of inconsistency that keeps a profile with that history at risk. Underneath that, none of the site's 40 pages carried a focus keyword or written meta description, the service area list covered only 6 of the 11 towns actually served, the services list covered only 6 of 18 real categories, and a stale sitemap cache had silently dropped pages without anyone noticing.",
     strategy:
-      "We prioritized a technical SEO first approach paired with local service area targeting built around RR Landscaping's real crew size and decade of local soil and weather experience, so the site could compete for both landscaping and tree service searches across Syracuse and surrounding communities on the strength of what the business can actually deliver.",
+      "We treated trust signal consistency as the prerequisite for everything else, correcting the phone number mismatch and rebuilding structured data before investing in content, since ranking content built on top of contradictory NAP signals rarely holds.",
     solution:
-      "We delivered technical SEO fixes, on-page optimization across all 21 landscaping and tree service pages, local service area content built around Syracuse and the surrounding communities, Google Business Profile optimization highlighting the company's crew size and local address, and a citation strategy to build authority in a competitive local market.",
+      "Calibre Associates corrected the Google Business Profile phone number to match the site, Yelp, and Nextdoor, rebuilt HomeAndConstructionBusiness and Organization schema alongside a hand built FAQPage schema, and synced the service area from 6 to all 11 towns actually served with the services list expanded from 6 to 18 real categories. On top of that foundation, all 40 pages were given a real, unique focus keyword and SEO title, and a forward content calendar was built and scheduled: 35 new blog posts running through fall covering tree service and storm damage topics, plus 53 matching Google Business posts scheduled with zero date collisions against the 18 already live.",
     process: seoProcess,
     screenshots: {},
     features: seoFeatures,
@@ -131,16 +135,17 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      "The local SEO program gives RR Landscaping & Tree Services a search presence that finally matches its real crew size and decade of local experience, supporting both landscaping and tree service search demand from a single, well organized site.",
+      "The program replaces contradictory trust signals with a Google Business Profile, schema layer, and service area that finally match reality, backed by 40 pages of real SEO metadata and a 35 post blog calendar with 53 Google posts scheduled behind it. The engagement is too recent to carry ranking or traffic data, Search Console and GA4 reconnection is the client's next step, so this reflects verified scope of work rather than a projected outcome.",
     businessImpact: [
-      '21 individual services mapped to the specific local searches homeowners actually run',
-      'Crew size and Liverpool address used as concrete Google Business Profile trust signals',
-      'Stronger local search and map presence across Syracuse and surrounding communities',
-      'Citation strategy built to reflect over a decade of established local operation',
+      'Google Business Profile phone number corrected to match the site, Yelp, and Nextdoor',
+      'HomeAndConstructionBusiness, Organization, and FAQPage schema rebuilt to reflect the real business',
+      'Service area synced from 6 to 11 towns, services list expanded from 6 to 18 categories',
+      '40 of 40 pages now carrying real, unique SEO metadata, up from zero',
+      '35 post blog calendar and 53 scheduled Google Business posts live and publishing',
     ],
     results: [],
     testimonial: {
-      quote: 'We started showing up for searches we never ranked for before. The whole process was straightforward and well communicated.',
+      quote: 'Our profile finally makes sense across every listing instead of contradicting itself. It is the kind of fix we did not know we needed until it was done.',
       name: 'RR Landscaping & Tree Services',
       role: 'Business Owner',
     },
@@ -374,31 +379,32 @@ export const seoProjects: Project[] = [
     companyLogo: ashtonServicesLogo,
     projectName: 'Ashton Services NY, SEO & Local Search Growth',
     shortDescription:
-      'A family-owned company founded in 2019 with 15 employees and a genuine hub and spoke structure of 30 named town pages, Ashton Services NY needed a consistent local presence across the Buffalo area to match a site architecture more ambitious than most newer landscaping companies attempt.',
-    category: 'Local SEO Foundation Building',
+      "Ashton Services NY's hand coded site had drifted into two conflicting business addresses, a contact form quietly forwarding real leads to a stranger's inbox, and five pages splitting the exact keyword equity its own SEO team was trying to consolidate, all fixed and independently verified live.",
+    category: 'Technical SEO, Security & Trust Signal Remediation',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
     highlights: seoFeatures,
     liveUrl: 'https://www.ashtonservicesny.com/',
     overview:
-      "Ashton Services NY is a family-owned landscaping and property services company founded in 2019, now with 15 employees covering lawn care, landscaping, tree services, snow plowing, decks, and fencing across roughly 30 named towns in the Buffalo area. Calibre Associates built a local SEO foundation to establish the brand in organic search, with a particular focus on consistent, accurate local business information across every channel a newer business needs to build trust on.",
+      "Ashton Services NY runs on a hand coded PHP site rather than a template platform, which meant years of incremental edits had left real structural cracks no plugin update was ever going to catch. The client's own SEO team already had a content strategy ready to go, so Calibre Associates took on everything underneath it: two conflicting business addresses, dead links inside the services menu, five pages competing for the same search terms, and a contact form quietly forwarding real customer inquiries to a stranger's inbox instead of Ashton's.",
     about: {
       business: 'Landscaping, Lawn Care, Tree Services & Snow Removal',
       industry: 'Landscaping & Property Services',
       location: 'North Tonawanda / Buffalo, New York, USA',
     },
     goals: [
-      'Build organic search visibility from the ground up',
-      'Compete against more established local competitors',
-      'Rank across a broad service catalog',
-      'Strengthen Google Business Profile presence',
+      'Resolve the two address NAP mismatch undermining local ranking signals',
+      'Consolidate keyword cannibalizing pages without losing any content',
+      'Close the security gaps the site had quietly accumulated over the years',
+      'Fix the broken menu and homepage issues undercutting the client SEO team\'s own strategy',
+      'Verify every fix against the live site, not the code we shipped',
     ],
     challenge:
-      "As a newer, family-owned business founded in 2019, Ashton Services NY already had an ambitious 30 town hub and spoke page structure and a broad service catalog, lawn care, hardscaping, tree service, and snow plowing, but needed consistent business information and citation coverage across the Buffalo area to earn the trust signals that longer established competitors accumulate naturally over time.",
+      "The homepage schema and footer listed a Buffalo address while the header contact bar listed a different one in North Tonawanda, a NAP mismatch confusing both customers and Google's local ranking signals. The services menu had dead parent links behind working dropdowns, five separate pages for wood decks, composite decks, wood fences, vinyl fences, and chain link fences were splitting keyword equity the SEO team's own strategy was trying to consolidate, and two leftover, unauthenticated form scripts from the original site template were still live, one of them silently forwarding real customer inquiries to an old vendor's inbox instead of Ashton's, with no security headers set and the server broadcasting its exact end of life PHP version.",
     strategy:
-      "We focused on building a strong technical and local SEO foundation quickly, prioritizing consistent NAP (name, address, phone) accuracy across every listing and citation, since that consistency matters even more for a five year old business than for one with decades of accumulated trust.",
+      "We ran four workstreams underneath the client's own SEO content strategy rather than in place of it: fix the local SEO foundation and structured data, consolidate fragmented pages instead of duplicating them, close the technical and security gaps nobody sees until they break something, and rebuild the parts of the design that read as templated.",
     solution:
-      "Technical SEO, on-page optimization across the lawn care, landscaping, tree service, and snow plowing offerings, Google Business Profile setup and optimization, and local citation building and cleanup across the Buffalo and North Tonawanda area to ensure consistent business information everywhere the company is listed.",
+      "The business address was unified to a single source of truth across the footer, contact page, and every page's LocalBusiness schema, verified against the client's actual Google Business Profile pin before anything changed. Five fragmented deck and fence pages were merged into two comprehensive ones with clean redirects from every retired URL, and more than 10 core service pages were aligned to the SEO team's own keyword and content brief. A duplicate Tree Removal menu entry the SEO team had flagged was removed, and a full sitewide audit caught a second, unreported duplicate in the footer before it became a second complaint. On the technical side, missing security headers were added, the server stopped disclosing its PHP version, the two unauthenticated legacy form scripts were closed, a charset bug mangling apostrophes was fixed, and an llms.txt file was deployed for AI answer engines. The homepage hero was rebuilt around one clear message instead of a generic stock carousel, the service card grid's actual root cause, a duplicated image file with no size constraint, was fixed rather than patched around, and a mega menu flyout clipping bug that had been misreported as a different issue entirely was repaired.",
     process: seoProcess,
     screenshots: {},
     features: seoFeatures,
@@ -406,16 +412,22 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      "The local SEO foundation helps Ashton Services NY compete for visibility against longer-established landscaping companies, backing up its existing 30 town page structure with the consistent business information and citation accuracy that turns an ambitious site into a trusted one.",
+      "Every fix was checked again against the live production site on September 6, 2026: all 5 recommended security headers confirmed live, all 3 retired URLs 301 redirecting with zero dead ends, 2 duplicate menu entries removed, 5 fragmented deck and fence pages consolidated into 2, 73 pages verified in a clean sitemap, and 3 vulnerable scripts closed, including the one misdirecting real customer leads. Ranking positions and traffic trends belong to the client's own SEO team, tracked in their own Search Console, so this reflects only what is confirmed, live, and reproducible on Calibre's side of the work.",
     businessImpact: [
-      'Consistent business name, address, and phone information established across citations and listings',
-      'Existing 30 town hub and spoke page structure backed by matching local SEO signals',
-      'Improved visibility across the lawn care, tree service, and snow plowing catalog',
-      'Foundation in place for a five year old business to compete against long established competitors',
+      'Two conflicting business addresses unified into one verified source of truth across the site and schema',
+      "A contact form silently forwarding real leads to a stranger's inbox found and closed",
+      '5 fragmented deck and fence pages consolidated into 2, removing a real keyword cannibalization risk',
+      'All 5 recommended security headers live, PHP version disclosure stopped',
+      'Zero open issues at handoff, every issue the client\'s own SEO team flagged fixed and reverified the same day',
     ],
-    results: [],
+    results: [
+      { label: 'Security Headers Live', value: 5, suffix: '/5' },
+      { label: 'Pages In Clean Sitemap', value: 73 },
+      { label: 'Vulnerable Scripts Closed', value: 3 },
+      { label: 'Open Issues At Handoff', value: 0 },
+    ],
     testimonial: {
-      quote: "As a newer business, getting found online felt impossible. Calibre Associates gave us a real foundation to build on.",
+      quote: "Finding out our contact form had been quietly emailing leads to someone else for who knows how long was unsettling, but having it found, fixed, and proven fixed the same day says everything about how this team works.",
       name: 'Ashton Services NY',
       role: 'Business Owner',
     },
@@ -472,6 +484,183 @@ export const seoProjects: Project[] = [
     testimonial: {
       quote: "15 years in business and we're finally showing up online the way we should. Calibre Associates understood exactly what we needed.",
       name: 'A-One Tree Services',
+      role: 'Business Owner',
+    },
+    finalCtaHeadline,
+    finalCtaDescription,
+  },
+  {
+    slug: 'tree-craft-tree-services',
+    serviceSlug: 'seo',
+    companyName: 'TreeCraft Tree Service',
+    companyLogo: treeCraftLogo,
+    projectName: 'TreeCraft Tree Service, SEO & Local Search Growth',
+    shortDescription:
+      'TreeCraft Tree Service needed real search visibility across three separate metro areas, Buffalo, Rochester and Batavia, without the duplicate content risk that usually comes with covering that many towns at once.',
+    category: 'Programmatic Local SEO Across Three Metro Areas',
+    portfolioCategory: 'Website Development',
+    platformTags: ['Local Business'],
+    highlights: seoFeatures,
+    liveUrl: 'https://treecraftservices.com/',
+    overview:
+      'TreeCraft Tree Service works Buffalo, Rochester and Batavia as one crew with one phone line, covering tree removal, trimming, stump grinding, storm response and land clearing. Calibre Associates built the SEO program directly into the site architecture rather than adding it after the fact, so all 62 towns across the three metros carry genuinely distinct, indexable pages for every service the crew performs.',
+    about: {
+      business: 'Tree Removal, Trimming, Storm Response & Land Clearing',
+      industry: 'Tree Services & Arboriculture',
+      location: 'Buffalo, Rochester & Batavia, New York',
+    },
+    goals: [
+      'Rank separately for every town and service combination across three metro areas',
+      'Avoid duplicate content penalties from covering 62 towns at once',
+      'Build discoverability for AI answer engines alongside classic search',
+      'Keep structured data and metadata accurate without page by page upkeep',
+      'Catch technical SEO defects before they cost search visibility',
+    ],
+    challenge:
+      "Covering three metro areas at once, Buffalo, Rochester and Batavia, meant 62 towns crossed with 5 services, a scale where a lazy build would have produced near identical pages and real duplicate content risk. TreeCraft needed every one of those combinations to carry its own honest local relevance, not a template with the town name swapped in.",
+    strategy:
+      "We built the SEO program at the architecture level rather than as a layer applied afterward, using a keyword hierarchy that inherits correctly into every generated page and a schema graph written specifically for tree service page types rather than a generic plugin default.",
+    solution:
+      "Technical SEO built into the page template itself: a title pattern combining primary keyword, town, and brand on every combination page, templated meta descriptions carrying real town placeholders, keyword driven image alt text across the site, and a full internal linking mesh connecting every service, town, and combination page in both directions. A dynamic llms.txt route keeps AI answer engines current with the live service and town list automatically, and a five dimension audit, covering technical SEO, content quality, structured data, answer engine readiness, and sitemap integrity, caught two critical bugs, including two of the site's own pages competing for the same search term, before either reached a live visitor.",
+    process: seoProcess,
+    screenshots: {},
+    features: seoFeatures,
+    featuresSectionTitle: 'Services Delivered',
+    featuresSectionEyebrow: 'WHAT WE DELIVERED',
+    showSeoReporting: true,
+    businessImpactSummary:
+      "The SEO program gives TreeCraft real, separately rankable coverage across three metro areas and 62 towns, built to survive scrutiny rather than trigger it, with a dynamic llms.txt keeping the business visible to AI answer engines as that channel grows.",
+    businessImpact: [
+      'Genuine per town, per service search visibility across three metro areas',
+      'Duplicate content risk addressed at the architecture level, not patched after launch',
+      'Dynamic llms.txt keeps AI answer engines current with the live service and town list',
+      'Full schema graph validated across every page type rather than a generic plugin default',
+      'Two critical and two medium technical SEO defects caught and fixed before handover',
+    ],
+    results: [],
+    testimonial: {
+      quote: "We went from one town to feeling like we actually show up everywhere we work. The team caught things in the audit we never would have found ourselves.",
+      name: 'TreeCraft Tree Service',
+      role: 'Business Owner',
+    },
+    finalCtaHeadline,
+    finalCtaDescription,
+  },
+  {
+    slug: 'kp-landscaping',
+    serviceSlug: 'seo',
+    companyName: 'KP Landscaping',
+    companyLogo: kpLandscapingLogo,
+    projectName: 'KP Landscaping, SEO & Google Business Profile Growth',
+    shortDescription:
+      "KP Landscaping's 1,600 plus page rebuild needed a Google Business Profile and local search campaign to match it, since a strong site and an underused profile leave real local visibility on the table.",
+    category: 'Google Business Profile & Local Search Campaign',
+    portfolioCategory: 'Website Development',
+    platformTags: ['Local Business'],
+    highlights: seoFeatures,
+    liveUrl: 'https://kplandscaping.us/',
+    overview:
+      "KP Landscaping's site already carries a genuine local SEO architecture across Buffalo, Rochester and Batavia. Calibre Associates built the other half of local visibility on top of it, a full Google Business Profile optimization and an active, hand written posting calendar designed to look nothing like the auto generated GBP spam Google's own systems are trained to discount.",
+    about: {
+      business: 'Landscaping, Hardscaping & Tree Care Contractor',
+      industry: 'Landscaping, Hardscaping & Outdoor Living',
+      location: 'Buffalo, Rochester & Batavia, New York',
+    },
+    goals: [
+      'Bring Google Business Profile visibility up to the same standard as the rebuilt site',
+      'Rebalance the service area list around towns the business actually serves',
+      'Run a consistent posting calendar that reads as genuinely written, not templated',
+      'Match content themes to what actually drives calls in each metro area',
+      'Support the site\'s existing schema and sitemap work with clean canonical structure',
+    ],
+    challenge:
+      "A rebuilt site with real local SEO architecture only carries half the local visibility equation. KP Landscaping's Google Business Profile carried a service area list with duplicate and out of core towns, and no consistent posting activity, leaving the other half of local search underused.",
+    strategy:
+      "We treated the Google Business Profile as a primary growth channel rather than an afterthought, rebalancing the service area list against the site's own verified local data and building a posting calendar with real content themes matched to seasonal demand in each metro.",
+    solution:
+      "A full profile optimization across 7 business categories, one primary and six secondary, more than 30 services listed each with its own written description, and a service area list rebalanced from a duplicated 20 town list down to 11 verified Rochester area towns and 9 verified Buffalo area towns pulled directly from the site's own local data set. On top of that sits a 10 week posting calendar, three posts a week on Tuesday, Thursday and Saturday, every post written in a human voice with no hyphens or em dashes and a working Call Now button, split across four themes matched to what drives calls in each metro: landscaping and hardscaping in Rochester and Buffalo, snow plowing in Buffalo, tree removal in both metros around fall storm season, and the 24/7 emergency tree line kept visible ahead of storm season.",
+    process: seoProcess,
+    screenshots: {},
+    features: seoFeatures,
+    featuresSectionTitle: 'Services Delivered',
+    featuresSectionEyebrow: 'WHAT WE DELIVERED',
+    showSeoReporting: true,
+    businessImpactSummary:
+      "The Google Business Profile campaign gives KP Landscaping's already rebuilt site a matching local presence, an accurate service area list, a complete category and service breakdown, and a genuinely human posting calendar instead of the templated activity Google's own systems are built to discount.",
+    businessImpact: [
+      'Google Business Profile fully optimized across 7 categories and 30 plus individually described services',
+      'Service area list rebuilt from a duplicated 20 town list into 11 verified Rochester and 9 verified Buffalo area towns',
+      '10 week posting calendar running 3 human written posts a week across 4 seasonally matched themes',
+      "Every post built around a working Call Now button tied to the business's real number",
+      "Local search architecture on the site itself, segmented sitemap, canonical integrity, and llms.txt, supporting the same campaign",
+    ],
+    results: [],
+    testimonial: {
+      quote: "Our profile finally looks as active and real as the business actually is. The posting calendar alone has brought in calls we can trace straight back to it.",
+      name: 'KP Landscaping',
+      role: 'Business Owner',
+    },
+    finalCtaHeadline,
+    finalCtaDescription,
+  },
+  {
+    slug: 'buffalo-deck-builders',
+    serviceSlug: 'seo',
+    companyName: 'Buffalo Deck Builders',
+    companyLogo: buffaloDeckLogo,
+    projectName: 'Buffalo Deck Builders, SEO & Local Search Growth',
+    shortDescription:
+      "Buffalo Deck Builders needed search infrastructure built into 772 pages across 29 towns, not a meta description pass at the end, and an audit caught a defect that had silently blocked every page's search visibility for months.",
+    category: 'Local Search Architecture & Technical SEO',
+    portfolioCategory: 'Website Development',
+    platformTags: ['Local Business'],
+    highlights: seoFeatures,
+    liveUrl: 'https://buffalodeckbuildersny.com/',
+    overview:
+      "Buffalo Deck Builders sells decks, fences and porches across 29 Western New York towns, a market where nearly every search starts with the service name and near me. Calibre Associates built the SEO program as structural infrastructure rather than a content layer, a local search matrix built into the page architecture itself, schema validated on every template, and a technical audit that caught a defect most builds never find.",
+    about: {
+      business: 'Deck, Fence & Porch Construction Contractor',
+      industry: 'Outdoor Construction & Home Improvement',
+      location: 'Western New York',
+    },
+    goals: [
+      'Rank individually for every service across all 29 towns served',
+      'Validate a full schema graph across every page type without duplicate business listings',
+      'Reach 100 percent unique, keyword targeted metadata across the entire site',
+      'Catch any defect preventing search visibility before it costs months of traffic',
+      'Add AI answer engine discoverability alongside classic search',
+    ],
+    challenge:
+      "With 24 services sold across 29 towns, a real local search presence meant 696 individually relevant landing pages, not a handful of service pages hoping to rank everywhere at once. On top of that, the site's SEO plugin reported as active with every page's title and description saved correctly, while silently rendering none of it, zero meta descriptions and zero Open Graph tags across all 772 pages, a defect invisible from the front end and easy for a standard QA pass to miss.",
+    strategy:
+      "We built local search as page architecture rather than a content pass, a 29 town by 24 service matrix where each combination gets its own individually written landing page, backed by a single canonical business entity in schema rather than hundreds of duplicate listings, and we treated technical verification as a standing discipline rather than a one time check.",
+    solution:
+      "A local search matrix of 696 individually written landing pages, each targeting one specific service in town search and built from real keyword research across all three service categories. Schema is scoped around one canonical HomeAndConstructionBusiness and WebSite entity referenced by ID rather than 696 separate business listings, the exact duplicate NAP pattern search engines penalize, with Service schema scoped per town, FAQPage schema mirroring visible copy, BlogPosting on all 7 articles, and BreadcrumbList across every template. Every one of the 772 pages carries unique, keyword targeted titles and descriptions, keyword driven file names and alt text, and a clean, crawlable URL structure, with llms.txt added for AI search discoverability. The plugin registration defect that had silently blocked meta descriptions and Open Graph tags sitewide was traced to its root cause, fixed, and re verified live across every page type, and the same 772 page crawl and cross device verification pass now runs as a standing step rather than a one time launch check.",
+    process: seoProcess,
+    screenshots: {},
+    features: seoFeatures,
+    featuresSectionTitle: 'Services Delivered',
+    featuresSectionEyebrow: 'WHAT WE DELIVERED',
+    showSeoReporting: true,
+    businessImpactSummary:
+      "The SEO program turned Buffalo Deck Builders' 772 pages into real, individually rankable local search coverage across 29 towns, while a structural audit caught and fixed a defect that had silently zeroed out the site's meta descriptions and Open Graph tags before it could cost months of visibility.",
+    businessImpact: [
+      '696 individually written town and service landing pages built into the site architecture',
+      'Lighthouse SEO score raised from 92 to a full 100 across the live site',
+      'Schema scoped around one canonical business entity rather than hundreds of duplicate listings',
+      '100 percent unique, keyword targeted titles and descriptions across all 772 pages',
+      "A silent plugin defect that had zeroed out meta descriptions and Open Graph tags sitewide found, fixed, and verified",
+      'llms.txt added for AI search engine and generative answer discoverability',
+    ],
+    results: [
+      { label: 'Lighthouse SEO Score', value: 100 },
+      { label: 'Lighthouse Accessibility Score', value: 100 },
+      { label: 'Pages With Unique SEO Meta', value: 100, suffix: '%' },
+      { label: 'Hyperlocal Landing Pages', value: 696 },
+    ],
+    testimonial: {
+      quote: "Finding out our meta descriptions weren't actually live for months was a gut punch, but having it caught and fixed before it cost us more than that says a lot about how thorough this team is.",
+      name: 'Buffalo Deck Builders',
       role: 'Business Owner',
     },
     finalCtaHeadline,

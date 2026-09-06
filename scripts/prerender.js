@@ -106,7 +106,15 @@ async function main() {
   console.log(`Prerendering ${routes.length} routes...`);
 
   const server = await startStaticServer();
-  const browser = await puppeteer.launch({ headless: true });
+  // --no-sandbox is required in Netlify's containerized build environment: Chrome's
+  // sandbox needs kernel namespace privileges that CI containers don't grant, so without
+  // it puppeteer.launch() throws immediately, this whole script exits non-zero, and the
+  // `|| echo` fallback in package.json's build script silently ships the plain,
+  // un-prerendered SPA build instead, no visible error, no failed deploy, nothing.
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+  });
 
   let failures = 0;
   for (const route of routes) {
