@@ -21,7 +21,7 @@ const LiveWebsiteButton = ({ url, className = '' }: LiveWebsiteButtonProps) => {
   }
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={url} target="_blank" rel="noopener noreferrer nofollow" className={className}>
       <Button className="rounded-pill px-6 py-3 group">
         View Live Website
         <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
