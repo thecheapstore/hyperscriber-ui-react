@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import TechnologyBadge from './TechnologyBadge';
 import LiveWebsiteButton from './LiveWebsiteButton';
 import type { Project } from '@/data/portfolio/types';
+import { projectLogoAlt } from './projectAlt';
 import { easeOut } from '@/lib/motion';
 
 interface CaseStudyHeroProps {
@@ -44,7 +45,7 @@ const CaseStudyHero = ({ project, serviceTitle }: CaseStudyHeroProps) => {
 
           <div className="flex items-center gap-4 mb-6">
             {project.companyLogo ? (
-              <img src={project.companyLogo} alt={project.companyName} loading="lazy" decoding="async" className="w-14 h-14 rounded-full object-cover border border-hairline flex-shrink-0" />
+              <img src={project.companyLogo} alt={projectLogoAlt(project)} width={56} height={56} loading="lazy" decoding="async" className="w-14 h-14 rounded-full object-cover border border-hairline flex-shrink-0" />
             ) : (
               <div className="w-14 h-14 rounded-full bg-surface-soft border border-hairline flex items-center justify-center text-lg font-semibold text-ink/60 flex-shrink-0">
                 {initial}
@@ -61,7 +62,7 @@ const CaseStudyHero = ({ project, serviceTitle }: CaseStudyHeroProps) => {
           {project.isConcept && (
             <span className="inline-flex items-center gap-1.5 rounded-pill bg-block-lilac/60 border border-hairline px-3 py-1.5 text-xs font-medium text-ink/80 mb-6">
               <Sparkles className="h-3.5 w-3.5" />
-              Concept Campaign, In-House Demo Work
+              Concept Campaign, In House Demo Work
             </span>
           )}
 

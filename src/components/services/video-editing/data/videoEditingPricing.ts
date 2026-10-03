@@ -34,15 +34,15 @@ export const videoEditingTiers: VideoEditingTier[] = [
   {
     id: 'premium',
     name: 'Premium',
-    description: 'Designed for businesses requiring cinematic, commercial-grade production.',
+    description: 'Designed for businesses requiring cinematic, commercial grade production.',
     features: [
       'Full Creative Direction',
-      'Story-driven Editing',
+      'Story driven Editing',
       'Motion Graphics',
       'Advanced Sound Design',
       'Color Grading',
       'Premium Visual Effects',
-      'Platform-specific Optimization',
+      'Platform specific Optimization',
     ],
     ctaLabel: 'Contact for Pricing',
   },
@@ -51,7 +51,7 @@ export const videoEditingTiers: VideoEditingTier[] = [
     name: 'Custom',
     description: 'A completely tailored editing workflow for agencies, creators, brands and enterprises.',
     features: [
-      'Long-form YouTube',
+      'Long form YouTube',
       'Podcasts',
       'Commercial Campaigns',
       'Product Launches',

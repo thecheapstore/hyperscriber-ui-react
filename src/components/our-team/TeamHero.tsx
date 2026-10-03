@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { Link } from "@/lib/routerLink";
 import { fadeUp, fadeIn, staggerContainer, easeOut } from "@/lib/motion";
 
 const TeamHero = () => {
@@ -38,15 +39,29 @@ const TeamHero = () => {
           </motion.span>
 
           <motion.h1 variants={fadeUp} className="mb-6">
-            Built by Specialists.
+            Meet the Founders and Experts
             <br />
-            <span className="text-ink font-bold">Driven by Results.</span>
+            <span className="text-ink font-bold">Behind Calibre Associates.</span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto">
-            Meet the specialists behind Calibre Associates. A multidisciplinary founding team
-            combining software engineering, marketing, automation, design and content to help
-            businesses grow through modern digital solutions.
+            Calibre Associates is a digital marketing agency serving India and the USA. Our
+            multidisciplinary team combines software engineering, marketing, automation, design
+            and content, led by{" "}
+            <Link
+              to="/our-team/abhijeet-jain"
+              className="font-semibold text-ink underline underline-offset-2 hover:no-underline"
+            >
+              Abhijeet Jain, Founder and CEO
+            </Link>{" "}
+            and{" "}
+            <Link
+              to="/our-team/manasvi-pathak"
+              className="font-semibold text-ink underline underline-offset-2 hover:no-underline"
+            >
+              Manasvi Pathak, Co Founder and Talent Manager
+            </Link>
+            .
           </motion.p>
 
           <motion.p variants={fadeUp} className="text-base text-ink/60 max-w-2xl mx-auto">
@@ -66,7 +81,7 @@ const TeamHero = () => {
             href="#team-members"
             className="flex flex-col items-center text-ink/70 hover:text-ink transition"
           >
-            <span className="mb-2 text-sm">Meet the founding team</span>
+            <span className="mb-2 text-sm">Meet the Calibre Associates team</span>
             <ArrowDown className="animate-bounce" size={18} />
           </a>
         </motion.div>

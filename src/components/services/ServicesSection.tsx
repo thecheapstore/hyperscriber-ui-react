@@ -1,10 +1,11 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { motion } from 'framer-motion';
 import { services } from './data/services';
 import { staggerContainer, fadeUp } from '@/lib/motion';
+import { SERVICE_LINKS } from '@/components/home/serviceLinks';
 
 const ServicesSection = () => {
   return (
@@ -21,12 +22,12 @@ const ServicesSection = () => {
             OUR CORE SERVICES
           </motion.span>
           <motion.h2 variants={fadeUp} className="mb-4">
-            Growth Driven Digital Services Built to Scale Your Business
+            Digital Marketing Services for Websites, Search, Social and Automation
           </motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg max-w-2xl">
-            Lead generation, paid advertising, SEO, social media marketing, video editing, website
-            development, and AI automation, delivered as one connected system by a digital marketing
-            agency that treats your growth as our own.
+            Website development, SEO, social media marketing, lead generation and paid advertising, video
+            editing, and AI automation, delivered as one connected system by a digital marketing agency
+            that treats your growth as our own.
           </motion.p>
         </motion.div>
 
@@ -62,6 +63,24 @@ const ServicesSection = () => {
           ))}
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 max-w-4xl text-ink/70"
+        >
+          Looking for something specific? Explore our{' '}
+          {SERVICE_LINKS.map((item, index) => (
+            <React.Fragment key={item.path}>
+              <Link to={item.path} className="text-ink underline underline-offset-4 hover:opacity-70">
+                {item.anchor}
+              </Link>
+              {index < SERVICE_LINKS.length - 2 ? ', ' : index === SERVICE_LINKS.length - 2 ? ' and ' : '.'}
+            </React.Fragment>
+          ))}
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +90,7 @@ const ServicesSection = () => {
         >
           <Button className="rounded-pill px-8 py-6 group" asChild>
             <Link to="/services">
-              View All Services
+              View All Digital Marketing Services
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

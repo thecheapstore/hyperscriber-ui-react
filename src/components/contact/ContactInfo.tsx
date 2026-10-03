@@ -17,7 +17,7 @@ const ContactInfo = () => {
         <CardContent className="p-8 text-inverse-ink">
           <h3 className="text-xl font-semibold mb-4 tracking-tight">Book a Consultation</h3>
           <p className="text-inverse-ink/80 mb-6">
-            Ready to discuss your business needs? Schedule a free 30-minute consultation with our team.
+            Ready to discuss your business needs? Schedule a free consultation call with our team.
           </p>
           <a href="https://calendly.com/calibreassociates/meeting" target="_blank" rel="noopener noreferrer">
             <Button
@@ -42,7 +42,7 @@ const ContactInfo = () => {
           </div>
           <div className="flex items-center gap-3">
             <CheckCircle className="h-5 w-5 text-ink flex-shrink-0" />
-            <h4 className="font-medium">Results-Driven Approach</h4>
+            <h4 className="font-medium">Results Driven Approach</h4>
           </div>
         </CardContent>
       </Card>
@@ -54,7 +54,7 @@ const ContactInfo = () => {
             <div>
               <p className="text-sm font-medium text-ink">North America Office</p>
               <a href="tel:+17163551231" className="text-ink/70 hover:text-ink">
-                +1 (716) 355-1231
+                +1 716 355 1231
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@ const ContactInfo = () => {
             <div>
               <p className="text-sm font-medium text-ink">India Office</p>
               <a href="tel:+919792848868" className="text-ink/70 hover:text-ink">
-                +91 97928 48868
+                +91 9792848868
               </a>
             </div>
           </div>
@@ -91,7 +91,7 @@ const ContactInfo = () => {
             <MapPin className="h-5 w-5 text-ink mt-0.5 flex-shrink-0" />
             <div>
               <p className="text-sm font-medium text-ink">Head Office</p>
-              <p className="text-ink/70">Uttar Pradesh, India</p>
+              <p className="text-ink/70">Lucknow, Uttar Pradesh, India</p>
             </div>
           </div>
         </CardContent>

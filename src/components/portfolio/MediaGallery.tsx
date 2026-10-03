@@ -85,6 +85,8 @@ const MediaGallery = ({
               <img
                 src={item.src}
                 alt={item.alt}
+                width={600}
+                height={600}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
@@ -98,7 +100,7 @@ const MediaGallery = ({
         <DialogContent className="max-w-3xl bg-canvas border-hairline p-2 sm:p-3">
           <DialogTitle className="sr-only">{active?.alt ?? 'Campaign image'}</DialogTitle>
           <DialogDescription className="sr-only">Enlarged campaign image</DialogDescription>
-          {active && <img src={active.src} alt={active.alt} className="w-full h-auto rounded-md" />}
+          {active && <img src={active.src} alt={active.alt} decoding="async" className="w-full h-auto rounded-md" />}
         </DialogContent>
       </Dialog>
     </section>

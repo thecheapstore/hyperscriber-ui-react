@@ -20,10 +20,10 @@ const CTASection = () => {
               GET IN TOUCH
             </span>
             <h2 className="text-inverse-ink max-w-3xl mx-auto mb-6">
-              Ready to Build Smarter Digital Systems for Growth?
+              Ready to Grow With a Digital Marketing Agency That Builds Smarter Systems?
             </h2>
             <p className="text-inverse-ink/80 text-body-lg mb-8 max-w-2xl mx-auto">
-              Book a free consultation to discuss your website, automation, or CRM needs and see how we can streamline your operations and improve conversions.
+              Book a free consultation to discuss your website, SEO, automation or CRM needs and see how Calibre Associates can streamline your operations and improve conversions.
             </p>
 
             {/* Social proof elements - made responsive */}
@@ -34,7 +34,7 @@ const CTASection = () => {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-2 rounded-pill">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-inverse-ink" />
-                <span className="text-inverse-ink text-sm sm:text-base font-medium">20 minute clarity call with our team</span>
+                <span className="text-inverse-ink text-sm sm:text-base font-medium">Short clarity call with our team</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-2 rounded-pill">
                 <Check className="h-4 w-4 sm:h-5 sm:w-5 text-inverse-ink" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';

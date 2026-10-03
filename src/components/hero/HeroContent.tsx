@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 
 const HeroContent = () => {
   return (
@@ -11,7 +11,7 @@ const HeroContent = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="w-full max-w-3xl mx-auto text-center relative z-10"
+      className="w-full max-w-4xl mx-auto text-center relative z-10"
     >
       <motion.span
         initial={{ opacity: 0, y: -10 }}
@@ -26,18 +26,17 @@ const HeroContent = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.3 }}
         className="mb-6 py-2"
+        style={{ fontSize: 'clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem)' }}
       >
-        Your <span className="text-ink font-bold"> Modern Business</span>
-        <br/>
-        Deserves Smarter Digital Growth
+        Digital Marketing Agency in India and the USA <span className="text-ink font-bold">That Brings You More Customers</span>
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-body-lg text-ink/70 mb-8 max-w-xl mx-auto"
+        className="text-body-lg text-ink/70 mb-8 max-w-2xl mx-auto"
       >
-        We build high performance websites, SEO driven marketing systems, social media marketing, video editing, and AI automation for small businesses, all designed to increase visibility, engagement, and revenue. <br/> Calibre Associates helps businesses in India and the United States scale through data driven digital strategy, conversion focused design, and measurable marketing execution across web, search, and paid channels.
+        Calibre Associates is a digital marketing agency for small business and growing brands. We join website development, local SEO, social media marketing, paid advertising, video editing and AI automation into one connected system, so more of the people who find you become paying customers. <br/> From tree service and landscaping companies in Buffalo and Rochester to startups across India, our team in Lucknow and Buffalo builds fast, search ready websites and marketing you can measure.
       </motion.p>
 
       {/* Social proof element with improved spacing */}
@@ -79,7 +78,7 @@ const HeroContent = () => {
           asChild
         >
           <Link to="/services">
-            View Services
+            View Our Services
           </Link>
         </Button>
       </motion.div>

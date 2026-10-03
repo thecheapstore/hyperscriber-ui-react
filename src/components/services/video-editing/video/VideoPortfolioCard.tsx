@@ -93,7 +93,7 @@ const VideoPortfolioCard = ({ video }: VideoPortfolioCardProps) => {
             onLoadedData={() => setIsLoaded(true)}
           />
         ) : (
-          video.thumbnailUrl && <img src={video.thumbnailUrl} alt={video.title} className="w-full h-full object-cover" loading="lazy" />
+          video.thumbnailUrl && <img src={video.thumbnailUrl} alt={`${video.title}, ${video.category} video sample by Calibre Associates`} width={360} height={640} className="w-full h-full object-cover" loading="lazy" decoding="async" />
         )}
 
         {hasEnteredOnce && !isLoaded && (

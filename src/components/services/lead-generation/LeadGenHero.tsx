@@ -40,14 +40,15 @@ const LeadGenHero = () => {
             </motion.span>
 
             <motion.h1 variants={fadeUp} className="text-inverse-ink mb-6 text-[clamp(2rem,1.2rem+3.4vw,3.75rem)] leading-[1.08]">
-              Generate More Qualified Leads.
+              Lead Generation and Paid Advertising Agency
               <br />
-              <span className="text-block-mint">Close More Customers.</span>
+              <span className="text-block-mint">That Closes More Customers.</span>
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Full funnel lead generation and paid advertising systems that turn ad spend into
-              booked appointments, tracked, optimized and reported on every step of the way.
+              Generate more qualified leads with full funnel Google Ads and Meta Ads systems that turn
+              ad spend into booked appointments, tracked, optimized and reported on every step of the
+              way.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -157,7 +158,7 @@ const LeadGenHero = () => {
               className="absolute -bottom-5 left-1/3 hidden sm:flex items-center gap-2 bg-canvas border border-hairline rounded-pill px-3.5 py-2 shadow-card"
             >
               <Mail className="h-3.5 w-3.5 text-block-lilac" />
-              <span className="text-xs font-semibold text-ink">Follow-up Sent</span>
+              <span className="text-xs font-semibold text-ink">Follow up Sent</span>
             </motion.div>
             <motion.div
               animate={{ y: [0, 10, 0] }}

@@ -35,7 +35,7 @@ const ContactForm = () => {
           <div>
             <p className="font-medium">North America Office</p>
             <a href="tel:+17163551231" className="text-muted-foreground hover:text-ink">
-              +1 (716) 355-1231
+              +1 716 355 1231
             </a>
           </div>
         </div>
@@ -48,7 +48,7 @@ const ContactForm = () => {
           <div>
             <p className="font-medium">India Office</p>
             <a href="tel:+919792848868" className="text-muted-foreground hover:text-ink">
-              +91 97928 48868
+              +91 9792848868
             </a>
           </div>
         </div>
@@ -60,9 +60,9 @@ const ContactForm = () => {
           </div>
           <div>
             <p className="font-medium">Email</p>
-            <p className="text-muted-foreground">
+            <a href="mailto:info@calibreassociates.com" className="text-muted-foreground hover:text-ink">
               info@calibreassociates.com
-            </p>
+            </a>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ const ContactForm = () => {
           <div>
             <p className="font-medium">Head Office</p>
             <p className="text-muted-foreground">
-              Uttar Pradesh, India
+              Lucknow, Uttar Pradesh, India
             </p>
           </div>
         </div>

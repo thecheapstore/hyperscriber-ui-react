@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Palette, Sparkles, Filter, Film, Wand2, ShieldCheck } from 'lucide-react';
 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Seo from '@/components/seo/Seo';
 import { services } from '@/components/services/data/services';
 import { pageTransition } from '@/lib/motion';
 
@@ -17,10 +17,10 @@ import FeaturedProjects from '@/components/portfolio/FeaturedProjects';
 import PortfolioBrowser from '@/components/portfolio/PortfolioBrowser';
 import { getProjectsForService } from '@/data/portfolio';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
-import { buildFaqSchema } from '@/lib/faqSchema';
-
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
+import ServiceAnswerBlock from '@/components/services/sections/ServiceAnswerBlock';
+import ServiceContentSection, { ExternalInlineLink, InlineLink } from '@/components/services/sections/ServiceContentSection';
+import ServiceResourceLinks from '@/components/services/sections/ServiceResourceLinks';
+import { buildServiceJsonLd, getServiceSeo } from '@/components/services/lib/serviceSchema';
 
 const whyChooseReasons: Reason[] = [
   { icon: <Palette className="h-6 w-6" />, title: 'Identity First, Not Logo Only', description: 'We design the whole system, wordmark, color, type, and packaging, not a single logo file.' },
@@ -57,6 +57,21 @@ const BRAND_IDENTITY_FAQS: FAQItem[] = [
     answer:
       'It depends on scope. A focused identity package, wordmark, color system, and a core photography set, can move quickly. A full funnel campaign with awareness, consideration, and conversion creative across multiple formats, plus a video reel, takes longer to plan and produce properly. We scope the timeline on a discovery call once we understand what you actually need launched.',
   },
+  {
+    question: 'What is the difference between a logo and a brand identity?',
+    answer:
+      'A logo is one mark. A brand identity is the whole system around it: wordmark, color palette, typography, imagery style, packaging and tone of voice. The system is what makes a business look consistent across a website, packaging, social posts and ads.',
+  },
+  {
+    question: 'How much does brand identity design cost?',
+    answer:
+      'It depends on scope, from a focused wordmark and color system to a full identity with packaging, campaign photography and a video reel. We scope the work on a free discovery call and give you a clear quote before you commit to anything.',
+  },
+  {
+    question: 'Do you build the website after the brand identity is done?',
+    answer:
+      'Yes. Because we also run website development, social media marketing and video editing, the identity can flow straight into a website, social content and ads without a handoff between agencies. You can start with the brand and add the website next.',
+  },
 ];
 
 const identityProcess: TimelineStep[] = [
@@ -78,62 +93,56 @@ const BrandIdentityDevelopment = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const pageUrl = `${SITE_URL}/services/${service.slug}`;
-  const pageTitle = `${service.title} | Calibre Associates`;
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-      { '@type': 'ListItem', position: 3, name: service.title, item: pageUrl },
-    ],
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.title,
-    description: service.description,
-    serviceType: service.title,
-    url: pageUrl,
-    provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: ['US', 'IN'],
-  };
-
-  const faqSchema = buildFaqSchema(BRAND_IDENTITY_FAQS);
-
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={service.shortDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={service.shortDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={service.shortDescription} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <Seo {...getServiceSeo(service)} jsonLd={buildServiceJsonLd(service, BRAND_IDENTITY_FAQS)} />
 
       <Navbar />
 
       <main className="mt-16">
         <ServiceHero service={service} secondaryCtaLabel="See The Campaigns" />
+
+        <ServiceAnswerBlock heading={service.answerHeading!} answer={service.answer!} />
+
+        <ServiceContentSection
+          eyebrow="WHAT WE DESIGN"
+          title="Brand Identity and Logo Design for New and Growing Brands"
+          intro="One identity system, designed to work in every placement from packaging to paid social."
+          cards={[
+            {
+              heading: 'Logo and wordmark design',
+              body: (
+                <>
+                  A distinctive wordmark that holds up at favicon size and on a billboard. See how we built the wordmark and
+                  checkerboard packaging for the{' '}
+                  <InlineLink to="/services/brand-identity-development/projects/slick">Slick brand identity and full funnel campaign</InlineLink>.
+                </>
+              ),
+            },
+            {
+              heading: 'Color system, typography and packaging',
+              body: (
+                <>
+                  Palettes and type chosen to work together and stay readable. We check color pairings against the{' '}
+                  <ExternalInlineLink href="https://www.w3.org/WAI/WCAG22/Understand/contrast-minimum.html">WCAG contrast guidance</ExternalInlineLink>{' '}
+                  and explore typefaces from{' '}
+                  <ExternalInlineLink href="https://fonts.google.com/">Google Fonts</ExternalInlineLink> where they fit.
+                </>
+              ),
+            },
+            {
+              heading: 'Brand campaign content',
+              body: (
+                <>
+                  Photography, art direction and short video built to launch the identity. Browse the{' '}
+                  <InlineLink to="/services/brand-identity-development/projects/plume">Plume</InlineLink> and{' '}
+                  <InlineLink to="/services/brand-identity-development/projects/volta">Volta</InlineLink> concept campaigns, each
+                  labeled as in house demo work.
+                </>
+              ),
+            },
+          ]}
+        />
 
         <WhyChooseUs
           reasons={whyChooseReasons}
@@ -173,6 +182,65 @@ const BrandIdentityDevelopment = () => {
             <PortfolioBrowser projects={projects} />
           </div>
         </section>
+
+        <ServiceContentSection
+          tone="canvas"
+          eyebrow="WHAT COMES NEXT"
+          title="From Brand Identity to Website, Social Media and Video"
+          intro="A finished identity is the starting point. Here is how it carries into the rest of your marketing."
+          cards={[
+            {
+              heading: 'A website that looks like your brand',
+              body: (
+                <>
+                  Turn the identity into a fast, conversion focused site with our{' '}
+                  <InlineLink to="/services/website-development">website development for small businesses</InlineLink>.
+                </>
+              ),
+            },
+            {
+              heading: 'Social content that stays on brand',
+              body: (
+                <>
+                  Keep every post consistent with{' '}
+                  <InlineLink to="/services/social-media-marketing">social media marketing and UGC content</InlineLink> planned
+                  around your palette and voice.
+                </>
+              ),
+            },
+            {
+              heading: 'Video that carries the identity',
+              body: (
+                <>
+                  Edit reels and ads in your brand style with our{' '}
+                  <InlineLink to="/services/video-editing">video editing services</InlineLink>. Creative direction and talent
+                  coordination come from{' '}
+                  <InlineLink to="/our-team/manasvi-pathak">Manasvi Pathak</InlineLink>, our Co Founder and Talent Manager.
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <ServiceResourceLinks
+          service={service}
+          intro="Browse the concept campaigns behind our brand work and explore the services that launch a brand."
+          caseStudies={[
+            { label: 'Plume brand identity concept campaign', to: '/services/brand-identity-development/projects/plume', description: 'A complete identity with launch photography.' },
+            { label: 'Volta brand identity concept campaign', to: '/services/brand-identity-development/projects/volta', description: 'Wordmark, color system and campaign content.' },
+            { label: 'Slick brand identity and full funnel campaign', to: '/services/brand-identity-development/projects/slick', description: 'Identity plus awareness to conversion creative.' },
+            { label: 'The Denim Co-Ord AI fashion campaign', to: '/services/brand-identity-development/projects/denim', description: 'A fashion campaign cut into a ready to post reel.' },
+          ]}
+          moreLinks={[
+            { label: 'All Calibre Associates projects', to: '/portfolio' },
+            { label: 'Meet Manasvi Pathak, Co Founder and Talent Manager', to: '/our-team/manasvi-pathak' },
+            { label: 'Start a brand identity project', to: '/contact' },
+          ]}
+          external={[
+            { label: 'WCAG contrast guidance', href: 'https://www.w3.org/WAI/WCAG22/Understand/contrast-minimum.html', description: 'Accessible color pairings for text and backgrounds.' },
+            { label: 'Google Fonts', href: 'https://fonts.google.com/', description: 'Open source typefaces for web and brand use.' },
+          ]}
+        />
 
         <FAQSection
           faqs={BRAND_IDENTITY_FAQS}

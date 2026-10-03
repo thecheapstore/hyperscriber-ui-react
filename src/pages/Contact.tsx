@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/seo/Seo';
+import { SITE_URL, absUrl, breadcrumbSchema } from '@/lib/seo';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -11,26 +12,44 @@ import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 import { pageTransition } from '@/lib/motion';
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
-const PAGE_TITLE = 'Contact Calibre Associates | Digital Marketing, Development & AI Solutions';
+const PAGE_TITLE = 'Contact Calibre Associates | Free Digital Marketing Consultation';
 const PAGE_DESCRIPTION =
-  'Contact Calibre Associates, a digital marketing agency serving businesses in India and the United States, to discuss website development, SEO, paid advertising, social media marketing, video editing, and AI automation for small businesses. Let’s build a scalable growth system for your business.';
-
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
-  ],
-};
+  'Contact Calibre Associates, a digital marketing agency in India and the USA, for a free consultation on website development, SEO, paid ads and AI automation.';
 
 const contactPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
+  '@id': `${absUrl('/contact')}#webpage`,
+  url: absUrl('/contact'),
   name: PAGE_TITLE,
-  url: `${SITE_URL}/contact`,
+  description: PAGE_DESCRIPTION,
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  inLanguage: 'en',
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Calibre Associates',
+    url: absUrl('/'),
+    email: 'info@calibreassociates.com',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+17163551231',
+        contactType: 'sales',
+        areaServed: 'US',
+        email: 'info@calibreassociates.com',
+        availableLanguage: 'English',
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+919792848868',
+        contactType: 'sales',
+        areaServed: 'IN',
+        email: 'info@calibreassociates.com',
+        availableLanguage: ['English', 'Hindi'],
+      },
+    ],
+  },
 };
 
 const Contact = () => {
@@ -42,28 +61,18 @@ const Contact = () => {
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-  <meta charSet="utf-8" />
-  <title>{PAGE_TITLE}</title>
-  <meta name="description" content={PAGE_DESCRIPTION} />
-  <link rel="canonical" href={`${SITE_URL}/contact`} />
-  <link rel="icon" href={OG_IMAGE} />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={PAGE_TITLE} />
-  <meta property="og:description" content={PAGE_DESCRIPTION} />
-  <meta property="og:url" content={`${SITE_URL}/contact`} />
-  <meta property="og:image" content={OG_IMAGE} />
-  <meta property="og:site_name" content="Calibre Associates" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={PAGE_TITLE} />
-  <meta name="twitter:description" content={PAGE_DESCRIPTION} />
-  <meta name="twitter:image" content={OG_IMAGE} />
-
-  <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-  <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
-</Helmet>
+      <Seo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/contact"
+        jsonLd={[
+          contactPageSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Contact', path: '/contact' },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen mt-16">
         <ContactHero />

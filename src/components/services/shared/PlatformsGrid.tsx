@@ -13,7 +13,7 @@ const PlatformsGrid = ({
   platforms,
   eyebrow = 'INTEGRATIONS',
   title = 'Platforms We Use',
-  description = 'Best-in-class tools, connected into one system.',
+  description = 'Best in class tools, connected into one system.',
   tone = 'light',
 }: PlatformsGridProps) => {
   const isDark = tone === 'dark';

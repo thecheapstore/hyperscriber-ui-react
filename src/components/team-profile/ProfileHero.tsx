@@ -89,7 +89,9 @@ const ProfileHero = ({ member }: ProfileHeroProps) => {
             <div className="relative aspect-[4/5] rounded-block overflow-hidden border border-hairline shadow-card">
               <img
                 src={member.image}
-                alt={member.heroImageAlt ?? member.name}
+                alt={member.heroImageAlt ?? `${member.name}, ${member.title} at Calibre Associates`}
+                width={800}
+                height={1000}
                 loading="eager"
                 // @ts-expect-error -- fetchpriority isn't in this React version's JSX types yet, but is a valid HTML attribute
                 fetchpriority="high"

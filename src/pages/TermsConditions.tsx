@@ -2,23 +2,13 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/seo/Seo';
+import { breadcrumbSchema } from '@/lib/seo';
 import { pageTransition } from '@/lib/motion';
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
-const PAGE_TITLE = 'Calibre Associates | Terms & Conditions';
+const PAGE_TITLE = 'Terms and Conditions | Calibre Associates';
 const PAGE_DESCRIPTION =
-  'Terms and conditions governing the use of Calibre Associates’ website, services, and digital solutions.';
-
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Terms & Conditions', item: `${SITE_URL}/terms-conditions` },
-  ],
-};
+  'Terms and conditions for using the Calibre Associates website and its digital marketing, website development, SEO and AI automation services.';
 
 const TermsConditions = () => {
   useEffect(() => {
@@ -30,34 +20,22 @@ const TermsConditions = () => {
       {...pageTransition}
       className="min-h-screen"
     >
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESCRIPTION} />
-        <link rel="canonical" href={`${SITE_URL}/terms-conditions`} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={PAGE_TITLE} />
-        <meta property="og:description" content={PAGE_DESCRIPTION} />
-        <meta property="og:url" content={`${SITE_URL}/terms-conditions`} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={PAGE_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      <Seo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/terms-conditions"
+        jsonLd={breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Terms and Conditions', path: '/terms-conditions' },
+        ])}
+      />
 
       <Navbar />
 
       <main className="mt-16">
         <div className="pt-24 pb-16 px-6">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8">Terms & Conditions</h1>
+            <h1 className="text-3xl font-bold mb-8">Terms and Conditions</h1>
 
             <div className="prose prose-slate max-w-none">
               <p className="text-lg text-muted-foreground mb-6">
@@ -107,7 +85,7 @@ const TermsConditions = () => {
               </p>
 
               <h2 className="text-xl font-semibold mt-8 mb-4">
-                5. Service Deliverables & Revisions
+                5. Service Deliverables and Revisions
               </h2>
               <p>
                 Service scope, deliverables, timelines, and revision limits are
@@ -120,7 +98,7 @@ const TermsConditions = () => {
               </h2>
               <p>
                 All services are provided on an "as is" and "as available"
-                basis. While we strive for high-quality outcomes, Calibre
+                basis. While we strive for high quality outcomes, Calibre
                 Associates does not guarantee specific business results,
                 rankings, revenue growth, or performance outcomes unless
                 explicitly stated in a written agreement.

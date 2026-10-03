@@ -11,7 +11,7 @@ const FOCUS_AREAS = [
   'Topical Authority',
   'Structured Data',
   'Helpful Content',
-  'E-E-A-T Principles',
+  'EEAT Principles',
 ];
 
 const AiSearchSection = () => (
@@ -33,7 +33,7 @@ const AiSearchSection = () => (
           </motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg mb-8">
             Search is no longer just a results page. We optimize content so it performs across traditional search
-            engines and the growing set of AI-powered search experiences people use to find local businesses today,
+            engines and the growing set of AI powered search experiences people use to find local businesses today,
             without exaggerated claims or guarantees about how any individual platform ranks content.
           </motion.p>
 

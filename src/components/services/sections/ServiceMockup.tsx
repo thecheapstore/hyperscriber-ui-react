@@ -8,7 +8,7 @@ const SkeletonLine = ({ className = '' }: { className?: string }) => (
   <div className={`h-2 rounded-full bg-hairline-soft ${className}`} />
 );
 
-const BrowserMockup = ({ previewImage }: { previewImage?: string }) => (
+const BrowserMockup = ({ previewImage, previewAlt = '' }: { previewImage?: string; previewAlt?: string }) => (
   <div className="w-full h-full bg-canvas rounded-lg shadow-card overflow-hidden flex flex-col">
     <div className="flex items-center gap-1.5 px-3 py-2.5 border-b border-hairline flex-shrink-0">
       <span className="w-2 h-2 rounded-full bg-hairline" />
@@ -18,7 +18,7 @@ const BrowserMockup = ({ previewImage }: { previewImage?: string }) => (
     </div>
     {previewImage ? (
       <div className="flex-1 overflow-hidden bg-surface-soft flex items-center justify-center">
-        <img src={previewImage} alt="" className="w-full h-full object-contain" />
+        <img src={previewImage} alt={previewAlt} width={800} height={600} decoding="async" fetchPriority="high" className="w-full h-full object-contain" />
       </div>
     ) : (
       <div className="p-4 flex-1 flex flex-col gap-3">
@@ -209,17 +209,17 @@ const WorkflowMockup = () => {
   );
 };
 
-const ImageMockup = ({ previewImage }: { previewImage?: string }) => (
+const ImageMockup = ({ previewImage, previewAlt = '' }: { previewImage?: string; previewAlt?: string }) => (
   <div className="w-full h-full flex items-center justify-center">
     {previewImage ? (
-      <img src={previewImage} alt="" className="w-full h-full object-contain" />
+      <img src={previewImage} alt={previewAlt} width={800} height={800} decoding="async" fetchPriority="high" className="w-full h-full object-contain" />
     ) : (
       <div className="w-full h-full rounded-lg bg-surface-soft" />
     )}
   </div>
 );
 
-const MOCKUP_COMPONENTS: Record<MockupVariant, React.FC<{ previewImage?: string }>> = {
+const MOCKUP_COMPONENTS: Record<MockupVariant, React.FC<{ previewImage?: string; previewAlt?: string }>> = {
   browser: BrowserMockup,
   image: ImageMockup,
   dashboard: DashboardMockup,
@@ -236,13 +236,15 @@ interface ServiceMockupProps {
   variant: MockupVariant;
   /** Real project screenshot, only rendered by the `browser` variant, ignored by the rest */
   previewImage?: string;
+  /** Descriptive alt text for previewImage, leave empty only when the image is purely decorative */
+  previewAlt?: string;
 }
 
-const ServiceMockup = ({ variant, previewImage }: ServiceMockupProps) => {
+const ServiceMockup = ({ variant, previewImage, previewAlt }: ServiceMockupProps) => {
   const MockupContent = MOCKUP_COMPONENTS[variant];
   return (
     <motion.div style={{ transform: 'translateZ(30px)' }} className="w-full h-full p-4 sm:p-6">
-      <MockupContent previewImage={previewImage} />
+      <MockupContent previewImage={previewImage} previewAlt={previewAlt} />
     </motion.div>
   );
 };

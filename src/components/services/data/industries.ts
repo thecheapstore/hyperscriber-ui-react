@@ -15,5 +15,5 @@ export const industries: Industry[] = [
   { label: 'Real Estate', icon: React.createElement(Building2, { className: 'h-6 w-6' }) },
   { label: 'Local Businesses', icon: React.createElement(Store, { className: 'h-6 w-6' }) },
   { label: 'Professional Services', icon: React.createElement(Briefcase, { className: 'h-6 w-6' }) },
-  { label: 'E-commerce', icon: React.createElement(ShoppingCart, { className: 'h-6 w-6' }) },
+  { label: 'Ecommerce', icon: React.createElement(ShoppingCart, { className: 'h-6 w-6' }) },
 ];

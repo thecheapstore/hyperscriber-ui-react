@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from '@/lib/routerLink';
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
 import type { TalentCategory, TalentIntro } from "@/data/team/types";
 

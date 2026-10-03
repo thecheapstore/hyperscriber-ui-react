@@ -13,7 +13,7 @@ const defaultReasons: Reason[] = [
   {
     icon: <Award className="h-6 w-6" />,
     title: 'Proven Experience',
-    description: 'Years of hands-on execution across development, marketing, and automation for growing businesses.',
+    description: 'Years of hands on execution across development, marketing, and automation for growing businesses.',
   },
   {
     icon: <Zap className="h-6 w-6" />,

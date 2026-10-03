@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { Suspense, lazy, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AnimatePresence } from "framer-motion";
@@ -13,26 +13,30 @@ import CookieConsent from "@/components/layout/CookieConsent";
 import DisableInspect from "@/components/layout/DisableInspect";
 import OrganizationSchema from "@/components/layout/OrganizationSchema";
 
-// Pages
+// Pages. The home page ships in the main bundle (it is the landing page for most visits);
+// every other route is split into its own chunk and loaded on demand.
 import Index from "@/pages/Index";
-import Services from "@/pages/Services";
-import ServiceDetail from "@/pages/ServiceDetail";
-import WebsiteDevelopment from "@/pages/WebsiteDevelopment";
-import SocialMediaMarketing from "@/pages/SocialMediaMarketing";
-import Seo from "@/pages/Seo";
-import VideoEditing from "@/pages/VideoEditing";
-import LeadGeneration from "@/pages/LeadGeneration";
-import AIAutomation from "@/pages/AIAutomation";
-import BrandIdentityDevelopment from "@/pages/BrandIdentityDevelopment";
-import CaseStudy from "@/pages/CaseStudy";
-import OurTeam from "@/pages/OurTeam";
-import TeamProfile from "@/pages/TeamProfile";
-import Faq from "@/pages/Faq";
-import WhyUs from "@/pages/WhyUs";
-import Contact from "@/pages/Contact";
-import TermsConditions from "@/pages/TermsConditions";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import NotFound from "@/pages/NotFound";
+const Services = lazy(() => import("@/pages/Services"));
+const ServiceDetail = lazy(() => import("@/pages/ServiceDetail"));
+const WebsiteDevelopment = lazy(() => import("@/pages/WebsiteDevelopment"));
+const SocialMediaMarketing = lazy(() => import("@/pages/SocialMediaMarketing"));
+const Seo = lazy(() => import("@/pages/Seo"));
+const VideoEditing = lazy(() => import("@/pages/VideoEditing"));
+const LeadGeneration = lazy(() => import("@/pages/LeadGeneration"));
+const AIAutomation = lazy(() => import("@/pages/AIAutomation"));
+const BrandIdentityDevelopment = lazy(() => import("@/pages/BrandIdentityDevelopment"));
+const CaseStudy = lazy(() => import("@/pages/CaseStudy"));
+const Portfolio = lazy(() => import("@/pages/Portfolio"));
+const IndustryPage = lazy(() => import("@/pages/IndustryPage"));
+const LocationPage = lazy(() => import("@/pages/LocationPage"));
+const OurTeam = lazy(() => import("@/pages/OurTeam"));
+const TeamProfile = lazy(() => import("@/pages/TeamProfile"));
+const Faq = lazy(() => import("@/pages/Faq"));
+const WhyUs = lazy(() => import("@/pages/WhyUs"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const TermsConditions = lazy(() => import("@/pages/TermsConditions"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -74,6 +78,9 @@ const AnimatedRoutes = () => {
         <Route path="/services/ai-automation-solutions" element={<AIAutomation />} />
         <Route path="/services/brand-identity-development" element={<BrandIdentityDevelopment />} />
         <Route path="/services/:serviceSlug/projects/:projectSlug" element={<CaseStudy />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/industries/:industrySlug" element={<IndustryPage />} />
+        <Route path="/locations/:locationSlug" element={<LocationPage />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/our-team/:slug" element={<TeamProfile />} />
@@ -103,7 +110,9 @@ const App = () => {
               <TopBanner />
 
               <main className="flex-1">
-                <AnimatedRoutes />
+                <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
+                  <AnimatedRoutes />
+                </Suspense>
               </main>
 
               <CookieConsent />

@@ -23,14 +23,14 @@ interface SolutionGroup {
 const SOLUTION_GROUPS: SolutionGroup[] = [
   { title: 'CRM Automation', icon: Workflow, items: ['Lead Routing', 'Pipeline Management', 'Lead Assignment', 'Opportunity Tracking', 'Sales Automation'] },
   { title: 'AI Receptionist', icon: Headset, items: ['24/7 Responses', 'Answer FAQs', 'Book Calls', 'Lead Qualification', 'Call Routing'] },
-  { title: 'AI Voice Callers', icon: PhoneCall, items: ['Outbound Calls', 'Appointment Confirmation', 'Follow-up Calls', 'Reminder Calls', 'Customer Qualification'] },
+  { title: 'AI Voice Callers', icon: PhoneCall, items: ['Outbound Calls', 'Appointment Confirmation', 'Follow up Calls', 'Reminder Calls', 'Customer Qualification'] },
   { title: 'AI Chatbots', icon: MessageCircle, items: ['Website Chat', 'WhatsApp', 'Facebook', 'Instagram', 'Lead Collection', 'Customer Support'] },
-  { title: 'Appointment Automation', icon: CalendarClock, items: ['Bookings', 'Rescheduling', 'Calendar Sync', 'Reminders', 'No-show Prevention'] },
-  { title: 'Lead Nurturing', icon: Mail, items: ['Email Sequences', 'SMS', 'WhatsApp', 'Follow-ups', 'Reactivation Campaigns'] },
+  { title: 'Appointment Automation', icon: CalendarClock, items: ['Bookings', 'Rescheduling', 'Calendar Sync', 'Reminders', 'No show Prevention'] },
+  { title: 'Lead Nurturing', icon: Mail, items: ['Email Sequences', 'SMS', 'WhatsApp', 'Follow ups', 'Reactivation Campaigns'] },
   { title: 'Estimates & Invoicing', icon: Receipt, items: ['Automatic Quotes', 'Invoice Generation', 'Payment Tracking', 'Payment Reminders'] },
   { title: 'Internal Business Automation', icon: Building2, items: ['Task Creation', 'Notifications', 'Document Generation', 'Client Onboarding', 'Employee Workflows', 'Reporting'] },
   { title: 'Marketing Automation', icon: Megaphone, items: ['Campaign Triggers', 'Lead Scoring', 'Customer Journeys', 'Review Requests', 'Referral Systems'] },
-  { title: 'Custom AI Solutions', icon: Puzzle, items: ['API Integrations', 'Custom Workflows', 'Business-specific Systems', 'Enterprise Automation'] },
+  { title: 'Custom AI Solutions', icon: Puzzle, items: ['API Integrations', 'Custom Workflows', 'Business specific Systems', 'Enterprise Automation'] },
 ];
 
 const AutomationSolutions = () => {

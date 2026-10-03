@@ -17,9 +17,9 @@ const seoProcess: ProjectProcessStep[] = [
   { title: 'Website Audit', description: 'A full technical and content audit to identify what\'s holding organic visibility back.' },
   { title: 'Technical SEO', description: 'Site speed, crawlability, indexing, and structured data fixed at the foundation.' },
   { title: 'Keyword Research', description: 'Mapping real local search intent to the pages that should be ranking for it.' },
-  { title: 'Content Optimization', description: 'On-page content rewritten and structured around what customers actually search for.' },
+  { title: 'Content Optimization', description: 'On page content rewritten and structured around what customers actually search for.' },
   { title: 'Google Business Profile Optimization', description: 'Profile completeness, categories, posts, and photos optimized for local pack visibility.' },
-  { title: 'Local SEO', description: 'Service-area pages, citations, and local signals built to strengthen map and local search rankings.' },
+  { title: 'Local SEO', description: 'Service area pages, citations, and local signals built to strengthen map and local search rankings.' },
   { title: 'Performance Monitoring', description: 'Ongoing tracking and iteration based on real ranking and traffic data.' },
 ];
 
@@ -68,7 +68,7 @@ export const seoProjects: Project[] = [
     challenge:
       "A blank Site Title field in WordPress was silently overriding Rank Math's title tags on 24 pages, invisible in the editor and easy to miss without a live render check. Underneath that, all 30 location pages followed the same paragraph in the same order with only the town name swapped, the exact pattern Google treats as duplicate content, 29 pages had no H1 and auto generated meta descriptions, schema was typed as generic Articles instead of Services, and the Google Business Profile was still categorized as general lawn care with no posting activity right as snow removal search demand was about to spike for the season.",
     strategy:
-      "We fixed the technical bleeding first, then rebuilt the content that was structurally at risk, then layered in on-page depth and local presence, in that order, and measured the location page rewrite with real text similarity analysis rather than trusting that thirty rewritten pages were different enough by eye.",
+      "We fixed the technical bleeding first, then rebuilt the content that was structurally at risk, then layered in on page depth and local presence, in that order, and measured the location page rewrite with real text similarity analysis rather than trusting that thirty rewritten pages were different enough by eye.",
     solution:
       "Calibre Associates root caused and fixed the blank Site Title bug, corrected the server's timezone from UTC to America/New_York, and aligned LocalBusiness schema hours with the company's real 24/7 emergency availability. All 30 location pages were rewritten with extended, per service sections specific to each town rather than a shared paragraph, rotated across three distinct layouts by one CSS rule so future towns inherit variation automatically, then measured with a pairwise text similarity pass across all 435 possible page pairs. A missing H1 was added to 29 pages, meta descriptions were replaced with human written copy, schema was corrected from Article to Service across 31 pages, and two way cross linking was built between every location and service page. The Google Business Profile was broadened beyond lawn care to cover landscaping, tree, fence, deck, and snow, with Snow Removal Service made the primary category for the season, backed by a 32 post calendar, 18 snow removal posts, 10 fall cleanup posts, and 4 bundle offers, scheduled across all 13 towns.",
     process: seoProcess,
@@ -166,7 +166,7 @@ export const seoProjects: Project[] = [
     highlights: seoFeatures,
     liveUrl: 'https://wnytreespecialists.com/',
     overview:
-      'WNY Tree Specialists covers five counties, Erie, Monroe, Niagara, Ontario, and Livingston, stretching from Buffalo through greater Rochester, with true 24/7 emergency availability and a client base spanning homeowners, HOAs, schools, churches, and municipal properties. Calibre Associates built a local SEO program designed around both routine tree care searches and the urgent, storm-driven searches that define much of the tree service industry across that entire footprint.',
+      'WNY Tree Specialists covers five counties, Erie, Monroe, Niagara, Ontario, and Livingston, stretching from Buffalo through greater Rochester, with true 24/7 emergency availability and a client base spanning homeowners, HOAs, schools, churches, and municipal properties. Calibre Associates built a local SEO program designed around both routine tree care searches and the urgent, storm driven searches that define much of the tree service industry across that entire footprint.',
     about: {
       business: 'Professional Tree Care & Emergency Services',
       industry: 'Tree Services & Arboriculture',
@@ -176,12 +176,12 @@ export const seoProjects: Project[] = [
       'Rank for both routine and emergency tree service searches',
       'Build trust signals that convert urgent searches into calls',
       'Strengthen local map pack visibility',
-      'Establish long-term authority in Western New York tree care',
+      'Establish long term authority in Western New York tree care',
     ],
     challenge:
       "A five county footprint is a genuinely different scale than a single metro tree company, and WNY Tree Specialists needed its search visibility to reach dozens of towns from Buffalo to greater Rochester, not just its home market. The site wasn't structured to capture urgent, storm driven local searches across that whole area, and its two anchor markets, Buffalo and Amherst, didn't have the dedicated local pages that kind of reach requires.",
     strategy:
-      "We built the SEO strategy around the company's real geographic reach and its genuine 24/7 emergency commitment, prioritizing the Buffalo and Amherst anchor markets while structuring the broader five county area, Erie, Monroe, Niagara, Ontario, and Livingston, for long-term coverage.",
+      "We built the SEO strategy around the company's real geographic reach and its genuine 24/7 emergency commitment, prioritizing the Buffalo and Amherst anchor markets while structuring the broader five county area, Erie, Monroe, Niagara, Ontario, and Livingston, for long term coverage.",
     solution:
       "Local SEO structure built around five distinct counties and dedicated Buffalo and Amherst location pages, technical optimization, Google Business Profile management highlighting genuine 24/7 availability, and authority building content aimed at the client types the company actually serves, from homeowners to schools and municipalities.",
     process: seoProcess,
@@ -194,7 +194,7 @@ export const seoProjects: Project[] = [
       "The SEO program positions WNY Tree Specialists to capture both everyday and emergency tree service demand across a genuinely five county footprint, with Buffalo and Amherst built out as strong anchor markets rather than left to compete on generic county wide terms alone.",
     businessImpact: [
       'Dedicated Buffalo and Amherst pages built as strong local anchors',
-      'Five county service structure, Erie, Monroe, Niagara, Ontario, Livingston, organized for long-term reach',
+      'Five county service structure, Erie, Monroe, Niagara, Ontario, Livingston, organized for long term reach',
       'Genuine 24/7 emergency availability made a visible trust signal in search and Google Business Profile',
       'Content built around the company\'s real client range, from homeowners to schools and municipalities',
     ],
@@ -221,15 +221,15 @@ export const seoProjects: Project[] = [
     highlights: seoFeatures,
     liveUrl: 'https://buffalotreespecialists.com/',
     overview:
-      "Buffalo Tree Specialists owns its own crane equipment, pulls its own permits, and runs no subcontractors, backed by ISA certified arborists, OSHA 30 compliance, ANSI A300 pruning standards, and two million dollars in liability coverage. Calibre Associates built a local SEO program focused on ranking quickly for urgent, high-intent tree service searches across the more than two dozen Western New York towns the company serves, while making that crane ownership and compliance story visible in search, not just on the site itself.",
+      "Buffalo Tree Specialists owns its own crane equipment, pulls its own permits, and runs no subcontractors, backed by ISA certified arborists, OSHA 30 compliance, ANSI A300 pruning standards, and two million dollars in liability coverage. Calibre Associates built a local SEO program focused on ranking quickly for urgent, high intent tree service searches across the more than two dozen Western New York towns the company serves, while making that crane ownership and compliance story visible in search, not just on the site itself.",
     about: {
-      business: 'Emergency-Ready Tree Removal & Care',
+      business: 'Emergency Ready Tree Removal & Care',
       industry: 'Tree Services, Tree Removal & Arboriculture',
       location: 'Buffalo, New York, USA',
     },
     goals: [
-      'Rank for emergency and same-day tree service searches',
-      'Build trust quickly with first-time searchers',
+      'Rank for emergency and same day tree service searches',
+      'Build trust quickly with first time searchers',
       'Strengthen local citations and map visibility',
       'Differentiate from other Buffalo tree service competitors in search',
     ],
@@ -246,7 +246,7 @@ export const seoProjects: Project[] = [
     featuresSectionEyebrow: 'WHAT WE DELIVERED',
     showSeoReporting: true,
     businessImpactSummary:
-      "The SEO program helps Buffalo Tree Specialists lead with what actually separates it from other Buffalo tree companies, crane ownership and no subcontractors, in the moments that matter most: urgent, high-intent local searches where trust has to build fast.",
+      "The SEO program helps Buffalo Tree Specialists lead with what actually separates it from other Buffalo tree companies, crane ownership and no subcontractors, in the moments that matter most: urgent, high intent local searches where trust has to build fast.",
     businessImpact: [
       'Crane ownership and no subcontractor claim surfaced directly in local search and map content',
       'ISA, OSHA 30, and ANSI A300 credentials used as concrete Google Business Profile trust signals',
@@ -310,7 +310,7 @@ export const seoProjects: Project[] = [
     ],
     results: [],
     testimonial: {
-      quote: 'The team set us up with a system that actually scales as we grow into new areas, not just a one-time fix.',
+      quote: 'The team set us up with a system that actually scales as we grow into new areas, not just a one time fix.',
       name: 'Meta Tree Services NY',
       role: 'Business Owner',
     },
@@ -325,7 +325,7 @@ export const seoProjects: Project[] = [
     projectName: 'Meta Services NY, SEO & Local Search Growth',
     shortDescription:
       "Meta Services NY sells close to two dozen services under a one crew, one number bundling pitch, and its SEO strategy needed to rank each service on its own while keeping that bundled coordination story intact rather than one page cannibalizing another.",
-    category: 'Multi-Service Local SEO Architecture',
+    category: 'Multi Service Local SEO Architecture',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
     highlights: seoFeatures,
@@ -333,7 +333,7 @@ export const seoProjects: Project[] = [
     overview:
       "Meta Services NY grew from a lawn care company into a full outdoor property operation over twenty years, now covering close to two dozen services across five groupings, Lawn Care, Landscaping, Tree Services, Outdoor Living, and Exterior and Seasonal work, all sold on a single crew, single number bundling pitch. Calibre Associates built a local SEO program structured around that real service breadth without letting individual service pages compete against each other in search.",
     about: {
-      business: 'Multi-Service Property Improvement Company',
+      business: 'Multi Service Property Improvement Company',
       industry: 'Property Services, Home Improvement & Construction',
       location: 'New York, USA',
     },
@@ -348,7 +348,7 @@ export const seoProjects: Project[] = [
     strategy:
       "We approached this with a hub and spoke content architecture matched to the company's own five service groupings, giving each service its own optimized page while the bundling pitch itself, and region specific technical realities like clay soil and freeze thaw cycles, reinforced overall domain authority.",
     solution:
-      "On-page SEO across all five service groupings and their individual pages, technical SEO improvements, Google Business Profile optimization built around the twenty year business history and same day coordination pitch, and internal linking connecting every service to the same five region service area used across the company's portfolio.",
+      "On page SEO across all five service groupings and their individual pages, technical SEO improvements, Google Business Profile optimization built around the twenty year business history and same day coordination pitch, and internal linking connecting every service to the same five region service area used across the company's portfolio.",
     process: seoProcess,
     screenshots: {},
     features: seoFeatures,
@@ -442,7 +442,7 @@ export const seoProjects: Project[] = [
     projectName: 'A-One Tree Services Rochester NY, SEO & Local Search Growth',
     shortDescription:
       "A-One Tree Services backs a zero property damage guarantee with ANSI A300 pruning standards and a spider lift that reaches through gates as narrow as 36 inches, but that specific credibility wasn't reflected in how the company showed up across Rochester's six distinct service regions.",
-    category: 'Local SEO Across a Multi-Community Service Area',
+    category: 'Local SEO Across a Multi Community Service Area',
     portfolioCategory: 'Website Development',
     platformTags: ['Local Business'],
     highlights: seoFeatures,

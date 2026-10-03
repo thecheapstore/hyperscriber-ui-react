@@ -3,6 +3,7 @@ import HeroContent from './HeroContent';
 import HeroBackground from './HeroBackground';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { Link } from '@/lib/routerLink';
 
 const HeroSection = () => {
   return (
@@ -26,13 +27,13 @@ const HeroSection = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="flex justify-center mt-20"
         >
-          <a
-            href="/why-us"
+          <Link
+            to="/why-us"
             className="flex flex-col items-center text-ink/70 hover:text-ink transition-colors"
           >
-            <span className="mb-2">View more</span>
+            <span className="mb-2">Why choose Calibre Associates</span>
             <ArrowDown className="animate-bounce" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </motion.div>

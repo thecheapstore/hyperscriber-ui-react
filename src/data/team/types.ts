@@ -25,6 +25,49 @@ export interface CtaLink {
 export interface ExperienceItem {
   role: string;
   org: string;
+  /** Display period, for example "Sep 2026 to present". */
+  period?: string;
+  /** Optional location shown beside the period. */
+  location?: string;
+  /** Optional one or two sentence summary of the role. */
+  detail?: string;
+}
+
+/** A press release placement or news feature that mentions the member. */
+export interface PressFeature {
+  outlet: string;
+  title: string;
+  url: string;
+  /** Display date, for example "24 Sep 2026". */
+  date: string;
+  /** ISO date (YYYY-MM-DD) used for datePublished in structured data. */
+  isoDate?: string;
+  note?: string;
+}
+
+/** A crawlable related link rendered in the "Explore more" section of a profile. */
+export interface RelatedLink {
+  label: string;
+  href: string;
+  description: string;
+  external?: boolean;
+}
+
+/** A verified certification, used for hasCredential structured data. */
+export interface ProfileCredential {
+  name: string;
+  issuer: string;
+  /** Month and year or year, for display only. */
+  date?: string;
+}
+
+/** Another organization the member works for, used for worksFor structured data. */
+export interface OtherEmployer {
+  name: string;
+  url?: string;
+  locality?: string;
+  region?: string;
+  country?: string;
 }
 
 export interface ProfileFAQItem {
@@ -80,6 +123,8 @@ export interface FoundingTeamMember {
   projectGroups?: TeamProjectGroup[];
   portfolioUrl?: string;
   portfolioImage?: string;
+  /** Descriptive alt text for the portfolio preview image. */
+  portfolioImageAlt?: string;
   /** Optional second CTA shown alongside the portfolio link (e.g. "Work With Manasvi" -> /contact). */
   secondaryPortfolioCta?: CtaLink;
   philosophyHeading: string;
@@ -101,6 +146,21 @@ export interface FoundingTeamMember {
   talentWorkflow?: TalentWorkflowStep[];
   /** schema.org Person "knowsAbout" values, omitted from structured data when unset. */
   knowsAbout?: string[];
+  /** Short schema.org jobTitle, for example "Founder and CEO". Falls back to roleLine. */
+  jobTitle?: string;
+  /** Home city for schema.org address, for example "Lucknow". Omitted from structured data when unset. */
+  locality?: string;
+  region?: string;
+  country?: string;
+  /** Extra profile URLs for schema.org sameAs (LinkedIn, Instagram, personal site). Press links never go here. */
+  sameAs?: string[];
+  /** Other organizations the member currently works for, added to worksFor alongside Calibre Associates. */
+  otherEmployers?: OtherEmployer[];
+  credentials?: ProfileCredential[];
+  /** Press release features and news mentions, rendered in an "In the News" section and added to Person JSON-LD as subjectOf. */
+  pressFeatures?: PressFeature[];
+  relatedLinks?: RelatedLink[];
+  relatedLinksHeading?: string;
   /** Overrides the default "{name} | Founding Team | Calibre Associates" page title. */
   metaTitle?: string;
   /** Overrides cardIntro as the meta/OG description when a longer, SEO-specific description is needed. */

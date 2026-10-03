@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Seo from "@/components/seo/Seo";
 
 import TeamHero from "@/components/our-team/TeamHero";
 import TeamMembers from "@/components/our-team/TeamMembers";
@@ -11,20 +11,45 @@ import TeamPhilosophy from "@/components/our-team/TeamPhilosophy";
 import WhyChooseUs from "@/components/our-team/WhyChooseUs";
 import TeamFinalCTA from "@/components/our-team/TeamFinalCTA";
 import { pageTransition } from "@/lib/motion";
+import { SITE_URL, absUrl, breadcrumbSchema } from "@/lib/seo";
+import { foundingTeam } from "@/data/team/foundingTeam";
+import { memberImageUrl, personId, profilePath, PROFILE_DATE_MODIFIED } from "@/lib/personSchema";
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
-const PAGE_TITLE = 'Founding Team | Abhijeet Jain, Manasvi Pathak and Calibre Associates';
+const PATH = "/our-team";
+const PAGE_TITLE = "Our Team | Founders and Experts at Calibre Associates";
 const PAGE_DESCRIPTION =
-  'Meet the founding team behind Calibre Associates, including Abhijeet Jain and Manasvi Pathak, specialists in software engineering, digital marketing, AI automation, design and content, working directly with clients in India and the United States to help businesses grow.';
+  "Meet Abhijeet Jain, Founder and CEO, Manasvi Pathak, Co Founder and Talent Manager, and the experts at Calibre Associates. Web, SEO, AI automation and creative.";
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Our Team', item: `${SITE_URL}/our-team` },
-  ],
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${absUrl(PATH)}#webpage`,
+  url: absUrl(PATH),
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  dateModified: PROFILE_DATE_MODIFIED,
+  inLanguage: "en",
+  isPartOf: { "@id": `${SITE_URL}/#website` },
+  about: { "@id": `${SITE_URL}/#organization` },
+  mainEntity: {
+    "@type": "ItemList",
+    name: "Calibre Associates founders and experts",
+    numberOfItems: foundingTeam.length,
+    itemListElement: foundingTeam.map((member, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: absUrl(profilePath(member)),
+      item: {
+        "@type": "Person",
+        "@id": personId(member),
+        name: member.name,
+        url: absUrl(profilePath(member)),
+        jobTitle: member.jobTitle ?? member.roleLine ?? member.title,
+        image: memberImageUrl(member),
+        worksFor: { "@id": `${SITE_URL}/#organization` },
+      },
+    })),
+  },
 };
 
 const OurTeamPage = () => {
@@ -37,27 +62,18 @@ const OurTeamPage = () => {
       {...pageTransition}
       className="min-h-screen"
     >
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESCRIPTION} />
-        <link rel="canonical" href={`${SITE_URL}/our-team`} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={PAGE_TITLE} />
-        <meta property="og:description" content={PAGE_DESCRIPTION} />
-        <meta property="og:url" content={`${SITE_URL}/our-team`} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={PAGE_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+      <Seo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path={PATH}
+        jsonLd={[
+          collectionSchema,
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Our Team", path: PATH },
+          ]),
+        ]}
+      />
 
       <Navbar />
 

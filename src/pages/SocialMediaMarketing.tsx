@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Target, Clapperboard, CalendarClock, TrendingUp, BarChart3, Layers, PlayCircle } from 'lucide-react';
 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Seo from '@/components/seo/Seo';
 import { services } from '@/components/services/data/services';
 import { pageTransition } from '@/lib/motion';
 
@@ -19,17 +19,16 @@ import PortfolioTabs from '@/components/services/social-media/PortfolioTabs';
 import { socialMediaPackages } from '@/components/services/data/socialMediaPackages';
 import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
-import { buildFaqSchema } from '@/lib/faqSchema';
-import { Link } from 'react-router-dom';
-
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
+import ServiceAnswerBlock from '@/components/services/sections/ServiceAnswerBlock';
+import ServiceContentSection, { ExternalInlineLink, InlineLink } from '@/components/services/sections/ServiceContentSection';
+import ServiceResourceLinks from '@/components/services/sections/ServiceResourceLinks';
+import { buildServiceJsonLd, getServiceSeo } from '@/components/services/lib/serviceSchema';
 
 const whyChooseReasons: Reason[] = [
-  { icon: <Target className="h-6 w-6" />, title: 'Strategy-Led Content', description: 'Every post ties back to a clear growth goal, not just a content calendar to fill.' },
-  { icon: <Clapperboard className="h-6 w-6" />, title: 'Platform-Native Editing', description: 'Reels and shorts edited to feel native to the feed, not repurposed ad creative.' },
+  { icon: <Target className="h-6 w-6" />, title: 'Strategy Led Content', description: 'Every post ties back to a clear growth goal, not just a content calendar to fill.' },
+  { icon: <Clapperboard className="h-6 w-6" />, title: 'Platform Native Editing', description: 'Reels and shorts edited to feel native to the feed, not repurposed ad creative.' },
   { icon: <CalendarClock className="h-6 w-6" />, title: 'Consistent Cadence', description: 'A dependable publishing rhythm that keeps your brand visible week over week.' },
-  { icon: <TrendingUp className="h-6 w-6" />, title: 'Data-Driven Iteration', description: 'We track what performs and adjust the content mix accordingly, every cycle.' },
+  { icon: <TrendingUp className="h-6 w-6" />, title: 'Data Driven Iteration', description: 'We track what performs and adjust the content mix accordingly, every cycle.' },
   { icon: <BarChart3 className="h-6 w-6" />, title: 'Transparent Reporting', description: 'Clear performance reports on a set cadence, no vague vanity metrics.' },
   { icon: <Layers className="h-6 w-6" />, title: 'Scalable Retainers', description: 'Start where you are and scale production up as the results come in.' },
 ];
@@ -60,6 +59,26 @@ const SOCIAL_MEDIA_FAQS: FAQItem[] = [
     answer:
       "Always get explicit permission from the original creator before using their content in paid advertising or official brand channels, a comment or like is not the same as consent to use someone's video or photo commercially. Keep a record of that permission, credit the creator where appropriate, and review platform specific rules, since requirements can differ between organic posts and paid ad usage.",
   },
+  {
+    question: 'What does a social media marketing agency do?',
+    answer:
+      'It plans, creates, publishes and reports on your social content so the brand shows up consistently. For us that means a monthly content calendar, Reels, carousels and graphics, written captions, scheduled posting and a performance report, with every piece cut to feel native on the platform it lives on.',
+  },
+  {
+    question: 'How much does social media management cost?',
+    answer:
+      'Our monthly packages are shown on this page, with Starter, Advanced and Premium tiers plus a Custom Plan for UGC, creators and paid advertising. Each tier lists exactly how many Reels, graphics, carousels and stories you receive, so you can compare them before booking a call.',
+  },
+  {
+    question: 'Do you work with UGC creators?',
+    answer:
+      'Yes. Manasvi Pathak, our Co Founder and Talent Manager, coordinates creators, models and on camera talent for brand campaigns, and she creates UGC style content herself. We also produce AI assisted UGC style video where it fits the brief and the budget.',
+  },
+  {
+    question: 'Which social media platforms do you create content for?',
+    answer:
+      'We plan content for Instagram and Facebook first, and cut vertical video for YouTube Shorts and TikTok as well. Each platform gets its own format, caption style and pacing, because a Reel and a carousel earn attention in different ways.',
+  },
 ];
 
 const SocialMediaMarketing = () => {
@@ -69,68 +88,60 @@ const SocialMediaMarketing = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const pageUrl = `${SITE_URL}/services/${service.slug}`;
-  const pageTitle = `${service.title} | Calibre Associates`;
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-      { '@type': 'ListItem', position: 3, name: service.title, item: pageUrl },
-    ],
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.title,
-    description: service.description,
-    serviceType: service.title,
-    url: pageUrl,
-    provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: ['US', 'IN'],
-  };
-
-  const faqSchema = buildFaqSchema(SOCIAL_MEDIA_FAQS);
-
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={service.shortDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={service.shortDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={service.shortDescription} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <Seo {...getServiceSeo(service)} jsonLd={buildServiceJsonLd(service, SOCIAL_MEDIA_FAQS)} />
 
       <Navbar />
 
       <main className="mt-16">
         <ServiceHero service={service} />
 
+        <ServiceAnswerBlock heading={service.answerHeading!} answer={service.answer!} />
+
+        <ServiceContentSection
+          eyebrow="WHAT WE CREATE"
+          title="Social Media Marketing, UGC Content and Reels for Your Brand"
+          intro="Everything we publish is planned around your goals and cut for the platform it will live on."
+          cards={[
+            {
+              heading: 'Social media marketing for small businesses',
+              body: (
+                <>
+                  A steady content calendar, on brand captions and consistent posting build trust faster than occasional
+                  bursts. Pair it with <InlineLink to="/services/seo">SEO services and local SEO</InlineLink> so the people who
+                  find you on Google also find an active, credible social presence.
+                </>
+              ),
+            },
+            {
+              heading: 'UGC content creation',
+              body: (
+                <>
+                  UGC style video feels like a real customer or creator made it, which is why it earns trust and engagement.{' '}
+                  <InlineLink to="/our-team/manasvi-pathak">Manasvi Pathak</InlineLink>, our Co Founder and Talent Manager,
+                  coordinates creators and on camera talent for campaigns.
+                </>
+              ),
+            },
+            {
+              heading: 'Reels and short form video',
+              body: (
+                <>
+                  Reels and Shorts need tight pacing, captions and a strong first second. Our{' '}
+                  <InlineLink to="/services/video-editing">video editing services</InlineLink> cut every clip for the platform it
+                  will live on.
+                </>
+              ),
+            },
+          ]}
+        />
+
         <WhyChooseUs
           reasons={whyChooseReasons}
           eyebrow="WHY CALIBRE ASSOCIATES"
           title="Why Brands Choose Us for Social"
-          description="Social media marketing and UGC content production built around consistency, performance, and platform-native quality."
+          description="Social media marketing and UGC content production built around consistency, performance, and platform native quality."
         />
 
         <StatsSection stats={service.stats} />
@@ -185,9 +196,9 @@ const SocialMediaMarketing = () => {
               </motion.p>
               <motion.p variants={fadeUp} className="text-ink/60 text-sm mt-4">
                 Need on camera talent for a campaign?{' '}
-                <Link to="/our-team/manasvi-pathak" className="font-semibold text-ink underline underline-offset-2 hover:no-underline">
+                <InlineLink to="/our-team/manasvi-pathak">
                   Manasvi Pathak
-                </Link>{' '}
+                </InlineLink>{' '}
                 leads talent management and brand representation at Calibre Associates.
               </motion.p>
             </motion.div>
@@ -195,6 +206,65 @@ const SocialMediaMarketing = () => {
             <PortfolioTabs />
           </div>
         </section>
+
+        <ServiceContentSection
+          tone="canvas"
+          eyebrow="THE BIGGER PICTURE"
+          title="How Social Media Fits With Your Ads, Brand and Website"
+          intro="Social media works hardest when it is connected to the rest of your marketing."
+          cards={[
+            {
+              heading: 'Social media and paid advertising',
+              body: (
+                <>
+                  Strong organic content makes ads cheaper to run and easier to trust. See our{' '}
+                  <InlineLink to="/services/lead-generation-paid-advertising">lead generation and paid advertising</InlineLink> work,
+                  and the{' '}
+                  <ExternalInlineLink href="https://www.facebook.com/business/help">Meta Business Help Center</ExternalInlineLink> for
+                  official platform guidance.
+                </>
+              ),
+            },
+            {
+              heading: 'Social media and brand identity',
+              body: (
+                <>
+                  Consistent content starts with a consistent identity. Our{' '}
+                  <InlineLink to="/services/brand-identity-development">brand identity and logo design</InlineLink> projects
+                  include campaign photography and short video built for social.
+                </>
+              ),
+            },
+            {
+              heading: 'Social media and your website',
+              body: (
+                <>
+                  Every post should lead somewhere useful. A fast, clear site from our{' '}
+                  <InlineLink to="/services/website-development">website development company</InlineLink> turns social attention
+                  into enquiries.
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <ServiceResourceLinks
+          service={service}
+          intro="See the campaign work behind our social content and explore the services that support it."
+          caseStudies={[
+            { label: 'Slick brand identity and full funnel campaign', to: '/services/brand-identity-development/projects/slick', description: 'Photography, video and funnel ad creative in one system.' },
+            { label: 'The Denim Co-Ord AI fashion campaign', to: '/services/brand-identity-development/projects/denim', description: 'A concept fashion campaign built for social formats.' },
+            { label: 'All Calibre Associates projects', to: '/portfolio', description: 'Browse every website, SEO and brand project.' },
+          ]}
+          moreLinks={[
+            { label: 'Meet Manasvi Pathak, Co Founder and Talent Manager', to: '/our-team/manasvi-pathak' },
+            { label: 'Request a social media proposal', to: '/contact' },
+          ]}
+          external={[
+            { label: 'Meta Business Help Center', href: 'https://www.facebook.com/business/help', description: 'Official guidance for Facebook and Instagram business tools.' },
+            { label: 'Instagram Help Center', href: 'https://help.instagram.com/', description: 'Official answers on Reels, posts and account features.' },
+          ]}
+        />
 
         <FAQSection
           faqs={SOCIAL_MEDIA_FAQS}
@@ -205,7 +275,7 @@ const SocialMediaMarketing = () => {
 
         <FinalCTA
           headline="Ready to Grow Your Brand Across Every Platform?"
-          description="Every business has different goals, we build a content strategy around yours, not a one-size-fits-all package."
+          description="Every business has different goals, we build a content strategy around yours, not a one size fits all package."
           primaryLabel="Book Free Consultation"
           secondaryLabel="View Our Work"
           secondaryHref="#portfolio"

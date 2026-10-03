@@ -5,19 +5,21 @@ import Footer from '@/components/layout/Footer';
 import ServiceProcess from '@/components/services/ServiceProcess';
 import WhyChooseUs from '@/components/services/sections/WhyChooseUs';
 import StatsSection from '@/components/services/sections/StatsSection';
-import TestimonialSlider from '@/components/services/sections/TestimonialSlider';
 import FinalCTA from '@/components/services/sections/FinalCTA';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
 import { buildFaqSchema } from '@/lib/faqSchema';
 import { ArrowDown } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/seo/Seo';
+import { Link } from '@/lib/routerLink';
+import { SERVICE_LINKS } from '@/components/home/serviceLinks';
+import { SITE_URL, absUrl, breadcrumbSchema } from '@/lib/seo';
 import { pageTransition } from '@/lib/motion';
 
 const companyStats = [
-  { label: 'Projects Delivered', value: 300, suffix: '+' },
-  { label: 'Years Combined Experience', value: 8, suffix: '+' },
-  { label: 'Client Retention Rate', value: 95, suffix: '%' },
-  { label: 'Industries Served', value: 12, suffix: '+' },
+  { label: 'Countries Served', value: 2 },
+  { label: 'Core Services Under One Team', value: 8 },
+  { label: 'Offices in Lucknow and Buffalo', value: 2 },
+  { label: 'Local Service Websites in Our Portfolio', value: 10, suffix: '+' },
 ];
 
 const BRAND_FAQS: FAQItem[] = [
@@ -48,19 +50,20 @@ const BRAND_FAQS: FAQItem[] = [
   },
 ];
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
-const PAGE_TITLE = 'Why Choose Calibre Associates | Digital Growth & Automation Experts';
+const PAGE_TITLE = 'Why Choose Calibre Associates | Digital Marketing and AI Agency';
 const PAGE_DESCRIPTION =
-  'Discover why businesses choose Calibre Associates for lead generation, SEO, development, automation, and AI-driven digital growth solutions built for scale.';
+  'Why choose Calibre Associates as your digital marketing agency: one team for websites, SEO, paid ads and AI automation for small business in India and the USA.';
 
-const breadcrumbSchema = {
+const webPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-    { '@type': 'ListItem', position: 2, name: 'Why Us', item: `${SITE_URL}/why-us` },
-  ],
+  '@type': 'AboutPage',
+  '@id': `${absUrl('/why-us')}#webpage`,
+  url: absUrl('/why-us'),
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#organization` },
+  inLanguage: 'en',
 };
 
 const WhyUs = () => {
@@ -75,32 +78,23 @@ const WhyUs = () => {
       {...pageTransition}
       className="min-h-screen"
     >
+      <Seo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/why-us"
+        jsonLd={[
+          webPageSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Why Us', path: '/why-us' },
+          ]),
+          faqSchema,
+        ]}
+      />
       <Navbar />
       <main className="mt-16">
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-white">
-          <Helmet>
-  <meta charSet="utf-8" />
-  <title>{PAGE_TITLE}</title>
-  <meta name="description" content={PAGE_DESCRIPTION} />
-  <link rel="canonical" href={`${SITE_URL}/why-us`} />
-  <link rel="icon" href={OG_IMAGE} />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={PAGE_TITLE} />
-  <meta property="og:description" content={PAGE_DESCRIPTION} />
-  <meta property="og:url" content={`${SITE_URL}/why-us`} />
-  <meta property="og:image" content={OG_IMAGE} />
-  <meta property="og:site_name" content="Calibre Associates" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={PAGE_TITLE} />
-  <meta name="twitter:description" content={PAGE_DESCRIPTION} />
-  <meta name="twitter:image" content={OG_IMAGE} />
-
-  <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-  <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-</Helmet>
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -109,13 +103,13 @@ const WhyUs = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <span className="inline-block py-1.5 px-4 mb-6 text-xs font-semibold tracking-wider rounded-full bg-surface-soft text-ink border border-hairline">
-                OUR APPROACH
+                WHY CALIBRE ASSOCIATES
               </span>
               <h1 className="mb-6">
-                How Calibre Associates Builds <span className="text-ink font-bold">Scalable Growth</span> Systems
+                Why Businesses Choose Calibre Associates as Their <span className="text-ink font-bold">Digital Marketing Agency</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10">
-                Our proven process combines strategy, technology, marketing, and automation to help businesses generate leads, scale operations, and achieve measurable long-term growth.
+                Calibre Associates is a digital marketing agency in India and the USA that combines strategy, website development, SEO, paid advertising and AI automation, so small businesses get one team and one plan instead of five separate vendors.
               </p>
 
               <motion.div
@@ -128,7 +122,7 @@ const WhyUs = () => {
                   href="#workflow"
                   className="flex flex-col items-center text-ink/70 hover:text-ink transition-colors"
                 >
-                  <span className="mb-2">Explore our execution process</span>
+                  <span className="mb-2">See how we work</span>
                   <ArrowDown className="animate-bounce" />
                 </a>
               </motion.div>
@@ -145,7 +139,60 @@ const WhyUs = () => {
 
         <StatsSection stats={companyStats} />
 
-        <TestimonialSlider />
+        <section className="py-20 md:py-24 bg-surface-soft">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="mb-4">Proof You Can Check</h2>
+              <p className="text-ink/70 text-body-lg mb-8">
+                We would rather show the work than describe it. Read how we built a{' '}
+                <Link to="/services/website-development/projects/tree-craft-tree-services" className="text-ink underline underline-offset-4 hover:opacity-70">
+                  tree service website for TreeCraft
+                </Link>
+                , a{' '}
+                <Link to="/services/website-development/projects/kp-landscaping" className="text-ink underline underline-offset-4 hover:opacity-70">
+                  landscaping website for KP Landscaping
+                </Link>{' '}
+                and a{' '}
+                <Link to="/services/website-development/projects/716-lawn-care" className="text-ink underline underline-offset-4 hover:opacity-70">
+                  lawn care website for 716 Lawn Care
+                </Link>
+                , or browse the{' '}
+                <Link to="/portfolio" className="text-ink font-semibold underline underline-offset-4 hover:opacity-70">
+                  full portfolio
+                </Link>
+                .
+              </p>
+              <p className="text-ink/70">
+                Meet the people behind the work:{' '}
+                <Link to="/our-team/abhijeet-jain" className="text-ink underline underline-offset-4 hover:opacity-70">
+                  Abhijeet Jain, founder and CEO
+                </Link>{' '}
+                and{' '}
+                <Link to="/our-team/manasvi-pathak" className="text-ink underline underline-offset-4 hover:opacity-70">
+                  Manasvi Pathak, co founder and talent manager
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-24 bg-canvas">
+          <div className="container mx-auto px-6 max-w-4xl text-center">
+            <h2 className="mb-4">Digital Marketing Services You Can Combine</h2>
+            <p className="text-ink/70 text-body-lg">
+              Start with one service or combine several:{' '}
+              {SERVICE_LINKS.map((item, index) => (
+                <React.Fragment key={item.path}>
+                  <Link to={item.path} className="text-ink underline underline-offset-4 hover:opacity-70">
+                    {item.anchor}
+                  </Link>
+                  {index < SERVICE_LINKS.length - 2 ? ', ' : index === SERVICE_LINKS.length - 2 ? ' and ' : '.'}
+                </React.Fragment>
+              ))}
+            </p>
+          </div>
+        </section>
 
         <FAQSection
           faqs={BRAND_FAQS}
@@ -156,7 +203,7 @@ const WhyUs = () => {
 
         <FinalCTA
           headline="Ready to Work With a Team That Delivers?"
-          description="Book a free consultation and let's talk about what scalable growth looks like for your business."
+          description="Book a free consultation and let us talk about what scalable growth looks like for your business."
         />
       </main>
       <Footer />

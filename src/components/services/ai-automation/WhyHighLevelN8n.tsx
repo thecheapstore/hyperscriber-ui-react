@@ -8,12 +8,12 @@ import WorkflowChain, { type WorkflowStep } from '../shared/WorkflowChain';
 
 const HIGHLEVEL_ALONE = ['CRM & Pipelines', 'Calendars & Booking', 'Basic Workflow Automations', 'Forms & Funnels', 'SMS & Email Sending'];
 const HIGHLEVEL_PLUS_N8N = [
-  'AI-Powered Lead Qualification',
-  'Multi-System Integrations',
+  'AI Powered Lead Qualification',
+  'Multi System Integrations',
   'Custom Logic & Branching',
   'Advanced Data Processing',
-  'Cross-Platform Automation',
-  'Enterprise-Grade Workflows',
+  'Cross Platform Automation',
+  'Enterprise Grade Workflows',
 ];
 
 const WORKFLOW_STEPS: WorkflowStep[] = [
@@ -25,7 +25,7 @@ const WORKFLOW_STEPS: WorkflowStep[] = [
   { label: 'Sales Pipeline', icon: Workflow },
   { label: 'Calendar', icon: CalendarCheck },
   { label: 'Invoice', icon: Receipt },
-  { label: 'Follow-up', icon: RefreshCw },
+  { label: 'Follow up', icon: RefreshCw },
   { label: 'Review Request', icon: Star },
   { label: 'Dashboard', icon: LayoutDashboard },
 ];
@@ -65,7 +65,7 @@ const WhyHighLevelN8n = () => {
                 <Layers className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-bold mb-1 text-ink/80">HighLevel Alone</h3>
-              <p className="text-xs text-ink/50 mb-5">A strong out-of-the-box platform</p>
+              <p className="text-xs text-ink/50 mb-5">A strong out of the box platform</p>
               <ul className="space-y-2.5">
                 {HIGHLEVEL_ALONE.map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-ink/70">

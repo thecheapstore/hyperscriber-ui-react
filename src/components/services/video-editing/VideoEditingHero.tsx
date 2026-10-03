@@ -51,13 +51,13 @@ const VideoEditingHero = () => {
             </motion.span>
 
             <motion.h1 variants={fadeUp} className="text-inverse-ink mb-6 text-[clamp(2rem,1.3rem+3.2vw,3.75rem)] leading-[1.08]">
-              We create videos that <span className="text-accent-magenta">stop the scroll.</span>
+              Video Editing Services for <span className="text-accent-magenta">Reels, YouTube and Ads.</span>
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Professional video editing services that turn raw footage into cinematic, conversion
-              focused content built to hold attention, across social media, YouTube, ads and
-              everything in between.
+              We create videos that stop the scroll. Our video editing services turn raw footage into
+              cinematic, conversion focused content built to hold attention, across Reels, YouTube
+              Shorts, long form YouTube videos, ads and everything in between.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

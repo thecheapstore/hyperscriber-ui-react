@@ -75,7 +75,7 @@ const ScreenshotGallery = ({ screenshots, projectName }: ScreenshotGalleryProps)
             >
               <WebsiteMockup
                 imageUrl={screenshots[active]}
-                alt={`${projectName}, ${active} preview`}
+                alt={`${projectName} ${active} website screenshot by Calibre Associates`}
                 device={active}
                 className={FRAME_SIZE[active]}
               />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { Mail, MapPin, Phone, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import TrustBox from './TrustBox';
@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="mb-4 flex items-start">
               <img
                 src={logo}
-                alt="Calibre Associates Logo"
+                alt="Calibre Associates digital marketing agency logo"
                 className="w-24 h-auto object-contain"
                 loading="lazy"
               />
@@ -59,6 +59,7 @@ const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Services', path: '/services' },
+                { name: 'Our Work', path: '/portfolio' },
                 { name: 'Why Us', path: '/why-us' },
                 { name: 'Our Team', path: '/our-team' },
                 { name: 'FAQ', path: '/faq' },
@@ -177,6 +178,24 @@ const Footer = () => {
           <div className="h-px w-full bg-hairline" />
         </div>
 
+        {/* HUB LINKS: industries and locations (internal linking for SEO) */}
+        <nav aria-label="Industries and locations" className="mt-12 pt-8 border-t border-hairline">
+          <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink/70">
+            {[
+              { name: 'Tree Service Marketing', path: '/industries/tree-service-marketing' },
+              { name: 'Landscaping and Lawn Care Marketing', path: '/industries/landscaping-and-lawn-care-marketing' },
+              { name: 'Digital Marketing Agency in Lucknow, India', path: '/locations/lucknow-india' },
+              { name: 'Digital Marketing for Buffalo, New York', path: '/locations/buffalo-new-york' },
+            ].map((hub) => (
+              <li key={hub.path}>
+                <Link to={hub.path} className="hover:text-ink transition-colors">
+                  {hub.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="mb-8">
           <TrustBox />
         </div>
@@ -187,7 +206,7 @@ const Footer = () => {
           <p className="mt-2 md:mt-0">
             Designed with ❤️ by{' '}
             <a
-              href="https://calibreassociates.com/our-team/abhijeet-jain"
+              href="https://calibreassociates.com/our-team/abhijeet-jain/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-ink inline-flex items-center gap-1"

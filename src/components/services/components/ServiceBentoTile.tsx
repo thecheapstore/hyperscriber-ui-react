@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { Service } from '../types/service';
 
 interface ServiceBentoTileProps {

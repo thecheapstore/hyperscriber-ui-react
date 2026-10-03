@@ -5,32 +5,32 @@ const strengths = [
   {
     title: "Experienced Engineering Team",
     description:
-      "Our engineering team brings hands-on experience across modern web technologies, building secure, scalable, and maintainable applications that support real business growth.",
+      "Our engineering team brings hands on experience across modern web technologies, building secure, scalable, and maintainable applications that support real business growth.",
   },
   {
-    title: "Design-Led Thinking",
+    title: "Design Led Thinking",
     description:
       "We approach every project with design clarity first, focusing on intuitive user experiences, clean interfaces, and thoughtful flows that make products easy to use and hard to forget.",
   },
   {
     title: "Automation & Integrations",
     description:
-      "Our team specializes in building smart automation and system integrations, helping businesses streamline operations, connect tools, and reduce manual effort through well-architected workflows.",
+      "Our team specializes in building smart automation and system integrations, helping businesses streamline operations, connect tools, and reduce manual effort through well architected workflows.",
   },
   {
     title: "Performance & Scalability",
     description:
-      "From code structure to infrastructure decisions, our team builds with performance and scalability in mind, ensuring long-term stability, speed, and technical reliability.",
+      "From code structure to infrastructure decisions, our team builds with performance and scalability in mind, ensuring long term stability, speed, and technical reliability.",
   },
   {
     title: "Clear Communication",
     description:
-      "We believe great results come from clear communication. Clients work directly with our execution team, with transparent timelines, regular updates, and collaborative decision-making.",
+      "We believe great results come from clear communication. Clients work directly with our execution team, with transparent timelines, regular updates, and collaborative decision making.",
   },
   {
-    title: "Long-Term Partnership",
+    title: "Long Term Partnership",
     description:
-      "We view every engagement as a long-term partnership, acting as an extension of your internal team rather than a short-term service provider.",
+      "We view every engagement as a long term partnership, acting as an extension of your internal team rather than a short term service provider.",
   },
 ];
 

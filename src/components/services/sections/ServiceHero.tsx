@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,12 +10,16 @@ import { getMockupVariant } from '../data/mockupVariants';
 
 interface ServiceHeroProps {
   service: Service;
+  /** The page's single H1. Falls back to service.h1, then the service title. */
+  h1?: string;
+  /** Lead paragraph under the H1. Falls back to service.heroSubheading, then the service description. */
+  subheading?: string;
   /** Optional premium badge row shown between the description and CTAs */
   badges?: string[];
   secondaryCtaLabel?: string;
 }
 
-const ServiceHero = ({ service, badges, secondaryCtaLabel = 'See Our Work' }: ServiceHeroProps) => {
+const ServiceHero = ({ service, h1, subheading, badges, secondaryCtaLabel = 'See Our Work' }: ServiceHeroProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -75,10 +79,10 @@ const ServiceHero = ({ service, badges, secondaryCtaLabel = 'See Our Work' }: Se
               {service.title}
             </span>
 
-            <h1 className="mb-6 text-[clamp(1.875rem,1.3rem+2.6vw,3.5rem)] leading-[1.1]">{service.shortDescription}</h1>
+            <h1 className="mb-6 text-[clamp(1.75rem,1.2rem+2.4vw,3.25rem)] leading-[1.1]">{h1 ?? service.h1 ?? service.title}</h1>
 
             <p className="text-lg md:text-xl text-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              {service.description}
+              {subheading ?? service.heroSubheading ?? service.description}
             </p>
 
             {badges && badges.length > 0 && (
@@ -128,7 +132,11 @@ const ServiceHero = ({ service, badges, secondaryCtaLabel = 'See Our Work' }: Se
               style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
               className={`relative aspect-square max-w-md mx-auto rounded-block border border-hairline ${service.bgLight} overflow-hidden`}
             >
-              <ServiceMockup variant={getMockupVariant(service.slug)} previewImage={service.previewImage} />
+              <ServiceMockup
+                variant={getMockupVariant(service.slug)}
+                previewImage={service.previewImage}
+                previewAlt={service.previewAlt}
+              />
 
               {/* Service icon badge */}
               <motion.div

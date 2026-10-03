@@ -1,27 +1,58 @@
 # Calibre Associates
 
-> Calibre Associates is a digital marketing agency that designs and builds scalable digital systems for businesses in India and the United States, including high performance websites, SEO, social media marketing, video editing, lead generation and paid advertising, and AI automation.
+> Calibre Associates is a digital marketing agency serving businesses in India and the United States. It builds websites, runs SEO and local SEO, manages social media and paid advertising, edits video, and sets up AI automation and CRM systems. It was founded in December 2025 in Lucknow, Uttar Pradesh, and has a North America presence in Buffalo, New York.
+
+## Quick facts
+
+- Business type: digital marketing agency (websites, SEO, social media marketing, lead generation, paid ads, AI automation, CRM, brand identity, video editing)
+- Founder and CEO: Abhijeet Jain, who is also Managing Director of 716 Lawn Care in Buffalo, New York
+- Co Founder and Talent Manager: Manasvi Pathak (Agra, India)
+- Markets: India and the United States, with most portfolio work for local service businesses around Buffalo, Rochester and Syracuse, New York
+- Booking: https://calendly.com/calibreassociates/meeting
+- Email: info@calibreassociates.com
+- Phone India: +91 9792848868. Phone USA (Buffalo, NY): +1 716 355 1231
 
 ## Services
 
-- [Website Development](https://calibreassociates.com/services/website-development): Custom WordPress development, React and Next.js applications, and e-commerce websites built for performance and conversion.
-- [SEO](https://calibreassociates.com/services/seo): Local SEO, technical SEO, and AI search optimization to improve organic rankings and visibility.
-- [Social Media Marketing](https://calibreassociates.com/services/social-media-marketing): Content creation, UGC production, and social media management built around consistent growth.
-- [Video Editing](https://calibreassociates.com/services/video-editing): Professional video editing for social media, YouTube, and paid advertising campaigns.
-- [Lead Generation & Paid Advertising](https://calibreassociates.com/services/lead-generation-paid-advertising): Google Ads, Meta Ads, and CRM automation built to generate qualified leads.
-- [AI Automation & Solutions](https://calibreassociates.com/services/ai-automation-solutions): Custom AI automation and CRM workflow automation for small businesses, built on HighLevel and n8n.
-- [Brand Identity Development](https://calibreassociates.com/services/brand-identity-development): Complete brand identities, wordmark, color system, packaging, and campaign content, including full-funnel ad creative and video reels.
-- [Application & Software Development](https://calibreassociates.com/services/application-software-development): Custom web applications and business software engineered for scale.
-- [All Services](https://calibreassociates.com/services): Full overview of every service Calibre Associates offers.
+- [Website Development](https://calibreassociates.com/services/website-development/): Custom WordPress and React websites for small businesses, built for speed, search visibility and lead conversion.
+- [SEO](https://calibreassociates.com/services/seo/): Local SEO, technical SEO and content for rankings in Google and AI search.
+- [Social Media Marketing](https://calibreassociates.com/services/social-media-marketing/): Content creation, UGC production and social media management.
+- [Video Editing](https://calibreassociates.com/services/video-editing/): Reels, YouTube and ad video editing.
+- [Lead Generation and Paid Advertising](https://calibreassociates.com/services/lead-generation-paid-advertising/): Google Ads, Meta Ads and CRM automation that bring in qualified leads.
+- [AI Automation and Solutions](https://calibreassociates.com/services/ai-automation-solutions/): AI automation and CRM workflows built on HighLevel and n8n.
+- [Brand Identity Development](https://calibreassociates.com/services/brand-identity-development/): Brand identity systems, packaging and campaign creative.
+- [Application and Software Development](https://calibreassociates.com/services/application-software-development/): Custom web applications and business software.
+- [All Services](https://calibreassociates.com/services/): Overview of every service.
 
-## Company
+## Industries and locations
 
-- [Why Us](https://calibreassociates.com/why-us): Why businesses choose Calibre Associates, our process, and results.
-- [Founding Team](https://calibreassociates.com/our-team): Meet the founding team, including Abhijeet Jain, Founder and CEO, and Manasvi Pathak, Co-Founder.
-- [FAQ](https://calibreassociates.com/faq): Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, and AI automation.
-- [Contact](https://calibreassociates.com/contact): Book a free consultation.
+- [Tree Service Website Design and SEO](https://calibreassociates.com/industries/tree-service-marketing/)
+- [Landscaping and Lawn Care Marketing](https://calibreassociates.com/industries/landscaping-and-lawn-care-marketing/)
+- [Digital Marketing Agency in Lucknow, India](https://calibreassociates.com/locations/lucknow-india/)
+- [Digital Marketing Agency in Buffalo, New York](https://calibreassociates.com/locations/buffalo-new-york/)
+
+## Work and case studies
+
+- [Portfolio of website design and SEO case studies](https://calibreassociates.com/portfolio/)
+- [Arborix Tree Services website](https://calibreassociates.com/services/website-development/projects/arborix-tree-services/)
+- [Branch Experts Rochester website](https://calibreassociates.com/services/website-development/projects/branch-experts-rochester/)
+- [TreeCraft Tree Service website](https://calibreassociates.com/services/website-development/projects/tree-craft-tree-services/)
+- [WNY Tree Specialists website](https://calibreassociates.com/services/website-development/projects/wny-tree-specialists/)
+- [716 Lawn Care website](https://calibreassociates.com/services/website-development/projects/716-lawn-care/)
+- [716 Lawn Care SEO](https://calibreassociates.com/services/seo/projects/716-lawn-care/)
+
+## Company and people
+
+- [Why Us](https://calibreassociates.com/why-us/): How Calibre Associates works and why businesses choose it.
+- [Our Team](https://calibreassociates.com/our-team/): The founders and experts behind Calibre Associates.
+- [Abhijeet Jain, Founder and CEO](https://calibreassociates.com/our-team/abhijeet-jain/)
+- [Manasvi Pathak, Co Founder and Talent Manager](https://calibreassociates.com/our-team/manasvi-pathak/)
+- [Pawan Sharma, Co Founder](https://calibreassociates.com/our-team/pawan-sharma/)
+- [Tej Pratap, Performance Manager](https://calibreassociates.com/our-team/tej-pratap/)
+- [FAQ](https://calibreassociates.com/faq/): Answers about website development, SEO, social media, video editing, lead generation and AI automation.
+- [Contact](https://calibreassociates.com/contact/): Book a free consultation.
 
 ## Optional
 
-- [Terms & Conditions](https://calibreassociates.com/terms-conditions)
-- [Privacy Policy](https://calibreassociates.com/privacy-policy)
+- [Terms and Conditions](https://calibreassociates.com/terms-conditions/)
+- [Privacy Policy](https://calibreassociates.com/privacy-policy/)

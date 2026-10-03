@@ -1,1 +1,7 @@
+# Retired route: /pricing used to client side redirect to the team page. Make it a real 301.
+/pricing    /our-team/    301
+/pricing/   /our-team/    301
+
+# Known routes are served from their prerendered /route/index.html automatically.
+# Everything else falls through to the SPA shell, which renders the noindex 404 screen.
 /*    /index.html   200

@@ -82,7 +82,7 @@ if (!isVisible) return null;
             </span>
             {/* Ensure font sizes are responsive */}
             <p className="text-xs sm:text-sm md:text-base font-medium text-center">
-              Limited Time Offer: Get a free one-one-one session with our marketing expert!
+              Limited Time Offer: Get a free one on one session with our marketing expert!
             </p>
           </div>
           {/* Ensure button padding and text size are suitable for mobile */}

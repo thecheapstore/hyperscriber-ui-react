@@ -30,8 +30,8 @@ export const aiAutomationTiers: PricingTier[] = [
     id: 'enterprise',
     name: 'Enterprise',
     priceLabel: 'Contact for Pricing',
-    description: 'Custom, API-level automation built for enterprise teams and complex operations.',
-    features: ['Custom API integrations', 'Business-specific systems', 'Enterprise-grade workflows', 'Dedicated build & support'],
+    description: 'Custom, API level automation built for enterprise teams and complex operations.',
+    features: ['Custom API integrations', 'Business specific systems', 'Enterprise grade workflows', 'Dedicated build & support'],
     ctaLabel: 'Book Consultation',
   },
 ];

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/seo/Seo';
+import { SITE_URL, absUrl, absImage, breadcrumbSchema, toMetaDescription } from '@/lib/seo';
 import { motion } from 'framer-motion';
 import { Target, Search, Gauge, TrendingUp, Sparkles } from 'lucide-react';
 
@@ -27,8 +28,11 @@ import ProcessTimeline from '@/components/services/sections/ProcessTimeline';
 import StatsSection from '@/components/services/sections/StatsSection';
 import FinalCTA from '@/components/services/sections/FinalCTA';
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
+const SERVICE_NOUN: Record<string, string> = {
+  'website-development': 'Website Design',
+  seo: 'SEO',
+  'brand-identity-development': 'Brand Identity',
+};
 
 const CaseStudy = () => {
   const { serviceSlug, projectSlug } = useParams<{ serviceSlug: string; projectSlug: string }>();
@@ -43,81 +47,78 @@ const CaseStudy = () => {
     return <Navigate to={service ? `/services/${service.slug}` : '/services'} replace />;
   }
 
-  const pageUrl = `${SITE_URL}/services/${project.serviceSlug}/projects/${project.slug}`;
-  const pageTitle = `${project.projectName} Case Study | Calibre Associates`;
-  const rawShareImage = project.socialImage || project.thumbnail || OG_IMAGE;
-  // Vite-resolved asset imports (thumbnail/socialImage) are root-relative paths, but
-  // OG/Twitter/JSON-LD image URLs must be absolute for external crawlers to resolve them.
-  const shareImage = rawShareImage.startsWith('/') ? `${SITE_URL}${rawShareImage}` : rawShareImage;
+  const pagePath = `/services/${project.serviceSlug}/projects/${project.slug}`;
+  const pageUrl = absUrl(pagePath);
+  const serviceNoun = SERVICE_NOUN[project.serviceSlug] ?? service.title;
+  // Built from the clean client name (not projectName, which can carry a subtitle) and kept near
+  // 60 characters: the "Case Study" suffix is dropped when the full form would run long.
+  const fullTitle = `${project.companyName} ${serviceNoun} Case Study | Calibre Associates`;
+  const pageTitle = fullTitle.length <= 66 ? fullTitle : `${project.companyName} ${serviceNoun} | Calibre Associates`;
+  const metaDescription = toMetaDescription(project.shortDescription);
+  const shareImage = absImage(project.socialImage || project.thumbnail);
   const hasBrief = Boolean(project.goals?.length || project.challenge || project.strategy || project.solution);
   const hasTechnicalFoundation = Boolean(project.seoFoundation?.length || project.performanceOptimizations?.length);
   const hasImpact = Boolean(project.businessImpact?.length || project.results.length > 0);
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-      { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${service.slug}` },
-      { '@type': 'ListItem', position: 4, name: project.projectName, item: pageUrl },
-    ],
-  };
-
   const caseStudySchema = {
     '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
-    name: pageTitle,
-    description: project.shortDescription,
+    '@type': 'Article',
+    '@id': `${pageUrl}#article`,
+    headline: pageTitle,
+    description: metaDescription,
     url: pageUrl,
+    mainEntityOfPage: pageUrl,
     image: shareImage,
-    about: service.title,
-    author: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
+    about: [
+      service.title,
+      {
+        '@type': 'Organization',
+        name: project.companyName,
+        ...(project.liveUrl && !project.isConcept ? { url: project.liveUrl } : {}),
+      },
+    ],
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
   };
 
   const rawVideoThumb = project.video?.poster;
-  const videoThumb = rawVideoThumb
-    ? (rawVideoThumb.startsWith('/') ? `${SITE_URL}${rawVideoThumb}` : rawVideoThumb)
-    : shareImage;
-  const rawVideoSrc = project.video?.src ?? '';
-  const videoContentUrl = rawVideoSrc.startsWith('/') ? `${SITE_URL}${rawVideoSrc}` : rawVideoSrc;
+  const videoThumb = rawVideoThumb ? absImage(rawVideoThumb) : shareImage;
+  const videoContentUrl = project.video?.src ? absImage(project.video.src) : '';
   const videoSchema = project.video
     ? {
         '@context': 'https://schema.org',
         '@type': 'VideoObject',
         name: project.video.label || pageTitle,
-        description: project.shortDescription,
+        description: metaDescription,
         thumbnailUrl: videoThumb,
         contentUrl: videoContentUrl,
         embedUrl: pageUrl,
       }
     : null;
 
+  const jsonLd = [
+    breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+      { name: service.title, path: `/services/${service.slug}` },
+      { name: project.projectName, path: pagePath },
+    ]),
+    caseStudySchema,
+    ...(videoSchema ? [videoSchema] : []),
+  ];
+
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={project.shortDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={project.shortDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={shareImage} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={project.shortDescription} />
-        <meta name="twitter:image" content={shareImage} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(caseStudySchema)}</script>
-        {videoSchema && <script type="application/ld+json">{JSON.stringify(videoSchema)}</script>}
-      </Helmet>
+      <Seo
+        title={pageTitle}
+        description={metaDescription}
+        path={pagePath}
+        image={project.socialImage || project.thumbnail}
+        imageAlt={`${project.projectName} ${serviceNoun.toLowerCase()} project by Calibre Associates`}
+        type="article"
+        jsonLd={jsonLd}
+      />
 
       <Navbar />
 

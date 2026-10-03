@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowDown } from 'lucide-react';
+import { Link } from '@/lib/routerLink';
 
 const ContactHero = () => {
     return (
@@ -18,11 +19,10 @@ const ContactHero = () => {
               </span>
             </div>
             <h1 className="mb-6">
-              Let's Start a <span className="text-ink font-bold">Conversation</span>
+              Contact Calibre Associates for a <span className="text-ink font-bold">Free Digital Marketing Consultation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
-              Have questions about website development, SEO, paid advertising, or AI automation,
-              or ready to transform your digital marketing strategy? We're here to help.
+              Talk to our digital marketing agency in India and the USA about website development, SEO, paid advertising or AI automation for your small business. Tell us where you are today and we will recommend what to fix first.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -43,6 +43,29 @@ const ContactHero = () => {
                 <span className="text-sm font-medium">Customized Solutions</span>
               </div>
             </motion.div>
+            <p className="text-ink/70 max-w-2xl mx-auto">
+              Not sure where to start? Explore our{' '}
+              <Link to="/services/website-development" className="text-ink underline underline-offset-4 hover:opacity-70">
+                website development
+              </Link>
+              ,{' '}
+              <Link to="/services/seo" className="text-ink underline underline-offset-4 hover:opacity-70">
+                local SEO
+              </Link>{' '}
+              and{' '}
+              <Link to="/services/ai-automation-solutions" className="text-ink underline underline-offset-4 hover:opacity-70">
+                AI automation
+              </Link>{' '}
+              services, read our{' '}
+              <Link to="/faq" className="text-ink underline underline-offset-4 hover:opacity-70">
+                digital marketing FAQs
+              </Link>{' '}
+              or browse our{' '}
+              <Link to="/portfolio" className="text-ink underline underline-offset-4 hover:opacity-70">
+                case studies
+              </Link>
+              .
+            </p>
           </motion.div>
           <motion.div 
             initial={{ opacity: 0 }}

@@ -7,7 +7,16 @@ interface WebsiteMockupProps {
   alt?: string;
   className?: string;
   device?: MockupDevice;
+  /** Set to "eager" together with fetchPriority only for the single LCP image on a page */
+  loading?: 'lazy' | 'eager';
 }
+
+// Intrinsic dimensions reserve space (no layout shift) while CSS aspect ratio classes control the rendered size.
+const INTRINSIC_SIZE: Record<MockupDevice, { width: number; height: number }> = {
+  desktop: { width: 1280, height: 720 },
+  tablet: { width: 768, height: 1024 },
+  mobile: { width: 390, height: 844 },
+};
 
 const PlaceholderContent = () => (
   <div className="w-full h-full bg-surface-soft flex flex-col gap-2 p-4">
@@ -18,9 +27,9 @@ const PlaceholderContent = () => (
 );
 
 /** Reusable browser / tablet / phone frame used for portfolio thumbnails and case study screenshots. */
-const WebsiteMockup = ({ imageUrl, alt = 'Website preview', className = '', device = 'desktop' }: WebsiteMockupProps) => {
+const WebsiteMockup = ({ imageUrl, alt = 'Website preview', className = '', device = 'desktop', loading = 'lazy' }: WebsiteMockupProps) => {
   const content = imageUrl ? (
-    <img src={imageUrl} alt={alt} loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
+    <img src={imageUrl} alt={alt} width={INTRINSIC_SIZE[device].width} height={INTRINSIC_SIZE[device].height} loading={loading} decoding="async" className="w-full h-full object-cover object-top" />
   ) : (
     <PlaceholderContent />
   );

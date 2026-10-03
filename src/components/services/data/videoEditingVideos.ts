@@ -48,12 +48,12 @@ const normalizeCategory = (raw: string) => {
 
 /** Default one-line description per category, used unless a per-video override is provided below. */
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  UGC: 'Authentic, native-feeling content built to convert.',
+  UGC: 'Authentic, native feeling content built to convert.',
   'Real Estate': 'Cinematic property walkthroughs that sell the space.',
-  Healthcare: 'Clear, trustworthy storytelling for patient-facing content.',
+  Healthcare: 'Clear, trustworthy storytelling for patient facing content.',
   Education: 'Structured, engaging edits built to teach and retain attention.',
-  'AI Videos': 'AI-assisted production edited to a premium, human finish.',
-  YouTube: 'Long-form storytelling paced to hold watch time.',
+  'AI Videos': 'AI assisted production edited to a premium, human finish.',
+  YouTube: 'Long form storytelling paced to hold watch time.',
 };
 
 /** Per-video description overrides, keyed by base filename, optional, falls back to the category default. */

@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 const plans = [
   {
     name: 'Starter',
-    description: 'Perfect for early-stage startups looking to establish their content foundation.',
+    description: 'Perfect for early stage startups looking to establish their content foundation.',
     monthlyPrice: '$1,500',
     yearlyPrice: '$1,200',
     features: [
@@ -87,7 +87,7 @@ const ServicePricing = () => {
             Transparent Pricing Plans
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Choose the plan that fits your business needs and scale as you grow. All plans include our AI-powered content creation process.
+            Choose the plan that fits your business needs and scale as you grow. All plans include our AI powered content creation process.
           </p>
           
           <div className="flex items-center justify-center space-x-4 mb-10">

@@ -24,12 +24,12 @@ const SERVICE_GROUPS: ServiceGroup[] = [
   { title: 'Google Ads', icon: Search, items: ['Search campaigns', 'Display campaigns', 'Performance Max', 'Remarketing', 'Local campaigns'] },
   { title: 'Meta Advertising', icon: Instagram, items: ['Facebook', 'Instagram', 'Lead Forms', 'Retargeting', 'Lookalike Audiences'] },
   { title: 'Local Service Ads (LSA)', icon: MapPin, items: ['Google Guaranteed', 'Call Generation', 'Service Businesses', 'Lead Tracking'] },
-  { title: 'Landing Pages', icon: LayoutTemplate, items: ['Conversion-focused design', 'A/B Testing', 'Lead Capture', 'Speed Optimization'] },
-  { title: 'CRM Integration', icon: Workflow, items: ['Lead Routing', 'Pipeline', 'Notifications', 'Follow-ups', 'Appointment Scheduling'] },
+  { title: 'Landing Pages', icon: LayoutTemplate, items: ['Conversion focused design', 'A/B Testing', 'Lead Capture', 'Speed Optimization'] },
+  { title: 'CRM Integration', icon: Workflow, items: ['Lead Routing', 'Pipeline', 'Notifications', 'Follow ups', 'Appointment Scheduling'] },
   { title: 'Email Marketing', icon: Mail, items: ['Lead Nurturing', 'Newsletter Campaigns', 'Promotional Campaigns', 'Customer Retention', 'Automated Sequences'] },
-  { title: 'Cold Email Outreach', icon: Send, items: ['Personalized Outreach', 'AI Personalization', 'Follow-up Sequences', 'Reply Tracking', 'Lead Qualification'] },
-  { title: 'Sales Outreach', icon: Phone, items: ['Cold Calling', 'Inbound Follow-up', 'Lead Qualification', 'Appointment Scheduling', 'Sales Support', 'CRM Updates'] },
-  { title: 'SMS Marketing', icon: MessageSquare, items: ['Appointment Reminders', 'Promotions', 'Follow-ups', 'Missed Call Text Back', 'Customer Engagement'] },
+  { title: 'Cold Email Outreach', icon: Send, items: ['Personalized Outreach', 'AI Personalization', 'Follow up Sequences', 'Reply Tracking', 'Lead Qualification'] },
+  { title: 'Sales Outreach', icon: Phone, items: ['Cold Calling', 'Inbound Follow up', 'Lead Qualification', 'Appointment Scheduling', 'Sales Support', 'CRM Updates'] },
+  { title: 'SMS Marketing', icon: MessageSquare, items: ['Appointment Reminders', 'Promotions', 'Follow ups', 'Missed Call Text Back', 'Customer Engagement'] },
   { title: 'Reputation Marketing', icon: Star, items: ['Google Reviews', 'Review Requests', 'Customer Feedback', 'Brand Trust'] },
 ];
 

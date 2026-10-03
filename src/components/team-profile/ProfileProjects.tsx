@@ -94,7 +94,7 @@ const ProfileProjects = ({ member }: ProfileProjectsProps) => {
             {member.portfolioImage && (
               <img
                 src={member.portfolioImage}
-                alt={`${member.name} portfolio preview`}
+                alt={member.portfolioImageAlt ?? `${member.name} portfolio website homepage preview`}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105"

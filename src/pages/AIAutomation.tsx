@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   TreePine, HardHat, Home, HeartPulse, Scale, Megaphone, UtensilsCrossed,
@@ -8,6 +7,7 @@ import {
 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import Seo from '@/components/seo/Seo';
 import { services } from '@/components/services/data/services';
 import { pageTransition } from '@/lib/motion';
 
@@ -23,10 +23,10 @@ import AutomationSolutions from '@/components/services/ai-automation/AutomationS
 import WhyHighLevelN8n from '@/components/services/ai-automation/WhyHighLevelN8n';
 import { aiAutomationTiers } from '@/components/services/ai-automation/data/aiAutomationPricing';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
-import { buildFaqSchema } from '@/lib/faqSchema';
-
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
+import ServiceAnswerBlock from '@/components/services/sections/ServiceAnswerBlock';
+import ServiceContentSection, { ExternalInlineLink, InlineLink } from '@/components/services/sections/ServiceContentSection';
+import ServiceResourceLinks from '@/components/services/sections/ServiceResourceLinks';
+import { buildServiceJsonLd, getServiceSeo } from '@/components/services/lib/serviceSchema';
 
 const PLATFORMS = [
   'HighLevel (GoHighLevel)', 'n8n', 'Make', 'Zapier', 'OpenAI', 'Claude', 'Gemini',
@@ -55,6 +55,26 @@ const AI_AUTOMATION_FAQS: FAQItem[] = [
     answer:
       'No, and that is not the goal. Our automation handles the repetitive parts of the process, answering common questions, qualifying leads, booking appointments, and sending reminders, so your team can focus on the conversations and decisions that actually need a person. Automation removes the busywork, it does not replace the people who build relationships with your customers.',
   },
+  {
+    question: 'What is an AI receptionist?',
+    answer:
+      'An AI receptionist answers calls and messages for your business around the clock, handles common questions, qualifies the caller and books appointments straight into your calendar. Anything complex is routed to a person. We build it on top of your CRM, so every conversation is logged against the right contact.',
+  },
+  {
+    question: 'What is n8n and why use it with HighLevel?',
+    answer:
+      'n8n is a workflow automation platform that connects apps and AI models through visual workflows. HighLevel runs your CRM, calendars and messaging, and n8n adds custom logic, integrations and AI steps that HighLevel does not do on its own. Together they give you a system built around how your business actually runs.',
+  },
+  {
+    question: 'How long does it take to build an AI automation workflow?',
+    answer:
+      'It depends on how many processes you want to automate and how many tools they touch. A single lead follow up workflow is quick to scope and build, while a full CRM, calendar and AI receptionist setup takes longer. We map your process first, then give you a clear timeline before any build starts.',
+  },
+  {
+    question: 'Which tools can you integrate with?',
+    answer:
+      'We connect HighLevel, n8n, Make, Zapier, OpenAI, Claude, Gemini, Google Workspace, Stripe, Twilio, Mailgun, WhatsApp, Calendly and WordPress, plus any tool that offers an API or webhook. If a tool you rely on is not listed, ask us on the discovery call.',
+  },
 ];
 
 const INDUSTRIES: IndustryItem[] = [
@@ -79,62 +99,58 @@ const AIAutomation = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const pageUrl = `${SITE_URL}/services/${service.slug}`;
-  const pageTitle = `${service.title} | Calibre Associates`;
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-      { '@type': 'ListItem', position: 3, name: service.title, item: pageUrl },
-    ],
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.title,
-    description: service.description,
-    serviceType: service.title,
-    url: pageUrl,
-    provider: { '@type': 'Organization', name: 'Calibre Associates', url: SITE_URL },
-    areaServed: ['US', 'IN'],
-  };
-
-  const faqSchema = buildFaqSchema(AI_AUTOMATION_FAQS);
-
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{pageTitle}</title>
-        <meta name="description" content={service.shortDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={service.shortDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={service.shortDescription} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <Seo {...getServiceSeo(service)} jsonLd={buildServiceJsonLd(service, AI_AUTOMATION_FAQS)} />
 
       <Navbar />
 
       <main className="mt-16">
         <AIAutomationHero />
+
+        <ServiceAnswerBlock heading={service.answerHeading!} answer={service.answer!} />
+
+        <ServiceContentSection
+          eyebrow="WHAT WE AUTOMATE"
+          title="AI Receptionist, CRM Workflow Automation and Appointment Booking"
+          intro="We design automation around your real process, then build it on tools you can keep using."
+          cards={[
+            {
+              heading: 'CRM workflow automation with HighLevel',
+              body: (
+                <>
+                  Lead routing, pipelines, follow ups and reporting built on{' '}
+                  <ExternalInlineLink href="https://www.gohighlevel.com/">HighLevel</ExternalInlineLink>.{' '}
+                  <InlineLink to="/our-team/abhijeet-jain">Abhijeet Jain</InlineLink>, our Founder and CEO, has hands on experience
+                  managing HighLevel CRM workflows and building AI automation systems for client businesses.
+                </>
+              ),
+            },
+            {
+              heading: 'AI receptionist and AI chatbots',
+              body: (
+                <>
+                  Answer calls and chats around the clock, qualify leads and book appointments without adding headcount. Pair
+                  them with{' '}
+                  <InlineLink to="/services/lead-generation-paid-advertising">lead generation and paid advertising</InlineLink> so
+                  every new lead is answered in minutes.
+                </>
+              ),
+            },
+            {
+              heading: 'n8n workflows and custom integrations',
+              body: (
+                <>
+                  Connect your tools and AI models through{' '}
+                  <ExternalInlineLink href="https://n8n.io/">n8n</ExternalInlineLink> workflows. When you need more than
+                  automation, our{' '}
+                  <InlineLink to="/services/application-software-development">custom software and web app development</InlineLink> team
+                  builds the missing piece.
+                </>
+              ),
+            },
+          ]}
+        />
 
         <CorePhilosophy />
 
@@ -142,7 +158,7 @@ const AIAutomation = () => {
           platforms={PLATFORMS}
           eyebrow="TECH STACK"
           title="Platforms We Build With"
-          description="Enterprise-grade tools, connected together into one automated system."
+          description="Enterprise grade tools, connected together into one automated system."
         />
 
         <AutomationSolutions />
@@ -154,6 +170,63 @@ const AIAutomation = () => {
         <StatsSection stats={service.stats} />
 
         <PricingTiers tiers={aiAutomationTiers} eyebrow="PRICING" title="Plans Built Around Your Operations" />
+
+        <ServiceContentSection
+          tone="canvas"
+          eyebrow="FOR LOCAL BUSINESSES"
+          title="GoHighLevel Automation for Local Service Businesses"
+          intro="Home service companies lose jobs when a call goes unanswered or a lead waits a day for a reply. Automation closes that gap."
+          cards={[
+            {
+              heading: 'Instant lead follow up and missed call text back',
+              body: (
+                <>
+                  Every enquiry gets an immediate reply by text or email, and missed calls get a text back. It works hand in
+                  hand with the campaigns from our{' '}
+                  <InlineLink to="/services/lead-generation-paid-advertising">lead generation agency</InlineLink> team.
+                </>
+              ),
+            },
+            {
+              heading: 'Appointment booking, reminders and review requests',
+              body: (
+                <>
+                  Calendars sync, reminders reduce no shows and happy customers are asked for a Google review. See how this
+                  fits the wider plan in our{' '}
+                  <InlineLink to="/industries/landscaping-and-lawn-care-marketing">landscaping and lawn care marketing guide</InlineLink>.
+                </>
+              ),
+            },
+            {
+              heading: 'A website that feeds the system',
+              body: (
+                <>
+                  Forms, chat and booking widgets on your site feed straight into the CRM. Our{' '}
+                  <InlineLink to="/services/website-development">website development company</InlineLink> builds sites ready for
+                  that handoff.
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <ServiceResourceLinks
+          service={service}
+          intro="Explore the services that connect to automation, and the official sites for the tools we build with."
+          caseStudies={[
+            { label: 'All Calibre Associates projects', to: '/portfolio', description: 'Browse every website, SEO and brand project.' },
+          ]}
+          moreLinks={[
+            { label: 'Meet Abhijeet Jain, Founder and CEO', to: '/our-team/abhijeet-jain' },
+            { label: 'Tree service marketing', to: '/industries/tree-service-marketing' },
+            { label: 'Book an automation consultation', to: '/contact' },
+          ]}
+          external={[
+            { label: 'HighLevel', href: 'https://www.gohighlevel.com/', description: 'The CRM and marketing platform we build on.' },
+            { label: 'n8n', href: 'https://n8n.io/', description: 'The workflow automation platform we pair with it.' },
+            { label: 'n8n documentation', href: 'https://docs.n8n.io/', description: 'How n8n workflows, nodes and integrations work.' },
+          ]}
+        />
 
         <FAQSection
           faqs={AI_AUTOMATION_FAQS}

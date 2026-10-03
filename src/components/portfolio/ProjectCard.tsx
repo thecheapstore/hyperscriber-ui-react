@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import WebsiteMockup from './WebsiteMockup';
 import TechnologyBadge from './TechnologyBadge';
 import type { Project } from '@/data/portfolio/types';
+import { projectImageAlt, projectLinkLabel, projectLogoAlt } from './projectAlt';
 import { fadeUp } from '@/lib/motion';
 
 interface ProjectCardProps {
@@ -19,6 +20,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     <motion.div variants={fadeUp} whileHover={{ y: -6 }} className="group h-full">
       <Link
         to={href}
+        aria-label={projectLinkLabel(project)}
+        title={project.projectName}
         onClick={() => window.scrollTo(0, 0)}
         className="flex flex-col h-full bg-canvas border border-hairline rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
@@ -26,7 +29,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="p-4 pb-0">
             <WebsiteMockup
               imageUrl={project.thumbnail}
-              alt={project.projectName}
+              alt={projectImageAlt(project)}
               device="desktop"
               className="aspect-video w-full transition-transform duration-500 ease-out group-hover:scale-[1.02]"
             />
@@ -36,7 +39,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center gap-3 mb-4">
             {project.companyLogo ? (
-              <img src={project.companyLogo} alt={project.companyName} loading="lazy" decoding="async" className="w-9 h-9 rounded-full object-cover border border-hairline flex-shrink-0" />
+              <img src={project.companyLogo} alt={projectLogoAlt(project)} width={36} height={36} loading="lazy" decoding="async" className="w-9 h-9 rounded-full object-cover border border-hairline flex-shrink-0" />
             ) : (
               <div className="w-9 h-9 rounded-full bg-surface-soft border border-hairline flex items-center justify-center text-sm font-semibold text-ink/60 flex-shrink-0">
                 {initial}

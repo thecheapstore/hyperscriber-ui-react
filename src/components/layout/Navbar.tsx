@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { Menu, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -37,6 +38,7 @@ const Navbar = () => {
 
   const primaryLinks = [{ name: 'Home', path: '/' }, { name: 'Why Us', path: '/why-us' }];
   const secondaryLinks = [
+    { name: 'Our Work', path: '/portfolio' },
     { name: 'Our Team', path: '/our-team' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
@@ -66,13 +68,13 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center lg:space-x-5 xl:space-x-8">
           {primaryLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               className={cn(
-                'text-body-sm font-medium transition-colors hover:text-ink relative group',
+                'text-body-sm font-medium whitespace-nowrap transition-colors hover:text-ink relative group',
                 location.pathname === link.path
                   ? 'text-ink'
                   : 'text-ink/60'
@@ -91,7 +93,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={cn(
-                'text-body-sm font-medium transition-colors hover:text-ink relative group',
+                'text-body-sm font-medium whitespace-nowrap transition-colors hover:text-ink relative group',
                 location.pathname === link.path
                   ? 'text-ink'
                   : 'text-ink/60'
@@ -108,14 +110,14 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-primary text-primary-foreground font-medium text-[20px] tracking-[-0.10px] px-5 py-2.5 rounded-pill hover:opacity-90 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 id-calendly-booking">
+            <button className="bg-primary text-primary-foreground font-medium whitespace-nowrap text-base xl:text-[20px] tracking-[-0.10px] px-4 xl:px-5 py-2.5 rounded-pill hover:opacity-90 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 id-calendly-booking">
               Book a Free Consultation
             </button>
           </a>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <button className="text-ink p-1" aria-label="Toggle Menu">

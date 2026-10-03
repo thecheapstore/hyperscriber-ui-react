@@ -4,7 +4,7 @@ import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 
 const POINTS = [
   { icon: Users, title: 'People Stay in Charge', description: 'Automation handles the workflow, your team still makes the decisions that matter.' },
-  { icon: Repeat, title: 'Repetitive Work Disappears', description: 'Data entry, follow-ups and status updates happen automatically, every time.' },
+  { icon: Repeat, title: 'Repetitive Work Disappears', description: 'Data entry, follow ups and status updates happen automatically, every time.' },
   { icon: TrendingUp, title: 'Time Goes Back to Growth', description: 'Hours saved get reinvested into sales, service and the work that actually grows the business.' },
 ];
 

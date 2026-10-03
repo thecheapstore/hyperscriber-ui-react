@@ -7,7 +7,7 @@ const websiteTypes = [
   {
     icon: <Newspaper className="h-6 w-6" />,
     title: 'WordPress Websites',
-    description: 'Flexible, content-managed sites built on the world\'s most trusted CMS.',
+    description: 'Flexible, content managed sites built on the world\'s most trusted CMS.',
   },
   {
     icon: <Image className="h-6 w-6" />,
@@ -17,37 +17,37 @@ const websiteTypes = [
   {
     icon: <Rocket className="h-6 w-6" />,
     title: 'Landing Pages',
-    description: 'Focused, high-converting pages built around a single campaign goal.',
+    description: 'Focused, high converting pages built around a single campaign goal.',
   },
   {
     icon: <Atom className="h-6 w-6" />,
     title: 'Custom React.js Websites',
-    description: 'Fast, component-driven builds for teams that need full control and scale.',
+    description: 'Fast, component driven builds for teams that need full control and scale.',
   },
   {
     icon: <ShoppingBag className="h-6 w-6" />,
     title: 'Shopify Stores',
-    description: 'Conversion-ready storefronts built for growing product businesses.',
+    description: 'Conversion ready storefronts built for growing product businesses.',
   },
   {
     icon: <ShoppingCart className="h-6 w-6" />,
-    title: 'E-commerce Websites',
+    title: 'Ecommerce Websites',
     description: 'Custom online stores with catalog, cart, and checkout built around your workflow.',
   },
   {
     icon: <FileText className="h-6 w-6" />,
     title: 'Static Websites',
-    description: 'Lightweight, blazing-fast sites for brochures, docs, and marketing pages.',
+    description: 'Lightweight, blazing fast sites for brochures, docs, and marketing pages.',
   },
   {
     icon: <Database className="h-6 w-6" />,
     title: 'Dynamic Websites',
-    description: 'Data-driven sites with real-time content, accounts, and interactive features.',
+    description: 'Data driven sites with real time content, accounts, and interactive features.',
   },
   {
     icon: <Server className="h-6 w-6" />,
     title: 'PHP Websites & Applications',
-    description: 'Robust server-side applications built for custom business logic at scale.',
+    description: 'Robust server side applications built for custom business logic at scale.',
   },
 ];
 

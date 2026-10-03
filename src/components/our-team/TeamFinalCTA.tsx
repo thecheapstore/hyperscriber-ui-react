@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from '@/lib/routerLink';
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { easeOut } from "@/lib/motion";
@@ -51,6 +51,14 @@ const TeamFinalCTA = () => {
                   className="border-white/30 bg-transparent text-inverse-ink hover:bg-white/10 rounded-pill px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base"
                 >
                   Explore Our Services
+                </Button>
+              </Link>
+              <Link to="/portfolio" onClick={() => window.scrollTo(0, 0)}>
+                <Button
+                  variant="outline"
+                  className="border-white/30 bg-transparent text-inverse-ink hover:bg-white/10 rounded-pill px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base"
+                >
+                  See Our Case Studies
                 </Button>
               </Link>
             </div>

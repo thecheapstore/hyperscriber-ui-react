@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ServiceBentoTile from './components/ServiceBentoTile';
-import ServicesHeader from './components/ServicesHeader';
+import { Link } from '@/lib/routerLink';
+import { SERVICE_LINKS } from '@/components/home/serviceLinks';
 import { services } from './data/services';
 import { useLocation } from 'react-router-dom';
 import { staggerContainer, fadeUp } from '@/lib/motion';
@@ -38,7 +39,15 @@ const ServicesList = () => {
   return (
     <section className="py-20 md:py-24 bg-canvas">
       <div className="container mx-auto px-6">
-        <ServicesHeader />
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="mb-4">
+            Every Service Under One Digital Marketing Agency
+          </h2>
+          <p className="text-lg text-ink/70">
+            From lead generation and paid advertising to SEO, social media marketing, AI automation and custom website
+            development, choose one service or combine several into a system that drives steady growth.
+          </p>
+        </div>
 
         <motion.div
           variants={staggerContainer}
@@ -60,6 +69,45 @@ const ServicesList = () => {
             );
           })}
         </motion.div>
+
+        <div className="max-w-4xl mx-auto mt-14 md:mt-16 text-center text-ink/70">
+          <p className="mb-3">
+            Popular starting points:{' '}
+            {SERVICE_LINKS.slice(0, 4).map((item, index) => (
+              <React.Fragment key={item.path}>
+                <Link to={item.path} className="text-ink underline underline-offset-4 hover:opacity-70">
+                  {item.anchor}
+                </Link>
+                {index < 2 ? ', ' : index === 2 ? ' and ' : '.'}
+              </React.Fragment>
+            ))}
+          </p>
+          <p>
+            See the work behind our services in the{' '}
+            <Link to="/portfolio" className="text-ink underline underline-offset-4 hover:opacity-70">
+              Calibre Associates portfolio
+            </Link>
+            , including{' '}
+            <Link
+              to="/services/website-development/projects/tree-craft-tree-services"
+              className="text-ink underline underline-offset-4 hover:opacity-70"
+            >
+              a tree service website case study
+            </Link>
+            , or read how we market{' '}
+            <Link to="/industries/tree-service-marketing" className="text-ink underline underline-offset-4 hover:opacity-70">
+              tree service companies
+            </Link>{' '}
+            and{' '}
+            <Link
+              to="/industries/landscaping-and-lawn-care-marketing"
+              className="text-ink underline underline-offset-4 hover:opacity-70"
+            >
+              landscaping and lawn care businesses
+            </Link>
+            .
+          </p>
+        </div>
       </div>
     </section>
   );

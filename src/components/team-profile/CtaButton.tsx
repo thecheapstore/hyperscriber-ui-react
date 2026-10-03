@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import { Link } from "react-router-dom";
+import { Link } from '@/lib/routerLink';
 import type { CtaLink } from "@/data/team/types";
 
 interface CtaButtonProps {

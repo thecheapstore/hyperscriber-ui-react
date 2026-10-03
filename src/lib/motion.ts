@@ -1,8 +1,8 @@
-import type { Transition, Variants } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 // Shared easing curve, a quick, confident deceleration used across the site
 // so every reveal / hover / transition reads as one consistent motion language.
-export const easeOut: Transition['ease'] = [0.22, 1, 0.36, 1];
+export const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export const viewportOnce = { once: true, amount: 0.2 } as const;
 

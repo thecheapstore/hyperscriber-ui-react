@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link } from '@/lib/routerLink';
 import { ArrowRight } from "lucide-react";
 import { foundingTeam } from "@/data/team/foundingTeam";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
@@ -23,6 +23,17 @@ const TeamMembers = () => {
             Every founding member brings a distinct craft to the table, together they cover
             everything a modern business needs to grow online.
           </p>
+          <p className="text-sm text-ink/60 mt-4">
+            See their work in our{" "}
+            <Link to="/portfolio" className="font-semibold text-ink underline underline-offset-2 hover:no-underline">
+              website, SEO and brand case studies
+            </Link>{" "}
+            or explore our{" "}
+            <Link to="/services" className="font-semibold text-ink underline underline-offset-2 hover:no-underline">
+              digital marketing services
+            </Link>
+            .
+          </p>
         </motion.div>
 
         <motion.div
@@ -36,13 +47,16 @@ const TeamMembers = () => {
             <motion.div key={member.slug} variants={fadeUp} className="group h-full">
               <Link
                 to={`/our-team/${member.slug}`}
+                aria-label={`View the profile of ${member.name}, ${member.title}`}
                 onClick={() => window.scrollTo(0, 0)}
                 className="flex flex-col h-full bg-white/70 backdrop-blur-sm border border-hairline rounded-block overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-1.5 hover:border-ink/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img
                     src={member.listingImage ?? member.image}
-                    alt={member.name}
+                    alt={member.heroImageAlt ?? `${member.name}, ${member.title} at Calibre Associates`}
+                    width={640}
+                    height={480}
                     loading="lazy"
                     decoding="async"
                     className={`w-full h-full object-cover ${member.listingImagePosition ?? member.imagePosition ?? "object-top"} transition-transform duration-700 ease-out group-hover:scale-110`}

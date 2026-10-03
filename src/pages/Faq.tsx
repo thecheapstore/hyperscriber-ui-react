@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Fragment, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FAQSection, { type FAQItem } from '@/components/services/sections/FAQSection';
 import FinalCTA from '@/components/services/sections/FinalCTA';
+import Seo from '@/components/seo/Seo';
+import { Link } from '@/lib/routerLink';
+import { SERVICE_LINKS } from '@/components/home/serviceLinks';
 import { buildFaqSchema } from '@/lib/faqSchema';
+import { SITE_URL, absUrl, breadcrumbSchema } from '@/lib/seo';
 import { pageTransition, fadeUp, staggerContainer, viewportOnce } from '@/lib/motion';
 
-const SITE_URL = 'https://calibreassociates.com';
-const OG_IMAGE = 'https://calibreassociates.com/favicons/android-chrome-512x512.png';
+const PAGE_TITLE = 'Digital Marketing, SEO and Website FAQs | Calibre Associates';
+const PAGE_DESCRIPTION =
+  'Answers on digital marketing costs, local SEO timelines, website development, GoHighLevel and AI automation for small business in India and the USA.';
 
 interface FaqCategory {
   eyebrow: string;
@@ -23,7 +27,7 @@ interface FaqCategory {
 const CATEGORIES: FaqCategory[] = [
   {
     eyebrow: 'WEBSITE DEVELOPMENT',
-    title: 'Website Development & WordPress',
+    title: 'Website Development and WordPress',
     description: 'Common questions about building, hosting, and outsourcing a website.',
     className: 'bg-canvas',
     faqs: [
@@ -45,7 +49,7 @@ const CATEGORIES: FaqCategory[] = [
       {
         question: 'How do I outsource WordPress development effectively?',
         answer:
-          'Start with a clear scope of what you need built, custom theme, specific functionality, e-commerce, so the agency can quote and plan accurately. Ask how they handle security, updates, and backups after launch, since WordPress sites need ongoing maintenance, and confirm they build custom functionality rather than relying entirely on page builders and third party plugins that can slow the site down.',
+          'Start with a clear scope of what you need built, custom theme, specific functionality, ecommerce, so the agency can quote and plan accurately. Ask how they handle security, updates, and backups after launch, since WordPress sites need ongoing maintenance, and confirm they build custom functionality rather than relying entirely on page builders and third party plugins that can slow the site down.',
       },
     ],
   },
@@ -73,13 +77,13 @@ const CATEGORIES: FaqCategory[] = [
       {
         question: 'What is the average cost of hiring an SEO expert for monthly consulting?',
         answer:
-          'Pricing varies widely based on scope, competitiveness of your industry, and whether you need local, national, or e-commerce SEO. Rather than a flat number that will not fit most businesses, we scope monthly SEO retainers around your specific goals and current site condition, so you are paying for a plan built around your business, not a generic package.',
+          'Pricing varies widely based on scope, competitiveness of your industry, and whether you need local, national, or ecommerce SEO. Rather than a flat number that will not fit most businesses, we scope monthly SEO retainers around your specific goals and current site condition, so you are paying for a plan built around your business, not a generic package.',
       },
     ],
   },
   {
-    eyebrow: 'SOCIAL MEDIA & UGC',
-    title: 'Social Media Marketing & UGC',
+    eyebrow: 'SOCIAL MEDIA AND UGC',
+    title: 'Social Media Marketing and UGC',
     description: 'Common questions about growing on social media and working with UGC content.',
     className: 'bg-canvas',
     faqs: [
@@ -152,7 +156,7 @@ const CATEGORIES: FaqCategory[] = [
       {
         question: 'What industries does Calibre Associates specialize in?',
         answer:
-          'We have worked across landscaping, construction, roofing, medical, legal, restaurants, real estate, home services, and professional services, along with e-commerce and local businesses more broadly. Our approach adapts to what each industry and business actually needs rather than applying the same template everywhere.',
+          'We work mainly with local and home service businesses, including tree service, landscaping, lawn care, and deck building companies around Buffalo, Rochester, and Western New York, along with startups, ecommerce brands, personal brands, and professional service firms in India and the USA. Our approach adapts to what each business actually needs rather than applying the same template everywhere.',
       },
       {
         question: 'What makes Calibre Associates different from other digital marketing agencies?',
@@ -162,8 +166,8 @@ const CATEGORIES: FaqCategory[] = [
     ],
   },
   {
-    eyebrow: 'AI AUTOMATION & LEAD GEN',
-    title: 'AI Automation & Lead Generation',
+    eyebrow: 'AI AUTOMATION AND LEAD GEN',
+    title: 'AI Automation and Lead Generation',
     description: 'Common questions about automating operations and paid advertising strategy.',
     className: 'bg-white',
     faqs: [
@@ -189,6 +193,44 @@ const CATEGORIES: FaqCategory[] = [
       },
     ],
   },
+  {
+    eyebrow: 'PRICING AND GETTING STARTED',
+    title: 'Pricing, Timelines and Getting Started',
+    description: 'Direct answers about cost, timelines, tools and how we work with businesses.',
+    className: 'bg-canvas',
+    faqs: [
+      {
+        question: 'How much does a website for a small business cost?',
+        answer:
+          'It depends on the number of pages, the features you need and the integrations behind them. A simple brochure site sits at the lower end, while a custom site with many service and town pages, a booking system or a CRM connection costs more. We scope your pages, features and goals on a free consultation call, then give you a scope specific quote instead of a generic price.',
+      },
+      {
+        question: 'How long does local SEO take to work?',
+        answer:
+          'Most local businesses see early movement in Google Business Profile views and map pack visibility within a few months, and steady rankings usually take six months or longer in competitive markets. The timeline depends on your starting point, your competition and how complete your website and profile are. We report progress monthly and cannot honestly promise a specific ranking.',
+      },
+      {
+        question: 'What is GoHighLevel and do I need it?',
+        answer:
+          'GoHighLevel is a CRM and marketing automation platform that combines lead pipelines, text and email follow ups, appointment booking and reporting in one place. You need it only if leads are slipping between tools today. If your current CRM already tracks every lead and follows up quickly, we can build the automation there instead.',
+      },
+      {
+        question: 'Do you work with businesses outside India and the USA?',
+        answer:
+          'Our clients and experience are in India and the USA, but most of our work is delivered remotely, so we are open to discussing projects elsewhere case by case. Time zones, payment methods and local search markets matter, so we talk through those on a call before agreeing to anything.',
+      },
+      {
+        question: 'Do you work with tree service and landscaping companies?',
+        answer:
+          'Yes. Most of our website portfolio is tree service, landscaping, lawn care and deck building companies around Buffalo, Rochester and Western New York. We build the website, the town and service pages, the local SEO foundation and the lead capture behind it.',
+      },
+      {
+        question: 'What happens on the free consultation call?',
+        answer:
+          'We ask about your business, your customers and your current website, search presence and tools, then tell you what we would fix first and why. There is no obligation to hire us afterwards, and you leave with a clear priority list either way.',
+      },
+    ],
+  },
 ];
 
 const ALL_FAQS: FAQItem[] = CATEGORIES.flatMap((category) => category.faqs);
@@ -198,51 +240,35 @@ const Faq = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const pageUrl = `${SITE_URL}/faq`;
   const faqSchema = buildFaqSchema(ALL_FAQS);
 
-  const breadcrumbSchema = {
+  const faqPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'FAQ', item: pageUrl },
-    ],
+    '@type': 'WebPage',
+    '@id': `${absUrl('/faq')}#webpage`,
+    url: absUrl('/faq'),
+    name: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en',
   };
 
   return (
     <motion.div {...pageTransition} className="min-h-screen">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Frequently Asked Questions | Calibre Associates</title>
-        <meta
-          name="description"
-          content="Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, paid advertising, and AI automation for businesses in India and the United States."
-        />
-        <link rel="canonical" href={pageUrl} />
-        <link rel="icon" href={OG_IMAGE} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Frequently Asked Questions | Calibre Associates" />
-        <meta
-          property="og:description"
-          content="Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, paid advertising, and AI automation."
-        />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:site_name" content="Calibre Associates" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Frequently Asked Questions | Calibre Associates" />
-        <meta
-          name="twitter:description"
-          content="Answers to common questions about website development, SEO, social media marketing, video editing, lead generation, paid advertising, and AI automation."
-        />
-        <meta name="twitter:image" content={OG_IMAGE} />
-
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <Seo
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        path="/faq"
+        jsonLd={[
+          faqPageSchema,
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'FAQ', path: '/faq' },
+          ]),
+          faqSchema,
+        ]}
+      />
 
       <Navbar />
 
@@ -259,12 +285,12 @@ const Faq = () => {
                 FREQUENTLY ASKED QUESTIONS
               </motion.span>
               <motion.h1 variants={fadeUp} className="mb-6">
-                Answers to the Questions We Hear Most
+                Digital Marketing, SEO and Website Development FAQs
               </motion.h1>
               <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
-                Straightforward answers about website development, SEO, social media marketing, video
-                editing, lead generation, paid advertising, and AI automation, for businesses in India
-                and the United States.
+                Straightforward answers from a digital marketing agency about website development, SEO,
+                social media marketing, video editing, lead generation, paid advertising, and AI
+                automation, for small businesses in India and the United States.
               </motion.p>
             </motion.div>
           </div>
@@ -281,6 +307,52 @@ const Faq = () => {
           />
         ))}
 
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center text-ink/70">
+            <h2 className="mb-4 text-3xl md:text-4xl">Keep Reading</h2>
+            <p className="mb-3">
+              Explore our services:{' '}
+              {SERVICE_LINKS.map((item, index) => (
+                <Fragment key={item.path}>
+                  <Link to={item.path} className="text-ink underline underline-offset-4 hover:opacity-70">
+                    {item.anchor}
+                  </Link>
+                  {index < SERVICE_LINKS.length - 2 ? ', ' : index === SERVICE_LINKS.length - 2 ? ' and ' : '.'}
+                </Fragment>
+              ))}
+            </p>
+            <p>
+              See real results in the{' '}
+              <Link to="/portfolio" className="text-ink underline underline-offset-4 hover:opacity-70">
+                Calibre Associates portfolio
+              </Link>
+              , including a{' '}
+              <Link
+                to="/services/website-development/projects/tree-craft-tree-services"
+                className="text-ink underline underline-offset-4 hover:opacity-70"
+              >
+                tree service website case study
+              </Link>
+              , or learn about{' '}
+              <Link to="/industries/tree-service-marketing" className="text-ink underline underline-offset-4 hover:opacity-70">
+                tree service marketing
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="/industries/landscaping-and-lawn-care-marketing"
+                className="text-ink underline underline-offset-4 hover:opacity-70"
+              >
+                landscaping and lawn care marketing
+              </Link>
+              . Questions about your own project? Visit our{' '}
+              <Link to="/contact" className="text-ink underline underline-offset-4 hover:opacity-70">
+                contact page
+              </Link>
+              .
+            </p>
+          </div>
+        </section>
+
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -289,7 +361,7 @@ const Faq = () => {
         >
           <FinalCTA
             headline="Still Have Questions?"
-            description="Book a free consultation and we'll answer anything specific to your business and goals."
+            description="Book a free consultation and we will answer anything specific to your business and goals."
           />
         </motion.div>
       </main>

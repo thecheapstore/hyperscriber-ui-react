@@ -34,15 +34,15 @@ const AIAutomationHero = () => {
             </motion.span>
 
             <motion.h1 variants={fadeUp} className="text-inverse-ink mb-6 text-[clamp(2rem,1.2rem+3.4vw,3.75rem)] leading-[1.08]">
-              Automate Everything.
+              AI Automation Agency for Small Businesses.
               <br />
               <span className="text-accent-magenta">Scale Without Hiring.</span>
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-lg md:text-xl text-inverse-ink/70 mb-10 max-w-xl mx-auto lg:mx-0">
-              Custom AI automation for small businesses that connects your CRM, phones, calendars
-              and tools into one workflow, so your business runs itself in the background while
-              you focus on growth.
+              Custom AI automation, including CRM workflows, an AI receptionist and instant lead follow
+              up, that connects your CRM, phones, calendars and tools into one workflow, so your
+              business runs in the background while you focus on growth.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

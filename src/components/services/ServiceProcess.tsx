@@ -21,7 +21,7 @@ const steps = [
     number: '02',
     title: 'Strategy, Systems & Architecture',
     description:
-      'Based on insights, we design a scalable strategy that combines marketing, content, development, and automation to support long-term growth.',
+      'Based on insights, we design a scalable strategy that combines marketing, content, development, and automation to support long term growth.',
     details: [
       'Lead generation and paid advertising strategy',
       'SEO and social media growth planning',
@@ -38,7 +38,7 @@ const steps = [
     details: [
       'Website, app, or software development',
       'SEO, paid ads, and social media execution',
-      'Content creation including video-first marketing',
+      'Content creation including video first marketing',
       'UI UX design and optimization',
       'Automation and AI system implementation'
     ]

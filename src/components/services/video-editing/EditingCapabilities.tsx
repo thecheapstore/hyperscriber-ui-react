@@ -18,8 +18,8 @@ import {
 import { staggerContainer, fadeUp, viewportOnce } from '@/lib/motion';
 
 const CAPABILITIES = [
-  { label: 'Long-form Editing', icon: Film },
-  { label: 'Short-form Editing', icon: Scissors },
+  { label: 'Long form Editing', icon: Film },
+  { label: 'Short form Editing', icon: Scissors },
   { label: 'Reels', icon: Instagram },
   { label: 'Shorts', icon: PlaySquare },
   { label: 'TikTok', icon: Music2 },
@@ -48,7 +48,7 @@ const EditingCapabilities = () => {
           <motion.span variants={fadeUp} className="eyebrow inline-block py-1 px-3 mb-5 rounded-pill bg-surface-soft">
             EDITING CAPABILITIES
           </motion.span>
-          <motion.h2 variants={fadeUp} className="mb-4">Everything We Edit, In-House</motion.h2>
+          <motion.h2 variants={fadeUp} className="mb-4">Everything We Edit, In House</motion.h2>
           <motion.p variants={fadeUp} className="text-ink/70 text-body-lg">
             One team covering the full range of formats and finishing work modern content needs.
           </motion.p>

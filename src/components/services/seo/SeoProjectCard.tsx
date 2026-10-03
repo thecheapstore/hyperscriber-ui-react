@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerLink';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, Star } from 'lucide-react';
 import TechnologyBadge from '@/components/portfolio/TechnologyBadge';
@@ -18,6 +18,8 @@ const SeoProjectCard = ({ project }: SeoProjectCardProps) => {
     <motion.div variants={fadeUp} whileHover={{ y: -6 }} className={`group h-full ${project.featured ? 'md:col-span-2' : ''}`}>
       <Link
         to={href}
+        aria-label={`Read the ${project.companyName} local SEO case study`}
+        title={project.projectName}
         onClick={() => window.scrollTo(0, 0)}
         className={`flex flex-col h-full rounded-lg p-6 md:p-8 transition-shadow duration-300 hover:shadow-card ${
           project.featured ? 'bg-ink text-inverse-ink border border-ink' : 'bg-canvas border border-hairline'
@@ -34,8 +36,11 @@ const SeoProjectCard = ({ project }: SeoProjectCardProps) => {
           {project.companyLogo ? (
             <img
               src={project.companyLogo}
-              alt={project.companyName}
+              alt={`${project.companyName} logo`}
+              width={56}
+              height={56}
               loading="lazy"
+              decoding="async"
               className={`w-14 h-14 rounded-full object-cover border flex-shrink-0 bg-white ${project.featured ? 'border-white/20' : 'border-hairline'}`}
             />
           ) : (

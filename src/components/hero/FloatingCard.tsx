@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type MotionProps } from 'framer-motion';
 
 type FloatingCardProps = {
   className: string;
   animationProps: {
-    initial: any;
-    animate: any;
-    transition: any;
+    initial: MotionProps['initial'];
+    animate: MotionProps['animate'];
+    transition: MotionProps['transition'];
     float: {
       y: number[];
       transition: {

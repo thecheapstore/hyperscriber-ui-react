@@ -42,7 +42,11 @@ const ProfileJourney = ({ steps }: ProfileJourneyProps) => {
                     <div className="w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-canvas" />
                   </div>
                   <div className={`md:w-[calc(50%-2rem)] ${isEven ? "md:text-right" : "md:text-left"}`}>
-                    <div className="inline-block bg-surface-soft border border-hairline rounded-pill px-5 py-2.5">
+                    <div
+                      className={`inline-block bg-surface-soft border border-hairline px-5 py-2.5 ${
+                        step.length > 40 ? "rounded-2xl text-left" : "rounded-pill"
+                      }`}
+                    >
                       <span className="font-mono text-caption text-ink/40 mr-2">{String(index + 1).padStart(2, "0")}</span>
                       <span className="font-medium text-ink">{step}</span>
                     </div>
