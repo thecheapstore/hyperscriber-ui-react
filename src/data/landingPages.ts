@@ -318,8 +318,8 @@ export const industryPages: IndustryPage[] = [
         "Landscaping and lawn care companies sell several different businesses on one calendar, and most websites flatten that into one list of services. That is where the leads leak.",
       items: [
         {
-          title: "Seasonal services buried on page three",
-          text: "716 Lawn Care ranked well for general landscaping terms in Buffalo, but snow plowing, its most seasonal and highest margin service, sat on page three and four of Google just as winter bookings opened. A service that lives in one paragraph on a services page ranks like one.",
+          title: "Seasonal services buried in one paragraph",
+          text: "716 Lawn Care sells landscaping in summer and snow plowing in winter. Before our work, snow plowing lived in a single paragraph on a services page, so the site gave its most seasonal service no page of its own for a customer to land on. A service that lives in one paragraph is easy to miss.",
         },
         {
           title: "Town pages that all say the same thing",

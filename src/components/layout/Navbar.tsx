@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/s
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import ServicesDropdown from './ServicesDropdown';
 import { servicesDropdownItems } from './servicesDropdownItems';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.webp';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

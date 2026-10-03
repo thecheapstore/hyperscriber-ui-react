@@ -1,19 +1,19 @@
 import type { Project } from './types';
-import calibreMark from '@/assets/portfolio/brand-identity/calibre-mark.png';
+import calibreMark from '@/assets/portfolio/brand-identity/calibre-mark.webp';
 
-const plumeImages = import.meta.glob('../../assets/portfolio/brand-identity/plume/*.jpg', {
+const plumeImages = import.meta.glob('../../assets/portfolio/brand-identity/plume/*.{jpg,webp}', {
   eager: true,
   query: '?url',
   import: 'default',
 }) as Record<string, string>;
 
-const voltaImages = import.meta.glob('../../assets/portfolio/brand-identity/volta/*.jpg', {
+const voltaImages = import.meta.glob('../../assets/portfolio/brand-identity/volta/*.{jpg,webp}', {
   eager: true,
   query: '?url',
   import: 'default',
 }) as Record<string, string>;
 
-const slickImages = import.meta.glob('../../assets/portfolio/brand-identity/slick/*.jpg', {
+const slickImages = import.meta.glob('../../assets/portfolio/brand-identity/slick/*.{jpg,webp}', {
   eager: true,
   query: '?url',
   import: 'default',
@@ -25,7 +25,7 @@ const slickVideoFiles = import.meta.glob('../../assets/portfolio/brand-identity/
   import: 'default',
 }) as Record<string, string>;
 
-const denimImages = import.meta.glob('../../assets/portfolio/brand-identity/denim/*.jpg', {
+const denimImages = import.meta.glob('../../assets/portfolio/brand-identity/denim/*.{jpg,webp}', {
   eager: true,
   query: '?url',
   import: 'default',
@@ -49,60 +49,60 @@ const slick = (name: string) => asset(slickImages, name);
 const denim = (name: string) => asset(denimImages, name);
 
 const plumeGallery = [
-  { src: plume('01_hero.jpg'), alt: 'Plume Thickening Ritual Shampoo bottle with a coral lit water splash on an emerald background' },
-  { src: plume('02_wetmodel.jpg'), alt: 'Model with wet hair laughing while holding the Plume bottle to her cheek' },
-  { src: plume('03_hairflip.jpg'), alt: 'Model with hair caught mid flip, holding the Plume bottle' },
-  { src: plume('04_lather.jpg'), alt: 'Macro shot of foaming lather with a rosemary sprig, close to the Plume bottle' },
-  { src: plume('05_niche.jpg'), alt: 'Plume bottle staged in a tiled shower niche with soft light and steam' },
-  { src: plume('06_ribbon.jpg'), alt: 'Water ribbon effect wrapping around the Plume bottle' },
-  { src: plume('07_flatlay.jpg'), alt: 'Flat lay of the Plume bottle with rosemary, lime, and bath accessories' },
-  { src: plume('08_plinth.jpg'), alt: 'Plume bottle staged on a stone plinth next to a lock of hair' },
-  { src: plume('09_prompts.jpg'), alt: 'Campaign card promoting the AI product photography generation process behind Plume' },
-  { src: plume('10_cta.jpg'), alt: 'Lead generation post inviting followers to comment for the Plume prompt guide' },
-  { src: plume('_filmstrip.jpg'), alt: 'Full contact sheet of the Plume campaign photography set' },
+  { src: plume('01_hero.webp'), alt: 'Plume Thickening Ritual Shampoo bottle with a coral lit water splash on an emerald background' },
+  { src: plume('02_wetmodel.webp'), alt: 'Model with wet hair laughing while holding the Plume bottle to her cheek' },
+  { src: plume('03_hairflip.webp'), alt: 'Model with hair caught mid flip, holding the Plume bottle' },
+  { src: plume('04_lather.webp'), alt: 'Macro shot of foaming lather with a rosemary sprig, close to the Plume bottle' },
+  { src: plume('05_niche.webp'), alt: 'Plume bottle staged in a tiled shower niche with soft light and steam' },
+  { src: plume('06_ribbon.webp'), alt: 'Water ribbon effect wrapping around the Plume bottle' },
+  { src: plume('07_flatlay.webp'), alt: 'Flat lay of the Plume bottle with rosemary, lime, and bath accessories' },
+  { src: plume('08_plinth.webp'), alt: 'Plume bottle staged on a stone plinth next to a lock of hair' },
+  { src: plume('09_prompts.webp'), alt: 'Campaign card promoting the AI product photography generation process behind Plume' },
+  { src: plume('10_cta.webp'), alt: 'Lead generation post inviting followers to comment for the Plume prompt guide' },
+  { src: plume('_filmstrip.webp'), alt: 'Full contact sheet of the Plume campaign photography set' },
 ];
 
 const voltaGallery = [
-  { src: volta('01_hero.jpg'), alt: 'Volta Sparkling Yuzu and Ginger can with a splash of water on a cobalt background' },
-  { src: volta('02_model.jpg'), alt: 'Model holding the Volta can to her face with eyes closed' },
-  { src: volta('03_macro.jpg'), alt: 'Macro close up of condensation droplets on the Volta can' },
-  { src: volta('04_ice.jpg'), alt: 'Volta can frozen inside a block of ice, backlit in acid yellow' },
-  { src: volta('05_flatlay.jpg'), alt: 'Flat lay of the Volta can with ginger, lemon, and mint on yellow tile' },
-  { src: volta('06_chrome.jpg'), alt: 'Volta can reflected on a liquid chrome floor' },
-  { src: volta('07_pool.jpg'), alt: 'Volta can staged poolside on blue tile with a pool float' },
-  { src: volta('08_street.jpg'), alt: 'Man in a denim jacket carrying the Volta can on a city street' },
-  { src: volta('09_prompts.jpg'), alt: 'Campaign card promoting the AI product photography generation process behind Volta' },
-  { src: volta('10_cta.jpg'), alt: 'Lead generation post inviting followers to comment for the Volta prompt guide' },
-  { src: volta('_filmstrip.jpg'), alt: 'Full contact sheet of the Volta campaign photography set' },
+  { src: volta('01_hero.webp'), alt: 'Volta Sparkling Yuzu and Ginger can with a splash of water on a cobalt background' },
+  { src: volta('02_model.webp'), alt: 'Model holding the Volta can to her face with eyes closed' },
+  { src: volta('03_macro.webp'), alt: 'Macro close up of condensation droplets on the Volta can' },
+  { src: volta('04_ice.webp'), alt: 'Volta can frozen inside a block of ice, backlit in acid yellow' },
+  { src: volta('05_flatlay.webp'), alt: 'Flat lay of the Volta can with ginger, lemon, and mint on yellow tile' },
+  { src: volta('06_chrome.webp'), alt: 'Volta can reflected on a liquid chrome floor' },
+  { src: volta('07_pool.webp'), alt: 'Volta can staged poolside on blue tile with a pool float' },
+  { src: volta('08_street.webp'), alt: 'Man in a denim jacket carrying the Volta can on a city street' },
+  { src: volta('09_prompts.webp'), alt: 'Campaign card promoting the AI product photography generation process behind Volta' },
+  { src: volta('10_cta.webp'), alt: 'Lead generation post inviting followers to comment for the Volta prompt guide' },
+  { src: volta('_filmstrip.webp'), alt: 'Full contact sheet of the Volta campaign photography set' },
 ];
 
 const slickGallery = [
-  { src: slick('01_hero.jpg'), alt: 'Slick Hyper Gloss Shampoo bottle on an orange background with glass rods and chrome spheres' },
-  { src: slick('02_wetmodel.jpg'), alt: 'Model with glossy dark hair holding the Slick bottle' },
-  { src: slick('03_hairflip.jpg'), alt: 'Model laughing under running water while holding the Slick bottle' },
-  { src: slick('04_lather.jpg'), alt: 'Macro shot of a chrome sphere swirling through lather for Slick' },
-  { src: slick('05_niche.jpg'), alt: 'Slick bottle styled on a black and white checkerboard surface with rice and oil ingredients' },
-  { src: slick('06_flatlay.jpg'), alt: 'Slick bottle on a checkerboard floor lit by a single hard light beam' },
-  { src: slick('07_hand.jpg'), alt: 'Hands lathering Slick shampoo under running water' },
-  { src: slick('08_bundle.jpg'), alt: 'Three bundled Slick bottles staged with glass rods and chrome spheres' },
-  { src: slick('09_prompts.jpg'), alt: 'Campaign card promoting the AI product photography generation process behind Slick' },
-  { src: slick('10_cta.jpg'), alt: 'Lead generation post inviting followers to comment for the Slick prompt guide' },
-  { src: slick('_filmstrip.jpg'), alt: 'Full contact sheet of the Slick brand photography set' },
-  { src: slick('_funnel_sheet.jpg'), alt: 'Funnel sheet mapping every Slick ad creative to its awareness, consideration, or conversion stage' },
-  { src: slick('T1_hook_4x5.jpg'), alt: 'Top of funnel Slick ad: "Your hair isn\'t dull, it\'s thirsty" hook creative' },
-  { src: slick('T2_shine_4x5.jpg'), alt: 'Top of funnel Slick ad built around a mirror shine hook' },
-  { src: slick('T3_washday_4x5.jpg'), alt: 'Top of funnel Slick ad built around a wash day hook' },
-  { src: slick('T4_slip_4x5.jpg'), alt: 'Top of funnel Slick ad built around the product\'s slip texture' },
-  { src: slick('M1_inside_4x5.jpg'), alt: 'Middle of funnel Slick ad explaining what is inside the formula' },
-  { src: slick('M2_builtfor_4x5.jpg'), alt: 'Middle of funnel Slick ad explaining who the product is built for' },
-  { src: slick('M3_twopumps_4x5.jpg'), alt: 'Middle of funnel Slick ad explaining the two pump usage routine' },
-  { src: slick('B1_bundle_4x5.jpg'), alt: 'Bottom of funnel Slick ad offering a buy two get one bundle deal' },
-  { src: slick('B2_reviews_4x5.jpg'), alt: 'Bottom of funnel Slick ad built around a five star customer review' },
-  { src: slick('B3_shopnow_4x5.jpg'), alt: 'Bottom of funnel Slick ad with a shop now call to action' },
+  { src: slick('01_hero.webp'), alt: 'Slick Hyper Gloss Shampoo bottle on an orange background with glass rods and chrome spheres' },
+  { src: slick('02_wetmodel.webp'), alt: 'Model with glossy dark hair holding the Slick bottle' },
+  { src: slick('03_hairflip.webp'), alt: 'Model laughing under running water while holding the Slick bottle' },
+  { src: slick('04_lather.webp'), alt: 'Macro shot of a chrome sphere swirling through lather for Slick' },
+  { src: slick('05_niche.webp'), alt: 'Slick bottle styled on a black and white checkerboard surface with rice and oil ingredients' },
+  { src: slick('06_flatlay.webp'), alt: 'Slick bottle on a checkerboard floor lit by a single hard light beam' },
+  { src: slick('07_hand.webp'), alt: 'Hands lathering Slick shampoo under running water' },
+  { src: slick('08_bundle.webp'), alt: 'Three bundled Slick bottles staged with glass rods and chrome spheres' },
+  { src: slick('09_prompts.webp'), alt: 'Campaign card promoting the AI product photography generation process behind Slick' },
+  { src: slick('10_cta.webp'), alt: 'Lead generation post inviting followers to comment for the Slick prompt guide' },
+  { src: slick('_filmstrip.webp'), alt: 'Full contact sheet of the Slick brand photography set' },
+  { src: slick('_funnel_sheet.webp'), alt: 'Funnel sheet mapping every Slick ad creative to its awareness, consideration, or conversion stage' },
+  { src: slick('T1_hook_4x5.webp'), alt: 'Top of funnel Slick ad: "Your hair isn\'t dull, it\'s thirsty" hook creative' },
+  { src: slick('T2_shine_4x5.webp'), alt: 'Top of funnel Slick ad built around a mirror shine hook' },
+  { src: slick('T3_washday_4x5.webp'), alt: 'Top of funnel Slick ad built around a wash day hook' },
+  { src: slick('T4_slip_4x5.webp'), alt: 'Top of funnel Slick ad built around the product\'s slip texture' },
+  { src: slick('M1_inside_4x5.webp'), alt: 'Middle of funnel Slick ad explaining what is inside the formula' },
+  { src: slick('M2_builtfor_4x5.webp'), alt: 'Middle of funnel Slick ad explaining who the product is built for' },
+  { src: slick('M3_twopumps_4x5.webp'), alt: 'Middle of funnel Slick ad explaining the two pump usage routine' },
+  { src: slick('B1_bundle_4x5.webp'), alt: 'Bottom of funnel Slick ad offering a buy two get one bundle deal' },
+  { src: slick('B2_reviews_4x5.webp'), alt: 'Bottom of funnel Slick ad built around a five star customer review' },
+  { src: slick('B3_shopnow_4x5.webp'), alt: 'Bottom of funnel Slick ad with a shop now call to action' },
 ];
 
 const denimGallery = [
-  { src: denim('reel_storyboard.jpg'), alt: 'Storyboard grid of the Denim Co-Ord campaign reel, one model in one outfit across every scene' },
+  { src: denim('reel_storyboard.webp'), alt: 'Storyboard grid of the Denim Co-Ord campaign reel, one model in one outfit across every scene' },
 ];
 
 export const brandIdentityProjects: Project[] = [
@@ -127,7 +127,7 @@ export const brandIdentityProjects: Project[] = [
       'Content Strategy',
     ],
     companyLogo: calibreMark,
-    socialImage: plume('01_hero.jpg'),
+    socialImage: plume('01_hero.webp'),
     overview:
       'Plume is a concept haircare brand built entirely in house to show how far a brand identity and an AI generated photography campaign can carry each other, from a single bottle render into a full ten shot campaign. Calibre Associates designed the Plume wordmark, packaging label, and emerald and coral color system, then generated a complete photography set around it: hero shots, lifestyle portraits, texture close ups, and flat lays, all without a physical product, a studio, or a photoshoot.',
     about: {
@@ -200,7 +200,7 @@ export const brandIdentityProjects: Project[] = [
       'Lifestyle Content',
     ],
     companyLogo: calibreMark,
-    socialImage: volta('01_hero.jpg'),
+    socialImage: volta('01_hero.webp'),
     overview:
       'Volta is a concept sparkling drink brand built entirely in house to show what a full can based brand identity and lifestyle campaign can look like when generated end to end. Calibre Associates designed the Volta wordmark and can graphics, then generated a ten shot campaign ranging from studio hero photography to real world feeling lifestyle scenes, all without a physical can, a studio, or a photoshoot.',
     about: {
@@ -273,7 +273,7 @@ export const brandIdentityProjects: Project[] = [
       'Multi Format Creative',
     ],
     companyLogo: calibreMark,
-    socialImage: slick('01_hero.jpg'),
+    socialImage: slick('01_hero.webp'),
     overview:
       'Slick is a concept haircare brand built entirely in house to show what a complete paid social system looks like when the brand identity and the full funnel creative are planned together from day one. Calibre Associates designed the Slick identity, then generated a full funnel campaign, awareness, consideration, and conversion creative across three ad formats, plus a cut, ready to post video reel, all without a physical product, a studio, or a photoshoot.',
     about: {
@@ -329,7 +329,7 @@ export const brandIdentityProjects: Project[] = [
     gallery: slickGallery,
     video: {
       src: asset(slickVideoFiles, 'SLICK_reel_TOFU_9x16.mp4'),
-      poster: slick('reel_storyboard.jpg'),
+      poster: slick('reel_storyboard.webp'),
       label: 'Vertical Video Reel, Top of Funnel Cut',
     },
     finalCtaHeadline: 'Need a Full Funnel Campaign, Not Just a Photo?',
@@ -356,7 +356,7 @@ export const brandIdentityProjects: Project[] = [
       'Art Direction',
     ],
     companyLogo: calibreMark,
-    socialImage: denim('reel_storyboard.jpg'),
+    socialImage: denim('reel_storyboard.webp'),
     overview:
       'This concept campaign was built to demonstrate a virtual photoshoot: a single consistent AI generated model styled in one denim co-ord, moved through a sequence of location styled scenes for a full campaign, catalogue, and ad set, all produced without an actual photoshoot, a studio day, or travel.',
     about: {
@@ -405,7 +405,7 @@ export const brandIdentityProjects: Project[] = [
     gallery: denimGallery,
     video: {
       src: asset(denimVideoFiles, 'DENIM_campaign_reel_9x16.mp4'),
-      poster: denim('reel_storyboard.jpg'),
+      poster: denim('reel_storyboard.webp'),
       label: 'Vertical Campaign Reel',
     },
     finalCtaHeadline: 'Curious What a Virtual Photoshoot Could Do for Your Brand?',

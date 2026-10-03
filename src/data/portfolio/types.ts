@@ -94,6 +94,17 @@ export interface Project {
   showSeoReporting?: boolean;
   /** Placeholder client quote, clearly marked as such, shown when present */
   testimonial?: ProjectTestimonial;
+  /** Heading overrides for the outcome section. SEO case studies use scope language ("What We Delivered"), not results language. */
+  outcomeTitle?: string;
+  outcomeEyebrow?: string;
+  /** Heading overrides for the process timeline (defaults suit design led projects) */
+  processTitle?: string;
+  processEyebrow?: string;
+  processDescription?: string;
+  /** Short note on what is deliberately not published (for example ranking and traffic data) */
+  dataNote?: string;
+  /** Project specific questions and answers, shown as a FAQ section and emitted as FAQPage schema */
+  faqs?: { question: string; answer: string }[];
   /** Marks this as an in-house concept/demo project rather than a real client engagement. Shows a disclosure badge instead of a live-site link. */
   isConcept?: boolean;
   /** Full media set for content-led case studies (campaign photography, stills) */

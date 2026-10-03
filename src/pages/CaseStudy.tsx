@@ -27,6 +27,8 @@ import CaseStudyTestimonial from '@/components/portfolio/CaseStudyTestimonial';
 import ProcessTimeline from '@/components/services/sections/ProcessTimeline';
 import StatsSection from '@/components/services/sections/StatsSection';
 import FinalCTA from '@/components/services/sections/FinalCTA';
+import FAQSection from '@/components/services/sections/FAQSection';
+import { buildFaqSchema } from '@/lib/faqSchema';
 
 const SERVICE_NOUN: Record<string, string> = {
   'website-development': 'Website Design',
@@ -106,6 +108,7 @@ const CaseStudy = () => {
     ]),
     caseStudySchema,
     ...(videoSchema ? [videoSchema] : []),
+    ...(project.faqs && project.faqs.length > 0 ? [buildFaqSchema(project.faqs)] : []),
   ];
 
   return (
@@ -183,9 +186,9 @@ const CaseStudy = () => {
         {project.process.length > 0 && (
           <ProcessTimeline
             process={project.process}
-            eyebrow="HOW WE GOT THERE"
-            title="Design Process"
-            description={`The path we took to bring ${project.projectName} to life.`}
+            eyebrow={project.processEyebrow ?? 'HOW WE GOT THERE'}
+            title={project.processTitle ?? 'Design Process'}
+            description={project.processDescription ?? `The path we took to bring ${project.projectName} to life.`}
           />
         )}
 
@@ -269,8 +272,8 @@ const CaseStudy = () => {
                   >
                     <BulletListCard
                       icon={<TrendingUp className="h-5 w-5 text-ink" />}
-                      eyebrow="THE OUTCOME"
-                      title="Business Impact"
+                      eyebrow={project.outcomeEyebrow ?? 'THE OUTCOME'}
+                      title={project.outcomeTitle ?? 'Business Impact'}
                       description={project.businessImpactSummary}
                       items={project.businessImpact}
                       variant="accent"
@@ -281,6 +284,23 @@ const CaseStudy = () => {
             )}
             {project.results.length > 0 && <StatsSection stats={project.results} />}
           </>
+        )}
+
+        {project.dataNote && (
+          <section className="pb-12 bg-canvas">
+            <div className="container mx-auto px-4 sm:px-6">
+              <p className="max-w-3xl mx-auto text-sm text-ink/60 leading-relaxed border-l-2 border-hairline pl-4">{project.dataNote}</p>
+            </div>
+          </section>
+        )}
+
+        {project.faqs && project.faqs.length > 0 && (
+          <FAQSection
+            faqs={project.faqs}
+            eyebrow="PROJECT FAQS"
+            title={`Questions About the ${project.companyName} Project`}
+            className="bg-surface-soft"
+          />
         )}
 
         {project.showSeoReporting && (

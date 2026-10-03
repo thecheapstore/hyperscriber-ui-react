@@ -8,8 +8,8 @@ import {
 import { Service } from '../types/service';
 import { applicationSoftwareFaqs } from './faqs';
 import React from 'react';
-import websiteDevPreview from '@/assets/images/mockup-website.jpg';
-import brandIdentityPreview from '@/assets/portfolio/brand-identity/plume/01_hero.jpg';
+import websiteDevPreview from '@/assets/images/mockup-website.webp';
+import brandIdentityPreview from '@/assets/portfolio/brand-identity/plume/01_hero.webp';
 
 export const services: Service[] = [
   {

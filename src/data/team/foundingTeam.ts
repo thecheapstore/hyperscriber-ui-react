@@ -1,15 +1,15 @@
-import abhijeetImg from '@/assets/team/abhijeet.jpeg';
-import pawanImg from '@/assets/team/pawan.jpeg';
+import abhijeetImg from '@/assets/team/abhijeet.webp';
+import pawanImg from '@/assets/team/pawan.webp';
 // manasvi-logo.webp (1080x1165, portrait, HD) is used for her profile hero, the display
 // frame there is large enough that a lower-res source visibly softens/pixelates.
 import manasviImg from '@/assets/portfolio/manasvi-logo.webp';
 // manasvi-pathak.jpeg is used for the Founding Team grid card instead, its landscape
 // aspect fits the card's 4:3 frame with much less cropping, and the card renders smaller.
-import manasviListingImg from '@/assets/team/manasvi-pathak.jpeg';
+import manasviListingImg from '@/assets/team/manasvi-pathak.webp';
 import manasviPortfolioImg from '@/assets/portfolio/manasvi-thumbnail.webp';
-import tejImg from '@/assets/team/tejpratap.jpeg';
-import niroshImg from '@/assets/team/nirosh.jpg';
-import jitpaulImg from '@/assets/team/jitpaul.jpg';
+import tejImg from '@/assets/team/tejpratap.webp';
+import niroshImg from '@/assets/team/nirosh.webp';
+import jitpaulImg from '@/assets/team/jitpaul.webp';
 import { Briefcase, FileText, Search, ListChecks, Handshake, CalendarCheck, Rocket } from 'lucide-react';
 import type { FoundingTeamMember, PressFeature, ProfileCredential } from './types';
 

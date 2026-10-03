@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@/lib/routerLink';
 import { Mail, MapPin, Phone, Linkedin, Instagram, ExternalLink } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.webp';
 import TrustBox from './TrustBox';
 
 const Footer = () => {
