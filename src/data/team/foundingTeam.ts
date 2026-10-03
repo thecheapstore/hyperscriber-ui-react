@@ -40,12 +40,12 @@ const ABHIJEET_PRESS: PressFeature[] = [
     note: 'Entrepreneur and business news site.',
   },
   {
-    outlet: 'Republic News India Business',
+    outlet: 'Deccan Business',
     title: PRESS_TITLE,
-    url: 'https://business.republicnewsindia.com/abhijeet-jain-builds-calibre-associates-as-an-end-to-end-digital-growth-partner-for-businesses/',
+    url: 'https://deccanbusiness.com/abhijeet-jain-builds-calibre-associates-as-an-end-to-end-digital-growth-partner-for-businesses/',
     date: '24 Sep 2026',
     isoDate: '2026-09-24',
-    note: 'Business section of Republic News India.',
+    note: 'Business news site covering Indian companies and entrepreneurship.',
   },
 ];
 

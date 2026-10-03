@@ -179,7 +179,7 @@ const Footer = () => {
         </div>
 
         {/* HUB LINKS: industries and locations (internal linking for SEO) */}
-        <nav aria-label="Industries and locations" className="mt-12 pt-8 border-t border-hairline">
+        <nav aria-label="Industries and locations" className="pb-8 mb-8 border-b border-hairline">
           <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink/70">
             {[
               { name: 'Tree Service Marketing', path: '/industries/tree-service-marketing' },
