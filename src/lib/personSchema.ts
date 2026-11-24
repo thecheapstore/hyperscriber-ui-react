@@ -1,8 +1,9 @@
 import type { FoundingTeamMember, CtaLink } from '@/data/team/types';
 import { SITE_URL, absImage, absUrl, breadcrumbSchema, DEFAULT_OG_IMAGE } from '@/lib/seo';
 
-/** Date the team profile content was last reviewed, used for ProfilePage dateModified. */
-export const PROFILE_DATE_MODIFIED = '2026-10-03';
+/** Date the team profile content was last reviewed, used for ProfilePage dateModified.
+ * Google requires a full ISO 8601 date time with a timezone here, a bare date is reported as an invalid datetime. */
+export const PROFILE_DATE_MODIFIED = '2026-11-24T10:00:00+05:30';
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;

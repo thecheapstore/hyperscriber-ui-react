@@ -34,12 +34,47 @@
 ## Work and case studies
 
 - [Portfolio of website design and SEO case studies](https://calibreassociates.com/portfolio/)
+
+### Website design case studies
+
+- [716 Lawn Care (Buffalo NY lawn care) website](https://calibreassociates.com/services/website-development/projects/716-lawn-care/)
+- [RR Landscaping and Tree Services website](https://calibreassociates.com/services/website-development/projects/rr-landscaping/)
+- [KP Landscaping website](https://calibreassociates.com/services/website-development/projects/kp-landscaping/)
+- [Buffalo Deck Builders website](https://calibreassociates.com/services/website-development/projects/buffalo-deck-builders/)
+- [WNY Tree Specialists website](https://calibreassociates.com/services/website-development/projects/wny-tree-specialists/)
+- [Buffalo Tree Specialists website](https://calibreassociates.com/services/website-development/projects/buffalo-tree-specialists/)
+- [Meta Tree Services NY website](https://calibreassociates.com/services/website-development/projects/meta-tree-services-ny/)
+- [Meta Services NY website](https://calibreassociates.com/services/website-development/projects/meta-services-ny/)
+- [TreeCraft Tree Service website](https://calibreassociates.com/services/website-development/projects/tree-craft-tree-services/)
 - [Arborix Tree Services website](https://calibreassociates.com/services/website-development/projects/arborix-tree-services/)
 - [Branch Experts Rochester website](https://calibreassociates.com/services/website-development/projects/branch-experts-rochester/)
-- [TreeCraft Tree Service website](https://calibreassociates.com/services/website-development/projects/tree-craft-tree-services/)
-- [WNY Tree Specialists website](https://calibreassociates.com/services/website-development/projects/wny-tree-specialists/)
-- [716 Lawn Care website](https://calibreassociates.com/services/website-development/projects/716-lawn-care/)
+- [Manasvi Pathak personal brand website website](https://calibreassociates.com/services/website-development/projects/manasvi-pathak/)
+- [Flo Mattress website](https://calibreassociates.com/services/website-development/projects/flo-mattress/)
+- [Tulsi Online website](https://calibreassociates.com/services/website-development/projects/tulsi-online/)
+- [Scentira India website](https://calibreassociates.com/services/website-development/projects/scentira-india/)
+- [Hatti Kaapi website](https://calibreassociates.com/services/website-development/projects/hatti-kaapi/)
+- [Gemennial website](https://calibreassociates.com/services/website-development/projects/gemennial/)
+
+### SEO case studies
+
 - [716 Lawn Care SEO](https://calibreassociates.com/services/seo/projects/716-lawn-care/)
+- [RR Landscaping and Tree Services SEO](https://calibreassociates.com/services/seo/projects/rr-landscaping/)
+- [KP Landscaping SEO](https://calibreassociates.com/services/seo/projects/kp-landscaping/)
+- [Buffalo Deck Builders SEO](https://calibreassociates.com/services/seo/projects/buffalo-deck-builders/)
+- [WNY Tree Specialists SEO](https://calibreassociates.com/services/seo/projects/wny-tree-specialists/)
+- [Buffalo Tree Specialists SEO](https://calibreassociates.com/services/seo/projects/buffalo-tree-specialists/)
+- [Meta Tree Services NY SEO](https://calibreassociates.com/services/seo/projects/meta-tree-services-ny/)
+- [Meta Services NY SEO](https://calibreassociates.com/services/seo/projects/meta-services-ny/)
+- [TreeCraft Tree Service SEO](https://calibreassociates.com/services/seo/projects/tree-craft-tree-services/)
+- [A-One Tree Services (Rochester NY) SEO](https://calibreassociates.com/services/seo/projects/a-one-tree-services/)
+- [Ashton Services NY SEO](https://calibreassociates.com/services/seo/projects/ashton-services-ny/)
+
+### Brand identity case studies
+
+- [Plume brand identity](https://calibreassociates.com/services/brand-identity-development/projects/plume/)
+- [Volta brand identity](https://calibreassociates.com/services/brand-identity-development/projects/volta/)
+- [Slick brand identity](https://calibreassociates.com/services/brand-identity-development/projects/slick/)
+- [The Denim Co-Ord brand identity](https://calibreassociates.com/services/brand-identity-development/projects/denim/)
 
 ## Company and people
 
@@ -48,9 +83,28 @@
 - [Abhijeet Jain, Founder and CEO](https://calibreassociates.com/our-team/abhijeet-jain/)
 - [Manasvi Pathak, Co Founder and Talent Manager](https://calibreassociates.com/our-team/manasvi-pathak/)
 - [Pawan Sharma, Co Founder](https://calibreassociates.com/our-team/pawan-sharma/)
-- [Tej Pratap, Performance Manager](https://calibreassociates.com/our-team/tej-pratap/)
+- [Tej Pratap, Performance Marketing Manager](https://calibreassociates.com/our-team/tej-pratap/)
+- [Nirosh, Software Engineer and UI/UX Designer](https://calibreassociates.com/our-team/nirosh/)
+- [Jitpaul, UI/UX and Graphic Designer](https://calibreassociates.com/our-team/jitpaul/)
 - [FAQ](https://calibreassociates.com/faq/): Answers about website development, SEO, social media, video editing, lead generation and AI automation.
 - [Contact](https://calibreassociates.com/contact/): Book a free consultation.
+
+## Guides by the founder
+
+Long form articles by Abhijeet Jain on the Calibre Associates insights blog. A full index is at https://insights.calibreassociates.com/llms.txt
+
+- [Local SEO for Tree Service Companies](https://insights.calibreassociates.com/articles/local-seo-for-tree-service-companies/)
+- [Tree Service Marketing: The System Behind the Phone Ringing](https://insights.calibreassociates.com/articles/tree-service-marketing-system/)
+- [Landscaping SEO: How Landscaping Companies Get Found Locally](https://insights.calibreassociates.com/articles/landscaping-seo-for-landscaping-companies/)
+- [What a Landscaping Website Needs to Get Calls](https://insights.calibreassociates.com/articles/landscaping-website-that-gets-calls/)
+- [Lawn Care Marketing: The System Behind a Full Mowing Route](https://insights.calibreassociates.com/articles/lawn-care-marketing-system/)
+- [Google Business Profile for Service Area Businesses](https://insights.calibreassociates.com/articles/google-business-profile-service-area-business/)
+- [How We Rank Service Area Pages Without Thin Content](https://insights.calibreassociates.com/articles/programmatic-local-seo-service-areas/)
+- [How to Set Up GoHighLevel for a Home Service Company](https://insights.calibreassociates.com/articles/gohighlevel-setup-home-services/)
+- [What Decides the Cost of a Website in India](https://insights.calibreassociates.com/articles/how-much-does-a-website-cost-in-india/)
+- [WhatsApp Automation for Indian Small Businesses](https://insights.calibreassociates.com/articles/whatsapp-automation-for-indian-small-business/)
+- [What a Brand Identity Project Actually Includes](https://insights.calibreassociates.com/articles/brand-identity-project-includes/)
+- [Google Ads vs Meta Ads for Lead Generation](https://insights.calibreassociates.com/articles/google-ads-vs-meta-ads/)
 
 ## Optional
 

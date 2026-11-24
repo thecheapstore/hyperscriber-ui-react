@@ -300,13 +300,13 @@ export const industryPages: IndustryPage[] = [
   {
     slug: "landscaping-and-lawn-care-marketing",
     path: LANDSCAPING_PATH,
-    title: "Landscaping Web Design and Lawn Care SEO | Calibre Associates",
+    title: "Landscaper SEO and Web Design in Buffalo NY | Calibre Associates",
     navLabel: "Landscaping and Lawn Care Marketing",
     summary:
       "Landscaping website design, lawn care SEO and lead generation, including snow plowing and hardscaping, for companies around Buffalo, Rochester and Syracuse NY.",
     metaDescription:
-      "Landscaping website design, lawn care SEO and lead generation for Buffalo and Rochester NY contractors, including snow plowing and hardscaping. Book a call.",
-    h1: "Landscaping and Lawn Care Marketing: Website Design, SEO and Lead Generation",
+      "SEO for landscapers and lawn care companies in Buffalo and Rochester NY: website design, local search and lead generation, including snow plowing. Book a call.",
+    h1: "Landscaping and Lawn Care Marketing: SEO, Website Design and Lead Generation for Landscapers",
     eyebrow: "LANDSCAPING AND LAWN CARE MARKETING",
     serviceName: "Landscaping and Lawn Care Marketing, Website Design and SEO",
     serviceType: "Digital marketing for landscaping and lawn care companies",
