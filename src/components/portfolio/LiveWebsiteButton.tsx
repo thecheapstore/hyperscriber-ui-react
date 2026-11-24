@@ -5,10 +5,12 @@ import { Button } from '@/components/ui/button';
 interface LiveWebsiteButtonProps {
   url?: string;
   className?: string;
+  /** Team owned sites pass link equity; client sites stay nofollow. */
+  follow?: boolean;
 }
 
 /** Premium CTA linking to the live project. Degrades gracefully when no URL is set yet. */
-const LiveWebsiteButton = ({ url, className = '' }: LiveWebsiteButtonProps) => {
+const LiveWebsiteButton = ({ url, className = '', follow = false }: LiveWebsiteButtonProps) => {
   if (!url) {
     return (
       <span
@@ -21,7 +23,7 @@ const LiveWebsiteButton = ({ url, className = '' }: LiveWebsiteButtonProps) => {
   }
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer nofollow" className={className}>
+    <a href={url} target="_blank" rel={follow ? 'noopener noreferrer' : 'noopener noreferrer nofollow'} className={className}>
       <Button className="rounded-pill px-6 py-3 group">
         View Live Website
         <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

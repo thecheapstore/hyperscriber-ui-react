@@ -242,6 +242,7 @@ export const websiteDevelopmentProjects: Project[] = [
       'User Experience Strategy',
     ],
     liveUrl: 'https://manasvipathak.netlify.app/',
+    followLiveUrl: true,
     thumbnail: manasviThumbnail,
     overview:
       "Manasvi Pathak required a premium personal website that could serve as a digital identity for brands, casting agencies, photographers, production houses, and potential collaborators. The project began as a single cinematic landing page and has since grown into a full multi page site, with dedicated Home, About, Portfolio, Services, Blog, FAQ, and Contact pages, so that a casting director, a brand looking to book UGC content, and a journalist researching her work each land on a page built specifically for them instead of scrolling through one long page to find it. The site continues to function as a personal brand asset capable of increasing credibility and improving discoverability online, now with the depth to back it up.",

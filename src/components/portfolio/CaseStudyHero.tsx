@@ -77,7 +77,7 @@ const CaseStudyHero = ({ project, serviceTitle }: CaseStudyHeroProps) => {
             </div>
           </div>
 
-          {!project.isConcept && <LiveWebsiteButton url={project.liveUrl} />}
+          {!project.isConcept && <LiveWebsiteButton url={project.liveUrl} follow={project.followLiveUrl} />}
         </motion.div>
       </div>
     </section>

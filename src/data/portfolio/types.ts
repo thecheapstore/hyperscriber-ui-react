@@ -59,6 +59,8 @@ export interface Project {
   /** Outcome-focused scope tags shown as badges, e.g. "Local SEO Structure", not raw tech stack names */
   highlights: string[];
   liveUrl?: string;
+  /** Pass link equity to liveUrl (no rel=nofollow). Only for sites owned by the Calibre team, never client sites. */
+  followLiveUrl?: boolean;
   /** Card thumbnail, falls back to an abstract mockup when omitted */
   thumbnail?: string;
   /** Image used for Open Graph/Twitter/JSON-LD sharing, falls back to `thumbnail` then the site default. Use this when a project intentionally has no card thumbnail but still needs a real social preview image. */

@@ -542,6 +542,12 @@ export const foundingTeam: FoundingTeamMember[] = [
         external: true,
       },
       {
+        label: 'Manasvi Pathak on Instagram',
+        href: MANASVI_INSTAGRAM,
+        description: 'Reels, shoots and behind the scenes from her latest work.',
+        external: true,
+      },
+      {
         label: 'Social media marketing and creator campaigns',
         href: '/services/social-media-marketing',
         description: 'The Calibre Associates service that talent management supports.',
