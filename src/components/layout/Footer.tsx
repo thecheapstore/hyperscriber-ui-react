@@ -62,21 +62,36 @@ const Footer = () => {
                 { name: 'Our Work', path: '/portfolio' },
                 { name: 'Why Us', path: '/why-us' },
                 { name: 'Our Team', path: '/our-team' },
+                { name: 'Insights', path: 'https://insights.calibreassociates.com/articles/', external: true },
                 { name: 'FAQ', path: '/faq' },
                 { name: 'Contact', path: '/contact' },
                 { name: 'Terms & Conditions', path: '/terms-conditions' },
                 { name: 'Privacy Policy', path: '/privacy-policy' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-ink/70 hover:text-ink transition-colors flex items-center group"
-                  >
-                    <span className="inline-block w-1.5 h-1.5 bg-ink rounded-full mr-3 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-200"></span>
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">
-                      {link.name}
-                    </span>
-                  </Link>
+                  {'external' in link && link.external ? (
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener"
+                      className="text-ink/70 hover:text-ink transition-colors flex items-center group"
+                    >
+                      <span className="inline-block w-1.5 h-1.5 bg-ink rounded-full mr-3 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-200"></span>
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">
+                        {link.name}
+                      </span>
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="text-ink/70 hover:text-ink transition-colors flex items-center group"
+                    >
+                      <span className="inline-block w-1.5 h-1.5 bg-ink rounded-full mr-3 opacity-0 group-hover:opacity-100 transform -translate-x-3 group-hover:translate-x-0 transition-all duration-200"></span>
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">
+                        {link.name}
+                      </span>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

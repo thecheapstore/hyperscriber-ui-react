@@ -93,7 +93,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     ],
     primaryCta: { label: 'Connect on LinkedIn', href: ABHIJEET_LINKEDIN, external: true },
     secondaryCta: { label: 'Email', href: 'mailto:info@calibreassociates.com', external: true },
-    sameAs: [ABHIJEET_LINKEDIN, ABHIJEET_INSTAGRAM],
+    sameAs: [ABHIJEET_LINKEDIN, ABHIJEET_INSTAGRAM, 'https://insights.calibreassociates.com/about/'],
     otherEmployers: [
       { name: '716 Lawn Care', url: 'https://716lawncare.com', locality: 'Buffalo', region: 'New York', country: 'US' },
     ],
@@ -187,6 +187,7 @@ export const foundingTeam: FoundingTeamMember[] = [
     finalCtaHeading: "Let's Build Something That Actually Grows Your Business.",
     finalCtaButtons: [
       { label: 'Connect on LinkedIn', href: ABHIJEET_LINKEDIN, external: true },
+      { label: 'Read My Articles', href: 'https://insights.calibreassociates.com/', external: true },
       { label: 'Book Free Consultation', href: '/contact' },
     ],
     achievements: [
@@ -251,6 +252,12 @@ export const foundingTeam: FoundingTeamMember[] = [
     ],
     relatedLinksHeading: 'Explore the Work Behind the Profile',
     relatedLinks: [
+      {
+        label: 'Read my articles on the Calibre Insights blog',
+        href: 'https://insights.calibreassociates.com/',
+        description: 'Practical guides on local SEO, websites, GoHighLevel and AI automation, written from real client work.',
+        external: true,
+      },
       {
         label: 'Website development services in India and the USA',
         href: '/services/website-development',

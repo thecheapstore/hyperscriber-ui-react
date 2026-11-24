@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from '@/lib/routerLink';
 import { fadeUp, staggerContainer, viewportOnce } from '@/lib/motion';
 import { services } from '../data/services';
+import { SERVICE_GUIDES, INSIGHTS_ARTICLES_URL } from '@/data/insightsGuides';
 import type { Service } from '../types/service';
 
 export interface ResourceLink {
@@ -54,6 +55,7 @@ const ServiceResourceLinks = ({
   const related = (service.relatedServiceSlugs ?? [])
     .map((slug) => services.find((s) => s.slug === slug))
     .filter((s): s is Service => Boolean(s));
+  const guides = SERVICE_GUIDES[service.slug] ?? [];
 
   const columnCount =
     (related.length > 0 ? 1 : 0) +
@@ -147,6 +149,36 @@ const ServiceResourceLinks = ({
             </Column>
           )}
         </motion.div>
+
+        {guides.length > 0 && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+            className="mt-6 rounded-block border border-hairline bg-canvas p-7"
+          >
+            <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+              <h3 className="text-lg font-bold">Guides from our founder</h3>
+              <a href={INSIGHTS_ARTICLES_URL} target="_blank" rel="noopener" className="text-sm font-semibold text-ink underline underline-offset-2 hover:no-underline">
+                All articles on the Calibre Insights blog
+              </a>
+            </motion.div>
+            <motion.ul variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-6">
+              {guides.map((g) => (
+                <li key={g.href}>
+                  <a href={g.href} target="_blank" rel="noopener" className={itemClass}>
+                    <span className={`inline-flex items-center gap-1 ${labelClass}`}>
+                      {g.title}
+                      <ArrowUpRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                    </span>
+                    <span className="block text-sm text-ink/60 mt-0.5">By Abhijeet Jain, Founder and CEO</span>
+                  </a>
+                </li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        )}
       </div>
     </section>
   );
