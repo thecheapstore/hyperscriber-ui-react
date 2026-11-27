@@ -1,4 +1,4 @@
-import abhijeetImg from '@/assets/team/abhijeet.webp';
+import abhijeetImg from '@/assets/team/abhijeet-jain-founder-calibre-associates.webp';
 import pawanImg from '@/assets/team/pawan.webp';
 // manasvi-logo.webp (1080x1165, portrait, HD) is used for her profile hero, the display
 // frame there is large enough that a lower-res source visibly softens/pixelates.
